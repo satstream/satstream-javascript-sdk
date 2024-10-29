@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **{String: Number}** |  | [optional] 
+**data** | [**ResponsesGetFeesResponse**](ResponsesGetFeesResponse.md) |  | [optional] 
 **responsesBaseResponse** | [**ResponsesBaseResponse**](ResponsesBaseResponse.md) |  | [optional] 
 
 
