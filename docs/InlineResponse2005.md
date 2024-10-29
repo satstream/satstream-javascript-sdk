@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **Number** |  | [optional] 
+**data** | [**ResponsesGetCurrentBlockHeightResponse**](ResponsesGetCurrentBlockHeightResponse.md) |  | [optional] 
 **responsesBaseResponse** | [**ResponsesBaseResponse**](ResponsesBaseResponse.md) |  | [optional] 
 
 

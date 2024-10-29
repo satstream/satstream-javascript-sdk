@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ResponsesBaseResponse'], factory);
+    define(['ApiClient', 'model/ResponsesBaseResponse', 'model/ResponsesGetCurrentBlockHeightResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ResponsesBaseResponse'));
+    module.exports = factory(require('../ApiClient'), require('./ResponsesBaseResponse'), require('./ResponsesGetCurrentBlockHeightResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.InlineResponse2005 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ResponsesBaseResponse);
+    root.SatstreamApi.InlineResponse2005 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ResponsesBaseResponse, root.SatstreamApi.ResponsesGetCurrentBlockHeightResponse);
   }
-}(this, function(ApiClient, ResponsesBaseResponse) {
+}(this, function(ApiClient, ResponsesBaseResponse, ResponsesGetCurrentBlockHeightResponse) {
   'use strict';
 
   /**
@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], 'Number');
+        obj.data = ResponsesGetCurrentBlockHeightResponse.constructFromObject(data['data']);
       if (data.hasOwnProperty('responses.BaseResponse'))
         obj.responsesBaseResponse = ResponsesBaseResponse.constructFromObject(data['responses.BaseResponse']);
     }
@@ -64,7 +64,7 @@
   }
 
   /**
-   * @member {Number} data
+   * @member {module:model/ResponsesGetCurrentBlockHeightResponse} data
    */
   exports.prototype.data = undefined;
 

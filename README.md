@@ -173,6 +173,7 @@ Class | Method | HTTP request | Description
  - [SatstreamApi.ResponsesGetAddressTimeframeBalance](docs/ResponsesGetAddressTimeframeBalance.md)
  - [SatstreamApi.ResponsesGetAddressTimeframeBalanceItem](docs/ResponsesGetAddressTimeframeBalanceItem.md)
  - [SatstreamApi.ResponsesGetAddressTimeframeBalanceItemBlockRange](docs/ResponsesGetAddressTimeframeBalanceItemBlockRange.md)
+ - [SatstreamApi.ResponsesGetCurrentBlockHeightResponse](docs/ResponsesGetCurrentBlockHeightResponse.md)
  - [SatstreamApi.ResponsesNonInscriptionUTXO](docs/ResponsesNonInscriptionUTXO.md)
  - [SatstreamApi.ResponsesSendRawTransaction](docs/ResponsesSendRawTransaction.md)
  - [SatstreamApi.ResponsesTxInfo](docs/ResponsesTxInfo.md)
