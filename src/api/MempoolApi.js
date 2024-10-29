@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiErrorResponse', 'model/InlineResponse2008'], factory);
+    define(['ApiClient', 'model/BlocksErrorResponse', 'model/InlineResponse2008'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiErrorResponse'), require('../model/InlineResponse2008'));
+    module.exports = factory(require('../ApiClient'), require('../model/BlocksErrorResponse'), require('../model/InlineResponse2008'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ApiErrorResponse, root.SatstreamApi.InlineResponse2008);
+    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BlocksErrorResponse, root.SatstreamApi.InlineResponse2008);
   }
-}(this, function(ApiClient, ApiErrorResponse, InlineResponse2008) {
+}(this, function(ApiClient, BlocksErrorResponse, InlineResponse2008) {
   'use strict';
 
   /**

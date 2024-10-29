@@ -151,8 +151,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SatstreamApi.ApiErrorResponse](docs/ApiErrorResponse.md)
  - [SatstreamApi.BigInt](docs/BigInt.md)
+ - [SatstreamApi.BlocksErrorResponse](docs/BlocksErrorResponse.md)
  - [SatstreamApi.InlineResponse200](docs/InlineResponse200.md)
  - [SatstreamApi.InlineResponse2001](docs/InlineResponse2001.md)
  - [SatstreamApi.InlineResponse20010](docs/InlineResponse20010.md)
