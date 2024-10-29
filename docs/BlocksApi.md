@@ -21,13 +21,6 @@ Get the current block height of the Bitcoin blockchain
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
-
-// Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.BlocksApi();
 
@@ -50,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+No authorization required
 
 ### HTTP request headers
 
