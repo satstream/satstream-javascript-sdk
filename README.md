@@ -102,7 +102,7 @@ var defaultClient = SatstreamApi.ApiClient.instance;
 var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix['X-API-Key'] = "Token"
+//ApiKeyAuth.apiKeyPrefix['X-API-KEY'] = "Token"
 
 var api = new SatstreamApi.AddressesApi()
 
@@ -195,6 +195,6 @@ Class | Method | HTTP request | Description
 ### ApiKeyAuth
 
 - **Type**: API key
-- **API key parameter name**: X-API-Key
+- **API key parameter name**: X-API-KEY
 - **Location**: HTTP header
 
