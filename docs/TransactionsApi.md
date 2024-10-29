@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="indexerTxHashGet"></a>
 # **indexerTxHashGet**
-> RpcBtcTx indexerTxHashGet(hash)
+> InlineResponse2008 indexerTxHashGet(hash)
 
 Get transaction
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RpcBtcTx**](RpcBtcTx.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 
 <a name="transactionsBroadcastPost"></a>
 # **transactionsBroadcastPost**
-> ResponsesSendRawTransaction transactionsBroadcastPost(transaction)
+> InlineResponse2009 transactionsBroadcastPost(transaction)
 
 Broadcast transaction
 
@@ -67,6 +67,13 @@ Broadcast a raw transaction to the Bitcoin network
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.TransactionsApi();
 
@@ -91,11 +98,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponsesSendRawTransaction**](ResponsesSendRawTransaction.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -104,7 +111,7 @@ No authorization required
 
 <a name="transactionsTxidGet"></a>
 # **transactionsTxidGet**
-> RpcBtcTx transactionsTxidGet(txid)
+> InlineResponse20010 transactionsTxidGet(txid)
 
 Get transaction info
 
@@ -113,6 +120,13 @@ Get detailed information about a specific transaction
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.TransactionsApi();
 
@@ -137,11 +151,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RpcBtcTx**](RpcBtcTx.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -150,7 +164,7 @@ No authorization required
 
 <a name="transactionsTxidInputsGet"></a>
 # **transactionsTxidInputsGet**
-> [RpcVin] transactionsTxidInputsGet(txid)
+> [Object] transactionsTxidInputsGet(txid)
 
 Get transaction inputs
 
@@ -159,6 +173,13 @@ Get the inputs of a specific transaction
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.TransactionsApi();
 
@@ -183,11 +204,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RpcVin]**](RpcVin.md)
+**[Object]**
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

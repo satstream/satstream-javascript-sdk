@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="addressesAddressBalanceGet"></a>
 # **addressesAddressBalanceGet**
-> ResponsesGetAddressBalance addressesAddressBalanceGet(address)
+> InlineResponse200 addressesAddressBalanceGet(address)
 
 Get address balance
 
@@ -22,6 +22,13 @@ Get the current balance of a Bitcoin address
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.AddressesApi();
 
@@ -46,11 +53,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponsesGetAddressBalance**](ResponsesGetAddressBalance.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -59,7 +66,7 @@ No authorization required
 
 <a name="addressesAddressBalanceTimeframeGet"></a>
 # **addressesAddressBalanceTimeframeGet**
-> ResponsesGetAddressTimeframeBalance addressesAddressBalanceTimeframeGet(address, start, end)
+> InlineResponse2001 addressesAddressBalanceTimeframeGet(address, start, end)
 
 Get address timeframe balance
 
@@ -68,6 +75,13 @@ Get the balance of a Bitcoin address for a specific timeframe
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.AddressesApi();
 
@@ -98,11 +112,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponsesGetAddressTimeframeBalance**](ResponsesGetAddressTimeframeBalance.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -111,7 +125,7 @@ No authorization required
 
 <a name="addressesAddressRunesGet"></a>
 # **addressesAddressRunesGet**
-> InlineResponse200 addressesAddressRunesGet(address)
+> InlineResponse2002 addressesAddressRunesGet(address)
 
 Get address runes balance list
 
@@ -120,6 +134,13 @@ Get the balance of all runes for a Bitcoin address
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.AddressesApi();
 
@@ -144,11 +165,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -157,7 +178,7 @@ No authorization required
 
 <a name="addressesAddressRunesRuneidGet"></a>
 # **addressesAddressRunesRuneidGet**
-> ResponsesGetAddressRuneBalance addressesAddressRunesRuneidGet(address, runeid)
+> InlineResponse2003 addressesAddressRunesRuneidGet(address, runeid)
 
 Get address rune balance
 
@@ -166,6 +187,13 @@ Get the balance of a specific rune for a Bitcoin address
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.AddressesApi();
 
@@ -193,11 +221,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResponsesGetAddressRuneBalance**](ResponsesGetAddressRuneBalance.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -206,7 +234,7 @@ No authorization required
 
 <a name="addressesAddressUtxosGet"></a>
 # **addressesAddressUtxosGet**
-> [ResponsesGetAddressNonInscriptionUTXOData] addressesAddressUtxosGet(address)
+> InlineResponse2004 addressesAddressUtxosGet(address)
 
 Get address non-inscription UTXOs
 
@@ -215,6 +243,13 @@ Get all non-inscription UTXOs for a Bitcoin address
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.AddressesApi();
 
@@ -239,11 +274,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ResponsesGetAddressNonInscriptionUTXOData]**](ResponsesGetAddressNonInscriptionUTXOData.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

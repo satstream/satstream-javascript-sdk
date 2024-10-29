@@ -1,9 +1,9 @@
-# SatstreamApi.InlineResponse200
+# SatstreamApi.InlineResponse2005
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ResponsesGetAddressBalance**](ResponsesGetAddressBalance.md) |  | [optional] 
+**data** | **Number** |  | [optional] 
 **responsesBaseResponse** | [**ResponsesBaseResponse**](ResponsesBaseResponse.md) |  | [optional] 
 
 

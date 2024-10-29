@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiErrorResponse', 'model/BigInt', 'model/InlineResponse200', 'model/ResponsesBaseResponse', 'model/ResponsesBlockRange', 'model/ResponsesGetAddressBalance', 'model/ResponsesGetAddressNonInscriptionUTXOData', 'model/ResponsesGetAddressRuneBalance', 'model/ResponsesGetAddressRunesBalanceListItem', 'model/ResponsesGetAddressTimeframeBalance', 'model/ResponsesGetAddressTimeframeBalanceItem', 'model/ResponsesGetAddressTimeframeBalanceItemBlockRange', 'model/ResponsesNonInscriptionUTXO', 'model/ResponsesSendRawTransaction', 'model/RpcBlock', 'model/RpcBtcTx', 'model/RpcPrevOut', 'model/RpcScriptPubKey', 'model/RpcScriptSig', 'model/RpcUtxoRune', 'model/RpcVin', 'model/RpcVout', 'model/SsApiServerApiRunesResponsesErrorResponse', 'model/SsApiServerApiTransactionsResponsesErrorResponse', 'model/StoreTransactionDocument', 'api/AddressesApi', 'api/BlocksApi', 'api/FeesApi', 'api/MempoolApi', 'api/RunesApi', 'api/TransactionsApi'], factory);
+    define(['ApiClient', 'model/ApiErrorResponse', 'model/BigInt', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse20010', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004', 'model/InlineResponse2005', 'model/InlineResponse2006', 'model/InlineResponse2007', 'model/InlineResponse2008', 'model/InlineResponse2009', 'model/ResponsesBaseResponse', 'model/ResponsesBlockRange', 'model/ResponsesGetAddressBalance', 'model/ResponsesGetAddressNonInscriptionUTXOData', 'model/ResponsesGetAddressRuneBalance', 'model/ResponsesGetAddressRunesBalanceListItem', 'model/ResponsesGetAddressTimeframeBalance', 'model/ResponsesGetAddressTimeframeBalanceItem', 'model/ResponsesGetAddressTimeframeBalanceItemBlockRange', 'model/ResponsesNonInscriptionUTXO', 'model/ResponsesSendRawTransaction', 'model/ResponsesTxInfo', 'model/RpcBlock', 'model/RpcBtcTx', 'model/RpcPrevOut', 'model/RpcScriptPubKey', 'model/RpcScriptSig', 'model/RpcUtxoRune', 'model/RpcVin', 'model/RpcVout', 'model/SsApiServerApiRunesResponsesErrorResponse', 'model/SsApiServerApiTransactionsResponsesErrorResponse', 'model/StoreTransactionDocument', 'api/AddressesApi', 'api/BlocksApi', 'api/FeesApi', 'api/MempoolApi', 'api/RunesApi', 'api/TransactionsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ApiErrorResponse'), require('./model/BigInt'), require('./model/InlineResponse200'), require('./model/ResponsesBaseResponse'), require('./model/ResponsesBlockRange'), require('./model/ResponsesGetAddressBalance'), require('./model/ResponsesGetAddressNonInscriptionUTXOData'), require('./model/ResponsesGetAddressRuneBalance'), require('./model/ResponsesGetAddressRunesBalanceListItem'), require('./model/ResponsesGetAddressTimeframeBalance'), require('./model/ResponsesGetAddressTimeframeBalanceItem'), require('./model/ResponsesGetAddressTimeframeBalanceItemBlockRange'), require('./model/ResponsesNonInscriptionUTXO'), require('./model/ResponsesSendRawTransaction'), require('./model/RpcBlock'), require('./model/RpcBtcTx'), require('./model/RpcPrevOut'), require('./model/RpcScriptPubKey'), require('./model/RpcScriptSig'), require('./model/RpcUtxoRune'), require('./model/RpcVin'), require('./model/RpcVout'), require('./model/SsApiServerApiRunesResponsesErrorResponse'), require('./model/SsApiServerApiTransactionsResponsesErrorResponse'), require('./model/StoreTransactionDocument'), require('./api/AddressesApi'), require('./api/BlocksApi'), require('./api/FeesApi'), require('./api/MempoolApi'), require('./api/RunesApi'), require('./api/TransactionsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ApiErrorResponse'), require('./model/BigInt'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse20010'), require('./model/InlineResponse2002'), require('./model/InlineResponse2003'), require('./model/InlineResponse2004'), require('./model/InlineResponse2005'), require('./model/InlineResponse2006'), require('./model/InlineResponse2007'), require('./model/InlineResponse2008'), require('./model/InlineResponse2009'), require('./model/ResponsesBaseResponse'), require('./model/ResponsesBlockRange'), require('./model/ResponsesGetAddressBalance'), require('./model/ResponsesGetAddressNonInscriptionUTXOData'), require('./model/ResponsesGetAddressRuneBalance'), require('./model/ResponsesGetAddressRunesBalanceListItem'), require('./model/ResponsesGetAddressTimeframeBalance'), require('./model/ResponsesGetAddressTimeframeBalanceItem'), require('./model/ResponsesGetAddressTimeframeBalanceItemBlockRange'), require('./model/ResponsesNonInscriptionUTXO'), require('./model/ResponsesSendRawTransaction'), require('./model/ResponsesTxInfo'), require('./model/RpcBlock'), require('./model/RpcBtcTx'), require('./model/RpcPrevOut'), require('./model/RpcScriptPubKey'), require('./model/RpcScriptSig'), require('./model/RpcUtxoRune'), require('./model/RpcVin'), require('./model/RpcVout'), require('./model/SsApiServerApiRunesResponsesErrorResponse'), require('./model/SsApiServerApiTransactionsResponsesErrorResponse'), require('./model/StoreTransactionDocument'), require('./api/AddressesApi'), require('./api/BlocksApi'), require('./api/FeesApi'), require('./api/MempoolApi'), require('./api/RunesApi'), require('./api/TransactionsApi'));
   }
-}(function(ApiClient, ApiErrorResponse, BigInt, InlineResponse200, ResponsesBaseResponse, ResponsesBlockRange, ResponsesGetAddressBalance, ResponsesGetAddressNonInscriptionUTXOData, ResponsesGetAddressRuneBalance, ResponsesGetAddressRunesBalanceListItem, ResponsesGetAddressTimeframeBalance, ResponsesGetAddressTimeframeBalanceItem, ResponsesGetAddressTimeframeBalanceItemBlockRange, ResponsesNonInscriptionUTXO, ResponsesSendRawTransaction, RpcBlock, RpcBtcTx, RpcPrevOut, RpcScriptPubKey, RpcScriptSig, RpcUtxoRune, RpcVin, RpcVout, SsApiServerApiRunesResponsesErrorResponse, SsApiServerApiTransactionsResponsesErrorResponse, StoreTransactionDocument, AddressesApi, BlocksApi, FeesApi, MempoolApi, RunesApi, TransactionsApi) {
+}(function(ApiClient, ApiErrorResponse, BigInt, InlineResponse200, InlineResponse2001, InlineResponse20010, InlineResponse2002, InlineResponse2003, InlineResponse2004, InlineResponse2005, InlineResponse2006, InlineResponse2007, InlineResponse2008, InlineResponse2009, ResponsesBaseResponse, ResponsesBlockRange, ResponsesGetAddressBalance, ResponsesGetAddressNonInscriptionUTXOData, ResponsesGetAddressRuneBalance, ResponsesGetAddressRunesBalanceListItem, ResponsesGetAddressTimeframeBalance, ResponsesGetAddressTimeframeBalanceItem, ResponsesGetAddressTimeframeBalanceItemBlockRange, ResponsesNonInscriptionUTXO, ResponsesSendRawTransaction, ResponsesTxInfo, RpcBlock, RpcBtcTx, RpcPrevOut, RpcScriptPubKey, RpcScriptSig, RpcUtxoRune, RpcVin, RpcVout, SsApiServerApiRunesResponsesErrorResponse, SsApiServerApiTransactionsResponsesErrorResponse, StoreTransactionDocument, AddressesApi, BlocksApi, FeesApi, MempoolApi, RunesApi, TransactionsApi) {
   'use strict';
 
   /**
@@ -78,6 +78,56 @@
      */
     InlineResponse200: InlineResponse200,
     /**
+     * The InlineResponse2001 model constructor.
+     * @property {module:model/InlineResponse2001}
+     */
+    InlineResponse2001: InlineResponse2001,
+    /**
+     * The InlineResponse20010 model constructor.
+     * @property {module:model/InlineResponse20010}
+     */
+    InlineResponse20010: InlineResponse20010,
+    /**
+     * The InlineResponse2002 model constructor.
+     * @property {module:model/InlineResponse2002}
+     */
+    InlineResponse2002: InlineResponse2002,
+    /**
+     * The InlineResponse2003 model constructor.
+     * @property {module:model/InlineResponse2003}
+     */
+    InlineResponse2003: InlineResponse2003,
+    /**
+     * The InlineResponse2004 model constructor.
+     * @property {module:model/InlineResponse2004}
+     */
+    InlineResponse2004: InlineResponse2004,
+    /**
+     * The InlineResponse2005 model constructor.
+     * @property {module:model/InlineResponse2005}
+     */
+    InlineResponse2005: InlineResponse2005,
+    /**
+     * The InlineResponse2006 model constructor.
+     * @property {module:model/InlineResponse2006}
+     */
+    InlineResponse2006: InlineResponse2006,
+    /**
+     * The InlineResponse2007 model constructor.
+     * @property {module:model/InlineResponse2007}
+     */
+    InlineResponse2007: InlineResponse2007,
+    /**
+     * The InlineResponse2008 model constructor.
+     * @property {module:model/InlineResponse2008}
+     */
+    InlineResponse2008: InlineResponse2008,
+    /**
+     * The InlineResponse2009 model constructor.
+     * @property {module:model/InlineResponse2009}
+     */
+    InlineResponse2009: InlineResponse2009,
+    /**
      * The ResponsesBaseResponse model constructor.
      * @property {module:model/ResponsesBaseResponse}
      */
@@ -132,6 +182,11 @@
      * @property {module:model/ResponsesSendRawTransaction}
      */
     ResponsesSendRawTransaction: ResponsesSendRawTransaction,
+    /**
+     * The ResponsesTxInfo model constructor.
+     * @property {module:model/ResponsesTxInfo}
+     */
+    ResponsesTxInfo: ResponsesTxInfo,
     /**
      * The RpcBlock model constructor.
      * @property {module:model/RpcBlock}

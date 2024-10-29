@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiErrorResponse', 'model/RpcBtcTx'], factory);
+    define(['ApiClient', 'model/ApiErrorResponse', 'model/InlineResponse2008'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiErrorResponse'), require('../model/RpcBtcTx'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiErrorResponse'), require('../model/InlineResponse2008'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ApiErrorResponse, root.SatstreamApi.RpcBtcTx);
+    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ApiErrorResponse, root.SatstreamApi.InlineResponse2008);
   }
-}(this, function(ApiClient, ApiErrorResponse, RpcBtcTx) {
+}(this, function(ApiClient, ApiErrorResponse, InlineResponse2008) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the mempoolAddressesAddressTransactionsGet operation.
      * @callback module:api/MempoolApi~mempoolAddressesAddressTransactionsGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/RpcBtcTx>} data The data returned by the service call.
+     * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,7 @@
      * Get all mempool transactions for a specific address
      * @param {String} address Bitcoin address
      * @param {module:api/MempoolApi~mempoolAddressesAddressTransactionsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/RpcBtcTx>}
+     * data is of type: {@link Array.<Object>}
      */
     this.mempoolAddressesAddressTransactionsGet = function(address, callback) {
       var postBody = null;
@@ -84,10 +84,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [RpcBtcTx];
+      var returnType = [Object];
 
       return this.apiClient.callApi(
         '/mempool/addresses/{address}/transactions', 'GET',
@@ -100,7 +100,7 @@
      * Callback function to receive the result of the mempoolTransactionsGet operation.
      * @callback module:api/MempoolApi~mempoolTransactionsGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/RpcBtcTx>} data The data returned by the service call.
+     * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -108,7 +108,7 @@
      * Get mempool transactions
      * Get all transactions currently in the mempool
      * @param {module:api/MempoolApi~mempoolTransactionsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/RpcBtcTx>}
+     * data is of type: {@link Array.<Object>}
      */
     this.mempoolTransactionsGet = function(callback) {
       var postBody = null;
@@ -125,10 +125,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [RpcBtcTx];
+      var returnType = [Object];
 
       return this.apiClient.callApi(
         '/mempool/transactions', 'GET',
@@ -141,7 +141,7 @@
      * Callback function to receive the result of the mempoolTransactionsTxidGet operation.
      * @callback module:api/MempoolApi~mempoolTransactionsTxidGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/RpcBtcTx} data The data returned by the service call.
+     * @param {module:model/InlineResponse2008} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -150,7 +150,7 @@
      * Get information about a specific transaction in the mempool
      * @param {String} txid Transaction ID
      * @param {module:api/MempoolApi~mempoolTransactionsTxidGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RpcBtcTx}
+     * data is of type: {@link module:model/InlineResponse2008}
      */
     this.mempoolTransactionsTxidGet = function(txid, callback) {
       var postBody = null;
@@ -173,10 +173,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = RpcBtcTx;
+      var returnType = InlineResponse2008;
 
       return this.apiClient.callApi(
         '/mempool/transactions/{txid}', 'GET',

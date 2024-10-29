@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiErrorResponse', 'model/RpcBlock', 'model/StoreTransactionDocument'], factory);
+    define(['ApiClient', 'model/ApiErrorResponse', 'model/InlineResponse2005', 'model/InlineResponse2006'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiErrorResponse'), require('../model/RpcBlock'), require('../model/StoreTransactionDocument'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiErrorResponse'), require('../model/InlineResponse2005'), require('../model/InlineResponse2006'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.BlocksApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ApiErrorResponse, root.SatstreamApi.RpcBlock, root.SatstreamApi.StoreTransactionDocument);
+    root.SatstreamApi.BlocksApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ApiErrorResponse, root.SatstreamApi.InlineResponse2005, root.SatstreamApi.InlineResponse2006);
   }
-}(this, function(ApiClient, ApiErrorResponse, RpcBlock, StoreTransactionDocument) {
+}(this, function(ApiClient, ApiErrorResponse, InlineResponse2005, InlineResponse2006) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the blocksCurrentHeightGet operation.
      * @callback module:api/BlocksApi~blocksCurrentHeightGetCallback
      * @param {String} error Error message, if any.
-     * @param {'Number'} data The data returned by the service call.
+     * @param {module:model/InlineResponse2005} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -60,7 +60,7 @@
      * Get current block height
      * Get the current block height of the Bitcoin blockchain
      * @param {module:api/BlocksApi~blocksCurrentHeightGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'Number'}
+     * data is of type: {@link module:model/InlineResponse2005}
      */
     this.blocksCurrentHeightGet = function(callback) {
       var postBody = null;
@@ -77,10 +77,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = 'Number';
+      var returnType = InlineResponse2005;
 
       return this.apiClient.callApi(
         '/blocks/current-height', 'GET',
@@ -93,7 +93,7 @@
      * Callback function to receive the result of the blocksHashHashGet operation.
      * @callback module:api/BlocksApi~blocksHashHashGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/RpcBlock} data The data returned by the service call.
+     * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -102,7 +102,7 @@
      * Get information about a specific block by its hash
      * @param {String} hash Block hash
      * @param {module:api/BlocksApi~blocksHashHashGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RpcBlock}
+     * data is of type: {@link module:model/InlineResponse2006}
      */
     this.blocksHashHashGet = function(hash, callback) {
       var postBody = null;
@@ -128,7 +128,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = RpcBlock;
+      var returnType = InlineResponse2006;
 
       return this.apiClient.callApi(
         '/blocks/hash/{hash}', 'GET',
@@ -141,7 +141,7 @@
      * Callback function to receive the result of the blocksHeightGet operation.
      * @callback module:api/BlocksApi~blocksHeightGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/RpcBlock} data The data returned by the service call.
+     * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -150,7 +150,7 @@
      * Get information about a specific block by height
      * @param {Number} height Block height
      * @param {module:api/BlocksApi~blocksHeightGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RpcBlock}
+     * data is of type: {@link module:model/InlineResponse2006}
      */
     this.blocksHeightGet = function(height, callback) {
       var postBody = null;
@@ -176,7 +176,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = RpcBlock;
+      var returnType = InlineResponse2006;
 
       return this.apiClient.callApi(
         '/blocks/{height}', 'GET',
@@ -189,7 +189,7 @@
      * Callback function to receive the result of the blocksHeightTransactionsGet operation.
      * @callback module:api/BlocksApi~blocksHeightTransactionsGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/StoreTransactionDocument>} data The data returned by the service call.
+     * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -198,7 +198,7 @@
      * Get transactions for a specific block height
      * @param {Number} height Block height
      * @param {module:api/BlocksApi~blocksHeightTransactionsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/StoreTransactionDocument>}
+     * data is of type: {@link Array.<Object>}
      */
     this.blocksHeightTransactionsGet = function(height, callback) {
       var postBody = null;
@@ -224,7 +224,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [StoreTransactionDocument];
+      var returnType = [Object];
 
       return this.apiClient.callApi(
         '/blocks/{height}/transactions', 'GET',

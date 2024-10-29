@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="feesGet"></a>
 # **feesGet**
-> {'String': 'Number'} feesGet()
+> InlineResponse2007 feesGet()
 
 Get recommended fees
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**{'String': 'Number'}**
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 

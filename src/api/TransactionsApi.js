@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ResponsesSendRawTransaction', 'model/RpcBtcTx', 'model/RpcVin', 'model/SsApiServerApiTransactionsResponsesErrorResponse'], factory);
+    define(['ApiClient', 'model/InlineResponse20010', 'model/InlineResponse2008', 'model/InlineResponse2009', 'model/SsApiServerApiTransactionsResponsesErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ResponsesSendRawTransaction'), require('../model/RpcBtcTx'), require('../model/RpcVin'), require('../model/SsApiServerApiTransactionsResponsesErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse20010'), require('../model/InlineResponse2008'), require('../model/InlineResponse2009'), require('../model/SsApiServerApiTransactionsResponsesErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.TransactionsApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ResponsesSendRawTransaction, root.SatstreamApi.RpcBtcTx, root.SatstreamApi.RpcVin, root.SatstreamApi.SsApiServerApiTransactionsResponsesErrorResponse);
+    root.SatstreamApi.TransactionsApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.InlineResponse20010, root.SatstreamApi.InlineResponse2008, root.SatstreamApi.InlineResponse2009, root.SatstreamApi.SsApiServerApiTransactionsResponsesErrorResponse);
   }
-}(this, function(ApiClient, ResponsesSendRawTransaction, RpcBtcTx, RpcVin, SsApiServerApiTransactionsResponsesErrorResponse) {
+}(this, function(ApiClient, InlineResponse20010, InlineResponse2008, InlineResponse2009, SsApiServerApiTransactionsResponsesErrorResponse) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the indexerTxHashGet operation.
      * @callback module:api/TransactionsApi~indexerTxHashGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/RpcBtcTx} data The data returned by the service call.
+     * @param {module:model/InlineResponse2008} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,7 @@
      * Get a transaction by its hash
      * @param {String} hash Transaction hash
      * @param {module:api/TransactionsApi~indexerTxHashGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RpcBtcTx}
+     * data is of type: {@link module:model/InlineResponse2008}
      */
     this.indexerTxHashGet = function(hash, callback) {
       var postBody = null;
@@ -87,7 +87,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = RpcBtcTx;
+      var returnType = InlineResponse2008;
 
       return this.apiClient.callApi(
         '/indexer/tx/{hash}', 'GET',
@@ -100,7 +100,7 @@
      * Callback function to receive the result of the transactionsBroadcastPost operation.
      * @callback module:api/TransactionsApi~transactionsBroadcastPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesSendRawTransaction} data The data returned by the service call.
+     * @param {module:model/InlineResponse2009} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -109,7 +109,7 @@
      * Broadcast a raw transaction to the Bitcoin network
      * @param {String} transaction Raw transaction hex
      * @param {module:api/TransactionsApi~transactionsBroadcastPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResponsesSendRawTransaction}
+     * data is of type: {@link module:model/InlineResponse2009}
      */
     this.transactionsBroadcastPost = function(transaction, callback) {
       var postBody = transaction;
@@ -131,10 +131,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ResponsesSendRawTransaction;
+      var returnType = InlineResponse2009;
 
       return this.apiClient.callApi(
         '/transactions/broadcast', 'POST',
@@ -147,7 +147,7 @@
      * Callback function to receive the result of the transactionsTxidGet operation.
      * @callback module:api/TransactionsApi~transactionsTxidGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/RpcBtcTx} data The data returned by the service call.
+     * @param {module:model/InlineResponse20010} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -156,7 +156,7 @@
      * Get detailed information about a specific transaction
      * @param {String} txid Transaction ID
      * @param {module:api/TransactionsApi~transactionsTxidGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RpcBtcTx}
+     * data is of type: {@link module:model/InlineResponse20010}
      */
     this.transactionsTxidGet = function(txid, callback) {
       var postBody = null;
@@ -179,10 +179,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = RpcBtcTx;
+      var returnType = InlineResponse20010;
 
       return this.apiClient.callApi(
         '/transactions/{txid}', 'GET',
@@ -195,7 +195,7 @@
      * Callback function to receive the result of the transactionsTxidInputsGet operation.
      * @callback module:api/TransactionsApi~transactionsTxidInputsGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/RpcVin>} data The data returned by the service call.
+     * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -204,7 +204,7 @@
      * Get the inputs of a specific transaction
      * @param {String} txid Transaction ID
      * @param {module:api/TransactionsApi~transactionsTxidInputsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/RpcVin>}
+     * data is of type: {@link Array.<Object>}
      */
     this.transactionsTxidInputsGet = function(txid, callback) {
       var postBody = null;
@@ -227,10 +227,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [RpcVin];
+      var returnType = [Object];
 
       return this.apiClient.callApi(
         '/transactions/{txid}/inputs', 'GET',

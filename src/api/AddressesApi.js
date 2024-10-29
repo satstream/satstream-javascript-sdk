@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse200', 'model/ResponsesBaseResponse', 'model/ResponsesGetAddressBalance', 'model/ResponsesGetAddressNonInscriptionUTXOData', 'model/ResponsesGetAddressRuneBalance', 'model/ResponsesGetAddressTimeframeBalance'], factory);
+    define(['ApiClient', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004', 'model/ResponsesBaseResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse200'), require('../model/ResponsesBaseResponse'), require('../model/ResponsesGetAddressBalance'), require('../model/ResponsesGetAddressNonInscriptionUTXOData'), require('../model/ResponsesGetAddressRuneBalance'), require('../model/ResponsesGetAddressTimeframeBalance'));
+    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse200'), require('../model/InlineResponse2001'), require('../model/InlineResponse2002'), require('../model/InlineResponse2003'), require('../model/InlineResponse2004'), require('../model/ResponsesBaseResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.AddressesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.InlineResponse200, root.SatstreamApi.ResponsesBaseResponse, root.SatstreamApi.ResponsesGetAddressBalance, root.SatstreamApi.ResponsesGetAddressNonInscriptionUTXOData, root.SatstreamApi.ResponsesGetAddressRuneBalance, root.SatstreamApi.ResponsesGetAddressTimeframeBalance);
+    root.SatstreamApi.AddressesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.InlineResponse200, root.SatstreamApi.InlineResponse2001, root.SatstreamApi.InlineResponse2002, root.SatstreamApi.InlineResponse2003, root.SatstreamApi.InlineResponse2004, root.SatstreamApi.ResponsesBaseResponse);
   }
-}(this, function(ApiClient, InlineResponse200, ResponsesBaseResponse, ResponsesGetAddressBalance, ResponsesGetAddressNonInscriptionUTXOData, ResponsesGetAddressRuneBalance, ResponsesGetAddressTimeframeBalance) {
+}(this, function(ApiClient, InlineResponse200, InlineResponse2001, InlineResponse2002, InlineResponse2003, InlineResponse2004, ResponsesBaseResponse) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the addressesAddressBalanceGet operation.
      * @callback module:api/AddressesApi~addressesAddressBalanceGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesGetAddressBalance} data The data returned by the service call.
+     * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,7 @@
      * Get the current balance of a Bitcoin address
      * @param {String} address Bitcoin address
      * @param {module:api/AddressesApi~addressesAddressBalanceGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResponsesGetAddressBalance}
+     * data is of type: {@link module:model/InlineResponse200}
      */
     this.addressesAddressBalanceGet = function(address, callback) {
       var postBody = null;
@@ -84,10 +84,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ResponsesGetAddressBalance;
+      var returnType = InlineResponse200;
 
       return this.apiClient.callApi(
         '/addresses/{address}/balance', 'GET',
@@ -100,7 +100,7 @@
      * Callback function to receive the result of the addressesAddressBalanceTimeframeGet operation.
      * @callback module:api/AddressesApi~addressesAddressBalanceTimeframeGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesGetAddressTimeframeBalance} data The data returned by the service call.
+     * @param {module:model/InlineResponse2001} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -111,7 +111,7 @@
      * @param {Number} start Start block height
      * @param {Number} end End block height
      * @param {module:api/AddressesApi~addressesAddressBalanceTimeframeGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResponsesGetAddressTimeframeBalance}
+     * data is of type: {@link module:model/InlineResponse2001}
      */
     this.addressesAddressBalanceTimeframeGet = function(address, start, end, callback) {
       var postBody = null;
@@ -146,10 +146,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ResponsesGetAddressTimeframeBalance;
+      var returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/addresses/{address}/balance/timeframe', 'GET',
@@ -162,7 +162,7 @@
      * Callback function to receive the result of the addressesAddressRunesGet operation.
      * @callback module:api/AddressesApi~addressesAddressRunesGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
+     * @param {module:model/InlineResponse2002} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -171,7 +171,7 @@
      * Get the balance of all runes for a Bitcoin address
      * @param {String} address Bitcoin address
      * @param {module:api/AddressesApi~addressesAddressRunesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
+     * data is of type: {@link module:model/InlineResponse2002}
      */
     this.addressesAddressRunesGet = function(address, callback) {
       var postBody = null;
@@ -194,10 +194,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse200;
+      var returnType = InlineResponse2002;
 
       return this.apiClient.callApi(
         '/addresses/{address}/runes', 'GET',
@@ -210,7 +210,7 @@
      * Callback function to receive the result of the addressesAddressRunesRuneidGet operation.
      * @callback module:api/AddressesApi~addressesAddressRunesRuneidGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesGetAddressRuneBalance} data The data returned by the service call.
+     * @param {module:model/InlineResponse2003} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -220,7 +220,7 @@
      * @param {String} address Bitcoin address
      * @param {String} runeid Rune ID
      * @param {module:api/AddressesApi~addressesAddressRunesRuneidGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResponsesGetAddressRuneBalance}
+     * data is of type: {@link module:model/InlineResponse2003}
      */
     this.addressesAddressRunesRuneidGet = function(address, runeid, callback) {
       var postBody = null;
@@ -249,10 +249,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ResponsesGetAddressRuneBalance;
+      var returnType = InlineResponse2003;
 
       return this.apiClient.callApi(
         '/addresses/{address}/runes/{runeid}', 'GET',
@@ -265,7 +265,7 @@
      * Callback function to receive the result of the addressesAddressUtxosGet operation.
      * @callback module:api/AddressesApi~addressesAddressUtxosGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ResponsesGetAddressNonInscriptionUTXOData>} data The data returned by the service call.
+     * @param {module:model/InlineResponse2004} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -274,7 +274,7 @@
      * Get all non-inscription UTXOs for a Bitcoin address
      * @param {String} address Bitcoin address
      * @param {module:api/AddressesApi~addressesAddressUtxosGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ResponsesGetAddressNonInscriptionUTXOData>}
+     * data is of type: {@link module:model/InlineResponse2004}
      */
     this.addressesAddressUtxosGet = function(address, callback) {
       var postBody = null;
@@ -297,10 +297,10 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [ResponsesGetAddressNonInscriptionUTXOData];
+      var returnType = InlineResponse2004;
 
       return this.apiClient.callApi(
         '/addresses/{address}/utxos', 'GET',

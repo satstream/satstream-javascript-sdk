@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="mempoolAddressesAddressTransactionsGet"></a>
 # **mempoolAddressesAddressTransactionsGet**
-> [RpcBtcTx] mempoolAddressesAddressTransactionsGet(address)
+> [Object] mempoolAddressesAddressTransactionsGet(address)
 
 Get address mempool transactions
 
@@ -20,6 +20,13 @@ Get all mempool transactions for a specific address
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.MempoolApi();
 
@@ -44,11 +51,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RpcBtcTx]**](RpcBtcTx.md)
+**[Object]**
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -57,7 +64,7 @@ No authorization required
 
 <a name="mempoolTransactionsGet"></a>
 # **mempoolTransactionsGet**
-> [RpcBtcTx] mempoolTransactionsGet()
+> [Object] mempoolTransactionsGet()
 
 Get mempool transactions
 
@@ -66,6 +73,13 @@ Get all transactions currently in the mempool
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.MempoolApi();
 
@@ -84,11 +98,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[RpcBtcTx]**](RpcBtcTx.md)
+**[Object]**
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -97,7 +111,7 @@ No authorization required
 
 <a name="mempoolTransactionsTxidGet"></a>
 # **mempoolTransactionsTxidGet**
-> RpcBtcTx mempoolTransactionsTxidGet(txid)
+> InlineResponse2008 mempoolTransactionsTxidGet(txid)
 
 Get mempool transaction info
 
@@ -106,6 +120,13 @@ Get information about a specific transaction in the mempool
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.MempoolApi();
 
@@ -130,11 +151,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RpcBtcTx**](RpcBtcTx.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

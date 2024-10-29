@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="blocksCurrentHeightGet"></a>
 # **blocksCurrentHeightGet**
-> 'Number' blocksCurrentHeightGet()
+> InlineResponse2005 blocksCurrentHeightGet()
 
 Get current block height
 
@@ -21,6 +21,13 @@ Get the current block height of the Bitcoin blockchain
 ### Example
 ```javascript
 var SatstreamApi = require('satstream_api');
+var defaultClient = SatstreamApi.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 var apiInstance = new SatstreamApi.BlocksApi();
 
@@ -39,11 +46,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**'Number'**
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -52,7 +59,7 @@ No authorization required
 
 <a name="blocksHashHashGet"></a>
 # **blocksHashHashGet**
-> RpcBlock blocksHashHashGet(hash)
+> InlineResponse2006 blocksHashHashGet(hash)
 
 Get block by hash
 
@@ -85,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RpcBlock**](RpcBlock.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -98,7 +105,7 @@ No authorization required
 
 <a name="blocksHeightGet"></a>
 # **blocksHeightGet**
-> RpcBlock blocksHeightGet(height)
+> InlineResponse2006 blocksHeightGet(height)
 
 Get block info
 
@@ -131,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RpcBlock**](RpcBlock.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -144,7 +151,7 @@ No authorization required
 
 <a name="blocksHeightTransactionsGet"></a>
 # **blocksHeightTransactionsGet**
-> [StoreTransactionDocument] blocksHeightTransactionsGet(height)
+> [Object] blocksHeightTransactionsGet(height)
 
 Get block transactions
 
@@ -177,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[StoreTransactionDocument]**](StoreTransactionDocument.md)
+**[Object]**
 
 ### Authorization
 
