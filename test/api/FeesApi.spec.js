@@ -47,14 +47,19 @@
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Object);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a('number');
-              // expect(data).to.be(null);
-            }
+            expect(data).to.be.a(SatstreamApi.InlineResponse2007);
+            expect(data.data).to.be.a(SatstreamApi.ResponsesGetFeesResponse);
+                  expect(data.data.confirmationBlocks).to.be.a('number');
+              expect(data.data.confirmationBlocks).to.be(0);
+              expect(data.data.feeRateInBtc).to.be.a('number');
+              expect(data.data.feeRateInBtc).to.be();
+            expect(data.responsesBaseResponse).to.be.a(SatstreamApi.ResponsesBaseResponse);
+                  expect(data.responsesBaseResponse.code).to.be.a('number');
+              expect(data.responsesBaseResponse.code).to.be(0);
+              expect(data.responsesBaseResponse.data).to.be.a(Object);
+              expect(data.responsesBaseResponse.data).to.be();
+              expect(data.responsesBaseResponse.msg).to.be.a('string');
+              expect(data.responsesBaseResponse.msg).to.be("");
 
             done();
           });

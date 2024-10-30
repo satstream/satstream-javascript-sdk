@@ -48,11 +48,19 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetAddressBalance);
-            expect(data.address).to.be.a('string');
-            expect(data.address).to.be("");
-            expect(data.balance).to.be.a('number');
-            expect(data.balance).to.be();
+            expect(data).to.be.a(SatstreamApi.InlineResponse200);
+            expect(data.data).to.be.a(SatstreamApi.ResponsesGetAddressBalance);
+                  expect(data.data.address).to.be.a('string');
+              expect(data.data.address).to.be("");
+              expect(data.data.balance).to.be.a('number');
+              expect(data.data.balance).to.be();
+            expect(data.responsesBaseResponse).to.be.a(SatstreamApi.ResponsesBaseResponse);
+                  expect(data.responsesBaseResponse.code).to.be.a('number');
+              expect(data.responsesBaseResponse.code).to.be(0);
+              expect(data.responsesBaseResponse.data).to.be.a(Object);
+              expect(data.responsesBaseResponse.data).to.be();
+              expect(data.responsesBaseResponse.msg).to.be.a('string');
+              expect(data.responsesBaseResponse.msg).to.be("");
 
             done();
           });
@@ -75,21 +83,29 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalance);
-            {
-              let dataCtr = data.items;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalanceItem);
-                expect(data.balance).to.be.a('number');
-                expect(data.balance).to.be();
-                expect(data.blockRange).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalanceItemBlockRange);
-        
-
-                      }
-            }
+            expect(data).to.be.a(SatstreamApi.InlineResponse2001);
+            expect(data.data).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalance);
+                  {
+                let dataCtr = data.data.items;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalanceItem);
+                  expect(data.balance).to.be.a('number');
+                  expect(data.balance).to.be();
+                  expect(data.blockRange).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalanceItemBlockRange);
+          
+  
+                        }
+              }
+            expect(data.responsesBaseResponse).to.be.a(SatstreamApi.ResponsesBaseResponse);
+                  expect(data.responsesBaseResponse.code).to.be.a('number');
+              expect(data.responsesBaseResponse.code).to.be(0);
+              expect(data.responsesBaseResponse.data).to.be.a(Object);
+              expect(data.responsesBaseResponse.data).to.be();
+              expect(data.responsesBaseResponse.msg).to.be.a('string');
+              expect(data.responsesBaseResponse.msg).to.be("");
 
             done();
           });
@@ -110,7 +126,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.InlineResponse200);
+            expect(data).to.be.a(SatstreamApi.InlineResponse2002);
             {
               let dataCtr = data.data;
               expect(dataCtr).to.be.an(Array);
@@ -157,21 +173,29 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetAddressRuneBalance);
-            expect(data.amount).to.be.a('string');
-            expect(data.amount).to.be("52286");
-            expect(data.divisibility).to.be.a('number');
-            expect(data.divisibility).to.be(5);
-            expect(data.rune).to.be.a('string');
-            expect(data.rune).to.be("DOGGOTOTHEMOON");
-            expect(data.runeid).to.be.a('string');
-            expect(data.runeid).to.be("840000:3");
-            expect(data.spacedAmount).to.be.a('string');
-            expect(data.spacedAmount).to.be("52.286");
-            expect(data.spacedRune).to.be.a('string');
-            expect(data.spacedRune).to.be("DOG•GO•TO•THE•MOON");
-            expect(data.symbol).to.be.a('string');
-            expect(data.symbol).to.be("🐕");
+            expect(data).to.be.a(SatstreamApi.InlineResponse2003);
+            expect(data.data).to.be.a(SatstreamApi.ResponsesGetAddressRuneBalance);
+                  expect(data.data.amount).to.be.a('string');
+              expect(data.data.amount).to.be("52286");
+              expect(data.data.divisibility).to.be.a('number');
+              expect(data.data.divisibility).to.be(5);
+              expect(data.data.rune).to.be.a('string');
+              expect(data.data.rune).to.be("DOGGOTOTHEMOON");
+              expect(data.data.runeid).to.be.a('string');
+              expect(data.data.runeid).to.be("840000:3");
+              expect(data.data.spacedAmount).to.be.a('string');
+              expect(data.data.spacedAmount).to.be("52.286");
+              expect(data.data.spacedRune).to.be.a('string');
+              expect(data.data.spacedRune).to.be("DOG•GO•TO•THE•MOON");
+              expect(data.data.symbol).to.be.a('string');
+              expect(data.data.symbol).to.be("🐕");
+            expect(data.responsesBaseResponse).to.be.a(SatstreamApi.ResponsesBaseResponse);
+                  expect(data.responsesBaseResponse.code).to.be.a('number');
+              expect(data.responsesBaseResponse.code).to.be(0);
+              expect(data.responsesBaseResponse.data).to.be.a(Object);
+              expect(data.responsesBaseResponse.data).to.be();
+              expect(data.responsesBaseResponse.msg).to.be.a('string');
+              expect(data.responsesBaseResponse.msg).to.be("");
 
             done();
           });
@@ -192,56 +216,67 @@
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(SatstreamApi.ResponsesGetAddressNonInscriptionUTXOData);
-              expect(data.cursor).to.be.a('number');
-              expect(data.cursor).to.be(0);
-              expect(data.total).to.be.a('number');
-              expect(data.total).to.be(0);
-              expect(data.totalConfirmed).to.be.a('number');
-              expect(data.totalConfirmed).to.be(0);
-              expect(data.totalRunes).to.be.a('number');
-              expect(data.totalRunes).to.be(0);
-              expect(data.totalUnconfirmed).to.be.a('number');
-              expect(data.totalUnconfirmed).to.be(0);
-              expect(data.totalUnconfirmedSpend).to.be.a('number');
-              expect(data.totalUnconfirmedSpend).to.be(0);
-              {
-                let dataCtr = data.utxo;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a(SatstreamApi.ResponsesNonInscriptionUTXO);
-                  expect(data.address).to.be.a('string');
-                  expect(data.address).to.be("");
-                  expect(data.codeType).to.be.a('number');
-                  expect(data.codeType).to.be(0);
-                  expect(data.height).to.be.a('number');
-                  expect(data.height).to.be(0);
-                  expect(data.idx).to.be.a('number');
-                  expect(data.idx).to.be(0);
-                  expect(data.isOpInRBF).to.be.a('boolean');
-                  expect(data.isOpInRBF).to.be(false);
-                  expect(data.isSpent).to.be.a('boolean');
-                  expect(data.isSpent).to.be(false);
-                  expect(data.satoshi).to.be.a(SatstreamApi.BigInt);
-                      expect(data.scriptPk).to.be.a('string');
-                  expect(data.scriptPk).to.be("");
-                  expect(data.scriptType).to.be.a('string');
-                  expect(data.scriptType).to.be("");
-                  expect(data.txid).to.be.a('string');
-                  expect(data.txid).to.be("");
-                  expect(data.vout).to.be.a('number');
-                  expect(data.vout).to.be(0);
-  
-                        }
-              }
+            expect(data).to.be.a(SatstreamApi.InlineResponse2004);
+            {
+              let dataCtr = data.data;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SatstreamApi.ResponsesGetAddressNonInscriptionUTXOData);
+                expect(data.cursor).to.be.a('number');
+                expect(data.cursor).to.be(0);
+                expect(data.total).to.be.a('number');
+                expect(data.total).to.be(0);
+                expect(data.totalConfirmed).to.be.a('number');
+                expect(data.totalConfirmed).to.be(0);
+                expect(data.totalRunes).to.be.a('number');
+                expect(data.totalRunes).to.be(0);
+                expect(data.totalUnconfirmed).to.be.a('number');
+                expect(data.totalUnconfirmed).to.be(0);
+                expect(data.totalUnconfirmedSpend).to.be.a('number');
+                expect(data.totalUnconfirmedSpend).to.be(0);
+                {
+                  let dataCtr = data.utxo;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(SatstreamApi.ResponsesNonInscriptionUTXO);
+                    expect(data.address).to.be.a('string');
+                    expect(data.address).to.be("");
+                    expect(data.codeType).to.be.a('number');
+                    expect(data.codeType).to.be(0);
+                    expect(data.height).to.be.a('number');
+                    expect(data.height).to.be(0);
+                    expect(data.idx).to.be.a('number');
+                    expect(data.idx).to.be(0);
+                    expect(data.isOpInRBF).to.be.a('boolean');
+                    expect(data.isOpInRBF).to.be(false);
+                    expect(data.isSpent).to.be.a('boolean');
+                    expect(data.isSpent).to.be(false);
+                    expect(data.satoshi).to.be.a(SatstreamApi.BigInt);
+                        expect(data.scriptPk).to.be.a('string');
+                    expect(data.scriptPk).to.be("");
+                    expect(data.scriptType).to.be.a('string');
+                    expect(data.scriptType).to.be("");
+                    expect(data.txid).to.be.a('string');
+                    expect(data.txid).to.be("");
+                    expect(data.vout).to.be.a('number');
+                    expect(data.vout).to.be(0);
+    
+                          }
+                }
+
+                      }
             }
+            expect(data.responsesBaseResponse).to.be.a(SatstreamApi.ResponsesBaseResponse);
+                  expect(data.responsesBaseResponse.code).to.be.a('number');
+              expect(data.responsesBaseResponse.code).to.be(0);
+              expect(data.responsesBaseResponse.data).to.be.a(Object);
+              expect(data.responsesBaseResponse.data).to.be();
+              expect(data.responsesBaseResponse.msg).to.be.a('string');
+              expect(data.responsesBaseResponse.msg).to.be("");
 
             done();
           });
