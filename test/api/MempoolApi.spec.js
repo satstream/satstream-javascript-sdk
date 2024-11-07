@@ -103,7 +103,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.InlineResponse2008);
+            expect(data).to.be.a(SatstreamApi.InlineResponse2009);
             expect(data.data).to.be.a(SatstreamApi.RpcBtcTx);
                   expect(data.data.blockheight).to.be.a('number');
               expect(data.data.blockheight).to.be(0);
@@ -231,13 +231,13 @@
               expect(data.data.vsize).to.be(0);
               expect(data.data.weight).to.be.a('number');
               expect(data.data.weight).to.be(0);
-            expect(data.responsesBaseResponse).to.be.a(SatstreamApi.ResponsesBaseResponse);
-                  expect(data.responsesBaseResponse.code).to.be.a('number');
-              expect(data.responsesBaseResponse.code).to.be(0);
-              expect(data.responsesBaseResponse.data).to.be.a(Object);
-              expect(data.responsesBaseResponse.data).to.be();
-              expect(data.responsesBaseResponse.msg).to.be.a('string');
-              expect(data.responsesBaseResponse.msg).to.be("");
+            expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse);
+                  expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be.a('number');
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be(0);
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be.a(Object);
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be();
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be.a('string');
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be("");
 
             done();
           });

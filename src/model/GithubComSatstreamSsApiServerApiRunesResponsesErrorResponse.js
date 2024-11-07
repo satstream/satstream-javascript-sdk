@@ -26,31 +26,31 @@
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.SsApiServerApiTransactionsResponsesErrorResponse = factory(root.SatstreamApi.ApiClient);
+    root.SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse = factory(root.SatstreamApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The SsApiServerApiTransactionsResponsesErrorResponse model module.
-   * @module model/SsApiServerApiTransactionsResponsesErrorResponse
+   * The GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse model module.
+   * @module model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse
    * @version 1.0
    */
 
   /**
-   * Constructs a new <code>SsApiServerApiTransactionsResponsesErrorResponse</code>.
-   * @alias module:model/SsApiServerApiTransactionsResponsesErrorResponse
+   * Constructs a new <code>GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse</code>.
+   * @alias module:model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>SsApiServerApiTransactionsResponsesErrorResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SsApiServerApiTransactionsResponsesErrorResponse} obj Optional instance to populate.
-   * @return {module:model/SsApiServerApiTransactionsResponsesErrorResponse} The populated <code>SsApiServerApiTransactionsResponsesErrorResponse</code> instance.
+   * @param {module:model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse} obj Optional instance to populate.
+   * @return {module:model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse} The populated <code>GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

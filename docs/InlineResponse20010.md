@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ResponsesTxInfo**](ResponsesTxInfo.md) |  | [optional] 
-**responsesBaseResponse** | [**ResponsesBaseResponse**](ResponsesBaseResponse.md) |  | [optional] 
+**data** | [**[ResponsesRuneInfo]**](ResponsesRuneInfo.md) |  | [optional] 
+**githubComSatstreamSsApiServerApiRunesResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse**](GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse.md) |  | [optional] 
 
 

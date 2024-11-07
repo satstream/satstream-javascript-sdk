@@ -31,14 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('SsApiServerApiTransactionsResponsesErrorResponse', function() {
+    describe('GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.SsApiServerApiTransactionsResponsesErrorResponse();
+        instance = new SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse();
       });
 
-      it('should create an instance of SsApiServerApiTransactionsResponsesErrorResponse', function() {
-        // TODO: update the code to test SsApiServerApiTransactionsResponsesErrorResponse
-        expect(instance).to.be.a(SatstreamApi.SsApiServerApiTransactionsResponsesErrorResponse);
+      it('should create an instance of GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse', function() {
+        // TODO: update the code to test GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse
+        expect(instance).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse);
       });
 
       it('should have the property code (base name: "code")', function() {

@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**ResponsesGetAddressRuneBalance**](ResponsesGetAddressRuneBalance.md) |  | [optional] 
-**responsesBaseResponse** | [**ResponsesBaseResponse**](ResponsesBaseResponse.md) |  | [optional] 
+**githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse**](GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.md) |  | [optional] 
 
 

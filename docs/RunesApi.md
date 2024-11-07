@@ -7,12 +7,11 @@ Method | HTTP request | Description
 [**runesGet**](RunesApi.md#runesGet) | **GET** /runes | Get runes info list
 [**runesRuneIdGet**](RunesApi.md#runesRuneIdGet) | **GET** /runes/{runeId} | Get rune info
 [**runesRuneIdHoldersGet**](RunesApi.md#runesRuneIdHoldersGet) | **GET** /runes/{runeId}/holders | Get rune holders
-[**runesStatusGet**](RunesApi.md#runesStatusGet) | **GET** /runes/status | Get runes status
 
 
 <a name="runesGet"></a>
 # **runesGet**
-> [Object] runesGet()
+> InlineResponse20010 runesGet(opts)
 
 Get runes info list
 
@@ -31,6 +30,11 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 var apiInstance = new SatstreamApi.RunesApi();
 
+var opts = { 
+  'page': 56, // Number | Page number (default: 1)
+  'perPage': 56 // Number | Items per page (default: 10)
+};
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -38,15 +42,19 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.runesGet(callback);
+apiInstance.runesGet(opts, callback);
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Number**| Page number (default: 1) | [optional] 
+ **perPage** | **Number**| Items per page (default: 10) | [optional] 
 
 ### Return type
 
-**[Object]**
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -153,53 +161,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **[Object]**
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="runesStatusGet"></a>
-# **runesStatusGet**
-> Object runesStatusGet()
-
-Get runes status
-
-Get the current status of the runes system
-
-### Example
-```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
-
-// Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-var apiInstance = new SatstreamApi.RunesApi();
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.runesStatusGet(callback);
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**Object**
 
 ### Authorization
 

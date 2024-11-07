@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 <a name="addressesAddressBalanceTimeframeGet"></a>
 # **addressesAddressBalanceTimeframeGet**
-> InlineResponse2001 addressesAddressBalanceTimeframeGet(address, start, end)
+> InlineResponse2001 addressesAddressBalanceTimeframeGet(address, timeframe, opts)
 
 Get address timeframe balance
 
@@ -87,10 +87,11 @@ var apiInstance = new SatstreamApi.AddressesApi();
 
 var address = "address_example"; // String | Bitcoin address
 
-var start = 56; // Number | Start block height
+var timeframe = "timeframe_example"; // String | Timeframe
 
-var end = 56; // Number | End block height
-
+var opts = { 
+  'token': "token_example" // String | Token
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -99,7 +100,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.addressesAddressBalanceTimeframeGet(address, start, end, callback);
+apiInstance.addressesAddressBalanceTimeframeGet(address, timeframe, opts, callback);
 ```
 
 ### Parameters
@@ -107,8 +108,8 @@ apiInstance.addressesAddressBalanceTimeframeGet(address, start, end, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **String**| Bitcoin address | 
- **start** | **Number**| Start block height | 
- **end** | **Number**| End block height | 
+ **timeframe** | **String**| Timeframe | 
+ **token** | **String**| Token | [optional] 
 
 ### Return type
 

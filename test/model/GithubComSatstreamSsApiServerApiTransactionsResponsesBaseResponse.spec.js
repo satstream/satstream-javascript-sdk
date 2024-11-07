@@ -31,14 +31,20 @@
   var instance;
 
   describe('(package)', function() {
-    describe('InlineResponse20010', function() {
+    describe('GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.InlineResponse20010();
+        instance = new SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse();
       });
 
-      it('should create an instance of InlineResponse20010', function() {
-        // TODO: update the code to test InlineResponse20010
-        expect(instance).to.be.a(SatstreamApi.InlineResponse20010);
+      it('should create an instance of GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse', function() {
+        // TODO: update the code to test GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse
+        expect(instance).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse);
+      });
+
+      it('should have the property code (base name: "code")', function() {
+        // TODO: update the code to test the property code
+        expect(instance).to.have.property('code');
+        // expect(instance.code).to.be(expectedValueLiteral);
       });
 
       it('should have the property data (base name: "data")', function() {
@@ -47,10 +53,10 @@
         // expect(instance.data).to.be(expectedValueLiteral);
       });
 
-      it('should have the property githubComSatstreamSsApiServerApiRunesResponsesBaseResponse (base name: "github_com_satstream_ss-api_server_api_runes_responses.BaseResponse")', function() {
-        // TODO: update the code to test the property githubComSatstreamSsApiServerApiRunesResponsesBaseResponse
-        expect(instance).to.have.property('githubComSatstreamSsApiServerApiRunesResponsesBaseResponse');
-        // expect(instance.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse).to.be(expectedValueLiteral);
+      it('should have the property msg (base name: "msg")', function() {
+        // TODO: update the code to test the property msg
+        expect(instance).to.have.property('msg');
+        // expect(instance.msg).to.be(expectedValueLiteral);
       });
 
     });

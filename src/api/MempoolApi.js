@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BlocksErrorResponse', 'model/InlineResponse2008'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse', 'model/InlineResponse2009'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BlocksErrorResponse'), require('../model/InlineResponse2008'));
+    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse'), require('../model/InlineResponse2009'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BlocksErrorResponse, root.SatstreamApi.InlineResponse2008);
+    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, root.SatstreamApi.InlineResponse2009);
   }
-}(this, function(ApiClient, BlocksErrorResponse, InlineResponse2008) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, InlineResponse2009) {
   'use strict';
 
   /**
@@ -141,7 +141,7 @@
      * Callback function to receive the result of the mempoolTransactionsTxidGet operation.
      * @callback module:api/MempoolApi~mempoolTransactionsTxidGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2008} data The data returned by the service call.
+     * @param {module:model/InlineResponse2009} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -150,7 +150,7 @@
      * Get information about a specific transaction in the mempool
      * @param {String} txid Transaction ID
      * @param {module:api/MempoolApi~mempoolTransactionsTxidGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2008}
+     * data is of type: {@link module:model/InlineResponse2009}
      */
     this.mempoolTransactionsTxidGet = function(txid, callback) {
       var postBody = null;
@@ -176,7 +176,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2008;
+      var returnType = InlineResponse2009;
 
       return this.apiClient.callApi(
         '/mempool/transactions/{txid}', 'GET',

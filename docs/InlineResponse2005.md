@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**ResponsesGetCurrentBlockHeightResponse**](ResponsesGetCurrentBlockHeightResponse.md) |  | [optional] 
-**responsesBaseResponse** | [**ResponsesBaseResponse**](ResponsesBaseResponse.md) |  | [optional] 
+**githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse**](GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.md) |  | [optional] 
 
 

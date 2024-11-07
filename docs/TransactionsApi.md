@@ -58,7 +58,7 @@ No authorization required
 
 <a name="transactionsBroadcastPost"></a>
 # **transactionsBroadcastPost**
-> InlineResponse2009 transactionsBroadcastPost(transaction)
+> InlineResponse20011 transactionsBroadcastPost(transaction)
 
 Broadcast transaction
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 <a name="transactionsTxidGet"></a>
 # **transactionsTxidGet**
-> InlineResponse20010 transactionsTxidGet(txid)
+> InlineResponse20012 transactionsTxidGet(txid)
 
 Get transaction info
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 

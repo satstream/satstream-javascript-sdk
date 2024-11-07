@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ResponsesBaseResponse', 'model/ResponsesSendRawTransaction'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse', 'model/RpcBtcTx'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ResponsesBaseResponse'), require('./ResponsesSendRawTransaction'));
+    module.exports = factory(require('../ApiClient'), require('./GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse'), require('./RpcBtcTx'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.InlineResponse2009 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ResponsesBaseResponse, root.SatstreamApi.ResponsesSendRawTransaction);
+    root.SatstreamApi.InlineResponse2009 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, root.SatstreamApi.RpcBtcTx);
   }
-}(this, function(ApiClient, ResponsesBaseResponse, ResponsesSendRawTransaction) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, RpcBtcTx) {
   'use strict';
 
   /**
@@ -56,22 +56,22 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('data'))
-        obj.data = ResponsesSendRawTransaction.constructFromObject(data['data']);
-      if (data.hasOwnProperty('responses.BaseResponse'))
-        obj.responsesBaseResponse = ResponsesBaseResponse.constructFromObject(data['responses.BaseResponse']);
+        obj.data = RpcBtcTx.constructFromObject(data['data']);
+      if (data.hasOwnProperty('github_com_satstream_ss-api_server_api_blocks_responses.BaseResponse'))
+        obj.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse = GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.constructFromObject(data['github_com_satstream_ss-api_server_api_blocks_responses.BaseResponse']);
     }
     return obj;
   }
 
   /**
-   * @member {module:model/ResponsesSendRawTransaction} data
+   * @member {module:model/RpcBtcTx} data
    */
   exports.prototype.data = undefined;
 
   /**
-   * @member {module:model/ResponsesBaseResponse} responsesBaseResponse
+   * @member {module:model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse} githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse
    */
-  exports.prototype.responsesBaseResponse = undefined;
+  exports.prototype.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse = undefined;
 
 
   return exports;

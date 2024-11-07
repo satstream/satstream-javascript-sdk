@@ -104,7 +104,7 @@ No authorization required
 
 <a name="mempoolTransactionsTxidGet"></a>
 # **mempoolTransactionsTxidGet**
-> InlineResponse2008 mempoolTransactionsTxidGet(txid)
+> InlineResponse2009 mempoolTransactionsTxidGet(txid)
 
 Get mempool transaction info
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 

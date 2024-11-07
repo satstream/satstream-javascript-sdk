@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BigInt', 'model/BlocksErrorResponse', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse20010', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004', 'model/InlineResponse2005', 'model/InlineResponse2006', 'model/InlineResponse2007', 'model/InlineResponse2008', 'model/InlineResponse2009', 'model/ResponsesBaseResponse', 'model/ResponsesBlockRange', 'model/ResponsesGetAddressBalance', 'model/ResponsesGetAddressNonInscriptionUTXOData', 'model/ResponsesGetAddressRuneBalance', 'model/ResponsesGetAddressRunesBalanceListItem', 'model/ResponsesGetAddressTimeframeBalance', 'model/ResponsesGetAddressTimeframeBalanceItem', 'model/ResponsesGetAddressTimeframeBalanceItemBlockRange', 'model/ResponsesGetCurrentBlockHeightResponse', 'model/ResponsesGetFeesResponse', 'model/ResponsesNonInscriptionUTXO', 'model/ResponsesSendRawTransaction', 'model/ResponsesTxInfo', 'model/RpcBlock', 'model/RpcBtcTx', 'model/RpcPrevOut', 'model/RpcScriptPubKey', 'model/RpcScriptSig', 'model/RpcUtxoRune', 'model/RpcVin', 'model/RpcVout', 'model/SsApiServerApiRunesResponsesErrorResponse', 'model/SsApiServerApiTransactionsResponsesErrorResponse', 'model/StoreTransactionDocument', 'api/AddressesApi', 'api/BlocksApi', 'api/FeesApi', 'api/MempoolApi', 'api/RunesApi', 'api/TransactionsApi'], factory);
+    define(['ApiClient', 'model/BigInt', 'model/GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse', 'model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse', 'model/GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse', 'model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse', 'model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse20010', 'model/InlineResponse20011', 'model/InlineResponse20012', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004', 'model/InlineResponse2005', 'model/InlineResponse2006', 'model/InlineResponse2007', 'model/InlineResponse2008', 'model/InlineResponse2009', 'model/OrdinalsTerms', 'model/OrdinalsTermsRange', 'model/ResponsesBlockRange', 'model/ResponsesGetAddressBalance', 'model/ResponsesGetAddressNonInscriptionUTXOData', 'model/ResponsesGetAddressRuneBalance', 'model/ResponsesGetAddressRunesBalanceListItem', 'model/ResponsesGetAddressTimeframeBalance', 'model/ResponsesGetAddressTimeframeBalanceItem', 'model/ResponsesGetAddressTimeframeBalanceItemBlockRange', 'model/ResponsesGetCurrentBlockHeightResponse', 'model/ResponsesGetFeesResponse', 'model/ResponsesNonInscriptionUTXO', 'model/ResponsesRuneInfo', 'model/ResponsesSendRawTransaction', 'model/ResponsesTxInfo', 'model/RpcBlock', 'model/RpcBtcTx', 'model/RpcPrevOut', 'model/RpcScriptPubKey', 'model/RpcScriptSig', 'model/RpcUtxoRune', 'model/RpcVin', 'model/RpcVout', 'model/StoreTransactionDocument', 'api/AddressesApi', 'api/BlocksApi', 'api/FeesApi', 'api/MempoolApi', 'api/RunesApi', 'api/TransactionsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/BigInt'), require('./model/BlocksErrorResponse'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse20010'), require('./model/InlineResponse2002'), require('./model/InlineResponse2003'), require('./model/InlineResponse2004'), require('./model/InlineResponse2005'), require('./model/InlineResponse2006'), require('./model/InlineResponse2007'), require('./model/InlineResponse2008'), require('./model/InlineResponse2009'), require('./model/ResponsesBaseResponse'), require('./model/ResponsesBlockRange'), require('./model/ResponsesGetAddressBalance'), require('./model/ResponsesGetAddressNonInscriptionUTXOData'), require('./model/ResponsesGetAddressRuneBalance'), require('./model/ResponsesGetAddressRunesBalanceListItem'), require('./model/ResponsesGetAddressTimeframeBalance'), require('./model/ResponsesGetAddressTimeframeBalanceItem'), require('./model/ResponsesGetAddressTimeframeBalanceItemBlockRange'), require('./model/ResponsesGetCurrentBlockHeightResponse'), require('./model/ResponsesGetFeesResponse'), require('./model/ResponsesNonInscriptionUTXO'), require('./model/ResponsesSendRawTransaction'), require('./model/ResponsesTxInfo'), require('./model/RpcBlock'), require('./model/RpcBtcTx'), require('./model/RpcPrevOut'), require('./model/RpcScriptPubKey'), require('./model/RpcScriptSig'), require('./model/RpcUtxoRune'), require('./model/RpcVin'), require('./model/RpcVout'), require('./model/SsApiServerApiRunesResponsesErrorResponse'), require('./model/SsApiServerApiTransactionsResponsesErrorResponse'), require('./model/StoreTransactionDocument'), require('./api/AddressesApi'), require('./api/BlocksApi'), require('./api/FeesApi'), require('./api/MempoolApi'), require('./api/RunesApi'), require('./api/TransactionsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/BigInt'), require('./model/GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse'), require('./model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse'), require('./model/GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse'), require('./model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse'), require('./model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/InlineResponse20010'), require('./model/InlineResponse20011'), require('./model/InlineResponse20012'), require('./model/InlineResponse2002'), require('./model/InlineResponse2003'), require('./model/InlineResponse2004'), require('./model/InlineResponse2005'), require('./model/InlineResponse2006'), require('./model/InlineResponse2007'), require('./model/InlineResponse2008'), require('./model/InlineResponse2009'), require('./model/OrdinalsTerms'), require('./model/OrdinalsTermsRange'), require('./model/ResponsesBlockRange'), require('./model/ResponsesGetAddressBalance'), require('./model/ResponsesGetAddressNonInscriptionUTXOData'), require('./model/ResponsesGetAddressRuneBalance'), require('./model/ResponsesGetAddressRunesBalanceListItem'), require('./model/ResponsesGetAddressTimeframeBalance'), require('./model/ResponsesGetAddressTimeframeBalanceItem'), require('./model/ResponsesGetAddressTimeframeBalanceItemBlockRange'), require('./model/ResponsesGetCurrentBlockHeightResponse'), require('./model/ResponsesGetFeesResponse'), require('./model/ResponsesNonInscriptionUTXO'), require('./model/ResponsesRuneInfo'), require('./model/ResponsesSendRawTransaction'), require('./model/ResponsesTxInfo'), require('./model/RpcBlock'), require('./model/RpcBtcTx'), require('./model/RpcPrevOut'), require('./model/RpcScriptPubKey'), require('./model/RpcScriptSig'), require('./model/RpcUtxoRune'), require('./model/RpcVin'), require('./model/RpcVout'), require('./model/StoreTransactionDocument'), require('./api/AddressesApi'), require('./api/BlocksApi'), require('./api/FeesApi'), require('./api/MempoolApi'), require('./api/RunesApi'), require('./api/TransactionsApi'));
   }
-}(function(ApiClient, BigInt, BlocksErrorResponse, InlineResponse200, InlineResponse2001, InlineResponse20010, InlineResponse2002, InlineResponse2003, InlineResponse2004, InlineResponse2005, InlineResponse2006, InlineResponse2007, InlineResponse2008, InlineResponse2009, ResponsesBaseResponse, ResponsesBlockRange, ResponsesGetAddressBalance, ResponsesGetAddressNonInscriptionUTXOData, ResponsesGetAddressRuneBalance, ResponsesGetAddressRunesBalanceListItem, ResponsesGetAddressTimeframeBalance, ResponsesGetAddressTimeframeBalanceItem, ResponsesGetAddressTimeframeBalanceItemBlockRange, ResponsesGetCurrentBlockHeightResponse, ResponsesGetFeesResponse, ResponsesNonInscriptionUTXO, ResponsesSendRawTransaction, ResponsesTxInfo, RpcBlock, RpcBtcTx, RpcPrevOut, RpcScriptPubKey, RpcScriptSig, RpcUtxoRune, RpcVin, RpcVout, SsApiServerApiRunesResponsesErrorResponse, SsApiServerApiTransactionsResponsesErrorResponse, StoreTransactionDocument, AddressesApi, BlocksApi, FeesApi, MempoolApi, RunesApi, TransactionsApi) {
+}(function(ApiClient, BigInt, GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse, GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse, GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse, GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse, InlineResponse200, InlineResponse2001, InlineResponse20010, InlineResponse20011, InlineResponse20012, InlineResponse2002, InlineResponse2003, InlineResponse2004, InlineResponse2005, InlineResponse2006, InlineResponse2007, InlineResponse2008, InlineResponse2009, OrdinalsTerms, OrdinalsTermsRange, ResponsesBlockRange, ResponsesGetAddressBalance, ResponsesGetAddressNonInscriptionUTXOData, ResponsesGetAddressRuneBalance, ResponsesGetAddressRunesBalanceListItem, ResponsesGetAddressTimeframeBalance, ResponsesGetAddressTimeframeBalanceItem, ResponsesGetAddressTimeframeBalanceItemBlockRange, ResponsesGetCurrentBlockHeightResponse, ResponsesGetFeesResponse, ResponsesNonInscriptionUTXO, ResponsesRuneInfo, ResponsesSendRawTransaction, ResponsesTxInfo, RpcBlock, RpcBtcTx, RpcPrevOut, RpcScriptPubKey, RpcScriptSig, RpcUtxoRune, RpcVin, RpcVout, StoreTransactionDocument, AddressesApi, BlocksApi, FeesApi, MempoolApi, RunesApi, TransactionsApi) {
   'use strict';
 
   /**
@@ -68,10 +68,30 @@
      */
     BigInt: BigInt,
     /**
-     * The BlocksErrorResponse model constructor.
-     * @property {module:model/BlocksErrorResponse}
+     * The GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse model constructor.
+     * @property {module:model/GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse}
      */
-    BlocksErrorResponse: BlocksErrorResponse,
+    GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse: GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse,
+    /**
+     * The GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse model constructor.
+     * @property {module:model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse}
+     */
+    GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse: GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse,
+    /**
+     * The GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse model constructor.
+     * @property {module:model/GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse}
+     */
+    GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse: GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse,
+    /**
+     * The GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse model constructor.
+     * @property {module:model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse}
+     */
+    GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse: GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse,
+    /**
+     * The GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse model constructor.
+     * @property {module:model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse}
+     */
+    GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse: GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse,
     /**
      * The InlineResponse200 model constructor.
      * @property {module:model/InlineResponse200}
@@ -87,6 +107,16 @@
      * @property {module:model/InlineResponse20010}
      */
     InlineResponse20010: InlineResponse20010,
+    /**
+     * The InlineResponse20011 model constructor.
+     * @property {module:model/InlineResponse20011}
+     */
+    InlineResponse20011: InlineResponse20011,
+    /**
+     * The InlineResponse20012 model constructor.
+     * @property {module:model/InlineResponse20012}
+     */
+    InlineResponse20012: InlineResponse20012,
     /**
      * The InlineResponse2002 model constructor.
      * @property {module:model/InlineResponse2002}
@@ -128,10 +158,15 @@
      */
     InlineResponse2009: InlineResponse2009,
     /**
-     * The ResponsesBaseResponse model constructor.
-     * @property {module:model/ResponsesBaseResponse}
+     * The OrdinalsTerms model constructor.
+     * @property {module:model/OrdinalsTerms}
      */
-    ResponsesBaseResponse: ResponsesBaseResponse,
+    OrdinalsTerms: OrdinalsTerms,
+    /**
+     * The OrdinalsTermsRange model constructor.
+     * @property {module:model/OrdinalsTermsRange}
+     */
+    OrdinalsTermsRange: OrdinalsTermsRange,
     /**
      * The ResponsesBlockRange model constructor.
      * @property {module:model/ResponsesBlockRange}
@@ -188,6 +223,11 @@
      */
     ResponsesNonInscriptionUTXO: ResponsesNonInscriptionUTXO,
     /**
+     * The ResponsesRuneInfo model constructor.
+     * @property {module:model/ResponsesRuneInfo}
+     */
+    ResponsesRuneInfo: ResponsesRuneInfo,
+    /**
      * The ResponsesSendRawTransaction model constructor.
      * @property {module:model/ResponsesSendRawTransaction}
      */
@@ -237,16 +277,6 @@
      * @property {module:model/RpcVout}
      */
     RpcVout: RpcVout,
-    /**
-     * The SsApiServerApiRunesResponsesErrorResponse model constructor.
-     * @property {module:model/SsApiServerApiRunesResponsesErrorResponse}
-     */
-    SsApiServerApiRunesResponsesErrorResponse: SsApiServerApiRunesResponsesErrorResponse,
-    /**
-     * The SsApiServerApiTransactionsResponsesErrorResponse model constructor.
-     * @property {module:model/SsApiServerApiTransactionsResponsesErrorResponse}
-     */
-    SsApiServerApiTransactionsResponsesErrorResponse: SsApiServerApiTransactionsResponsesErrorResponse,
     /**
      * The StoreTransactionDocument model constructor.
      * @property {module:model/StoreTransactionDocument}

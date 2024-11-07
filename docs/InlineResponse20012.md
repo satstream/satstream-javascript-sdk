@@ -1,9 +1,9 @@
-# SatstreamApi.InlineResponse2008
+# SatstreamApi.InlineResponse20012
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**RpcBtcTx**](RpcBtcTx.md) |  | [optional] 
+**data** | [**ResponsesTxInfo**](ResponsesTxInfo.md) |  | [optional] 
 **githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse**](GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.md) |  | [optional] 
 
 

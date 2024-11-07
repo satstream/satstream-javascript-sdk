@@ -47,10 +47,10 @@
         // expect(instance.data).to.be(expectedValueLiteral);
       });
 
-      it('should have the property responsesBaseResponse (base name: "responses.BaseResponse")', function() {
-        // TODO: update the code to test the property responsesBaseResponse
-        expect(instance).to.have.property('responsesBaseResponse');
-        // expect(instance.responsesBaseResponse).to.be(expectedValueLiteral);
+      it('should have the property githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse (base name: "github_com_satstream_ss-api_server_api_transactions_responses.BaseResponse")', function() {
+        // TODO: update the code to test the property githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse
+        expect(instance).to.have.property('githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse');
+        // expect(instance.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse).to.be(expectedValueLiteral);
       });
 
     });

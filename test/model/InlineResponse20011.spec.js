@@ -31,14 +31,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('InlineResponse20010', function() {
+    describe('InlineResponse20011', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.InlineResponse20010();
+        instance = new SatstreamApi.InlineResponse20011();
       });
 
-      it('should create an instance of InlineResponse20010', function() {
-        // TODO: update the code to test InlineResponse20010
-        expect(instance).to.be.a(SatstreamApi.InlineResponse20010);
+      it('should create an instance of InlineResponse20011', function() {
+        // TODO: update the code to test InlineResponse20011
+        expect(instance).to.be.a(SatstreamApi.InlineResponse20011);
       });
 
       it('should have the property data (base name: "data")', function() {
@@ -47,10 +47,10 @@
         // expect(instance.data).to.be(expectedValueLiteral);
       });
 
-      it('should have the property githubComSatstreamSsApiServerApiRunesResponsesBaseResponse (base name: "github_com_satstream_ss-api_server_api_runes_responses.BaseResponse")', function() {
-        // TODO: update the code to test the property githubComSatstreamSsApiServerApiRunesResponsesBaseResponse
-        expect(instance).to.have.property('githubComSatstreamSsApiServerApiRunesResponsesBaseResponse');
-        // expect(instance.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse).to.be(expectedValueLiteral);
+      it('should have the property githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse (base name: "github_com_satstream_ss-api_server_api_transactions_responses.BaseResponse")', function() {
+        // TODO: update the code to test the property githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse
+        expect(instance).to.have.property('githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse');
+        // expect(instance.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse).to.be(expectedValueLiteral);
       });
 
     });

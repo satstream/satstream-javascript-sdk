@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**balance** | **Number** |  | [optional] 
+**balance** | **String** |  | [optional] 
 **blockRange** | [**ResponsesGetAddressTimeframeBalanceItemBlockRange**](ResponsesGetAddressTimeframeBalanceItemBlockRange.md) |  | [optional] 
 
 

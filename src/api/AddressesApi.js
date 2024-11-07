@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004', 'model/ResponsesBaseResponse'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/InlineResponse2002', 'model/InlineResponse2003', 'model/InlineResponse2004'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse200'), require('../model/InlineResponse2001'), require('../model/InlineResponse2002'), require('../model/InlineResponse2003'), require('../model/InlineResponse2004'), require('../model/ResponsesBaseResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse'), require('../model/InlineResponse200'), require('../model/InlineResponse2001'), require('../model/InlineResponse2002'), require('../model/InlineResponse2003'), require('../model/InlineResponse2004'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.AddressesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.InlineResponse200, root.SatstreamApi.InlineResponse2001, root.SatstreamApi.InlineResponse2002, root.SatstreamApi.InlineResponse2003, root.SatstreamApi.InlineResponse2004, root.SatstreamApi.ResponsesBaseResponse);
+    root.SatstreamApi.AddressesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse, root.SatstreamApi.InlineResponse200, root.SatstreamApi.InlineResponse2001, root.SatstreamApi.InlineResponse2002, root.SatstreamApi.InlineResponse2003, root.SatstreamApi.InlineResponse2004);
   }
-}(this, function(ApiClient, InlineResponse200, InlineResponse2001, InlineResponse2002, InlineResponse2003, InlineResponse2004, ResponsesBaseResponse) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse, InlineResponse200, InlineResponse2001, InlineResponse2002, InlineResponse2003, InlineResponse2004) {
   'use strict';
 
   /**
@@ -108,12 +108,14 @@
      * Get address timeframe balance
      * Get the balance of a Bitcoin address for a specific timeframe
      * @param {String} address Bitcoin address
-     * @param {Number} start Start block height
-     * @param {Number} end End block height
+     * @param {module:model/String} timeframe Timeframe
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.token Token
      * @param {module:api/AddressesApi~addressesAddressBalanceTimeframeGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2001}
      */
-    this.addressesAddressBalanceTimeframeGet = function(address, start, end, callback) {
+    this.addressesAddressBalanceTimeframeGet = function(address, timeframe, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'address' is set
@@ -121,14 +123,9 @@
         throw new Error("Missing the required parameter 'address' when calling addressesAddressBalanceTimeframeGet");
       }
 
-      // verify the required parameter 'start' is set
-      if (start === undefined || start === null) {
-        throw new Error("Missing the required parameter 'start' when calling addressesAddressBalanceTimeframeGet");
-      }
-
-      // verify the required parameter 'end' is set
-      if (end === undefined || end === null) {
-        throw new Error("Missing the required parameter 'end' when calling addressesAddressBalanceTimeframeGet");
+      // verify the required parameter 'timeframe' is set
+      if (timeframe === undefined || timeframe === null) {
+        throw new Error("Missing the required parameter 'timeframe' when calling addressesAddressBalanceTimeframeGet");
       }
 
 
@@ -136,8 +133,8 @@
         'address': address
       };
       var queryParams = {
-        'start': start,
-        'end': end,
+        'token': opts['token'],
+        'timeframe': timeframe,
       };
       var collectionQueryParams = {
       };

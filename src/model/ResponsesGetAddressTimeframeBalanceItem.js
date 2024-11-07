@@ -56,7 +56,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('balance'))
-        obj.balance = ApiClient.convertToType(data['balance'], 'Number');
+        obj.balance = ApiClient.convertToType(data['balance'], 'String');
       if (data.hasOwnProperty('blockRange'))
         obj.blockRange = ResponsesGetAddressTimeframeBalanceItemBlockRange.constructFromObject(data['blockRange']);
     }
@@ -64,7 +64,7 @@
   }
 
   /**
-   * @member {Number} balance
+   * @member {String} balance
    */
   exports.prototype.balance = undefined;
 

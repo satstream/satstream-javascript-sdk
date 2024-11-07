@@ -38,23 +38,70 @@
     describe('RunesApi', function() {
       describe('runesGet', function() {
         it('should call runesGet successfully', function(done) {
-          // TODO: uncomment runesGet call and complete the assertions
+          // TODO: uncomment, update parameter values for runesGet call and complete the assertions
           /*
+          var opts = {};
+          opts.page = 56;
+          opts.perPage = 56;
 
-          instance.runesGet(function(error, data, response) {
+          instance.runesGet(opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
+            expect(data).to.be.a(SatstreamApi.InlineResponse20010);
+            {
+              let dataCtr = data.data;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SatstreamApi.ResponsesRuneInfo);
+                expect(data.blockHeight).to.be.a('number');
+                expect(data.blockHeight).to.be(0);
+                expect(data.divisibility).to.be.a('number');
+                expect(data.divisibility).to.be(0);
+                expect(data.minted).to.be.a('string');
+                expect(data.minted).to.be("");
+                expect(data.premine).to.be.a(SatstreamApi.BigInt);
+                    expect(data.rune).to.be.a('string');
+                expect(data.rune).to.be("");
+                expect(data.runeId).to.be.a('string');
+                expect(data.runeId).to.be("");
+                expect(data.spacedRune).to.be.a('string');
+                expect(data.spacedRune).to.be("");
+                expect(data.spacers).to.be.a('number');
+                expect(data.spacers).to.be(0);
+                expect(data.symbol).to.be.a('string');
+                expect(data.symbol).to.be("");
+                expect(data.terms).to.be.a(SatstreamApi.OrdinalsTerms);
+                      expect(data.terms.amount).to.be.a(SatstreamApi.BigInt);
+                      expect(data.terms.cap).to.be.a(SatstreamApi.BigInt);
+                      expect(data.terms.height).to.be.a(SatstreamApi.OrdinalsTermsRange);
+                        expect(data.terms.height.end).to.be.a(SatstreamApi.BigInt);
+                        expect(data.terms.height.start).to.be.a(SatstreamApi.BigInt);
+            
+                  expect(data.terms.offset).to.be.a(SatstreamApi.OrdinalsTermsRange);
+                        expect(data.terms.offset.end).to.be.a(SatstreamApi.BigInt);
+                        expect(data.terms.offset.start).to.be.a(SatstreamApi.BigInt);
+            
+                expect(data.turbo).to.be.a('boolean');
+                expect(data.turbo).to.be(false);
+                expect(data.txHeight).to.be.a('number');
+                expect(data.txHeight).to.be(0);
+                expect(data.txid).to.be.a('string');
+                expect(data.txid).to.be("");
+
+                      }
             }
+            expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse);
+                  expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse.code).to.be.a('number');
+              expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse.code).to.be(0);
+              expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse.data).to.be.a(Object);
+              expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse.data).to.be();
+              expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse.msg).to.be.a('string');
+              expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse.msg).to.be("");
 
             done();
           });
@@ -105,27 +152,6 @@
               expect(data).to.be.a(Object);
               // expect(data).to.be(null);
             }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('runesStatusGet', function() {
-        it('should call runesStatusGet successfully', function(done) {
-          // TODO: uncomment runesStatusGet call and complete the assertions
-          /*
-
-          instance.runesStatusGet(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(Object);
-            // expect(data).to.be(null);
 
             done();
           });

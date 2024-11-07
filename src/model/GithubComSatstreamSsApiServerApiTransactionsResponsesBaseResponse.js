@@ -26,31 +26,31 @@
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.BlocksErrorResponse = factory(root.SatstreamApi.ApiClient);
+    root.SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse = factory(root.SatstreamApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The BlocksErrorResponse model module.
-   * @module model/BlocksErrorResponse
+   * The GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse model module.
+   * @module model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse
    * @version 1.0
    */
 
   /**
-   * Constructs a new <code>BlocksErrorResponse</code>.
-   * @alias module:model/BlocksErrorResponse
+   * Constructs a new <code>GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse</code>.
+   * @alias module:model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>BlocksErrorResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/BlocksErrorResponse} obj Optional instance to populate.
-   * @return {module:model/BlocksErrorResponse} The populated <code>BlocksErrorResponse</code> instance.
+   * @param {module:model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse} obj Optional instance to populate.
+   * @return {module:model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse} The populated <code>GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

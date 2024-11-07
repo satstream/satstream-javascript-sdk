@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**ResponsesGetAddressTimeframeBalance**](ResponsesGetAddressTimeframeBalance.md) |  | [optional] 
-**responsesBaseResponse** | [**ResponsesBaseResponse**](ResponsesBaseResponse.md) |  | [optional] 
+**githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse**](GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.md) |  | [optional] 
 
 

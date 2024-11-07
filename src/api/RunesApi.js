@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SsApiServerApiRunesResponsesErrorResponse'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse', 'model/InlineResponse20010'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/SsApiServerApiRunesResponsesErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse'), require('../model/InlineResponse20010'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.RunesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.SsApiServerApiRunesResponsesErrorResponse);
+    root.SatstreamApi.RunesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse, root.SatstreamApi.InlineResponse20010);
   }
-}(this, function(ApiClient, SsApiServerApiRunesResponsesErrorResponse) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse, InlineResponse20010) {
   'use strict';
 
   /**
@@ -52,23 +52,29 @@
      * Callback function to receive the result of the runesGet operation.
      * @callback module:api/RunesApi~runesGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {module:model/InlineResponse20010} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get runes info list
      * Get information about all runes
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page Page number (default: 1)
+     * @param {Number} opts.perPage Items per page (default: 10)
      * @param {module:api/RunesApi~runesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * data is of type: {@link module:model/InlineResponse20010}
      */
-    this.runesGet = function(callback) {
+    this.runesGet = function(opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
 
       var pathParams = {
       };
       var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage'],
       };
       var collectionQueryParams = {
       };
@@ -80,7 +86,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [Object];
+      var returnType = InlineResponse20010;
 
       return this.apiClient.callApi(
         '/runes', 'GET',
@@ -180,47 +186,6 @@
 
       return this.apiClient.callApi(
         '/runes/{runeId}/holders', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the runesStatusGet operation.
-     * @callback module:api/RunesApi~runesStatusGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get runes status
-     * Get the current status of the runes system
-     * @param {module:api/RunesApi~runesStatusGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
-     */
-    this.runesStatusGet = function(callback) {
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ApiKeyAuth'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = Object;
-
-      return this.apiClient.callApi(
-        '/runes/status', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

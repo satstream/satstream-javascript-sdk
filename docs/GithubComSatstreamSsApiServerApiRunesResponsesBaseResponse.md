@@ -1,4 +1,4 @@
-# SatstreamApi.BlocksErrorResponse
+# SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse
 
 ## Properties
 Name | Type | Description | Notes

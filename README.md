@@ -142,7 +142,6 @@ Class | Method | HTTP request | Description
 *SatstreamApi.RunesApi* | [**runesGet**](docs/RunesApi.md#runesGet) | **GET** /runes | Get runes info list
 *SatstreamApi.RunesApi* | [**runesRuneIdGet**](docs/RunesApi.md#runesRuneIdGet) | **GET** /runes/{runeId} | Get rune info
 *SatstreamApi.RunesApi* | [**runesRuneIdHoldersGet**](docs/RunesApi.md#runesRuneIdHoldersGet) | **GET** /runes/{runeId}/holders | Get rune holders
-*SatstreamApi.RunesApi* | [**runesStatusGet**](docs/RunesApi.md#runesStatusGet) | **GET** /runes/status | Get runes status
 *SatstreamApi.TransactionsApi* | [**indexerTxHashGet**](docs/TransactionsApi.md#indexerTxHashGet) | **GET** /indexer/tx/{hash} | Get transaction
 *SatstreamApi.TransactionsApi* | [**transactionsBroadcastPost**](docs/TransactionsApi.md#transactionsBroadcastPost) | **POST** /transactions/broadcast | Broadcast transaction
 *SatstreamApi.TransactionsApi* | [**transactionsTxidGet**](docs/TransactionsApi.md#transactionsTxidGet) | **GET** /transactions/{txid} | Get transaction info
@@ -152,10 +151,16 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [SatstreamApi.BigInt](docs/BigInt.md)
- - [SatstreamApi.BlocksErrorResponse](docs/BlocksErrorResponse.md)
+ - [SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse](docs/GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.md)
+ - [SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse](docs/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.md)
+ - [SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse](docs/GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse.md)
+ - [SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse](docs/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse.md)
+ - [SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse](docs/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.md)
  - [SatstreamApi.InlineResponse200](docs/InlineResponse200.md)
  - [SatstreamApi.InlineResponse2001](docs/InlineResponse2001.md)
  - [SatstreamApi.InlineResponse20010](docs/InlineResponse20010.md)
+ - [SatstreamApi.InlineResponse20011](docs/InlineResponse20011.md)
+ - [SatstreamApi.InlineResponse20012](docs/InlineResponse20012.md)
  - [SatstreamApi.InlineResponse2002](docs/InlineResponse2002.md)
  - [SatstreamApi.InlineResponse2003](docs/InlineResponse2003.md)
  - [SatstreamApi.InlineResponse2004](docs/InlineResponse2004.md)
@@ -164,7 +169,8 @@ Class | Method | HTTP request | Description
  - [SatstreamApi.InlineResponse2007](docs/InlineResponse2007.md)
  - [SatstreamApi.InlineResponse2008](docs/InlineResponse2008.md)
  - [SatstreamApi.InlineResponse2009](docs/InlineResponse2009.md)
- - [SatstreamApi.ResponsesBaseResponse](docs/ResponsesBaseResponse.md)
+ - [SatstreamApi.OrdinalsTerms](docs/OrdinalsTerms.md)
+ - [SatstreamApi.OrdinalsTermsRange](docs/OrdinalsTermsRange.md)
  - [SatstreamApi.ResponsesBlockRange](docs/ResponsesBlockRange.md)
  - [SatstreamApi.ResponsesGetAddressBalance](docs/ResponsesGetAddressBalance.md)
  - [SatstreamApi.ResponsesGetAddressNonInscriptionUTXOData](docs/ResponsesGetAddressNonInscriptionUTXOData.md)
@@ -176,6 +182,7 @@ Class | Method | HTTP request | Description
  - [SatstreamApi.ResponsesGetCurrentBlockHeightResponse](docs/ResponsesGetCurrentBlockHeightResponse.md)
  - [SatstreamApi.ResponsesGetFeesResponse](docs/ResponsesGetFeesResponse.md)
  - [SatstreamApi.ResponsesNonInscriptionUTXO](docs/ResponsesNonInscriptionUTXO.md)
+ - [SatstreamApi.ResponsesRuneInfo](docs/ResponsesRuneInfo.md)
  - [SatstreamApi.ResponsesSendRawTransaction](docs/ResponsesSendRawTransaction.md)
  - [SatstreamApi.ResponsesTxInfo](docs/ResponsesTxInfo.md)
  - [SatstreamApi.RpcBlock](docs/RpcBlock.md)
@@ -186,8 +193,6 @@ Class | Method | HTTP request | Description
  - [SatstreamApi.RpcUtxoRune](docs/RpcUtxoRune.md)
  - [SatstreamApi.RpcVin](docs/RpcVin.md)
  - [SatstreamApi.RpcVout](docs/RpcVout.md)
- - [SatstreamApi.SsApiServerApiRunesResponsesErrorResponse](docs/SsApiServerApiRunesResponsesErrorResponse.md)
- - [SatstreamApi.SsApiServerApiTransactionsResponsesErrorResponse](docs/SsApiServerApiTransactionsResponsesErrorResponse.md)
  - [SatstreamApi.StoreTransactionDocument](docs/StoreTransactionDocument.md)
 
 

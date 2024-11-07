@@ -17,46 +17,46 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse', 'model/RpcBtcTx'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse', 'model/ResponsesTxInfo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse'), require('./RpcBtcTx'));
+    module.exports = factory(require('../ApiClient'), require('./GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse'), require('./ResponsesTxInfo'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.InlineResponse2008 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse, root.SatstreamApi.RpcBtcTx);
+    root.SatstreamApi.InlineResponse20012 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse, root.SatstreamApi.ResponsesTxInfo);
   }
-}(this, function(ApiClient, GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse, RpcBtcTx) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse, ResponsesTxInfo) {
   'use strict';
 
   /**
-   * The InlineResponse2008 model module.
-   * @module model/InlineResponse2008
+   * The InlineResponse20012 model module.
+   * @module model/InlineResponse20012
    * @version 1.0
    */
 
   /**
-   * Constructs a new <code>InlineResponse2008</code>.
-   * @alias module:model/InlineResponse2008
+   * Constructs a new <code>InlineResponse20012</code>.
+   * @alias module:model/InlineResponse20012
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>InlineResponse2008</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>InlineResponse20012</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/InlineResponse2008} obj Optional instance to populate.
-   * @return {module:model/InlineResponse2008} The populated <code>InlineResponse2008</code> instance.
+   * @param {module:model/InlineResponse20012} obj Optional instance to populate.
+   * @return {module:model/InlineResponse20012} The populated <code>InlineResponse20012</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('data'))
-        obj.data = RpcBtcTx.constructFromObject(data['data']);
+        obj.data = ResponsesTxInfo.constructFromObject(data['data']);
       if (data.hasOwnProperty('github_com_satstream_ss-api_server_api_transactions_responses.BaseResponse'))
         obj.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse = GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.constructFromObject(data['github_com_satstream_ss-api_server_api_transactions_responses.BaseResponse']);
     }
@@ -64,7 +64,7 @@
   }
 
   /**
-   * @member {module:model/RpcBtcTx} data
+   * @member {module:model/ResponsesTxInfo} data
    */
   exports.prototype.data = undefined;
 

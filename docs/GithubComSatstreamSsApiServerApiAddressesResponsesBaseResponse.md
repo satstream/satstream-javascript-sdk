@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesBaseResponse
+# SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse
 
 ## Properties
 Name | Type | Description | Notes

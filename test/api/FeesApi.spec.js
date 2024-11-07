@@ -53,13 +53,13 @@
               expect(data.data.confirmationBlocks).to.be(0);
               expect(data.data.feeRateInBtc).to.be.a('number');
               expect(data.data.feeRateInBtc).to.be();
-            expect(data.responsesBaseResponse).to.be.a(SatstreamApi.ResponsesBaseResponse);
-                  expect(data.responsesBaseResponse.code).to.be.a('number');
-              expect(data.responsesBaseResponse.code).to.be(0);
-              expect(data.responsesBaseResponse.data).to.be.a(Object);
-              expect(data.responsesBaseResponse.data).to.be();
-              expect(data.responsesBaseResponse.msg).to.be.a('string');
-              expect(data.responsesBaseResponse.msg).to.be("");
+            expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse);
+                  expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be.a('number');
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be(0);
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be.a(Object);
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be();
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be.a('string');
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be("");
 
             done();
           });

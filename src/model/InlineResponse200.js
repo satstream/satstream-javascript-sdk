@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ResponsesBaseResponse', 'model/ResponsesGetAddressBalance'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse', 'model/ResponsesGetAddressBalance'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ResponsesBaseResponse'), require('./ResponsesGetAddressBalance'));
+    module.exports = factory(require('../ApiClient'), require('./GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse'), require('./ResponsesGetAddressBalance'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.InlineResponse200 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ResponsesBaseResponse, root.SatstreamApi.ResponsesGetAddressBalance);
+    root.SatstreamApi.InlineResponse200 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse, root.SatstreamApi.ResponsesGetAddressBalance);
   }
-}(this, function(ApiClient, ResponsesBaseResponse, ResponsesGetAddressBalance) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse, ResponsesGetAddressBalance) {
   'use strict';
 
   /**
@@ -57,8 +57,8 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('data'))
         obj.data = ResponsesGetAddressBalance.constructFromObject(data['data']);
-      if (data.hasOwnProperty('responses.BaseResponse'))
-        obj.responsesBaseResponse = ResponsesBaseResponse.constructFromObject(data['responses.BaseResponse']);
+      if (data.hasOwnProperty('github_com_satstream_ss-api_server_api_addresses_responses.BaseResponse'))
+        obj.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse = GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.constructFromObject(data['github_com_satstream_ss-api_server_api_addresses_responses.BaseResponse']);
     }
     return obj;
   }
@@ -69,9 +69,9 @@
   exports.prototype.data = undefined;
 
   /**
-   * @member {module:model/ResponsesBaseResponse} responsesBaseResponse
+   * @member {module:model/GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse} githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse
    */
-  exports.prototype.responsesBaseResponse = undefined;
+  exports.prototype.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse = undefined;
 
 
   return exports;

@@ -26,31 +26,31 @@
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.ResponsesBaseResponse = factory(root.SatstreamApi.ApiClient);
+    root.SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse = factory(root.SatstreamApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ResponsesBaseResponse model module.
-   * @module model/ResponsesBaseResponse
+   * The GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse model module.
+   * @module model/GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse
    * @version 1.0
    */
 
   /**
-   * Constructs a new <code>ResponsesBaseResponse</code>.
-   * @alias module:model/ResponsesBaseResponse
+   * Constructs a new <code>GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse</code>.
+   * @alias module:model/GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ResponsesBaseResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ResponsesBaseResponse} obj Optional instance to populate.
-   * @return {module:model/ResponsesBaseResponse} The populated <code>ResponsesBaseResponse</code> instance.
+   * @param {module:model/GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse} obj Optional instance to populate.
+   * @return {module:model/GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse} The populated <code>GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

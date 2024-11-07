@@ -17,61 +17,61 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/BigInt'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./BigInt'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.ResponsesGetAddressBalance = factory(root.SatstreamApi.ApiClient);
+    root.SatstreamApi.OrdinalsTermsRange = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BigInt);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, BigInt) {
   'use strict';
 
   /**
-   * The ResponsesGetAddressBalance model module.
-   * @module model/ResponsesGetAddressBalance
+   * The OrdinalsTermsRange model module.
+   * @module model/OrdinalsTermsRange
    * @version 1.0
    */
 
   /**
-   * Constructs a new <code>ResponsesGetAddressBalance</code>.
-   * @alias module:model/ResponsesGetAddressBalance
+   * Constructs a new <code>OrdinalsTermsRange</code>.
+   * @alias module:model/OrdinalsTermsRange
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>ResponsesGetAddressBalance</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>OrdinalsTermsRange</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ResponsesGetAddressBalance} obj Optional instance to populate.
-   * @return {module:model/ResponsesGetAddressBalance} The populated <code>ResponsesGetAddressBalance</code> instance.
+   * @param {module:model/OrdinalsTermsRange} obj Optional instance to populate.
+   * @return {module:model/OrdinalsTermsRange} The populated <code>OrdinalsTermsRange</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('address'))
-        obj.address = ApiClient.convertToType(data['address'], 'String');
-      if (data.hasOwnProperty('balance'))
-        obj.balance = ApiClient.convertToType(data['balance'], 'String');
+      if (data.hasOwnProperty('end'))
+        obj.end = BigInt.constructFromObject(data['end']);
+      if (data.hasOwnProperty('start'))
+        obj.start = BigInt.constructFromObject(data['start']);
     }
     return obj;
   }
 
   /**
-   * @member {String} address
+   * @member {module:model/BigInt} end
    */
-  exports.prototype.address = undefined;
+  exports.prototype.end = undefined;
 
   /**
-   * @member {String} balance
+   * @member {module:model/BigInt} start
    */
-  exports.prototype.balance = undefined;
+  exports.prototype.start = undefined;
 
 
   return exports;
