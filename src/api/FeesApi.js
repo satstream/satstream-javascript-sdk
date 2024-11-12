@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse', 'model/InlineResponse2007'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse', 'model/InlineResponse2006'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse'), require('../model/InlineResponse2007'));
+    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse'), require('../model/InlineResponse2006'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.FeesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, root.SatstreamApi.InlineResponse2007);
+    root.SatstreamApi.FeesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, root.SatstreamApi.InlineResponse2006);
   }
-}(this, function(ApiClient, GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, InlineResponse2007) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, InlineResponse2006) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the getRecommendedFees operation.
      * @callback module:api/FeesApi~getRecommendedFeesCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007} data The data returned by the service call.
+     * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -60,7 +60,7 @@
      * Get recommended fees
      * Get recommended fees for Bitcoin transactions
      * @param {module:api/FeesApi~getRecommendedFeesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007}
+     * data is of type: {@link module:model/InlineResponse2006}
      */
     this.getRecommendedFees = function(callback) {
       var postBody = null;
@@ -80,7 +80,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2007;
+      var returnType = InlineResponse2006;
 
       return this.apiClient.callApi(
         '/fees', 'GET',

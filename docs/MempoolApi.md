@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 <a name="getMempoolTransactionInfo"></a>
 # **getMempoolTransactionInfo**
-> InlineResponse2009 getMempoolTransactionInfo(txid)
+> InlineResponse2008 getMempoolTransactionInfo(txid)
 
 Get mempool transaction info
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 

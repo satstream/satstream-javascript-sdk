@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="broadcastTransaction"></a>
 # **broadcastTransaction**
-> InlineResponse20011 broadcastTransaction(transaction)
+> InlineResponse20010 broadcastTransaction(transaction)
 
 Broadcast transaction
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="getTransaction"></a>
 # **getTransaction**
-> InlineResponse2008 getTransaction(hash)
+> InlineResponse2007 getTransaction(hash)
 
 Get transaction
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ No authorization required
 
 <a name="getTransactionInfo"></a>
 # **getTransactionInfo**
-> InlineResponse20012 getTransactionInfo(txid)
+> InlineResponse20011 getTransactionInfo(txid)
 
 Get transaction info
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 

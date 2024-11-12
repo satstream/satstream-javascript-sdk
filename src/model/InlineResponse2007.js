@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse', 'model/ResponsesGetFeesResponse'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse', 'model/GithubComSatstreamSsUtilsRpcBtcTx'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse'), require('./ResponsesGetFeesResponse'));
+    module.exports = factory(require('../ApiClient'), require('./GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse'), require('./GithubComSatstreamSsUtilsRpcBtcTx'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.InlineResponse2007 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, root.SatstreamApi.ResponsesGetFeesResponse);
+    root.SatstreamApi.InlineResponse2007 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse, root.SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx);
   }
-}(this, function(ApiClient, GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse, ResponsesGetFeesResponse) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse, GithubComSatstreamSsUtilsRpcBtcTx) {
   'use strict';
 
   /**
@@ -56,22 +56,22 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('data'))
-        obj.data = ResponsesGetFeesResponse.constructFromObject(data['data']);
-      if (data.hasOwnProperty('github_com_satstream_ss-api_server_api_blocks_responses.BaseResponse'))
-        obj.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse = GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.constructFromObject(data['github_com_satstream_ss-api_server_api_blocks_responses.BaseResponse']);
+        obj.data = GithubComSatstreamSsUtilsRpcBtcTx.constructFromObject(data['data']);
+      if (data.hasOwnProperty('github_com_satstream_ss-api_server_api_transactions_responses.BaseResponse'))
+        obj.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse = GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.constructFromObject(data['github_com_satstream_ss-api_server_api_transactions_responses.BaseResponse']);
     }
     return obj;
   }
 
   /**
-   * @member {module:model/ResponsesGetFeesResponse} data
+   * @member {module:model/GithubComSatstreamSsUtilsRpcBtcTx} data
    */
   exports.prototype.data = undefined;
 
   /**
-   * @member {module:model/GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse} githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse
+   * @member {module:model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse} githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse
    */
-  exports.prototype.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse = undefined;
+  exports.prototype.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse = undefined;
 
 
   return exports;

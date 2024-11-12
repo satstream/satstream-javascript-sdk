@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getBlockByHash"></a>
 # **getBlockByHash**
-> InlineResponse2006 getBlockByHash(hash)
+> InlineResponse2005 getBlockByHash(hash)
 
 Get block by hash
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 
 <a name="getBlockInfo"></a>
 # **getBlockInfo**
-> InlineResponse2006 getBlockInfo(height)
+> InlineResponse2005 getBlockInfo(height)
 
 Get block info
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ No authorization required
 
 <a name="getCurrentBlockHeight"></a>
 # **getCurrentBlockHeight**
-> InlineResponse2005 getCurrentBlockHeight()
+> ResponsesBlockHeightResponse getCurrentBlockHeight()
 
 Get current block height
 
@@ -177,7 +177,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**ResponsesBlockHeightResponse**](ResponsesBlockHeightResponse.md)
 
 ### Authorization
 

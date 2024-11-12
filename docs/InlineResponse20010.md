@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[ResponsesRuneInfo]**](ResponsesRuneInfo.md) |  | [optional] 
-**githubComSatstreamSsApiServerApiRunesResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse**](GithubComSatstreamSsApiServerApiRunesResponsesBaseResponse.md) |  | [optional] 
+**data** | [**ResponsesSendRawTransaction**](ResponsesSendRawTransaction.md) |  | [optional] 
+**githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse**](GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.md) |  | [optional] 
 
 

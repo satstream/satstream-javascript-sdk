@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getRecommendedFees"></a>
 # **getRecommendedFees**
-> InlineResponse2007 getRecommendedFees()
+> InlineResponse2006 getRecommendedFees()
 
 Get recommended fees
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

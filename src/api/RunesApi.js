@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse', 'model/InlineResponse20010'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse', 'model/InlineResponse2009'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse'), require('../model/InlineResponse20010'));
+    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse'), require('../model/InlineResponse2009'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.RunesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse, root.SatstreamApi.InlineResponse20010);
+    root.SatstreamApi.RunesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse, root.SatstreamApi.InlineResponse2009);
   }
-}(this, function(ApiClient, GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse, InlineResponse20010) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiRunesResponsesErrorResponse, InlineResponse2009) {
   'use strict';
 
   /**
@@ -148,7 +148,7 @@
      * Callback function to receive the result of the getRunesInfoList operation.
      * @callback module:api/RunesApi~getRunesInfoListCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20010} data The data returned by the service call.
+     * @param {module:model/InlineResponse2009} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -159,7 +159,7 @@
      * @param {Number} opts.page Page number (default: 1)
      * @param {Number} opts.perPage Items per page (default: 10)
      * @param {module:api/RunesApi~getRunesInfoListCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20010}
+     * data is of type: {@link module:model/InlineResponse2009}
      */
     this.getRunesInfoList = function(opts, callback) {
       opts = opts || {};
@@ -182,7 +182,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20010;
+      var returnType = InlineResponse2009;
 
       return this.apiClient.callApi(
         '/runes', 'GET',
