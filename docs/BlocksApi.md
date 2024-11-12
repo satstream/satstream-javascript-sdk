@@ -150,7 +150,7 @@ No authorization required
 
 <a name="getCurrentBlockHeight"></a>
 # **getCurrentBlockHeight**
-> ResponsesBlockHeight getCurrentBlockHeight()
+> BlocksBlockHeight getCurrentBlockHeight()
 
 Get current block height
 
@@ -177,7 +177,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ResponsesBlockHeight**](ResponsesBlockHeight.md)
+[**BlocksBlockHeight**](BlocksBlockHeight.md)
 
 ### Authorization
 

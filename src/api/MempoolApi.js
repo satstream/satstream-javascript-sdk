@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2007', 'model/ResponsesBase', 'model/ResponsesError'], factory);
+    define(['ApiClient', 'model/BlocksBase', 'model/BlocksError', 'model/InlineResponse2007'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse2007'), require('../model/ResponsesBase'), require('../model/ResponsesError'));
+    module.exports = factory(require('../ApiClient'), require('../model/BlocksBase'), require('../model/BlocksError'), require('../model/InlineResponse2007'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.InlineResponse2007, root.SatstreamApi.ResponsesBase, root.SatstreamApi.ResponsesError);
+    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BlocksBase, root.SatstreamApi.BlocksError, root.SatstreamApi.InlineResponse2007);
   }
-}(this, function(ApiClient, InlineResponse2007, ResponsesBase, ResponsesError) {
+}(this, function(ApiClient, BlocksBase, BlocksError, InlineResponse2007) {
   'use strict';
 
   /**

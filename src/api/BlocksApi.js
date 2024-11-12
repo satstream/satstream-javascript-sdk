@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2005', 'model/ResponsesBase', 'model/ResponsesBlockHeight', 'model/ResponsesError'], factory);
+    define(['ApiClient', 'model/BlocksBase', 'model/BlocksBlockHeight', 'model/BlocksError', 'model/InlineResponse2005'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse2005'), require('../model/ResponsesBase'), require('../model/ResponsesBlockHeight'), require('../model/ResponsesError'));
+    module.exports = factory(require('../ApiClient'), require('../model/BlocksBase'), require('../model/BlocksBlockHeight'), require('../model/BlocksError'), require('../model/InlineResponse2005'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.BlocksApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.InlineResponse2005, root.SatstreamApi.ResponsesBase, root.SatstreamApi.ResponsesBlockHeight, root.SatstreamApi.ResponsesError);
+    root.SatstreamApi.BlocksApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BlocksBase, root.SatstreamApi.BlocksBlockHeight, root.SatstreamApi.BlocksError, root.SatstreamApi.InlineResponse2005);
   }
-}(this, function(ApiClient, InlineResponse2005, ResponsesBase, ResponsesBlockHeight, ResponsesError) {
+}(this, function(ApiClient, BlocksBase, BlocksBlockHeight, BlocksError, InlineResponse2005) {
   'use strict';
 
   /**
@@ -196,7 +196,7 @@
      * Callback function to receive the result of the getCurrentBlockHeight operation.
      * @callback module:api/BlocksApi~getCurrentBlockHeightCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesBlockHeight} data The data returned by the service call.
+     * @param {module:model/BlocksBlockHeight} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -204,7 +204,7 @@
      * Get current block height
      * Get the current block height of the Bitcoin blockchain
      * @param {module:api/BlocksApi~getCurrentBlockHeightCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResponsesBlockHeight}
+     * data is of type: {@link module:model/BlocksBlockHeight}
      */
     this.getCurrentBlockHeight = function(callback) {
       var postBody = null;
@@ -224,7 +224,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = ResponsesBlockHeight;
+      var returnType = BlocksBlockHeight;
 
       return this.apiClient.callApi(
         '/blocks/current-height', 'GET',

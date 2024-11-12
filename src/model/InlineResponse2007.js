@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GithubComSatstreamSsUtilsRpcBtcTx', 'model/ResponsesBase'], factory);
+    define(['ApiClient', 'model/BlocksBase', 'model/GithubComSatstreamSsUtilsRpcBtcTx'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GithubComSatstreamSsUtilsRpcBtcTx'), require('./ResponsesBase'));
+    module.exports = factory(require('../ApiClient'), require('./BlocksBase'), require('./GithubComSatstreamSsUtilsRpcBtcTx'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.InlineResponse2007 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx, root.SatstreamApi.ResponsesBase);
+    root.SatstreamApi.InlineResponse2007 = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BlocksBase, root.SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx);
   }
-}(this, function(ApiClient, GithubComSatstreamSsUtilsRpcBtcTx, ResponsesBase) {
+}(this, function(ApiClient, BlocksBase, GithubComSatstreamSsUtilsRpcBtcTx) {
   'use strict';
 
   /**
@@ -55,23 +55,23 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('blocks.Base'))
+        obj.blocksBase = BlocksBase.constructFromObject(data['blocks.Base']);
       if (data.hasOwnProperty('data'))
         obj.data = GithubComSatstreamSsUtilsRpcBtcTx.constructFromObject(data['data']);
-      if (data.hasOwnProperty('responses.Base'))
-        obj.responsesBase = ResponsesBase.constructFromObject(data['responses.Base']);
     }
     return obj;
   }
 
   /**
+   * @member {module:model/BlocksBase} blocksBase
+   */
+  exports.prototype.blocksBase = undefined;
+
+  /**
    * @member {module:model/GithubComSatstreamSsUtilsRpcBtcTx} data
    */
   exports.prototype.data = undefined;
-
-  /**
-   * @member {module:model/ResponsesBase} responsesBase
-   */
-  exports.prototype.responsesBase = undefined;
 
 
   return exports;
