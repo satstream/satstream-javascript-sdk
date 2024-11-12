@@ -36,12 +36,12 @@
 
   describe('(package)', function() {
     describe('FeesApi', function() {
-      describe('feesGet', function() {
-        it('should call feesGet successfully', function(done) {
-          // TODO: uncomment feesGet call and complete the assertions
+      describe('getRecommendedFees', function() {
+        it('should call getRecommendedFees successfully', function(done) {
+          // TODO: uncomment getRecommendedFees call and complete the assertions
           /*
 
-          instance.feesGet(function(error, data, response) {
+          instance.getRecommendedFees(function(error, data, response) {
             if (error) {
               done(error);
               return;

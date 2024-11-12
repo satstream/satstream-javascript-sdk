@@ -36,13 +36,13 @@
 
   describe('(package)', function() {
     describe('AddressesApi', function() {
-      describe('addressesAddressBalanceGet', function() {
-        it('should call addressesAddressBalanceGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for addressesAddressBalanceGet call and complete the assertions
+      describe('getAddressBalance', function() {
+        it('should call getAddressBalance successfully', function(done) {
+          // TODO: uncomment, update parameter values for getAddressBalance call and complete the assertions
           /*
           var address = "address_example";
 
-          instance.addressesAddressBalanceGet(address, function(error, data, response) {
+          instance.getAddressBalance(address, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -69,149 +69,13 @@
           done();
         });
       });
-      describe('addressesAddressBalanceTimeframeGet', function() {
-        it('should call addressesAddressBalanceTimeframeGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for addressesAddressBalanceTimeframeGet call and complete the assertions
-          /*
-          var address = "address_example";
-          var timeframe = "timeframe_example";
-          var opts = {};
-          opts.token = "token_example";
-
-          instance.addressesAddressBalanceTimeframeGet(address, timeframe, opts, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.InlineResponse2001);
-            expect(data.data).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalance);
-                  {
-                let dataCtr = data.data.items;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalanceItem);
-                  expect(data.balance).to.be.a('string');
-                  expect(data.balance).to.be("");
-                  expect(data.blockRange).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalanceItemBlockRange);
-          
-  
-                        }
-              }
-            expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse);
-                  expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be.a('number');
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be(0);
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be.a(Object);
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be();
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be.a('string');
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('addressesAddressRunesGet', function() {
-        it('should call addressesAddressRunesGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for addressesAddressRunesGet call and complete the assertions
+      describe('getAddressNonInscriptionUtxos', function() {
+        it('should call getAddressNonInscriptionUtxos successfully', function(done) {
+          // TODO: uncomment, update parameter values for getAddressNonInscriptionUtxos call and complete the assertions
           /*
           var address = "address_example";
 
-          instance.addressesAddressRunesGet(address, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.InlineResponse2002);
-            {
-              let dataCtr = data.data;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a(SatstreamApi.ResponsesGetAddressRunesBalanceListItem);
-                expect(data.amount).to.be.a('string');
-                expect(data.amount).to.be("52286");
-                expect(data.parsedAmount).to.be.a('string');
-                expect(data.parsedAmount).to.be("52.286");
-                expect(data.runeId).to.be.a('string');
-                expect(data.runeId).to.be("840000:3");
-                expect(data.spacedRune).to.be.a('string');
-                expect(data.spacedRune).to.be("DECENTRALIZED");
-
-                      }
-            }
-            expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse);
-                  expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be.a('number');
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be(0);
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be.a(Object);
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be();
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be.a('string');
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('addressesAddressRunesRuneidGet', function() {
-        it('should call addressesAddressRunesRuneidGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for addressesAddressRunesRuneidGet call and complete the assertions
-          /*
-          var address = "address_example";
-          var runeid = "runeid_example";
-
-          instance.addressesAddressRunesRuneidGet(address, runeid, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.InlineResponse2003);
-            expect(data.data).to.be.a(SatstreamApi.ResponsesGetAddressRuneBalance);
-                  expect(data.data.amount).to.be.a('string');
-              expect(data.data.amount).to.be("52286");
-              expect(data.data.divisibility).to.be.a('number');
-              expect(data.data.divisibility).to.be(5);
-              expect(data.data.rune).to.be.a('string');
-              expect(data.data.rune).to.be("DOGGOTOTHEMOON");
-              expect(data.data.runeid).to.be.a('string');
-              expect(data.data.runeid).to.be("840000:3");
-              expect(data.data.spacedAmount).to.be.a('string');
-              expect(data.data.spacedAmount).to.be("52.286");
-              expect(data.data.spacedRune).to.be.a('string');
-              expect(data.data.spacedRune).to.be("DOG•GO•TO•THE•MOON");
-              expect(data.data.symbol).to.be.a('string');
-              expect(data.data.symbol).to.be("🐕");
-            expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse);
-                  expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be.a('number');
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be(0);
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be.a(Object);
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be();
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be.a('string');
-              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('addressesAddressUtxosGet', function() {
-        it('should call addressesAddressUtxosGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for addressesAddressUtxosGet call and complete the assertions
-          /*
-          var address = "address_example";
-
-          instance.addressesAddressUtxosGet(address, function(error, data, response) {
+          instance.getAddressNonInscriptionUtxos(address, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -271,6 +135,142 @@
 
                       }
             }
+            expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse);
+                  expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be.a('number');
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be(0);
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be.a(Object);
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be();
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be.a('string');
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getAddressRuneBalance', function() {
+        it('should call getAddressRuneBalance successfully', function(done) {
+          // TODO: uncomment, update parameter values for getAddressRuneBalance call and complete the assertions
+          /*
+          var address = "address_example";
+          var runeid = "runeid_example";
+
+          instance.getAddressRuneBalance(address, runeid, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamApi.InlineResponse2003);
+            expect(data.data).to.be.a(SatstreamApi.ResponsesGetAddressRuneBalance);
+                  expect(data.data.amount).to.be.a('string');
+              expect(data.data.amount).to.be("52286");
+              expect(data.data.divisibility).to.be.a('number');
+              expect(data.data.divisibility).to.be(5);
+              expect(data.data.rune).to.be.a('string');
+              expect(data.data.rune).to.be("DOGGOTOTHEMOON");
+              expect(data.data.runeid).to.be.a('string');
+              expect(data.data.runeid).to.be("840000:3");
+              expect(data.data.spacedAmount).to.be.a('string');
+              expect(data.data.spacedAmount).to.be("52.286");
+              expect(data.data.spacedRune).to.be.a('string');
+              expect(data.data.spacedRune).to.be("DOG•GO•TO•THE•MOON");
+              expect(data.data.symbol).to.be.a('string');
+              expect(data.data.symbol).to.be("🐕");
+            expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse);
+                  expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be.a('number');
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be(0);
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be.a(Object);
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be();
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be.a('string');
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getAddressRunesBalanceList', function() {
+        it('should call getAddressRunesBalanceList successfully', function(done) {
+          // TODO: uncomment, update parameter values for getAddressRunesBalanceList call and complete the assertions
+          /*
+          var address = "address_example";
+
+          instance.getAddressRunesBalanceList(address, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamApi.InlineResponse2002);
+            {
+              let dataCtr = data.data;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(SatstreamApi.ResponsesGetAddressRunesBalanceListItem);
+                expect(data.amount).to.be.a('string');
+                expect(data.amount).to.be("52286");
+                expect(data.parsedAmount).to.be.a('string');
+                expect(data.parsedAmount).to.be("52.286");
+                expect(data.runeId).to.be.a('string');
+                expect(data.runeId).to.be("840000:3");
+                expect(data.spacedRune).to.be.a('string');
+                expect(data.spacedRune).to.be("DECENTRALIZED");
+
+                      }
+            }
+            expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse);
+                  expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be.a('number');
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be(0);
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be.a(Object);
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.data).to.be();
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be.a('string');
+              expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.msg).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getAddressTimeframeBalance', function() {
+        it('should call getAddressTimeframeBalance successfully', function(done) {
+          // TODO: uncomment, update parameter values for getAddressTimeframeBalance call and complete the assertions
+          /*
+          var address = "address_example";
+          var timeframe = "timeframe_example";
+          var opts = {};
+          opts.token = "token_example";
+
+          instance.getAddressTimeframeBalance(address, timeframe, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamApi.InlineResponse2001);
+            expect(data.data).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalance);
+                  {
+                let dataCtr = data.data.items;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalanceItem);
+                  expect(data.balance).to.be.a('string');
+                  expect(data.balance).to.be("");
+                  expect(data.blockRange).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalanceItemBlockRange);
+          
+  
+                        }
+              }
             expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiAddressesResponsesBaseResponse);
                   expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be.a('number');
               expect(data.githubComSatstreamSsApiServerApiAddressesResponsesBaseResponse.code).to.be(0);

@@ -36,13 +36,13 @@
 
   describe('(package)', function() {
     describe('MempoolApi', function() {
-      describe('mempoolAddressesAddressTransactionsGet', function() {
-        it('should call mempoolAddressesAddressTransactionsGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for mempoolAddressesAddressTransactionsGet call and complete the assertions
+      describe('getAddressMempoolTransactions', function() {
+        it('should call getAddressMempoolTransactions successfully', function(done) {
+          // TODO: uncomment, update parameter values for getAddressMempoolTransactions call and complete the assertions
           /*
           var address = "address_example";
 
-          instance.mempoolAddressesAddressTransactionsGet(address, function(error, data, response) {
+          instance.getAddressMempoolTransactions(address, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -64,47 +64,20 @@
           done();
         });
       });
-      describe('mempoolTransactionsGet', function() {
-        it('should call mempoolTransactionsGet successfully', function(done) {
-          // TODO: uncomment mempoolTransactionsGet call and complete the assertions
-          /*
-
-          instance.mempoolTransactionsGet(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('mempoolTransactionsTxidGet', function() {
-        it('should call mempoolTransactionsTxidGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for mempoolTransactionsTxidGet call and complete the assertions
+      describe('getMempoolTransactionInfo', function() {
+        it('should call getMempoolTransactionInfo successfully', function(done) {
+          // TODO: uncomment, update parameter values for getMempoolTransactionInfo call and complete the assertions
           /*
           var txid = "txid_example";
 
-          instance.mempoolTransactionsTxidGet(txid, function(error, data, response) {
+          instance.getMempoolTransactionInfo(txid, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
             expect(data).to.be.a(SatstreamApi.InlineResponse2009);
-            expect(data.data).to.be.a(SatstreamApi.RpcBtcTx);
+            expect(data.data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx);
                   expect(data.data.blockheight).to.be.a('number');
               expect(data.data.blockheight).to.be(0);
               expect(data.data.fee).to.be.a('number');
@@ -129,10 +102,10 @@
                 expect(dataCtr).to.not.be.empty();
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
-                  expect(data).to.be.a(SatstreamApi.RpcVin);
+                  expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVin);
                   expect(data.coinbase).to.be.a('string');
                   expect(data.coinbase).to.be("");
-                  expect(data.prevout).to.be.a(SatstreamApi.RpcPrevOut);
+                  expect(data.prevout).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcPrevOut);
                         expect(data.prevout.height).to.be.a('number');
                     expect(data.prevout.height).to.be(0);
                     expect(data.prevout.n).to.be.a('number');
@@ -145,14 +118,14 @@
                       expect(dataCtr).to.not.be.empty();
                       for (let p in dataCtr) {
                         let data = dataCtr[p];
-                        expect(data).to.be.a(SatstreamApi.RpcUtxoRune);
+                        expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcUtxoRune);
                         expect(data.amount).to.be.a(SatstreamApi.BigInt);
                             expect(data.runeId).to.be.a('string');
                         expect(data.runeId).to.be("");
         
                               }
                     }
-                    expect(data.prevout.scriptPubKey).to.be.a(SatstreamApi.RpcScriptPubKey);
+                    expect(data.prevout.scriptPubKey).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey);
                           expect(data.prevout.scriptPubKey.address).to.be.a('string');
                       expect(data.prevout.scriptPubKey.address).to.be("");
                       expect(data.prevout.scriptPubKey.asm).to.be.a('string');
@@ -165,7 +138,7 @@
                       expect(data.prevout.scriptPubKey.type).to.be("");
                     expect(data.prevout.value).to.be.a('number');
                     expect(data.prevout.value).to.be();
-                  expect(data.scriptSig).to.be.a(SatstreamApi.RpcScriptSig);
+                  expect(data.scriptSig).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptSig);
                         expect(data.scriptSig.asm).to.be.a('string');
                     expect(data.scriptSig.asm).to.be("");
                     expect(data.scriptSig.hex).to.be.a('string');
@@ -195,7 +168,7 @@
                 expect(dataCtr).to.not.be.empty();
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
-                  expect(data).to.be.a(SatstreamApi.RpcVout);
+                  expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVout);
                   expect(data.n).to.be.a('number');
                   expect(data.n).to.be(0);
                   {
@@ -204,14 +177,14 @@
                     expect(dataCtr).to.not.be.empty();
                     for (let p in dataCtr) {
                       let data = dataCtr[p];
-                      expect(data).to.be.a(SatstreamApi.RpcUtxoRune);
+                      expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcUtxoRune);
                       expect(data.amount).to.be.a(SatstreamApi.BigInt);
                           expect(data.runeId).to.be.a('string');
                       expect(data.runeId).to.be("");
       
                             }
                   }
-                  expect(data.scriptPubKey).to.be.a(SatstreamApi.RpcScriptPubKey);
+                  expect(data.scriptPubKey).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey);
                         expect(data.scriptPubKey.address).to.be.a('string');
                     expect(data.scriptPubKey.address).to.be("");
                     expect(data.scriptPubKey.asm).to.be.a('string');
@@ -238,6 +211,33 @@
               expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be();
               expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be.a('string');
               expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getMempoolTransactions', function() {
+        it('should call getMempoolTransactions successfully', function(done) {
+          // TODO: uncomment getMempoolTransactions call and complete the assertions
+          /*
+
+          instance.getMempoolTransactions(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(Object);
+              // expect(data).to.be(null);
+            }
 
             done();
           });

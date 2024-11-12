@@ -36,20 +36,51 @@
 
   describe('(package)', function() {
     describe('TransactionsApi', function() {
-      describe('indexerTxHashGet', function() {
-        it('should call indexerTxHashGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for indexerTxHashGet call and complete the assertions
+      describe('broadcastTransaction', function() {
+        it('should call broadcastTransaction successfully', function(done) {
+          // TODO: uncomment, update parameter values for broadcastTransaction call and complete the assertions
+          /*
+          var transaction = "transaction_example";
+
+          instance.broadcastTransaction(transaction, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamApi.InlineResponse20011);
+            expect(data.data).to.be.a(SatstreamApi.ResponsesSendRawTransaction);
+                  expect(data.data.txHash).to.be.a('string');
+              expect(data.data.txHash).to.be("");
+            expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse);
+                  expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.code).to.be.a('number');
+              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.code).to.be(0);
+              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.data).to.be.a(Object);
+              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.data).to.be();
+              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.msg).to.be.a('string');
+              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.msg).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getTransaction', function() {
+        it('should call getTransaction successfully', function(done) {
+          // TODO: uncomment, update parameter values for getTransaction call and complete the assertions
           /*
           var hash = "hash_example";
 
-          instance.indexerTxHashGet(hash, function(error, data, response) {
+          instance.getTransaction(hash, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
             expect(data).to.be.a(SatstreamApi.InlineResponse2008);
-            expect(data.data).to.be.a(SatstreamApi.RpcBtcTx);
+            expect(data.data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx);
                   expect(data.data.blockheight).to.be.a('number');
               expect(data.data.blockheight).to.be(0);
               expect(data.data.fee).to.be.a('number');
@@ -74,10 +105,10 @@
                 expect(dataCtr).to.not.be.empty();
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
-                  expect(data).to.be.a(SatstreamApi.RpcVin);
+                  expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVin);
                   expect(data.coinbase).to.be.a('string');
                   expect(data.coinbase).to.be("");
-                  expect(data.prevout).to.be.a(SatstreamApi.RpcPrevOut);
+                  expect(data.prevout).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcPrevOut);
                         expect(data.prevout.height).to.be.a('number');
                     expect(data.prevout.height).to.be(0);
                     expect(data.prevout.n).to.be.a('number');
@@ -90,14 +121,14 @@
                       expect(dataCtr).to.not.be.empty();
                       for (let p in dataCtr) {
                         let data = dataCtr[p];
-                        expect(data).to.be.a(SatstreamApi.RpcUtxoRune);
+                        expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcUtxoRune);
                         expect(data.amount).to.be.a(SatstreamApi.BigInt);
                             expect(data.runeId).to.be.a('string');
                         expect(data.runeId).to.be("");
         
                               }
                     }
-                    expect(data.prevout.scriptPubKey).to.be.a(SatstreamApi.RpcScriptPubKey);
+                    expect(data.prevout.scriptPubKey).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey);
                           expect(data.prevout.scriptPubKey.address).to.be.a('string');
                       expect(data.prevout.scriptPubKey.address).to.be("");
                       expect(data.prevout.scriptPubKey.asm).to.be.a('string');
@@ -110,7 +141,7 @@
                       expect(data.prevout.scriptPubKey.type).to.be("");
                     expect(data.prevout.value).to.be.a('number');
                     expect(data.prevout.value).to.be();
-                  expect(data.scriptSig).to.be.a(SatstreamApi.RpcScriptSig);
+                  expect(data.scriptSig).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptSig);
                         expect(data.scriptSig.asm).to.be.a('string');
                     expect(data.scriptSig.asm).to.be("");
                     expect(data.scriptSig.hex).to.be.a('string');
@@ -140,7 +171,7 @@
                 expect(dataCtr).to.not.be.empty();
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
-                  expect(data).to.be.a(SatstreamApi.RpcVout);
+                  expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVout);
                   expect(data.n).to.be.a('number');
                   expect(data.n).to.be(0);
                   {
@@ -149,14 +180,14 @@
                     expect(dataCtr).to.not.be.empty();
                     for (let p in dataCtr) {
                       let data = dataCtr[p];
-                      expect(data).to.be.a(SatstreamApi.RpcUtxoRune);
+                      expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcUtxoRune);
                       expect(data.amount).to.be.a(SatstreamApi.BigInt);
                           expect(data.runeId).to.be.a('string');
                       expect(data.runeId).to.be("");
       
                             }
                   }
-                  expect(data.scriptPubKey).to.be.a(SatstreamApi.RpcScriptPubKey);
+                  expect(data.scriptPubKey).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey);
                         expect(data.scriptPubKey.address).to.be.a('string');
                     expect(data.scriptPubKey.address).to.be("");
                     expect(data.scriptPubKey.asm).to.be.a('string');
@@ -191,44 +222,13 @@
           done();
         });
       });
-      describe('transactionsBroadcastPost', function() {
-        it('should call transactionsBroadcastPost successfully', function(done) {
-          // TODO: uncomment, update parameter values for transactionsBroadcastPost call and complete the assertions
-          /*
-          var transaction = "transaction_example";
-
-          instance.transactionsBroadcastPost(transaction, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.InlineResponse20011);
-            expect(data.data).to.be.a(SatstreamApi.ResponsesSendRawTransaction);
-                  expect(data.data.txHash).to.be.a('string');
-              expect(data.data.txHash).to.be("");
-            expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse);
-                  expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.code).to.be.a('number');
-              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.code).to.be(0);
-              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.data).to.be.a(Object);
-              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.data).to.be();
-              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.msg).to.be.a('string');
-              expect(data.githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.msg).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('transactionsTxidGet', function() {
-        it('should call transactionsTxidGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for transactionsTxidGet call and complete the assertions
+      describe('getTransactionInfo', function() {
+        it('should call getTransactionInfo successfully', function(done) {
+          // TODO: uncomment, update parameter values for getTransactionInfo call and complete the assertions
           /*
           var txid = "txid_example";
 
-          instance.transactionsTxidGet(txid, function(error, data, response) {
+          instance.getTransactionInfo(txid, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -277,13 +277,13 @@
           done();
         });
       });
-      describe('transactionsTxidInputsGet', function() {
-        it('should call transactionsTxidInputsGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for transactionsTxidInputsGet call and complete the assertions
+      describe('getTransactionInputs', function() {
+        it('should call getTransactionInputs successfully', function(done) {
+          // TODO: uncomment, update parameter values for getTransactionInputs call and complete the assertions
           /*
           var txid = "txid_example";
 
-          instance.transactionsTxidInputsGet(txid, function(error, data, response) {
+          instance.getTransactionInputs(txid, function(error, data, response) {
             if (error) {
               done(error);
               return;

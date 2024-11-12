@@ -36,15 +36,65 @@
 
   describe('(package)', function() {
     describe('RunesApi', function() {
-      describe('runesGet', function() {
-        it('should call runesGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for runesGet call and complete the assertions
+      describe('getRunesHolders', function() {
+        it('should call getRunesHolders successfully', function(done) {
+          // TODO: uncomment, update parameter values for getRunesHolders call and complete the assertions
+          /*
+          var runeId = "runeId_example";
+
+          instance.getRunesHolders(runeId, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(Object);
+              // expect(data).to.be(null);
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getRunesInfo', function() {
+        it('should call getRunesInfo successfully', function(done) {
+          // TODO: uncomment, update parameter values for getRunesInfo call and complete the assertions
+          /*
+          var runeId = "runeId_example";
+
+          instance.getRunesInfo(runeId, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(Object);
+            // expect(data).to.be(null);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getRunesInfoList', function() {
+        it('should call getRunesInfoList successfully', function(done) {
+          // TODO: uncomment, update parameter values for getRunesInfoList call and complete the assertions
           /*
           var opts = {};
           opts.page = 56;
           opts.perPage = 56;
 
-          instance.runesGet(opts, function(error, data, response) {
+          instance.getRunesInfoList(opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -75,14 +125,14 @@
                 expect(data.spacers).to.be(0);
                 expect(data.symbol).to.be.a('string');
                 expect(data.symbol).to.be("");
-                expect(data.terms).to.be.a(SatstreamApi.OrdinalsTerms);
+                expect(data.terms).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsOrdinalsTerms);
                       expect(data.terms.amount).to.be.a(SatstreamApi.BigInt);
                       expect(data.terms.cap).to.be.a(SatstreamApi.BigInt);
-                      expect(data.terms.height).to.be.a(SatstreamApi.OrdinalsTermsRange);
+                      expect(data.terms.height).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsOrdinalsTermsRange);
                         expect(data.terms.height.end).to.be.a(SatstreamApi.BigInt);
                         expect(data.terms.height.start).to.be.a(SatstreamApi.BigInt);
             
-                  expect(data.terms.offset).to.be.a(SatstreamApi.OrdinalsTermsRange);
+                  expect(data.terms.offset).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsOrdinalsTermsRange);
                         expect(data.terms.offset.end).to.be.a(SatstreamApi.BigInt);
                         expect(data.terms.offset.start).to.be.a(SatstreamApi.BigInt);
             
@@ -102,56 +152,6 @@
               expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse.data).to.be();
               expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse.msg).to.be.a('string');
               expect(data.githubComSatstreamSsApiServerApiRunesResponsesBaseResponse.msg).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('runesRuneIdGet', function() {
-        it('should call runesRuneIdGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for runesRuneIdGet call and complete the assertions
-          /*
-          var runeId = "runeId_example";
-
-          instance.runesRuneIdGet(runeId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(Object);
-            // expect(data).to.be(null);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('runesRuneIdHoldersGet', function() {
-        it('should call runesRuneIdHoldersGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for runesRuneIdHoldersGet call and complete the assertions
-          /*
-          var runeId = "runeId_example";
-
-          instance.runesRuneIdHoldersGet(runeId, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
-            }
 
             done();
           });

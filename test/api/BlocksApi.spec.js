@@ -36,12 +36,438 @@
 
   describe('(package)', function() {
     describe('BlocksApi', function() {
-      describe('blocksCurrentHeightGet', function() {
-        it('should call blocksCurrentHeightGet successfully', function(done) {
-          // TODO: uncomment blocksCurrentHeightGet call and complete the assertions
+      describe('getBlockByHash', function() {
+        it('should call getBlockByHash successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockByHash call and complete the assertions
+          /*
+          var hash = "hash_example";
+
+          instance.getBlockByHash(hash, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamApi.InlineResponse2006);
+            expect(data.data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcBlock);
+                  expect(data.data.bits).to.be.a('string');
+              expect(data.data.bits).to.be("");
+              expect(data.data.chainwork).to.be.a('string');
+              expect(data.data.chainwork).to.be("");
+              expect(data.data.confirmations).to.be.a('number');
+              expect(data.data.confirmations).to.be(0);
+              expect(data.data.difficulty).to.be.a('number');
+              expect(data.data.difficulty).to.be();
+              expect(data.data.hash).to.be.a('string');
+              expect(data.data.hash).to.be("");
+              expect(data.data.height).to.be.a('number');
+              expect(data.data.height).to.be(0);
+              expect(data.data.mediantime).to.be.a('number');
+              expect(data.data.mediantime).to.be(0);
+              expect(data.data.merkleroot).to.be.a('string');
+              expect(data.data.merkleroot).to.be("");
+              expect(data.data.nTx).to.be.a('number');
+              expect(data.data.nTx).to.be(0);
+              expect(data.data.nonce).to.be.a('number');
+              expect(data.data.nonce).to.be(0);
+              expect(data.data.previousblockhash).to.be.a('string');
+              expect(data.data.previousblockhash).to.be("");
+              expect(data.data.size).to.be.a('number');
+              expect(data.data.size).to.be(0);
+              expect(data.data.strippedSize).to.be.a('number');
+              expect(data.data.strippedSize).to.be(0);
+              expect(data.data.time).to.be.a('number');
+              expect(data.data.time).to.be(0);
+              {
+                let dataCtr = data.data.tx;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx);
+                  expect(data.blockheight).to.be.a('number');
+                  expect(data.blockheight).to.be(0);
+                  expect(data.fee).to.be.a('number');
+                  expect(data.fee).to.be();
+                  expect(data.hash).to.be.a('string');
+                  expect(data.hash).to.be("");
+                  expect(data.hex).to.be.a('string');
+                  expect(data.hex).to.be("");
+                  expect(data.index).to.be.a('number');
+                  expect(data.index).to.be(0);
+                  expect(data.locktime).to.be.a('number');
+                  expect(data.locktime).to.be(0);
+                  expect(data.size).to.be.a('number');
+                  expect(data.size).to.be(0);
+                  expect(data.txid).to.be.a('string');
+                  expect(data.txid).to.be("");
+                  expect(data.version).to.be.a('number');
+                  expect(data.version).to.be(0);
+                  {
+                    let dataCtr = data.vin;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVin);
+                      expect(data.coinbase).to.be.a('string');
+                      expect(data.coinbase).to.be("");
+                      expect(data.prevout).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcPrevOut);
+                            expect(data.prevout.height).to.be.a('number');
+                        expect(data.prevout.height).to.be(0);
+                        expect(data.prevout.n).to.be.a('number');
+                        expect(data.prevout.n).to.be(0);
+                        expect(data.prevout.populated).to.be.a('boolean');
+                        expect(data.prevout.populated).to.be(false);
+                        {
+                          let dataCtr = data.prevout.runeHoldings;
+                          expect(dataCtr).to.be.an(Array);
+                          expect(dataCtr).to.not.be.empty();
+                          for (let p in dataCtr) {
+                            let data = dataCtr[p];
+                            expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcUtxoRune);
+                            expect(data.amount).to.be.a(SatstreamApi.BigInt);
+                                expect(data.runeId).to.be.a('string');
+                            expect(data.runeId).to.be("");
+            
+                                  }
+                        }
+                        expect(data.prevout.scriptPubKey).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey);
+                              expect(data.prevout.scriptPubKey.address).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.address).to.be("");
+                          expect(data.prevout.scriptPubKey.asm).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.asm).to.be("");
+                          expect(data.prevout.scriptPubKey.desc).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.desc).to.be("");
+                          expect(data.prevout.scriptPubKey.hex).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.hex).to.be("");
+                          expect(data.prevout.scriptPubKey.type).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.type).to.be("");
+                        expect(data.prevout.value).to.be.a('number');
+                        expect(data.prevout.value).to.be();
+                      expect(data.scriptSig).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptSig);
+                            expect(data.scriptSig.asm).to.be.a('string');
+                        expect(data.scriptSig.asm).to.be("");
+                        expect(data.scriptSig.hex).to.be.a('string');
+                        expect(data.scriptSig.hex).to.be("");
+                      expect(data.sequence).to.be.a('number');
+                      expect(data.sequence).to.be(0);
+                      expect(data.txid).to.be.a('string');
+                      expect(data.txid).to.be("");
+                      {
+                        let dataCtr = data.txinwitness;
+                        expect(dataCtr).to.be.an(Array);
+                        expect(dataCtr).to.not.be.empty();
+                        for (let p in dataCtr) {
+                          let data = dataCtr[p];
+                          expect(data).to.be.a('string');
+                          expect(data).to.be("");
+                        }
+                      }
+                      expect(data.vout).to.be.a('number');
+                      expect(data.vout).to.be(0);
+      
+                            }
+                  }
+                  {
+                    let dataCtr = data.vout;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVout);
+                      expect(data.n).to.be.a('number');
+                      expect(data.n).to.be(0);
+                      {
+                        let dataCtr = data.runeHoldings;
+                        expect(dataCtr).to.be.an(Array);
+                        expect(dataCtr).to.not.be.empty();
+                        for (let p in dataCtr) {
+                          let data = dataCtr[p];
+                          expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcUtxoRune);
+                          expect(data.amount).to.be.a(SatstreamApi.BigInt);
+                              expect(data.runeId).to.be.a('string');
+                          expect(data.runeId).to.be("");
+          
+                                }
+                      }
+                      expect(data.scriptPubKey).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey);
+                            expect(data.scriptPubKey.address).to.be.a('string');
+                        expect(data.scriptPubKey.address).to.be("");
+                        expect(data.scriptPubKey.asm).to.be.a('string');
+                        expect(data.scriptPubKey.asm).to.be("");
+                        expect(data.scriptPubKey.desc).to.be.a('string');
+                        expect(data.scriptPubKey.desc).to.be("");
+                        expect(data.scriptPubKey.hex).to.be.a('string');
+                        expect(data.scriptPubKey.hex).to.be("");
+                        expect(data.scriptPubKey.type).to.be.a('string');
+                        expect(data.scriptPubKey.type).to.be("");
+                      expect(data.value).to.be.a('number');
+                      expect(data.value).to.be();
+      
+                            }
+                  }
+                  expect(data.vsize).to.be.a('number');
+                  expect(data.vsize).to.be(0);
+                  expect(data.weight).to.be.a('number');
+                  expect(data.weight).to.be(0);
+  
+                        }
+              }
+              expect(data.data.version).to.be.a('number');
+              expect(data.data.version).to.be(0);
+              expect(data.data.versionHex).to.be.a('string');
+              expect(data.data.versionHex).to.be("");
+              expect(data.data.weight).to.be.a('number');
+              expect(data.data.weight).to.be(0);
+            expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse);
+                  expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be.a('number');
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be(0);
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be.a(Object);
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be();
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be.a('string');
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockInfo', function() {
+        it('should call getBlockInfo successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockInfo call and complete the assertions
+          /*
+          var height = 56;
+
+          instance.getBlockInfo(height, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamApi.InlineResponse2006);
+            expect(data.data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcBlock);
+                  expect(data.data.bits).to.be.a('string');
+              expect(data.data.bits).to.be("");
+              expect(data.data.chainwork).to.be.a('string');
+              expect(data.data.chainwork).to.be("");
+              expect(data.data.confirmations).to.be.a('number');
+              expect(data.data.confirmations).to.be(0);
+              expect(data.data.difficulty).to.be.a('number');
+              expect(data.data.difficulty).to.be();
+              expect(data.data.hash).to.be.a('string');
+              expect(data.data.hash).to.be("");
+              expect(data.data.height).to.be.a('number');
+              expect(data.data.height).to.be(0);
+              expect(data.data.mediantime).to.be.a('number');
+              expect(data.data.mediantime).to.be(0);
+              expect(data.data.merkleroot).to.be.a('string');
+              expect(data.data.merkleroot).to.be("");
+              expect(data.data.nTx).to.be.a('number');
+              expect(data.data.nTx).to.be(0);
+              expect(data.data.nonce).to.be.a('number');
+              expect(data.data.nonce).to.be(0);
+              expect(data.data.previousblockhash).to.be.a('string');
+              expect(data.data.previousblockhash).to.be("");
+              expect(data.data.size).to.be.a('number');
+              expect(data.data.size).to.be(0);
+              expect(data.data.strippedSize).to.be.a('number');
+              expect(data.data.strippedSize).to.be(0);
+              expect(data.data.time).to.be.a('number');
+              expect(data.data.time).to.be(0);
+              {
+                let dataCtr = data.data.tx;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx);
+                  expect(data.blockheight).to.be.a('number');
+                  expect(data.blockheight).to.be(0);
+                  expect(data.fee).to.be.a('number');
+                  expect(data.fee).to.be();
+                  expect(data.hash).to.be.a('string');
+                  expect(data.hash).to.be("");
+                  expect(data.hex).to.be.a('string');
+                  expect(data.hex).to.be("");
+                  expect(data.index).to.be.a('number');
+                  expect(data.index).to.be(0);
+                  expect(data.locktime).to.be.a('number');
+                  expect(data.locktime).to.be(0);
+                  expect(data.size).to.be.a('number');
+                  expect(data.size).to.be(0);
+                  expect(data.txid).to.be.a('string');
+                  expect(data.txid).to.be("");
+                  expect(data.version).to.be.a('number');
+                  expect(data.version).to.be(0);
+                  {
+                    let dataCtr = data.vin;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVin);
+                      expect(data.coinbase).to.be.a('string');
+                      expect(data.coinbase).to.be("");
+                      expect(data.prevout).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcPrevOut);
+                            expect(data.prevout.height).to.be.a('number');
+                        expect(data.prevout.height).to.be(0);
+                        expect(data.prevout.n).to.be.a('number');
+                        expect(data.prevout.n).to.be(0);
+                        expect(data.prevout.populated).to.be.a('boolean');
+                        expect(data.prevout.populated).to.be(false);
+                        {
+                          let dataCtr = data.prevout.runeHoldings;
+                          expect(dataCtr).to.be.an(Array);
+                          expect(dataCtr).to.not.be.empty();
+                          for (let p in dataCtr) {
+                            let data = dataCtr[p];
+                            expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcUtxoRune);
+                            expect(data.amount).to.be.a(SatstreamApi.BigInt);
+                                expect(data.runeId).to.be.a('string');
+                            expect(data.runeId).to.be("");
+            
+                                  }
+                        }
+                        expect(data.prevout.scriptPubKey).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey);
+                              expect(data.prevout.scriptPubKey.address).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.address).to.be("");
+                          expect(data.prevout.scriptPubKey.asm).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.asm).to.be("");
+                          expect(data.prevout.scriptPubKey.desc).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.desc).to.be("");
+                          expect(data.prevout.scriptPubKey.hex).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.hex).to.be("");
+                          expect(data.prevout.scriptPubKey.type).to.be.a('string');
+                          expect(data.prevout.scriptPubKey.type).to.be("");
+                        expect(data.prevout.value).to.be.a('number');
+                        expect(data.prevout.value).to.be();
+                      expect(data.scriptSig).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptSig);
+                            expect(data.scriptSig.asm).to.be.a('string');
+                        expect(data.scriptSig.asm).to.be("");
+                        expect(data.scriptSig.hex).to.be.a('string');
+                        expect(data.scriptSig.hex).to.be("");
+                      expect(data.sequence).to.be.a('number');
+                      expect(data.sequence).to.be(0);
+                      expect(data.txid).to.be.a('string');
+                      expect(data.txid).to.be("");
+                      {
+                        let dataCtr = data.txinwitness;
+                        expect(dataCtr).to.be.an(Array);
+                        expect(dataCtr).to.not.be.empty();
+                        for (let p in dataCtr) {
+                          let data = dataCtr[p];
+                          expect(data).to.be.a('string');
+                          expect(data).to.be("");
+                        }
+                      }
+                      expect(data.vout).to.be.a('number');
+                      expect(data.vout).to.be(0);
+      
+                            }
+                  }
+                  {
+                    let dataCtr = data.vout;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVout);
+                      expect(data.n).to.be.a('number');
+                      expect(data.n).to.be(0);
+                      {
+                        let dataCtr = data.runeHoldings;
+                        expect(dataCtr).to.be.an(Array);
+                        expect(dataCtr).to.not.be.empty();
+                        for (let p in dataCtr) {
+                          let data = dataCtr[p];
+                          expect(data).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcUtxoRune);
+                          expect(data.amount).to.be.a(SatstreamApi.BigInt);
+                              expect(data.runeId).to.be.a('string');
+                          expect(data.runeId).to.be("");
+          
+                                }
+                      }
+                      expect(data.scriptPubKey).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey);
+                            expect(data.scriptPubKey.address).to.be.a('string');
+                        expect(data.scriptPubKey.address).to.be("");
+                        expect(data.scriptPubKey.asm).to.be.a('string');
+                        expect(data.scriptPubKey.asm).to.be("");
+                        expect(data.scriptPubKey.desc).to.be.a('string');
+                        expect(data.scriptPubKey.desc).to.be("");
+                        expect(data.scriptPubKey.hex).to.be.a('string');
+                        expect(data.scriptPubKey.hex).to.be("");
+                        expect(data.scriptPubKey.type).to.be.a('string');
+                        expect(data.scriptPubKey.type).to.be("");
+                      expect(data.value).to.be.a('number');
+                      expect(data.value).to.be();
+      
+                            }
+                  }
+                  expect(data.vsize).to.be.a('number');
+                  expect(data.vsize).to.be(0);
+                  expect(data.weight).to.be.a('number');
+                  expect(data.weight).to.be(0);
+  
+                        }
+              }
+              expect(data.data.version).to.be.a('number');
+              expect(data.data.version).to.be(0);
+              expect(data.data.versionHex).to.be.a('string');
+              expect(data.data.versionHex).to.be("");
+              expect(data.data.weight).to.be.a('number');
+              expect(data.data.weight).to.be(0);
+            expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse);
+                  expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be.a('number');
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be(0);
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be.a(Object);
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be();
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be.a('string');
+              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockTransactions', function() {
+        it('should call getBlockTransactions successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockTransactions call and complete the assertions
+          /*
+          var height = 56;
+
+          instance.getBlockTransactions(height, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(Object);
+              // expect(data).to.be(null);
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getCurrentBlockHeight', function() {
+        it('should call getCurrentBlockHeight successfully', function(done) {
+          // TODO: uncomment getCurrentBlockHeight call and complete the assertions
           /*
 
-          instance.blocksCurrentHeightGet(function(error, data, response) {
+          instance.getCurrentBlockHeight(function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -58,432 +484,6 @@
               expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be();
               expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be.a('string');
               expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('blocksHashHashGet', function() {
-        it('should call blocksHashHashGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for blocksHashHashGet call and complete the assertions
-          /*
-          var hash = "hash_example";
-
-          instance.blocksHashHashGet(hash, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.InlineResponse2006);
-            expect(data.data).to.be.a(SatstreamApi.RpcBlock);
-                  expect(data.data.bits).to.be.a('string');
-              expect(data.data.bits).to.be("");
-              expect(data.data.chainwork).to.be.a('string');
-              expect(data.data.chainwork).to.be("");
-              expect(data.data.confirmations).to.be.a('number');
-              expect(data.data.confirmations).to.be(0);
-              expect(data.data.difficulty).to.be.a('number');
-              expect(data.data.difficulty).to.be();
-              expect(data.data.hash).to.be.a('string');
-              expect(data.data.hash).to.be("");
-              expect(data.data.height).to.be.a('number');
-              expect(data.data.height).to.be(0);
-              expect(data.data.mediantime).to.be.a('number');
-              expect(data.data.mediantime).to.be(0);
-              expect(data.data.merkleroot).to.be.a('string');
-              expect(data.data.merkleroot).to.be("");
-              expect(data.data.nTx).to.be.a('number');
-              expect(data.data.nTx).to.be(0);
-              expect(data.data.nonce).to.be.a('number');
-              expect(data.data.nonce).to.be(0);
-              expect(data.data.previousblockhash).to.be.a('string');
-              expect(data.data.previousblockhash).to.be("");
-              expect(data.data.size).to.be.a('number');
-              expect(data.data.size).to.be(0);
-              expect(data.data.strippedSize).to.be.a('number');
-              expect(data.data.strippedSize).to.be(0);
-              expect(data.data.time).to.be.a('number');
-              expect(data.data.time).to.be(0);
-              {
-                let dataCtr = data.data.tx;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a(SatstreamApi.RpcBtcTx);
-                  expect(data.blockheight).to.be.a('number');
-                  expect(data.blockheight).to.be(0);
-                  expect(data.fee).to.be.a('number');
-                  expect(data.fee).to.be();
-                  expect(data.hash).to.be.a('string');
-                  expect(data.hash).to.be("");
-                  expect(data.hex).to.be.a('string');
-                  expect(data.hex).to.be("");
-                  expect(data.index).to.be.a('number');
-                  expect(data.index).to.be(0);
-                  expect(data.locktime).to.be.a('number');
-                  expect(data.locktime).to.be(0);
-                  expect(data.size).to.be.a('number');
-                  expect(data.size).to.be(0);
-                  expect(data.txid).to.be.a('string');
-                  expect(data.txid).to.be("");
-                  expect(data.version).to.be.a('number');
-                  expect(data.version).to.be(0);
-                  {
-                    let dataCtr = data.vin;
-                    expect(dataCtr).to.be.an(Array);
-                    expect(dataCtr).to.not.be.empty();
-                    for (let p in dataCtr) {
-                      let data = dataCtr[p];
-                      expect(data).to.be.a(SatstreamApi.RpcVin);
-                      expect(data.coinbase).to.be.a('string');
-                      expect(data.coinbase).to.be("");
-                      expect(data.prevout).to.be.a(SatstreamApi.RpcPrevOut);
-                            expect(data.prevout.height).to.be.a('number');
-                        expect(data.prevout.height).to.be(0);
-                        expect(data.prevout.n).to.be.a('number');
-                        expect(data.prevout.n).to.be(0);
-                        expect(data.prevout.populated).to.be.a('boolean');
-                        expect(data.prevout.populated).to.be(false);
-                        {
-                          let dataCtr = data.prevout.runeHoldings;
-                          expect(dataCtr).to.be.an(Array);
-                          expect(dataCtr).to.not.be.empty();
-                          for (let p in dataCtr) {
-                            let data = dataCtr[p];
-                            expect(data).to.be.a(SatstreamApi.RpcUtxoRune);
-                            expect(data.amount).to.be.a(SatstreamApi.BigInt);
-                                expect(data.runeId).to.be.a('string');
-                            expect(data.runeId).to.be("");
-            
-                                  }
-                        }
-                        expect(data.prevout.scriptPubKey).to.be.a(SatstreamApi.RpcScriptPubKey);
-                              expect(data.prevout.scriptPubKey.address).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.address).to.be("");
-                          expect(data.prevout.scriptPubKey.asm).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.asm).to.be("");
-                          expect(data.prevout.scriptPubKey.desc).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.desc).to.be("");
-                          expect(data.prevout.scriptPubKey.hex).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.hex).to.be("");
-                          expect(data.prevout.scriptPubKey.type).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.type).to.be("");
-                        expect(data.prevout.value).to.be.a('number');
-                        expect(data.prevout.value).to.be();
-                      expect(data.scriptSig).to.be.a(SatstreamApi.RpcScriptSig);
-                            expect(data.scriptSig.asm).to.be.a('string');
-                        expect(data.scriptSig.asm).to.be("");
-                        expect(data.scriptSig.hex).to.be.a('string');
-                        expect(data.scriptSig.hex).to.be("");
-                      expect(data.sequence).to.be.a('number');
-                      expect(data.sequence).to.be(0);
-                      expect(data.txid).to.be.a('string');
-                      expect(data.txid).to.be("");
-                      {
-                        let dataCtr = data.txinwitness;
-                        expect(dataCtr).to.be.an(Array);
-                        expect(dataCtr).to.not.be.empty();
-                        for (let p in dataCtr) {
-                          let data = dataCtr[p];
-                          expect(data).to.be.a('string');
-                          expect(data).to.be("");
-                        }
-                      }
-                      expect(data.vout).to.be.a('number');
-                      expect(data.vout).to.be(0);
-      
-                            }
-                  }
-                  {
-                    let dataCtr = data.vout;
-                    expect(dataCtr).to.be.an(Array);
-                    expect(dataCtr).to.not.be.empty();
-                    for (let p in dataCtr) {
-                      let data = dataCtr[p];
-                      expect(data).to.be.a(SatstreamApi.RpcVout);
-                      expect(data.n).to.be.a('number');
-                      expect(data.n).to.be(0);
-                      {
-                        let dataCtr = data.runeHoldings;
-                        expect(dataCtr).to.be.an(Array);
-                        expect(dataCtr).to.not.be.empty();
-                        for (let p in dataCtr) {
-                          let data = dataCtr[p];
-                          expect(data).to.be.a(SatstreamApi.RpcUtxoRune);
-                          expect(data.amount).to.be.a(SatstreamApi.BigInt);
-                              expect(data.runeId).to.be.a('string');
-                          expect(data.runeId).to.be("");
-          
-                                }
-                      }
-                      expect(data.scriptPubKey).to.be.a(SatstreamApi.RpcScriptPubKey);
-                            expect(data.scriptPubKey.address).to.be.a('string');
-                        expect(data.scriptPubKey.address).to.be("");
-                        expect(data.scriptPubKey.asm).to.be.a('string');
-                        expect(data.scriptPubKey.asm).to.be("");
-                        expect(data.scriptPubKey.desc).to.be.a('string');
-                        expect(data.scriptPubKey.desc).to.be("");
-                        expect(data.scriptPubKey.hex).to.be.a('string');
-                        expect(data.scriptPubKey.hex).to.be("");
-                        expect(data.scriptPubKey.type).to.be.a('string');
-                        expect(data.scriptPubKey.type).to.be("");
-                      expect(data.value).to.be.a('number');
-                      expect(data.value).to.be();
-      
-                            }
-                  }
-                  expect(data.vsize).to.be.a('number');
-                  expect(data.vsize).to.be(0);
-                  expect(data.weight).to.be.a('number');
-                  expect(data.weight).to.be(0);
-  
-                        }
-              }
-              expect(data.data.version).to.be.a('number');
-              expect(data.data.version).to.be(0);
-              expect(data.data.versionHex).to.be.a('string');
-              expect(data.data.versionHex).to.be("");
-              expect(data.data.weight).to.be.a('number');
-              expect(data.data.weight).to.be(0);
-            expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse);
-                  expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be.a('number');
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be(0);
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be.a(Object);
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be();
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be.a('string');
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('blocksHeightGet', function() {
-        it('should call blocksHeightGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for blocksHeightGet call and complete the assertions
-          /*
-          var height = 56;
-
-          instance.blocksHeightGet(height, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.InlineResponse2006);
-            expect(data.data).to.be.a(SatstreamApi.RpcBlock);
-                  expect(data.data.bits).to.be.a('string');
-              expect(data.data.bits).to.be("");
-              expect(data.data.chainwork).to.be.a('string');
-              expect(data.data.chainwork).to.be("");
-              expect(data.data.confirmations).to.be.a('number');
-              expect(data.data.confirmations).to.be(0);
-              expect(data.data.difficulty).to.be.a('number');
-              expect(data.data.difficulty).to.be();
-              expect(data.data.hash).to.be.a('string');
-              expect(data.data.hash).to.be("");
-              expect(data.data.height).to.be.a('number');
-              expect(data.data.height).to.be(0);
-              expect(data.data.mediantime).to.be.a('number');
-              expect(data.data.mediantime).to.be(0);
-              expect(data.data.merkleroot).to.be.a('string');
-              expect(data.data.merkleroot).to.be("");
-              expect(data.data.nTx).to.be.a('number');
-              expect(data.data.nTx).to.be(0);
-              expect(data.data.nonce).to.be.a('number');
-              expect(data.data.nonce).to.be(0);
-              expect(data.data.previousblockhash).to.be.a('string');
-              expect(data.data.previousblockhash).to.be("");
-              expect(data.data.size).to.be.a('number');
-              expect(data.data.size).to.be(0);
-              expect(data.data.strippedSize).to.be.a('number');
-              expect(data.data.strippedSize).to.be(0);
-              expect(data.data.time).to.be.a('number');
-              expect(data.data.time).to.be(0);
-              {
-                let dataCtr = data.data.tx;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a(SatstreamApi.RpcBtcTx);
-                  expect(data.blockheight).to.be.a('number');
-                  expect(data.blockheight).to.be(0);
-                  expect(data.fee).to.be.a('number');
-                  expect(data.fee).to.be();
-                  expect(data.hash).to.be.a('string');
-                  expect(data.hash).to.be("");
-                  expect(data.hex).to.be.a('string');
-                  expect(data.hex).to.be("");
-                  expect(data.index).to.be.a('number');
-                  expect(data.index).to.be(0);
-                  expect(data.locktime).to.be.a('number');
-                  expect(data.locktime).to.be(0);
-                  expect(data.size).to.be.a('number');
-                  expect(data.size).to.be(0);
-                  expect(data.txid).to.be.a('string');
-                  expect(data.txid).to.be("");
-                  expect(data.version).to.be.a('number');
-                  expect(data.version).to.be(0);
-                  {
-                    let dataCtr = data.vin;
-                    expect(dataCtr).to.be.an(Array);
-                    expect(dataCtr).to.not.be.empty();
-                    for (let p in dataCtr) {
-                      let data = dataCtr[p];
-                      expect(data).to.be.a(SatstreamApi.RpcVin);
-                      expect(data.coinbase).to.be.a('string');
-                      expect(data.coinbase).to.be("");
-                      expect(data.prevout).to.be.a(SatstreamApi.RpcPrevOut);
-                            expect(data.prevout.height).to.be.a('number');
-                        expect(data.prevout.height).to.be(0);
-                        expect(data.prevout.n).to.be.a('number');
-                        expect(data.prevout.n).to.be(0);
-                        expect(data.prevout.populated).to.be.a('boolean');
-                        expect(data.prevout.populated).to.be(false);
-                        {
-                          let dataCtr = data.prevout.runeHoldings;
-                          expect(dataCtr).to.be.an(Array);
-                          expect(dataCtr).to.not.be.empty();
-                          for (let p in dataCtr) {
-                            let data = dataCtr[p];
-                            expect(data).to.be.a(SatstreamApi.RpcUtxoRune);
-                            expect(data.amount).to.be.a(SatstreamApi.BigInt);
-                                expect(data.runeId).to.be.a('string');
-                            expect(data.runeId).to.be("");
-            
-                                  }
-                        }
-                        expect(data.prevout.scriptPubKey).to.be.a(SatstreamApi.RpcScriptPubKey);
-                              expect(data.prevout.scriptPubKey.address).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.address).to.be("");
-                          expect(data.prevout.scriptPubKey.asm).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.asm).to.be("");
-                          expect(data.prevout.scriptPubKey.desc).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.desc).to.be("");
-                          expect(data.prevout.scriptPubKey.hex).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.hex).to.be("");
-                          expect(data.prevout.scriptPubKey.type).to.be.a('string');
-                          expect(data.prevout.scriptPubKey.type).to.be("");
-                        expect(data.prevout.value).to.be.a('number');
-                        expect(data.prevout.value).to.be();
-                      expect(data.scriptSig).to.be.a(SatstreamApi.RpcScriptSig);
-                            expect(data.scriptSig.asm).to.be.a('string');
-                        expect(data.scriptSig.asm).to.be("");
-                        expect(data.scriptSig.hex).to.be.a('string');
-                        expect(data.scriptSig.hex).to.be("");
-                      expect(data.sequence).to.be.a('number');
-                      expect(data.sequence).to.be(0);
-                      expect(data.txid).to.be.a('string');
-                      expect(data.txid).to.be("");
-                      {
-                        let dataCtr = data.txinwitness;
-                        expect(dataCtr).to.be.an(Array);
-                        expect(dataCtr).to.not.be.empty();
-                        for (let p in dataCtr) {
-                          let data = dataCtr[p];
-                          expect(data).to.be.a('string');
-                          expect(data).to.be("");
-                        }
-                      }
-                      expect(data.vout).to.be.a('number');
-                      expect(data.vout).to.be(0);
-      
-                            }
-                  }
-                  {
-                    let dataCtr = data.vout;
-                    expect(dataCtr).to.be.an(Array);
-                    expect(dataCtr).to.not.be.empty();
-                    for (let p in dataCtr) {
-                      let data = dataCtr[p];
-                      expect(data).to.be.a(SatstreamApi.RpcVout);
-                      expect(data.n).to.be.a('number');
-                      expect(data.n).to.be(0);
-                      {
-                        let dataCtr = data.runeHoldings;
-                        expect(dataCtr).to.be.an(Array);
-                        expect(dataCtr).to.not.be.empty();
-                        for (let p in dataCtr) {
-                          let data = dataCtr[p];
-                          expect(data).to.be.a(SatstreamApi.RpcUtxoRune);
-                          expect(data.amount).to.be.a(SatstreamApi.BigInt);
-                              expect(data.runeId).to.be.a('string');
-                          expect(data.runeId).to.be("");
-          
-                                }
-                      }
-                      expect(data.scriptPubKey).to.be.a(SatstreamApi.RpcScriptPubKey);
-                            expect(data.scriptPubKey.address).to.be.a('string');
-                        expect(data.scriptPubKey.address).to.be("");
-                        expect(data.scriptPubKey.asm).to.be.a('string');
-                        expect(data.scriptPubKey.asm).to.be("");
-                        expect(data.scriptPubKey.desc).to.be.a('string');
-                        expect(data.scriptPubKey.desc).to.be("");
-                        expect(data.scriptPubKey.hex).to.be.a('string');
-                        expect(data.scriptPubKey.hex).to.be("");
-                        expect(data.scriptPubKey.type).to.be.a('string');
-                        expect(data.scriptPubKey.type).to.be("");
-                      expect(data.value).to.be.a('number');
-                      expect(data.value).to.be();
-      
-                            }
-                  }
-                  expect(data.vsize).to.be.a('number');
-                  expect(data.vsize).to.be(0);
-                  expect(data.weight).to.be.a('number');
-                  expect(data.weight).to.be(0);
-  
-                        }
-              }
-              expect(data.data.version).to.be.a('number');
-              expect(data.data.version).to.be(0);
-              expect(data.data.versionHex).to.be.a('string');
-              expect(data.data.versionHex).to.be("");
-              expect(data.data.weight).to.be.a('number');
-              expect(data.data.weight).to.be(0);
-            expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse);
-                  expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be.a('number');
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.code).to.be(0);
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be.a(Object);
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.data).to.be();
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be.a('string');
-              expect(data.githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.msg).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('blocksHeightTransactionsGet', function() {
-        it('should call blocksHeightTransactionsGet successfully', function(done) {
-          // TODO: uncomment, update parameter values for blocksHeightTransactionsGet call and complete the assertions
-          /*
-          var height = 56;
-
-          instance.blocksHeightTransactionsGet(height, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
-            }
 
             done();
           });
