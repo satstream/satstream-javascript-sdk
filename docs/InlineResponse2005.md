@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**GithubComSatstreamSsUtilsRpcBlock**](GithubComSatstreamSsUtilsRpcBlock.md) |  | [optional] 
-**githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse**](GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.md) |  | [optional] 
+**responsesBase** | [**ResponsesBase**](ResponsesBase.md) |  | [optional] 
 
 
