@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**RpcBlock**](RpcBlock.md) |  | [optional] 
+**data** | [**GithubComSatstreamSsUtilsRpcBlock**](GithubComSatstreamSsUtilsRpcBlock.md) |  | [optional] 
 **githubComSatstreamSsApiServerApiBlocksResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse**](GithubComSatstreamSsApiServerApiBlocksResponsesBaseResponse.md) |  | [optional] 
 
 

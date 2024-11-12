@@ -49,8 +49,8 @@
 
 
     /**
-     * Callback function to receive the result of the addressesAddressBalanceGet operation.
-     * @callback module:api/AddressesApi~addressesAddressBalanceGetCallback
+     * Callback function to receive the result of the getAddressBalance operation.
+     * @callback module:api/AddressesApi~getAddressBalanceCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -60,15 +60,15 @@
      * Get address balance
      * Get the current balance of a Bitcoin address
      * @param {String} address Bitcoin address
-     * @param {module:api/AddressesApi~addressesAddressBalanceGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AddressesApi~getAddressBalanceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse200}
      */
-    this.addressesAddressBalanceGet = function(address, callback) {
+    this.getAddressBalance = function(address, callback) {
       var postBody = null;
 
       // verify the required parameter 'address' is set
       if (address === undefined || address === null) {
-        throw new Error("Missing the required parameter 'address' when calling addressesAddressBalanceGet");
+        throw new Error("Missing the required parameter 'address' when calling getAddressBalance");
       }
 
 
@@ -97,85 +97,26 @@
     }
 
     /**
-     * Callback function to receive the result of the addressesAddressBalanceTimeframeGet operation.
-     * @callback module:api/AddressesApi~addressesAddressBalanceTimeframeGetCallback
+     * Callback function to receive the result of the getAddressNonInscriptionUtxos operation.
+     * @callback module:api/AddressesApi~getAddressNonInscriptionUtxosCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001} data The data returned by the service call.
+     * @param {module:model/InlineResponse2004} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get address timeframe balance
-     * Get the balance of a Bitcoin address for a specific timeframe
+     * Get address non-inscription UTXOs
+     * Get all non-inscription UTXOs for a Bitcoin address
      * @param {String} address Bitcoin address
-     * @param {module:model/String} timeframe Timeframe
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.token Token
-     * @param {module:api/AddressesApi~addressesAddressBalanceTimeframeGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2001}
+     * @param {module:api/AddressesApi~getAddressNonInscriptionUtxosCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2004}
      */
-    this.addressesAddressBalanceTimeframeGet = function(address, timeframe, opts, callback) {
-      opts = opts || {};
+    this.getAddressNonInscriptionUtxos = function(address, callback) {
       var postBody = null;
 
       // verify the required parameter 'address' is set
       if (address === undefined || address === null) {
-        throw new Error("Missing the required parameter 'address' when calling addressesAddressBalanceTimeframeGet");
-      }
-
-      // verify the required parameter 'timeframe' is set
-      if (timeframe === undefined || timeframe === null) {
-        throw new Error("Missing the required parameter 'timeframe' when calling addressesAddressBalanceTimeframeGet");
-      }
-
-
-      var pathParams = {
-        'address': address
-      };
-      var queryParams = {
-        'token': opts['token'],
-        'timeframe': timeframe,
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ApiKeyAuth'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = InlineResponse2001;
-
-      return this.apiClient.callApi(
-        '/addresses/{address}/balance/timeframe', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the addressesAddressRunesGet operation.
-     * @callback module:api/AddressesApi~addressesAddressRunesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get address runes balance list
-     * Get the balance of all runes for a Bitcoin address
-     * @param {String} address Bitcoin address
-     * @param {module:api/AddressesApi~addressesAddressRunesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2002}
-     */
-    this.addressesAddressRunesGet = function(address, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'address' is set
-      if (address === undefined || address === null) {
-        throw new Error("Missing the required parameter 'address' when calling addressesAddressRunesGet");
+        throw new Error("Missing the required parameter 'address' when calling getAddressNonInscriptionUtxos");
       }
 
 
@@ -194,18 +135,18 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2002;
+      var returnType = InlineResponse2004;
 
       return this.apiClient.callApi(
-        '/addresses/{address}/runes', 'GET',
+        '/addresses/{address}/utxos', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the addressesAddressRunesRuneidGet operation.
-     * @callback module:api/AddressesApi~addressesAddressRunesRuneidGetCallback
+     * Callback function to receive the result of the getAddressRuneBalance operation.
+     * @callback module:api/AddressesApi~getAddressRuneBalanceCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse2003} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -216,20 +157,20 @@
      * Get the balance of a specific rune for a Bitcoin address
      * @param {String} address Bitcoin address
      * @param {String} runeid Rune ID
-     * @param {module:api/AddressesApi~addressesAddressRunesRuneidGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AddressesApi~getAddressRuneBalanceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2003}
      */
-    this.addressesAddressRunesRuneidGet = function(address, runeid, callback) {
+    this.getAddressRuneBalance = function(address, runeid, callback) {
       var postBody = null;
 
       // verify the required parameter 'address' is set
       if (address === undefined || address === null) {
-        throw new Error("Missing the required parameter 'address' when calling addressesAddressRunesRuneidGet");
+        throw new Error("Missing the required parameter 'address' when calling getAddressRuneBalance");
       }
 
       // verify the required parameter 'runeid' is set
       if (runeid === undefined || runeid === null) {
-        throw new Error("Missing the required parameter 'runeid' when calling addressesAddressRunesRuneidGet");
+        throw new Error("Missing the required parameter 'runeid' when calling getAddressRuneBalance");
       }
 
 
@@ -259,26 +200,26 @@
     }
 
     /**
-     * Callback function to receive the result of the addressesAddressUtxosGet operation.
-     * @callback module:api/AddressesApi~addressesAddressUtxosGetCallback
+     * Callback function to receive the result of the getAddressRunesBalanceList operation.
+     * @callback module:api/AddressesApi~getAddressRunesBalanceListCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2004} data The data returned by the service call.
+     * @param {module:model/InlineResponse2002} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get address non-inscription UTXOs
-     * Get all non-inscription UTXOs for a Bitcoin address
+     * Get address runes balance list
+     * Get the balance of all runes for a Bitcoin address
      * @param {String} address Bitcoin address
-     * @param {module:api/AddressesApi~addressesAddressUtxosGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2004}
+     * @param {module:api/AddressesApi~getAddressRunesBalanceListCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2002}
      */
-    this.addressesAddressUtxosGet = function(address, callback) {
+    this.getAddressRunesBalanceList = function(address, callback) {
       var postBody = null;
 
       // verify the required parameter 'address' is set
       if (address === undefined || address === null) {
-        throw new Error("Missing the required parameter 'address' when calling addressesAddressUtxosGet");
+        throw new Error("Missing the required parameter 'address' when calling getAddressRunesBalanceList");
       }
 
 
@@ -297,10 +238,69 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2004;
+      var returnType = InlineResponse2002;
 
       return this.apiClient.callApi(
-        '/addresses/{address}/utxos', 'GET',
+        '/addresses/{address}/runes', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAddressTimeframeBalance operation.
+     * @callback module:api/AddressesApi~getAddressTimeframeBalanceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2001} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get address timeframe balance
+     * Get the balance of a Bitcoin address for a specific timeframe
+     * @param {String} address Bitcoin address
+     * @param {module:model/String} timeframe Timeframe
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.token Token
+     * @param {module:api/AddressesApi~getAddressTimeframeBalanceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2001}
+     */
+    this.getAddressTimeframeBalance = function(address, timeframe, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'address' is set
+      if (address === undefined || address === null) {
+        throw new Error("Missing the required parameter 'address' when calling getAddressTimeframeBalance");
+      }
+
+      // verify the required parameter 'timeframe' is set
+      if (timeframe === undefined || timeframe === null) {
+        throw new Error("Missing the required parameter 'timeframe' when calling getAddressTimeframeBalance");
+      }
+
+
+      var pathParams = {
+        'address': address
+      };
+      var queryParams = {
+        'token': opts['token'],
+        'timeframe': timeframe,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ApiKeyAuth'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = InlineResponse2001;
+
+      return this.apiClient.callApi(
+        '/addresses/{address}/balance/timeframe', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

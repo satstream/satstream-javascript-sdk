@@ -4,61 +4,15 @@ All URIs are relative to *https://api.satstream.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**indexerTxHashGet**](TransactionsApi.md#indexerTxHashGet) | **GET** /indexer/tx/{hash} | Get transaction
-[**transactionsBroadcastPost**](TransactionsApi.md#transactionsBroadcastPost) | **POST** /transactions/broadcast | Broadcast transaction
-[**transactionsTxidGet**](TransactionsApi.md#transactionsTxidGet) | **GET** /transactions/{txid} | Get transaction info
-[**transactionsTxidInputsGet**](TransactionsApi.md#transactionsTxidInputsGet) | **GET** /transactions/{txid}/inputs | Get transaction inputs
+[**broadcastTransaction**](TransactionsApi.md#broadcastTransaction) | **POST** /transactions/broadcast | Broadcast transaction
+[**getTransaction**](TransactionsApi.md#getTransaction) | **GET** /indexer/tx/{hash} | Get transaction
+[**getTransactionInfo**](TransactionsApi.md#getTransactionInfo) | **GET** /transactions/{txid} | Get transaction info
+[**getTransactionInputs**](TransactionsApi.md#getTransactionInputs) | **GET** /transactions/{txid}/inputs | Get transaction inputs
 
 
-<a name="indexerTxHashGet"></a>
-# **indexerTxHashGet**
-> InlineResponse2008 indexerTxHashGet(hash)
-
-Get transaction
-
-Get a transaction by its hash
-
-### Example
-```javascript
-var SatstreamApi = require('satstream_api');
-
-var apiInstance = new SatstreamApi.TransactionsApi();
-
-var hash = "hash_example"; // String | Transaction hash
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.indexerTxHashGet(hash, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **hash** | **String**| Transaction hash | 
-
-### Return type
-
-[**InlineResponse2008**](InlineResponse2008.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="transactionsBroadcastPost"></a>
-# **transactionsBroadcastPost**
-> InlineResponse20011 transactionsBroadcastPost(transaction)
+<a name="broadcastTransaction"></a>
+# **broadcastTransaction**
+> InlineResponse20011 broadcastTransaction(transaction)
 
 Broadcast transaction
 
@@ -87,7 +41,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.transactionsBroadcastPost(transaction, callback);
+apiInstance.broadcastTransaction(transaction, callback);
 ```
 
 ### Parameters
@@ -109,9 +63,55 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="transactionsTxidGet"></a>
-# **transactionsTxidGet**
-> InlineResponse20012 transactionsTxidGet(txid)
+<a name="getTransaction"></a>
+# **getTransaction**
+> InlineResponse2008 getTransaction(hash)
+
+Get transaction
+
+Get a transaction by its hash
+
+### Example
+```javascript
+var SatstreamApi = require('satstream_api');
+
+var apiInstance = new SatstreamApi.TransactionsApi();
+
+var hash = "hash_example"; // String | Transaction hash
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getTransaction(hash, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **hash** | **String**| Transaction hash | 
+
+### Return type
+
+[**InlineResponse2008**](InlineResponse2008.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getTransactionInfo"></a>
+# **getTransactionInfo**
+> InlineResponse20012 getTransactionInfo(txid)
 
 Get transaction info
 
@@ -140,7 +140,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.transactionsTxidGet(txid, callback);
+apiInstance.getTransactionInfo(txid, callback);
 ```
 
 ### Parameters
@@ -162,9 +162,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="transactionsTxidInputsGet"></a>
-# **transactionsTxidInputsGet**
-> [Object] transactionsTxidInputsGet(txid)
+<a name="getTransactionInputs"></a>
+# **getTransactionInputs**
+> [Object] getTransactionInputs(txid)
 
 Get transaction inputs
 
@@ -193,7 +193,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.transactionsTxidInputsGet(txid, callback);
+apiInstance.getTransactionInputs(txid, callback);
 ```
 
 ### Parameters

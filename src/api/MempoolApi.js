@@ -49,8 +49,8 @@
 
 
     /**
-     * Callback function to receive the result of the mempoolAddressesAddressTransactionsGet operation.
-     * @callback module:api/MempoolApi~mempoolAddressesAddressTransactionsGetCallback
+     * Callback function to receive the result of the getAddressMempoolTransactions operation.
+     * @callback module:api/MempoolApi~getAddressMempoolTransactionsCallback
      * @param {String} error Error message, if any.
      * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -60,15 +60,15 @@
      * Get address mempool transactions
      * Get all mempool transactions for a specific address
      * @param {String} address Bitcoin address
-     * @param {module:api/MempoolApi~mempoolAddressesAddressTransactionsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/MempoolApi~getAddressMempoolTransactionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
      */
-    this.mempoolAddressesAddressTransactionsGet = function(address, callback) {
+    this.getAddressMempoolTransactions = function(address, callback) {
       var postBody = null;
 
       // verify the required parameter 'address' is set
       if (address === undefined || address === null) {
-        throw new Error("Missing the required parameter 'address' when calling mempoolAddressesAddressTransactionsGet");
+        throw new Error("Missing the required parameter 'address' when calling getAddressMempoolTransactions");
       }
 
 
@@ -97,49 +97,8 @@
     }
 
     /**
-     * Callback function to receive the result of the mempoolTransactionsGet operation.
-     * @callback module:api/MempoolApi~mempoolTransactionsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get mempool transactions
-     * Get all transactions currently in the mempool
-     * @param {module:api/MempoolApi~mempoolTransactionsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
-     */
-    this.mempoolTransactionsGet = function(callback) {
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = [Object];
-
-      return this.apiClient.callApi(
-        '/mempool/transactions', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the mempoolTransactionsTxidGet operation.
-     * @callback module:api/MempoolApi~mempoolTransactionsTxidGetCallback
+     * Callback function to receive the result of the getMempoolTransactionInfo operation.
+     * @callback module:api/MempoolApi~getMempoolTransactionInfoCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse2009} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -149,15 +108,15 @@
      * Get mempool transaction info
      * Get information about a specific transaction in the mempool
      * @param {String} txid Transaction ID
-     * @param {module:api/MempoolApi~mempoolTransactionsTxidGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/MempoolApi~getMempoolTransactionInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2009}
      */
-    this.mempoolTransactionsTxidGet = function(txid, callback) {
+    this.getMempoolTransactionInfo = function(txid, callback) {
       var postBody = null;
 
       // verify the required parameter 'txid' is set
       if (txid === undefined || txid === null) {
-        throw new Error("Missing the required parameter 'txid' when calling mempoolTransactionsTxidGet");
+        throw new Error("Missing the required parameter 'txid' when calling getMempoolTransactionInfo");
       }
 
 
@@ -180,6 +139,47 @@
 
       return this.apiClient.callApi(
         '/mempool/transactions/{txid}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getMempoolTransactions operation.
+     * @callback module:api/MempoolApi~getMempoolTransactionsCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get mempool transactions
+     * Get all transactions currently in the mempool
+     * @param {module:api/MempoolApi~getMempoolTransactionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<Object>}
+     */
+    this.getMempoolTransactions = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = [Object];
+
+      return this.apiClient.callApi(
+        '/mempool/transactions', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

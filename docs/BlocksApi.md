@@ -4,55 +4,15 @@ All URIs are relative to *https://api.satstream.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**blocksCurrentHeightGet**](BlocksApi.md#blocksCurrentHeightGet) | **GET** /blocks/current-height | Get current block height
-[**blocksHashHashGet**](BlocksApi.md#blocksHashHashGet) | **GET** /blocks/hash/{hash} | Get block by hash
-[**blocksHeightGet**](BlocksApi.md#blocksHeightGet) | **GET** /blocks/{height} | Get block info
-[**blocksHeightTransactionsGet**](BlocksApi.md#blocksHeightTransactionsGet) | **GET** /blocks/{height}/transactions | Get block transactions
+[**getBlockByHash**](BlocksApi.md#getBlockByHash) | **GET** /blocks/hash/{hash} | Get block by hash
+[**getBlockInfo**](BlocksApi.md#getBlockInfo) | **GET** /blocks/{height} | Get block info
+[**getBlockTransactions**](BlocksApi.md#getBlockTransactions) | **GET** /blocks/{height}/transactions | Get block transactions
+[**getCurrentBlockHeight**](BlocksApi.md#getCurrentBlockHeight) | **GET** /blocks/current-height | Get current block height
 
 
-<a name="blocksCurrentHeightGet"></a>
-# **blocksCurrentHeightGet**
-> InlineResponse2005 blocksCurrentHeightGet()
-
-Get current block height
-
-Get the current block height of the Bitcoin blockchain
-
-### Example
-```javascript
-var SatstreamApi = require('satstream_api');
-
-var apiInstance = new SatstreamApi.BlocksApi();
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.blocksCurrentHeightGet(callback);
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**InlineResponse2005**](InlineResponse2005.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="blocksHashHashGet"></a>
-# **blocksHashHashGet**
-> InlineResponse2006 blocksHashHashGet(hash)
+<a name="getBlockByHash"></a>
+# **getBlockByHash**
+> InlineResponse2006 getBlockByHash(hash)
 
 Get block by hash
 
@@ -74,7 +34,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.blocksHashHashGet(hash, callback);
+apiInstance.getBlockByHash(hash, callback);
 ```
 
 ### Parameters
@@ -96,9 +56,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="blocksHeightGet"></a>
-# **blocksHeightGet**
-> InlineResponse2006 blocksHeightGet(height)
+<a name="getBlockInfo"></a>
+# **getBlockInfo**
+> InlineResponse2006 getBlockInfo(height)
 
 Get block info
 
@@ -120,7 +80,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.blocksHeightGet(height, callback);
+apiInstance.getBlockInfo(height, callback);
 ```
 
 ### Parameters
@@ -142,9 +102,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="blocksHeightTransactionsGet"></a>
-# **blocksHeightTransactionsGet**
-> [Object] blocksHeightTransactionsGet(height)
+<a name="getBlockTransactions"></a>
+# **getBlockTransactions**
+> [Object] getBlockTransactions(height)
 
 Get block transactions
 
@@ -166,7 +126,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.blocksHeightTransactionsGet(height, callback);
+apiInstance.getBlockTransactions(height, callback);
 ```
 
 ### Parameters
@@ -178,6 +138,46 @@ Name | Type | Description  | Notes
 ### Return type
 
 **[Object]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getCurrentBlockHeight"></a>
+# **getCurrentBlockHeight**
+> InlineResponse2005 getCurrentBlockHeight()
+
+Get current block height
+
+Get the current block height of the Bitcoin blockchain
+
+### Example
+```javascript
+var SatstreamApi = require('satstream_api');
+
+var apiInstance = new SatstreamApi.BlocksApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getCurrentBlockHeight(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 

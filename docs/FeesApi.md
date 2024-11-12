@@ -4,12 +4,12 @@ All URIs are relative to *https://api.satstream.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**feesGet**](FeesApi.md#feesGet) | **GET** /fees | Get recommended fees
+[**getRecommendedFees**](FeesApi.md#getRecommendedFees) | **GET** /fees | Get recommended fees
 
 
-<a name="feesGet"></a>
-# **feesGet**
-> InlineResponse2007 feesGet()
+<a name="getRecommendedFees"></a>
+# **getRecommendedFees**
+> InlineResponse2007 getRecommendedFees()
 
 Get recommended fees
 
@@ -28,7 +28,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.feesGet(callback);
+apiInstance.getRecommendedFees(callback);
 ```
 
 ### Parameters

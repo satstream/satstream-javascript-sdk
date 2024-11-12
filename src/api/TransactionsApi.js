@@ -49,8 +49,55 @@
 
 
     /**
-     * Callback function to receive the result of the indexerTxHashGet operation.
-     * @callback module:api/TransactionsApi~indexerTxHashGetCallback
+     * Callback function to receive the result of the broadcastTransaction operation.
+     * @callback module:api/TransactionsApi~broadcastTransactionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20011} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Broadcast transaction
+     * Broadcast a raw transaction to the Bitcoin network
+     * @param {String} transaction Raw transaction hex
+     * @param {module:api/TransactionsApi~broadcastTransactionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20011}
+     */
+    this.broadcastTransaction = function(transaction, callback) {
+      var postBody = transaction;
+
+      // verify the required parameter 'transaction' is set
+      if (transaction === undefined || transaction === null) {
+        throw new Error("Missing the required parameter 'transaction' when calling broadcastTransaction");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ApiKeyAuth'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = InlineResponse20011;
+
+      return this.apiClient.callApi(
+        '/transactions/broadcast', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTransaction operation.
+     * @callback module:api/TransactionsApi~getTransactionCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse2008} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -60,15 +107,15 @@
      * Get transaction
      * Get a transaction by its hash
      * @param {String} hash Transaction hash
-     * @param {module:api/TransactionsApi~indexerTxHashGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransactionsApi~getTransactionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2008}
      */
-    this.indexerTxHashGet = function(hash, callback) {
+    this.getTransaction = function(hash, callback) {
       var postBody = null;
 
       // verify the required parameter 'hash' is set
       if (hash === undefined || hash === null) {
-        throw new Error("Missing the required parameter 'hash' when calling indexerTxHashGet");
+        throw new Error("Missing the required parameter 'hash' when calling getTransaction");
       }
 
 
@@ -97,55 +144,8 @@
     }
 
     /**
-     * Callback function to receive the result of the transactionsBroadcastPost operation.
-     * @callback module:api/TransactionsApi~transactionsBroadcastPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20011} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Broadcast transaction
-     * Broadcast a raw transaction to the Bitcoin network
-     * @param {String} transaction Raw transaction hex
-     * @param {module:api/TransactionsApi~transactionsBroadcastPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20011}
-     */
-    this.transactionsBroadcastPost = function(transaction, callback) {
-      var postBody = transaction;
-
-      // verify the required parameter 'transaction' is set
-      if (transaction === undefined || transaction === null) {
-        throw new Error("Missing the required parameter 'transaction' when calling transactionsBroadcastPost");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ApiKeyAuth'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = InlineResponse20011;
-
-      return this.apiClient.callApi(
-        '/transactions/broadcast', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the transactionsTxidGet operation.
-     * @callback module:api/TransactionsApi~transactionsTxidGetCallback
+     * Callback function to receive the result of the getTransactionInfo operation.
+     * @callback module:api/TransactionsApi~getTransactionInfoCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse20012} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -155,15 +155,15 @@
      * Get transaction info
      * Get detailed information about a specific transaction
      * @param {String} txid Transaction ID
-     * @param {module:api/TransactionsApi~transactionsTxidGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransactionsApi~getTransactionInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse20012}
      */
-    this.transactionsTxidGet = function(txid, callback) {
+    this.getTransactionInfo = function(txid, callback) {
       var postBody = null;
 
       // verify the required parameter 'txid' is set
       if (txid === undefined || txid === null) {
-        throw new Error("Missing the required parameter 'txid' when calling transactionsTxidGet");
+        throw new Error("Missing the required parameter 'txid' when calling getTransactionInfo");
       }
 
 
@@ -192,8 +192,8 @@
     }
 
     /**
-     * Callback function to receive the result of the transactionsTxidInputsGet operation.
-     * @callback module:api/TransactionsApi~transactionsTxidInputsGetCallback
+     * Callback function to receive the result of the getTransactionInputs operation.
+     * @callback module:api/TransactionsApi~getTransactionInputsCallback
      * @param {String} error Error message, if any.
      * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -203,15 +203,15 @@
      * Get transaction inputs
      * Get the inputs of a specific transaction
      * @param {String} txid Transaction ID
-     * @param {module:api/TransactionsApi~transactionsTxidInputsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransactionsApi~getTransactionInputsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
      */
-    this.transactionsTxidInputsGet = function(txid, callback) {
+    this.getTransactionInputs = function(txid, callback) {
       var postBody = null;
 
       // verify the required parameter 'txid' is set
       if (txid === undefined || txid === null) {
-        throw new Error("Missing the required parameter 'txid' when calling transactionsTxidInputsGet");
+        throw new Error("Missing the required parameter 'txid' when calling getTransactionInputs");
       }
 
 

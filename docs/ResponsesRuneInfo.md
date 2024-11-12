@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **spacedRune** | **String** |  | [optional] 
 **spacers** | **Number** |  | [optional] 
 **symbol** | **String** |  | [optional] 
-**terms** | [**OrdinalsTerms**](OrdinalsTerms.md) |  | [optional] 
+**terms** | [**GithubComSatstreamSsUtilsOrdinalsTerms**](GithubComSatstreamSsUtilsOrdinalsTerms.md) |  | [optional] 
 **turbo** | **Boolean** |  | [optional] 
 **txHeight** | **Number** |  | [optional] 
 **txid** | **String** |  | [optional] 

@@ -49,49 +49,8 @@
 
 
     /**
-     * Callback function to receive the result of the blocksCurrentHeightGet operation.
-     * @callback module:api/BlocksApi~blocksCurrentHeightGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get current block height
-     * Get the current block height of the Bitcoin blockchain
-     * @param {module:api/BlocksApi~blocksCurrentHeightGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2005}
-     */
-    this.blocksCurrentHeightGet = function(callback) {
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = InlineResponse2005;
-
-      return this.apiClient.callApi(
-        '/blocks/current-height', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the blocksHashHashGet operation.
-     * @callback module:api/BlocksApi~blocksHashHashGetCallback
+     * Callback function to receive the result of the getBlockByHash operation.
+     * @callback module:api/BlocksApi~getBlockByHashCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -101,15 +60,15 @@
      * Get block by hash
      * Get information about a specific block by its hash
      * @param {String} hash Block hash
-     * @param {module:api/BlocksApi~blocksHashHashGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/BlocksApi~getBlockByHashCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2006}
      */
-    this.blocksHashHashGet = function(hash, callback) {
+    this.getBlockByHash = function(hash, callback) {
       var postBody = null;
 
       // verify the required parameter 'hash' is set
       if (hash === undefined || hash === null) {
-        throw new Error("Missing the required parameter 'hash' when calling blocksHashHashGet");
+        throw new Error("Missing the required parameter 'hash' when calling getBlockByHash");
       }
 
 
@@ -138,8 +97,8 @@
     }
 
     /**
-     * Callback function to receive the result of the blocksHeightGet operation.
-     * @callback module:api/BlocksApi~blocksHeightGetCallback
+     * Callback function to receive the result of the getBlockInfo operation.
+     * @callback module:api/BlocksApi~getBlockInfoCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse2006} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -149,15 +108,15 @@
      * Get block info
      * Get information about a specific block by height
      * @param {Number} height Block height
-     * @param {module:api/BlocksApi~blocksHeightGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/BlocksApi~getBlockInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2006}
      */
-    this.blocksHeightGet = function(height, callback) {
+    this.getBlockInfo = function(height, callback) {
       var postBody = null;
 
       // verify the required parameter 'height' is set
       if (height === undefined || height === null) {
-        throw new Error("Missing the required parameter 'height' when calling blocksHeightGet");
+        throw new Error("Missing the required parameter 'height' when calling getBlockInfo");
       }
 
 
@@ -186,8 +145,8 @@
     }
 
     /**
-     * Callback function to receive the result of the blocksHeightTransactionsGet operation.
-     * @callback module:api/BlocksApi~blocksHeightTransactionsGetCallback
+     * Callback function to receive the result of the getBlockTransactions operation.
+     * @callback module:api/BlocksApi~getBlockTransactionsCallback
      * @param {String} error Error message, if any.
      * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -197,15 +156,15 @@
      * Get block transactions
      * Get transactions for a specific block height
      * @param {Number} height Block height
-     * @param {module:api/BlocksApi~blocksHeightTransactionsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/BlocksApi~getBlockTransactionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
      */
-    this.blocksHeightTransactionsGet = function(height, callback) {
+    this.getBlockTransactions = function(height, callback) {
       var postBody = null;
 
       // verify the required parameter 'height' is set
       if (height === undefined || height === null) {
-        throw new Error("Missing the required parameter 'height' when calling blocksHeightTransactionsGet");
+        throw new Error("Missing the required parameter 'height' when calling getBlockTransactions");
       }
 
 
@@ -228,6 +187,47 @@
 
       return this.apiClient.callApi(
         '/blocks/{height}/transactions', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getCurrentBlockHeight operation.
+     * @callback module:api/BlocksApi~getCurrentBlockHeightCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2005} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get current block height
+     * Get the current block height of the Bitcoin blockchain
+     * @param {module:api/BlocksApi~getCurrentBlockHeightCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse2005}
+     */
+    this.getCurrentBlockHeight = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = InlineResponse2005;
+
+      return this.apiClient.callApi(
+        '/blocks/current-height', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

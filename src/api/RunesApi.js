@@ -49,32 +49,33 @@
 
 
     /**
-     * Callback function to receive the result of the runesGet operation.
-     * @callback module:api/RunesApi~runesGetCallback
+     * Callback function to receive the result of the getRunesHolders operation.
+     * @callback module:api/RunesApi~getRunesHoldersCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20010} data The data returned by the service call.
+     * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get runes info list
-     * Get information about all runes
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.page Page number (default: 1)
-     * @param {Number} opts.perPage Items per page (default: 10)
-     * @param {module:api/RunesApi~runesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20010}
+     * Get rune holders
+     * Get a list of addresses holding a specific rune
+     * @param {String} runeId Rune ID
+     * @param {module:api/RunesApi~getRunesHoldersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<Object>}
      */
-    this.runesGet = function(opts, callback) {
-      opts = opts || {};
+    this.getRunesHolders = function(runeId, callback) {
       var postBody = null;
+
+      // verify the required parameter 'runeId' is set
+      if (runeId === undefined || runeId === null) {
+        throw new Error("Missing the required parameter 'runeId' when calling getRunesHolders");
+      }
 
 
       var pathParams = {
+        'runeId': runeId
       };
       var queryParams = {
-        'page': opts['page'],
-        'per_page': opts['perPage'],
       };
       var collectionQueryParams = {
       };
@@ -86,18 +87,18 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse20010;
+      var returnType = [Object];
 
       return this.apiClient.callApi(
-        '/runes', 'GET',
+        '/runes/{runeId}/holders', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the runesRuneIdGet operation.
-     * @callback module:api/RunesApi~runesRuneIdGetCallback
+     * Callback function to receive the result of the getRunesInfo operation.
+     * @callback module:api/RunesApi~getRunesInfoCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -107,15 +108,15 @@
      * Get rune info
      * Get detailed information about a specific rune
      * @param {String} runeId Rune ID
-     * @param {module:api/RunesApi~runesRuneIdGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/RunesApi~getRunesInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
-    this.runesRuneIdGet = function(runeId, callback) {
+    this.getRunesInfo = function(runeId, callback) {
       var postBody = null;
 
       // verify the required parameter 'runeId' is set
       if (runeId === undefined || runeId === null) {
-        throw new Error("Missing the required parameter 'runeId' when calling runesRuneIdGet");
+        throw new Error("Missing the required parameter 'runeId' when calling getRunesInfo");
       }
 
 
@@ -144,33 +145,32 @@
     }
 
     /**
-     * Callback function to receive the result of the runesRuneIdHoldersGet operation.
-     * @callback module:api/RunesApi~runesRuneIdHoldersGetCallback
+     * Callback function to receive the result of the getRunesInfoList operation.
+     * @callback module:api/RunesApi~getRunesInfoListCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {module:model/InlineResponse20010} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get rune holders
-     * Get a list of addresses holding a specific rune
-     * @param {String} runeId Rune ID
-     * @param {module:api/RunesApi~runesRuneIdHoldersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * Get runes info list
+     * Get information about all runes
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page Page number (default: 1)
+     * @param {Number} opts.perPage Items per page (default: 10)
+     * @param {module:api/RunesApi~getRunesInfoListCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InlineResponse20010}
      */
-    this.runesRuneIdHoldersGet = function(runeId, callback) {
+    this.getRunesInfoList = function(opts, callback) {
+      opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'runeId' is set
-      if (runeId === undefined || runeId === null) {
-        throw new Error("Missing the required parameter 'runeId' when calling runesRuneIdHoldersGet");
-      }
 
 
       var pathParams = {
-        'runeId': runeId
       };
       var queryParams = {
+        'page': opts['page'],
+        'per_page': opts['perPage'],
       };
       var collectionQueryParams = {
       };
@@ -182,10 +182,10 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [Object];
+      var returnType = InlineResponse20010;
 
       return this.apiClient.callApi(
-        '/runes/{runeId}/holders', 'GET',
+        '/runes', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

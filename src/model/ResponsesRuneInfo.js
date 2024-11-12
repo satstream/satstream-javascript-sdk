@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BigInt', 'model/OrdinalsTerms'], factory);
+    define(['ApiClient', 'model/BigInt', 'model/GithubComSatstreamSsUtilsOrdinalsTerms'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BigInt'), require('./OrdinalsTerms'));
+    module.exports = factory(require('../ApiClient'), require('./BigInt'), require('./GithubComSatstreamSsUtilsOrdinalsTerms'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.ResponsesRuneInfo = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BigInt, root.SatstreamApi.OrdinalsTerms);
+    root.SatstreamApi.ResponsesRuneInfo = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BigInt, root.SatstreamApi.GithubComSatstreamSsUtilsOrdinalsTerms);
   }
-}(this, function(ApiClient, BigInt, OrdinalsTerms) {
+}(this, function(ApiClient, BigInt, GithubComSatstreamSsUtilsOrdinalsTerms) {
   'use strict';
 
   /**
@@ -74,7 +74,7 @@
       if (data.hasOwnProperty('symbol'))
         obj.symbol = ApiClient.convertToType(data['symbol'], 'String');
       if (data.hasOwnProperty('terms'))
-        obj.terms = OrdinalsTerms.constructFromObject(data['terms']);
+        obj.terms = GithubComSatstreamSsUtilsOrdinalsTerms.constructFromObject(data['terms']);
       if (data.hasOwnProperty('turbo'))
         obj.turbo = ApiClient.convertToType(data['turbo'], 'Boolean');
       if (data.hasOwnProperty('tx_height'))
@@ -131,7 +131,7 @@
   exports.prototype.symbol = undefined;
 
   /**
-   * @member {module:model/OrdinalsTerms} terms
+   * @member {module:model/GithubComSatstreamSsUtilsOrdinalsTerms} terms
    */
   exports.prototype.terms = undefined;
 

@@ -4,14 +4,14 @@ All URIs are relative to *https://api.satstream.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mempoolAddressesAddressTransactionsGet**](MempoolApi.md#mempoolAddressesAddressTransactionsGet) | **GET** /mempool/addresses/{address}/transactions | Get address mempool transactions
-[**mempoolTransactionsGet**](MempoolApi.md#mempoolTransactionsGet) | **GET** /mempool/transactions | Get mempool transactions
-[**mempoolTransactionsTxidGet**](MempoolApi.md#mempoolTransactionsTxidGet) | **GET** /mempool/transactions/{txid} | Get mempool transaction info
+[**getAddressMempoolTransactions**](MempoolApi.md#getAddressMempoolTransactions) | **GET** /mempool/addresses/{address}/transactions | Get address mempool transactions
+[**getMempoolTransactionInfo**](MempoolApi.md#getMempoolTransactionInfo) | **GET** /mempool/transactions/{txid} | Get mempool transaction info
+[**getMempoolTransactions**](MempoolApi.md#getMempoolTransactions) | **GET** /mempool/transactions | Get mempool transactions
 
 
-<a name="mempoolAddressesAddressTransactionsGet"></a>
-# **mempoolAddressesAddressTransactionsGet**
-> [Object] mempoolAddressesAddressTransactionsGet(address)
+<a name="getAddressMempoolTransactions"></a>
+# **getAddressMempoolTransactions**
+> [Object] getAddressMempoolTransactions(address)
 
 Get address mempool transactions
 
@@ -40,7 +40,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.mempoolAddressesAddressTransactionsGet(address, callback);
+apiInstance.getAddressMempoolTransactions(address, callback);
 ```
 
 ### Parameters
@@ -62,49 +62,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="mempoolTransactionsGet"></a>
-# **mempoolTransactionsGet**
-> [Object] mempoolTransactionsGet()
-
-Get mempool transactions
-
-Get all transactions currently in the mempool
-
-### Example
-```javascript
-var SatstreamApi = require('satstream_api');
-
-var apiInstance = new SatstreamApi.MempoolApi();
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.mempoolTransactionsGet(callback);
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**[Object]**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="mempoolTransactionsTxidGet"></a>
-# **mempoolTransactionsTxidGet**
-> InlineResponse2009 mempoolTransactionsTxidGet(txid)
+<a name="getMempoolTransactionInfo"></a>
+# **getMempoolTransactionInfo**
+> InlineResponse2009 getMempoolTransactionInfo(txid)
 
 Get mempool transaction info
 
@@ -133,7 +93,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.mempoolTransactionsTxidGet(txid, callback);
+apiInstance.getMempoolTransactionInfo(txid, callback);
 ```
 
 ### Parameters
@@ -149,6 +109,46 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getMempoolTransactions"></a>
+# **getMempoolTransactions**
+> [Object] getMempoolTransactions()
+
+Get mempool transactions
+
+Get all transactions currently in the mempool
+
+### Example
+```javascript
+var SatstreamApi = require('satstream_api');
+
+var apiInstance = new SatstreamApi.MempoolApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getMempoolTransactions(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**[Object]**
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 

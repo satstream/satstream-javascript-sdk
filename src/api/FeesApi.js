@@ -49,8 +49,8 @@
 
 
     /**
-     * Callback function to receive the result of the feesGet operation.
-     * @callback module:api/FeesApi~feesGetCallback
+     * Callback function to receive the result of the getRecommendedFees operation.
+     * @callback module:api/FeesApi~getRecommendedFeesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/InlineResponse2007} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -59,10 +59,10 @@
     /**
      * Get recommended fees
      * Get recommended fees for Bitcoin transactions
-     * @param {module:api/FeesApi~feesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/FeesApi~getRecommendedFeesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InlineResponse2007}
      */
-    this.feesGet = function(callback) {
+    this.getRecommendedFees = function(callback) {
       var postBody = null;
 
 
