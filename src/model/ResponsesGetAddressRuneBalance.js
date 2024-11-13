@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/ResponsesGetAddressRuneBalanceData'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ResponsesGetAddressRuneBalanceData'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.ResponsesGetAddressRuneBalance = factory(root.SatstreamApi.ApiClient);
+    root.SatstreamApi.ResponsesGetAddressRuneBalance = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ResponsesGetAddressRuneBalanceData);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ResponsesGetAddressRuneBalanceData) {
   'use strict';
 
   /**
@@ -55,58 +55,30 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('amount'))
-        obj.amount = ApiClient.convertToType(data['amount'], 'String');
-      if (data.hasOwnProperty('divisibility'))
-        obj.divisibility = ApiClient.convertToType(data['divisibility'], 'Number');
-      if (data.hasOwnProperty('rune'))
-        obj.rune = ApiClient.convertToType(data['rune'], 'String');
-      if (data.hasOwnProperty('runeid'))
-        obj.runeid = ApiClient.convertToType(data['runeid'], 'String');
-      if (data.hasOwnProperty('spacedAmount'))
-        obj.spacedAmount = ApiClient.convertToType(data['spacedAmount'], 'String');
-      if (data.hasOwnProperty('spacedRune'))
-        obj.spacedRune = ApiClient.convertToType(data['spacedRune'], 'String');
-      if (data.hasOwnProperty('symbol'))
-        obj.symbol = ApiClient.convertToType(data['symbol'], 'String');
+      if (data.hasOwnProperty('code'))
+        obj.code = ApiClient.convertToType(data['code'], 'Number');
+      if (data.hasOwnProperty('data'))
+        obj.data = ResponsesGetAddressRuneBalanceData.constructFromObject(data['data']);
+      if (data.hasOwnProperty('msg'))
+        obj.msg = ApiClient.convertToType(data['msg'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {String} amount
+   * @member {Number} code
    */
-  exports.prototype.amount = undefined;
+  exports.prototype.code = undefined;
 
   /**
-   * @member {Number} divisibility
+   * @member {module:model/ResponsesGetAddressRuneBalanceData} data
    */
-  exports.prototype.divisibility = undefined;
+  exports.prototype.data = undefined;
 
   /**
-   * @member {String} rune
+   * @member {String} msg
    */
-  exports.prototype.rune = undefined;
-
-  /**
-   * @member {String} runeid
-   */
-  exports.prototype.runeid = undefined;
-
-  /**
-   * @member {String} spacedAmount
-   */
-  exports.prototype.spacedAmount = undefined;
-
-  /**
-   * @member {String} spacedRune
-   */
-  exports.prototype.spacedRune = undefined;
-
-  /**
-   * @member {String} symbol
-   */
-  exports.prototype.symbol = undefined;
+  exports.prototype.msg = undefined;
 
 
   return exports;

@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[ResponsesGetAddressTimeframeBalanceItem]**](ResponsesGetAddressTimeframeBalanceItem.md) |  | [optional] 
+**code** | **Number** |  | [optional] 
+**data** | [**ResponsesGetAddressTimeframeBalanceData**](ResponsesGetAddressTimeframeBalanceData.md) |  | [optional] 
+**msg** | **String** |  | [optional] 
 
 

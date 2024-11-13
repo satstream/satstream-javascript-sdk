@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getAddressBalance"></a>
 # **getAddressBalance**
-> InlineResponse200 getAddressBalance(address)
+> ResponsesGetAddressBalance getAddressBalance(address)
 
 Get address balance
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**ResponsesGetAddressBalance**](ResponsesGetAddressBalance.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 <a name="getAddressNonInscriptionUtxos"></a>
 # **getAddressNonInscriptionUtxos**
-> InlineResponse2004 getAddressNonInscriptionUtxos(address)
+> ResponsesGetAddressNonInscriptionUTXO getAddressNonInscriptionUtxos(address)
 
 Get address non-inscription UTXOs
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**ResponsesGetAddressNonInscriptionUTXO**](ResponsesGetAddressNonInscriptionUTXO.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 <a name="getAddressRuneBalance"></a>
 # **getAddressRuneBalance**
-> InlineResponse2003 getAddressRuneBalance(address, runeid)
+> ResponsesGetAddressRuneBalance getAddressRuneBalance(address, runeid)
 
 Get address rune balance
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**ResponsesGetAddressRuneBalance**](ResponsesGetAddressRuneBalance.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 <a name="getAddressRunesBalanceList"></a>
 # **getAddressRunesBalanceList**
-> InlineResponse2002 getAddressRunesBalanceList(address)
+> ResponsesGetAddressRunesBalanceList getAddressRunesBalanceList(address)
 
 Get address runes balance list
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**ResponsesGetAddressRunesBalanceList**](ResponsesGetAddressRunesBalanceList.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 <a name="getAddressTimeframeBalance"></a>
 # **getAddressTimeframeBalance**
-> InlineResponse2001 getAddressTimeframeBalance(address, timeframe, opts)
+> ResponsesGetAddressTimeframeBalance getAddressTimeframeBalance(address, timeframe, opts)
 
 Get address timeframe balance
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**ResponsesGetAddressTimeframeBalance**](ResponsesGetAddressTimeframeBalance.md)
 
 ### Authorization
 

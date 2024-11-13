@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getRunesHolders"></a>
 # **getRunesHolders**
-> [Object] getRunesHolders(runeId)
+> ResponsesGetRuneHolders getRunesHolders(runeId)
 
 Get rune holders
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[Object]**
+[**ResponsesGetRuneHolders**](ResponsesGetRuneHolders.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 <a name="getRunesInfo"></a>
 # **getRunesInfo**
-> Object getRunesInfo(runeId)
+> ResponsesGetRuneInfo getRunesInfo(runeId)
 
 Get rune info
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**ResponsesGetRuneInfo**](ResponsesGetRuneInfo.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 <a name="getRunesInfoList"></a>
 # **getRunesInfoList**
-> InlineResponse2006 getRunesInfoList(opts)
+> ResponsesGetRunesInfoList getRunesInfoList(opts)
 
 Get runes info list
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**ResponsesGetRunesInfoList**](ResponsesGetRunesInfoList.md)
 
 ### Authorization
 

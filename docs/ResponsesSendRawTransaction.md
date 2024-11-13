@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**txHash** | **String** |  | [optional] 
+**code** | **Number** |  | [optional] 
+**data** | [**ResponsesSendRawTransactionData**](ResponsesSendRawTransactionData.md) |  | [optional] 
+**msg** | **String** |  | [optional] 
 
 

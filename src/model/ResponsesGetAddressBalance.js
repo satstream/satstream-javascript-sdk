@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/ResponsesGetAddressBalanceData'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ResponsesGetAddressBalanceData'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.ResponsesGetAddressBalance = factory(root.SatstreamApi.ApiClient);
+    root.SatstreamApi.ResponsesGetAddressBalance = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ResponsesGetAddressBalanceData);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ResponsesGetAddressBalanceData) {
   'use strict';
 
   /**
@@ -55,23 +55,30 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('address'))
-        obj.address = ApiClient.convertToType(data['address'], 'String');
-      if (data.hasOwnProperty('balance'))
-        obj.balance = ApiClient.convertToType(data['balance'], 'String');
+      if (data.hasOwnProperty('code'))
+        obj.code = ApiClient.convertToType(data['code'], 'Number');
+      if (data.hasOwnProperty('data'))
+        obj.data = ResponsesGetAddressBalanceData.constructFromObject(data['data']);
+      if (data.hasOwnProperty('msg'))
+        obj.msg = ApiClient.convertToType(data['msg'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {String} address
+   * @member {Number} code
    */
-  exports.prototype.address = undefined;
+  exports.prototype.code = undefined;
 
   /**
-   * @member {String} balance
+   * @member {module:model/ResponsesGetAddressBalanceData} data
    */
-  exports.prototype.balance = undefined;
+  exports.prototype.data = undefined;
+
+  /**
+   * @member {String} msg
+   */
+  exports.prototype.msg = undefined;
 
 
   return exports;

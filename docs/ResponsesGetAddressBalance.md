@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | **String** |  | [optional] 
-**balance** | **String** |  | [optional] 
+**code** | **Number** |  | [optional] 
+**data** | [**ResponsesGetAddressBalanceData**](ResponsesGetAddressBalanceData.md) |  | [optional] 
+**msg** | **String** |  | [optional] 
 
 

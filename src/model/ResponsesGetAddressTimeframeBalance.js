@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ResponsesGetAddressTimeframeBalanceItem'], factory);
+    define(['ApiClient', 'model/ResponsesGetAddressTimeframeBalanceData'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ResponsesGetAddressTimeframeBalanceItem'));
+    module.exports = factory(require('../ApiClient'), require('./ResponsesGetAddressTimeframeBalanceData'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.ResponsesGetAddressTimeframeBalance = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ResponsesGetAddressTimeframeBalanceItem);
+    root.SatstreamApi.ResponsesGetAddressTimeframeBalance = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.ResponsesGetAddressTimeframeBalanceData);
   }
-}(this, function(ApiClient, ResponsesGetAddressTimeframeBalanceItem) {
+}(this, function(ApiClient, ResponsesGetAddressTimeframeBalanceData) {
   'use strict';
 
   /**
@@ -55,16 +55,30 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('items'))
-        obj.items = ApiClient.convertToType(data['items'], [ResponsesGetAddressTimeframeBalanceItem]);
+      if (data.hasOwnProperty('code'))
+        obj.code = ApiClient.convertToType(data['code'], 'Number');
+      if (data.hasOwnProperty('data'))
+        obj.data = ResponsesGetAddressTimeframeBalanceData.constructFromObject(data['data']);
+      if (data.hasOwnProperty('msg'))
+        obj.msg = ApiClient.convertToType(data['msg'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/ResponsesGetAddressTimeframeBalanceItem>} items
+   * @member {Number} code
    */
-  exports.prototype.items = undefined;
+  exports.prototype.code = undefined;
+
+  /**
+   * @member {module:model/ResponsesGetAddressTimeframeBalanceData} data
+   */
+  exports.prototype.data = undefined;
+
+  /**
+   * @member {String} msg
+   */
+  exports.prototype.msg = undefined;
 
 
   return exports;

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse', 'model/InlineResponse2005', 'model/InlineResponse2007', 'model/InlineResponse2008'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiTransactionsResponsesError', 'model/ResponsesGetTransaction', 'model/ResponsesGetTxInfo', 'model/ResponsesSendRawTransaction'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse'), require('../model/InlineResponse2005'), require('../model/InlineResponse2007'), require('../model/InlineResponse2008'));
+    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiTransactionsResponsesError'), require('../model/ResponsesGetTransaction'), require('../model/ResponsesGetTxInfo'), require('../model/ResponsesSendRawTransaction'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.TransactionsApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse, root.SatstreamApi.InlineResponse2005, root.SatstreamApi.InlineResponse2007, root.SatstreamApi.InlineResponse2008);
+    root.SatstreamApi.TransactionsApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesError, root.SatstreamApi.ResponsesGetTransaction, root.SatstreamApi.ResponsesGetTxInfo, root.SatstreamApi.ResponsesSendRawTransaction);
   }
-}(this, function(ApiClient, GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse, InlineResponse2005, InlineResponse2007, InlineResponse2008) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiTransactionsResponsesError, ResponsesGetTransaction, ResponsesGetTxInfo, ResponsesSendRawTransaction) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the broadcastTransaction operation.
      * @callback module:api/TransactionsApi~broadcastTransactionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007} data The data returned by the service call.
+     * @param {module:model/ResponsesSendRawTransaction} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,7 @@
      * Broadcast a raw transaction to the Bitcoin network
      * @param {String} transaction Raw transaction hex
      * @param {module:api/TransactionsApi~broadcastTransactionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007}
+     * data is of type: {@link module:model/ResponsesSendRawTransaction}
      */
     this.broadcastTransaction = function(transaction, callback) {
       var postBody = transaction;
@@ -86,7 +86,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2007;
+      var returnType = ResponsesSendRawTransaction;
 
       return this.apiClient.callApi(
         '/transactions/broadcast', 'POST',
@@ -99,7 +99,7 @@
      * Callback function to receive the result of the getTransaction operation.
      * @callback module:api/TransactionsApi~getTransactionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005} data The data returned by the service call.
+     * @param {module:model/ResponsesGetTransaction} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -108,7 +108,7 @@
      * Get a transaction by its hash
      * @param {String} hash Transaction hash
      * @param {module:api/TransactionsApi~getTransactionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2005}
+     * data is of type: {@link module:model/ResponsesGetTransaction}
      */
     this.getTransaction = function(hash, callback) {
       var postBody = null;
@@ -134,7 +134,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2005;
+      var returnType = ResponsesGetTransaction;
 
       return this.apiClient.callApi(
         '/indexer/tx/{hash}', 'GET',
@@ -147,7 +147,7 @@
      * Callback function to receive the result of the getTransactionInfo operation.
      * @callback module:api/TransactionsApi~getTransactionInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2008} data The data returned by the service call.
+     * @param {module:model/ResponsesGetTxInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -156,7 +156,7 @@
      * Get detailed information about a specific transaction
      * @param {String} txid Transaction ID
      * @param {module:api/TransactionsApi~getTransactionInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2008}
+     * data is of type: {@link module:model/ResponsesGetTxInfo}
      */
     this.getTransactionInfo = function(txid, callback) {
       var postBody = null;
@@ -182,58 +182,10 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2008;
+      var returnType = ResponsesGetTxInfo;
 
       return this.apiClient.callApi(
         '/transactions/{txid}', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getTransactionInputs operation.
-     * @callback module:api/TransactionsApi~getTransactionInputsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get transaction inputs
-     * Get the inputs of a specific transaction
-     * @param {String} txid Transaction ID
-     * @param {module:api/TransactionsApi~getTransactionInputsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
-     */
-    this.getTransactionInputs = function(txid, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'txid' is set
-      if (txid === undefined || txid === null) {
-        throw new Error("Missing the required parameter 'txid' when calling getTransactionInputs");
-      }
-
-
-      var pathParams = {
-        'txid': txid
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['ApiKeyAuth'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = [Object];
-
-      return this.apiClient.callApi(
-        '/transactions/{txid}/inputs', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

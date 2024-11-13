@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse2006', 'model/ResponsesErrorResponse'], factory);
+    define(['ApiClient', 'model/GithubComSatstreamSsApiServerApiRunesResponsesError', 'model/ResponsesGetRuneHolders', 'model/ResponsesGetRuneInfo', 'model/ResponsesGetRunesInfoList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse2006'), require('../model/ResponsesErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/GithubComSatstreamSsApiServerApiRunesResponsesError'), require('../model/ResponsesGetRuneHolders'), require('../model/ResponsesGetRuneInfo'), require('../model/ResponsesGetRunesInfoList'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.RunesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.InlineResponse2006, root.SatstreamApi.ResponsesErrorResponse);
+    root.SatstreamApi.RunesApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesError, root.SatstreamApi.ResponsesGetRuneHolders, root.SatstreamApi.ResponsesGetRuneInfo, root.SatstreamApi.ResponsesGetRunesInfoList);
   }
-}(this, function(ApiClient, InlineResponse2006, ResponsesErrorResponse) {
+}(this, function(ApiClient, GithubComSatstreamSsApiServerApiRunesResponsesError, ResponsesGetRuneHolders, ResponsesGetRuneInfo, ResponsesGetRunesInfoList) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the getRunesHolders operation.
      * @callback module:api/RunesApi~getRunesHoldersCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {module:model/ResponsesGetRuneHolders} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,7 @@
      * Get a list of addresses holding a specific rune
      * @param {String} runeId Rune ID
      * @param {module:api/RunesApi~getRunesHoldersCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * data is of type: {@link module:model/ResponsesGetRuneHolders}
      */
     this.getRunesHolders = function(runeId, callback) {
       var postBody = null;
@@ -87,7 +87,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [Object];
+      var returnType = ResponsesGetRuneHolders;
 
       return this.apiClient.callApi(
         '/runes/{runeId}/holders', 'GET',
@@ -100,7 +100,7 @@
      * Callback function to receive the result of the getRunesInfo operation.
      * @callback module:api/RunesApi~getRunesInfoCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/ResponsesGetRuneInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -109,7 +109,7 @@
      * Get detailed information about a specific rune
      * @param {String} runeId Rune ID
      * @param {module:api/RunesApi~getRunesInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/ResponsesGetRuneInfo}
      */
     this.getRunesInfo = function(runeId, callback) {
       var postBody = null;
@@ -135,7 +135,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = ResponsesGetRuneInfo;
 
       return this.apiClient.callApi(
         '/runes/{runeId}', 'GET',
@@ -148,7 +148,7 @@
      * Callback function to receive the result of the getRunesInfoList operation.
      * @callback module:api/RunesApi~getRunesInfoListCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2006} data The data returned by the service call.
+     * @param {module:model/ResponsesGetRunesInfoList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -159,7 +159,7 @@
      * @param {Number} opts.page Page number (default: 1)
      * @param {Number} opts.perPage Items per page (default: 10)
      * @param {module:api/RunesApi~getRunesInfoListCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2006}
+     * data is of type: {@link module:model/ResponsesGetRunesInfoList}
      */
     this.getRunesInfoList = function(opts, callback) {
       opts = opts || {};
@@ -182,7 +182,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2006;
+      var returnType = ResponsesGetRunesInfoList;
 
       return this.apiClient.callApi(
         '/runes', 'GET',
