@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 <a name="getRunesInfoList"></a>
 # **getRunesInfoList**
-> InlineResponse2008 getRunesInfoList(opts)
+> InlineResponse2006 getRunesInfoList(opts)
 
 Get runes info list
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

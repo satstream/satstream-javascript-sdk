@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BlocksBase', 'model/BlocksError', 'model/InlineResponse2007'], factory);
+    define(['ApiClient', 'model/BlocksError', 'model/BlocksGetAddressMempoolTransactions', 'model/BlocksGetMempoolTransactions', 'model/BlocksGetMempoolTxInfo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BlocksBase'), require('../model/BlocksError'), require('../model/InlineResponse2007'));
+    module.exports = factory(require('../ApiClient'), require('../model/BlocksError'), require('../model/BlocksGetAddressMempoolTransactions'), require('../model/BlocksGetMempoolTransactions'), require('../model/BlocksGetMempoolTxInfo'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BlocksBase, root.SatstreamApi.BlocksError, root.SatstreamApi.InlineResponse2007);
+    root.SatstreamApi.MempoolApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BlocksError, root.SatstreamApi.BlocksGetAddressMempoolTransactions, root.SatstreamApi.BlocksGetMempoolTransactions, root.SatstreamApi.BlocksGetMempoolTxInfo);
   }
-}(this, function(ApiClient, BlocksBase, BlocksError, InlineResponse2007) {
+}(this, function(ApiClient, BlocksError, BlocksGetAddressMempoolTransactions, BlocksGetMempoolTransactions, BlocksGetMempoolTxInfo) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the getAddressMempoolTransactions operation.
      * @callback module:api/MempoolApi~getAddressMempoolTransactionsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {module:model/BlocksGetAddressMempoolTransactions} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,7 @@
      * Get all mempool transactions for a specific address
      * @param {String} address Bitcoin address
      * @param {module:api/MempoolApi~getAddressMempoolTransactionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * data is of type: {@link module:model/BlocksGetAddressMempoolTransactions}
      */
     this.getAddressMempoolTransactions = function(address, callback) {
       var postBody = null;
@@ -87,7 +87,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [Object];
+      var returnType = BlocksGetAddressMempoolTransactions;
 
       return this.apiClient.callApi(
         '/mempool/addresses/{address}/transactions', 'GET',
@@ -100,7 +100,7 @@
      * Callback function to receive the result of the getMempoolTransactionInfo operation.
      * @callback module:api/MempoolApi~getMempoolTransactionInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007} data The data returned by the service call.
+     * @param {module:model/BlocksGetMempoolTxInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -109,7 +109,7 @@
      * Get information about a specific transaction in the mempool
      * @param {String} txid Transaction ID
      * @param {module:api/MempoolApi~getMempoolTransactionInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2007}
+     * data is of type: {@link module:model/BlocksGetMempoolTxInfo}
      */
     this.getMempoolTransactionInfo = function(txid, callback) {
       var postBody = null;
@@ -135,7 +135,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2007;
+      var returnType = BlocksGetMempoolTxInfo;
 
       return this.apiClient.callApi(
         '/mempool/transactions/{txid}', 'GET',
@@ -148,7 +148,7 @@
      * Callback function to receive the result of the getMempoolTransactions operation.
      * @callback module:api/MempoolApi~getMempoolTransactionsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {module:model/BlocksGetMempoolTransactions} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -156,7 +156,7 @@
      * Get mempool transactions
      * Get all transactions currently in the mempool
      * @param {module:api/MempoolApi~getMempoolTransactionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * data is of type: {@link module:model/BlocksGetMempoolTransactions}
      */
     this.getMempoolTransactions = function(callback) {
       var postBody = null;
@@ -176,7 +176,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [Object];
+      var returnType = BlocksGetMempoolTransactions;
 
       return this.apiClient.callApi(
         '/mempool/transactions', 'GET',

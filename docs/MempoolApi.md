@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getAddressMempoolTransactions"></a>
 # **getAddressMempoolTransactions**
-> [Object] getAddressMempoolTransactions(address)
+> BlocksGetAddressMempoolTransactions getAddressMempoolTransactions(address)
 
 Get address mempool transactions
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[Object]**
+[**BlocksGetAddressMempoolTransactions**](BlocksGetAddressMempoolTransactions.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 <a name="getMempoolTransactionInfo"></a>
 # **getMempoolTransactionInfo**
-> InlineResponse2007 getMempoolTransactionInfo(txid)
+> BlocksGetMempoolTxInfo getMempoolTransactionInfo(txid)
 
 Get mempool transaction info
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**BlocksGetMempoolTxInfo**](BlocksGetMempoolTxInfo.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 <a name="getMempoolTransactions"></a>
 # **getMempoolTransactions**
-> [Object] getMempoolTransactions()
+> BlocksGetMempoolTransactions getMempoolTransactions()
 
 Get mempool transactions
 
@@ -144,7 +144,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**[Object]**
+[**BlocksGetMempoolTransactions**](BlocksGetMempoolTransactions.md)
 
 ### Authorization
 

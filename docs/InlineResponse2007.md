@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**blocksBase** | [**BlocksBase**](BlocksBase.md) |  | [optional] 
-**data** | [**GithubComSatstreamSsUtilsRpcBtcTx**](GithubComSatstreamSsUtilsRpcBtcTx.md) |  | [optional] 
+**data** | [**ResponsesSendRawTransaction**](ResponsesSendRawTransaction.md) |  | [optional] 
+**githubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse** | [**GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse**](GithubComSatstreamSsApiServerApiTransactionsResponsesBaseResponse.md) |  | [optional] 
 
 
