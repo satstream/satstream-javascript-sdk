@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getRecommendedFees"></a>
 # **getRecommendedFees**
-> BlocksGetFees getRecommendedFees()
+> BlocksFees getRecommendedFees()
 
 Get recommended fees
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BlocksGetFees**](BlocksGetFees.md)
+[**BlocksFees**](BlocksFees.md)
 
 ### Authorization
 

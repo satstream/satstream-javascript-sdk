@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getBlockByHash"></a>
 # **getBlockByHash**
-> BlocksGetBlockByHash getBlockByHash(hash)
+> BlocksBlockByHash getBlockByHash(hash)
 
 Get block by hash
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BlocksGetBlockByHash**](BlocksGetBlockByHash.md)
+[**BlocksBlockByHash**](BlocksBlockByHash.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 
 <a name="getBlockInfo"></a>
 # **getBlockInfo**
-> BlocksGetBlockInfo getBlockInfo(height)
+> BlocksBlockInfo getBlockInfo(height)
 
 Get block info
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BlocksGetBlockInfo**](BlocksGetBlockInfo.md)
+[**BlocksBlockInfo**](BlocksBlockInfo.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ No authorization required
 
 <a name="getBlockTransactions"></a>
 # **getBlockTransactions**
-> BlocksGetBlockTransactions getBlockTransactions(height)
+> BlocksBlockTransactions getBlockTransactions(height)
 
 Get block transactions
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BlocksGetBlockTransactions**](BlocksGetBlockTransactions.md)
+[**BlocksBlockTransactions**](BlocksBlockTransactions.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ No authorization required
 
 <a name="getCurrentBlockHeight"></a>
 # **getCurrentBlockHeight**
-> BlocksGetCurrentBlockHeight getCurrentBlockHeight()
+> BlocksBlockHeight getCurrentBlockHeight()
 
 Get current block height
 
@@ -177,7 +177,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BlocksGetCurrentBlockHeight**](BlocksGetCurrentBlockHeight.md)
+[**BlocksBlockHeight**](BlocksBlockHeight.md)
 
 ### Authorization
 

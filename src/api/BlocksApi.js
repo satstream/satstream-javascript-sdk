@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BlocksError', 'model/BlocksGetBlockByHash', 'model/BlocksGetBlockInfo', 'model/BlocksGetBlockTransactions', 'model/BlocksGetCurrentBlockHeight'], factory);
+    define(['ApiClient', 'model/BlocksBlockByHash', 'model/BlocksBlockHeight', 'model/BlocksBlockInfo', 'model/BlocksBlockTransactions', 'model/BlocksError'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BlocksError'), require('../model/BlocksGetBlockByHash'), require('../model/BlocksGetBlockInfo'), require('../model/BlocksGetBlockTransactions'), require('../model/BlocksGetCurrentBlockHeight'));
+    module.exports = factory(require('../ApiClient'), require('../model/BlocksBlockByHash'), require('../model/BlocksBlockHeight'), require('../model/BlocksBlockInfo'), require('../model/BlocksBlockTransactions'), require('../model/BlocksError'));
   } else {
     // Browser globals (root is window)
     if (!root.SatstreamApi) {
       root.SatstreamApi = {};
     }
-    root.SatstreamApi.BlocksApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BlocksError, root.SatstreamApi.BlocksGetBlockByHash, root.SatstreamApi.BlocksGetBlockInfo, root.SatstreamApi.BlocksGetBlockTransactions, root.SatstreamApi.BlocksGetCurrentBlockHeight);
+    root.SatstreamApi.BlocksApi = factory(root.SatstreamApi.ApiClient, root.SatstreamApi.BlocksBlockByHash, root.SatstreamApi.BlocksBlockHeight, root.SatstreamApi.BlocksBlockInfo, root.SatstreamApi.BlocksBlockTransactions, root.SatstreamApi.BlocksError);
   }
-}(this, function(ApiClient, BlocksError, BlocksGetBlockByHash, BlocksGetBlockInfo, BlocksGetBlockTransactions, BlocksGetCurrentBlockHeight) {
+}(this, function(ApiClient, BlocksBlockByHash, BlocksBlockHeight, BlocksBlockInfo, BlocksBlockTransactions, BlocksError) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the getBlockByHash operation.
      * @callback module:api/BlocksApi~getBlockByHashCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/BlocksGetBlockByHash} data The data returned by the service call.
+     * @param {module:model/BlocksBlockByHash} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,7 @@
      * Get information about a specific block by its hash
      * @param {String} hash Block hash
      * @param {module:api/BlocksApi~getBlockByHashCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BlocksGetBlockByHash}
+     * data is of type: {@link module:model/BlocksBlockByHash}
      */
     this.getBlockByHash = function(hash, callback) {
       var postBody = null;
@@ -87,7 +87,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = BlocksGetBlockByHash;
+      var returnType = BlocksBlockByHash;
 
       return this.apiClient.callApi(
         '/blocks/hash/{hash}', 'GET',
@@ -100,7 +100,7 @@
      * Callback function to receive the result of the getBlockInfo operation.
      * @callback module:api/BlocksApi~getBlockInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/BlocksGetBlockInfo} data The data returned by the service call.
+     * @param {module:model/BlocksBlockInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -109,7 +109,7 @@
      * Get information about a specific block by height
      * @param {Number} height Block height
      * @param {module:api/BlocksApi~getBlockInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BlocksGetBlockInfo}
+     * data is of type: {@link module:model/BlocksBlockInfo}
      */
     this.getBlockInfo = function(height, callback) {
       var postBody = null;
@@ -135,7 +135,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = BlocksGetBlockInfo;
+      var returnType = BlocksBlockInfo;
 
       return this.apiClient.callApi(
         '/blocks/{height}', 'GET',
@@ -148,7 +148,7 @@
      * Callback function to receive the result of the getBlockTransactions operation.
      * @callback module:api/BlocksApi~getBlockTransactionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/BlocksGetBlockTransactions} data The data returned by the service call.
+     * @param {module:model/BlocksBlockTransactions} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -157,7 +157,7 @@
      * Get transactions for a specific block height
      * @param {Number} height Block height
      * @param {module:api/BlocksApi~getBlockTransactionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BlocksGetBlockTransactions}
+     * data is of type: {@link module:model/BlocksBlockTransactions}
      */
     this.getBlockTransactions = function(height, callback) {
       var postBody = null;
@@ -183,7 +183,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = BlocksGetBlockTransactions;
+      var returnType = BlocksBlockTransactions;
 
       return this.apiClient.callApi(
         '/blocks/{height}/transactions', 'GET',
@@ -196,7 +196,7 @@
      * Callback function to receive the result of the getCurrentBlockHeight operation.
      * @callback module:api/BlocksApi~getCurrentBlockHeightCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/BlocksGetCurrentBlockHeight} data The data returned by the service call.
+     * @param {module:model/BlocksBlockHeight} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -204,7 +204,7 @@
      * Get current block height
      * Get the current block height of the Bitcoin blockchain
      * @param {module:api/BlocksApi~getCurrentBlockHeightCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BlocksGetCurrentBlockHeight}
+     * data is of type: {@link module:model/BlocksBlockHeight}
      */
     this.getCurrentBlockHeight = function(callback) {
       var postBody = null;
@@ -224,7 +224,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = BlocksGetCurrentBlockHeight;
+      var returnType = BlocksBlockHeight;
 
       return this.apiClient.callApi(
         '/blocks/current-height', 'GET',
