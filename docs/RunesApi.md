@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**getRunesInfo**](RunesApi.md#getRunesInfo) | **GET** /runes/{runeId} | Get rune info
 [**getRunesInfoList**](RunesApi.md#getRunesInfoList) | **GET** /runes | Get runes info list
 
-
 <a name="getRunesHolders"></a>
 # **getRunesHolders**
 > ResponsesGetRuneHolders getRunesHolders(runeId)
@@ -19,28 +18,25 @@ Get a list of addresses holding a specific rune
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.RunesApi();
+let apiInstance = new SatstreamApi.RunesApi();
+let runeId = "runeId_example"; // String | Rune ID
 
-var runeId = "runeId_example"; // String | Rune ID
-
-
-var callback = function(error, data, response) {
+apiInstance.getRunesHolders(runeId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getRunesHolders(runeId, callback);
+});
 ```
 
 ### Parameters
@@ -59,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getRunesInfo"></a>
@@ -72,28 +68,25 @@ Get detailed information about a specific rune
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.RunesApi();
+let apiInstance = new SatstreamApi.RunesApi();
+let runeId = "runeId_example"; // String | Rune ID
 
-var runeId = "runeId_example"; // String | Rune ID
-
-
-var callback = function(error, data, response) {
+apiInstance.getRunesInfo(runeId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getRunesInfo(runeId, callback);
+});
 ```
 
 ### Parameters
@@ -112,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getRunesInfoList"></a>
@@ -125,30 +118,27 @@ Get information about all runes
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.RunesApi();
-
-var opts = { 
+let apiInstance = new SatstreamApi.RunesApi();
+let opts = { 
   'page': 56, // Number | Page number (default: 1)
   'perPage': 56 // Number | Items per page (default: 10)
 };
-
-var callback = function(error, data, response) {
+apiInstance.getRunesInfoList(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getRunesInfoList(opts, callback);
+});
 ```
 
 ### Parameters
@@ -168,6 +158,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

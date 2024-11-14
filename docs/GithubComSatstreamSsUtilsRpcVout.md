@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **runeHoldings** | [**[GithubComSatstreamSsUtilsRpcUtxoRune]**](GithubComSatstreamSsUtilsRpcUtxoRune.md) |  | [optional] 
 **scriptPubKey** | [**GithubComSatstreamSsUtilsRpcScriptPubKey**](GithubComSatstreamSsUtilsRpcScriptPubKey.md) |  | [optional] 
 **value** | **Number** |  | [optional] 
-
-

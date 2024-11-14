@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**getMempoolTransactionInfo**](MempoolApi.md#getMempoolTransactionInfo) | **GET** /mempool/transactions/{txid} | Get mempool transaction info
 [**getMempoolTransactions**](MempoolApi.md#getMempoolTransactions) | **GET** /mempool/transactions | Get mempool transactions
 
-
 <a name="getAddressMempoolTransactions"></a>
 # **getAddressMempoolTransactions**
 > ResponsesGetAddressMempoolTxs getAddressMempoolTransactions(address)
@@ -19,28 +18,25 @@ Get all mempool transactions for a specific address
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.MempoolApi();
+let apiInstance = new SatstreamApi.MempoolApi();
+let address = "address_example"; // String | Bitcoin address
 
-var address = "address_example"; // String | Bitcoin address
-
-
-var callback = function(error, data, response) {
+apiInstance.getAddressMempoolTransactions(address, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAddressMempoolTransactions(address, callback);
+});
 ```
 
 ### Parameters
@@ -59,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getMempoolTransactionInfo"></a>
@@ -72,28 +68,25 @@ Get information about a specific transaction in the mempool
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.MempoolApi();
+let apiInstance = new SatstreamApi.MempoolApi();
+let txid = "txid_example"; // String | Transaction ID
 
-var txid = "txid_example"; // String | Transaction ID
-
-
-var callback = function(error, data, response) {
+apiInstance.getMempoolTransactionInfo(txid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getMempoolTransactionInfo(txid, callback);
+});
 ```
 
 ### Parameters
@@ -112,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getMempoolTransactions"></a>
@@ -125,18 +118,16 @@ Get all transactions currently in the mempool
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
+import {SatstreamApi} from 'satstream_api';
 
-var apiInstance = new SatstreamApi.MempoolApi();
-
-var callback = function(error, data, response) {
+let apiInstance = new SatstreamApi.MempoolApi();
+apiInstance.getMempoolTransactions((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getMempoolTransactions(callback);
+});
 ```
 
 ### Parameters
@@ -152,6 +143,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

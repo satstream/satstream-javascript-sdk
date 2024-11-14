@@ -14,5 +14,3 @@ Name | Type | Description | Notes
 **scriptType** | **String** |  | [optional] 
 **txid** | **String** |  | [optional] 
 **vout** | **Number** |  | [optional] 
-
-

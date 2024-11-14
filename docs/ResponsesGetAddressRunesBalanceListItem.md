@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **parsedAmount** | **String** |  | [optional] 
 **runeId** | **String** |  | [optional] 
 **spacedRune** | **String** |  | [optional] 
-
-

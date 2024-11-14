@@ -8,10 +8,9 @@ Method | HTTP request | Description
 [**getTransaction**](TransactionsApi.md#getTransaction) | **GET** /indexer/tx/{hash} | Get transaction
 [**getTransactionInfo**](TransactionsApi.md#getTransactionInfo) | **GET** /transactions/{txid} | Get transaction info
 
-
 <a name="broadcastTransaction"></a>
 # **broadcastTransaction**
-> ResponsesSendRawTransaction broadcastTransaction(transaction)
+> ResponsesSendRawTransaction broadcastTransaction(body)
 
 Broadcast transaction
 
@@ -19,35 +18,32 @@ Broadcast a raw transaction to the Bitcoin network
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.TransactionsApi();
+let apiInstance = new SatstreamApi.TransactionsApi();
+let body = "body_example"; // String | Raw transaction hex
 
-var transaction = "transaction_example"; // String | Raw transaction hex
-
-
-var callback = function(error, data, response) {
+apiInstance.broadcastTransaction(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.broadcastTransaction(transaction, callback);
+});
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction** | **String**| Raw transaction hex | 
+ **body** | [**String**](String.md)| Raw transaction hex | 
 
 ### Return type
 
@@ -72,21 +68,18 @@ Get a transaction by its hash
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
+import {SatstreamApi} from 'satstream_api';
 
-var apiInstance = new SatstreamApi.TransactionsApi();
+let apiInstance = new SatstreamApi.TransactionsApi();
+let hash = "hash_example"; // String | Transaction hash
 
-var hash = "hash_example"; // String | Transaction hash
-
-
-var callback = function(error, data, response) {
+apiInstance.getTransaction(hash, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTransaction(hash, callback);
+});
 ```
 
 ### Parameters
@@ -105,7 +98,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getTransactionInfo"></a>
@@ -118,28 +111,25 @@ Get detailed information about a specific transaction
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.TransactionsApi();
+let apiInstance = new SatstreamApi.TransactionsApi();
+let txid = "txid_example"; // String | Transaction ID
 
-var txid = "txid_example"; // String | Transaction ID
-
-
-var callback = function(error, data, response) {
+apiInstance.getTransactionInfo(txid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getTransactionInfo(txid, callback);
+});
 ```
 
 ### Parameters
@@ -158,6 +148,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **cap** | [**BigInt**](BigInt.md) |  | [optional] 
 **height** | [**GithubComSatstreamSsUtilsOrdinalsTermsRange**](GithubComSatstreamSsUtilsOrdinalsTermsRange.md) |  | [optional] 
 **offset** | [**GithubComSatstreamSsUtilsOrdinalsTermsRange**](GithubComSatstreamSsUtilsOrdinalsTermsRange.md) |  | [optional] 
-
-

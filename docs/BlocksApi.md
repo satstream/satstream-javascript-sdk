@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**getBlockTransactions**](BlocksApi.md#getBlockTransactions) | **GET** /blocks/{height}/transactions | Get block transactions
 [**getCurrentBlockHeight**](BlocksApi.md#getCurrentBlockHeight) | **GET** /blocks/current-height | Get current block height
 
-
 <a name="getBlockByHash"></a>
 # **getBlockByHash**
 > ResponsesGetBlockByHash getBlockByHash(hash)
@@ -20,21 +19,18 @@ Get information about a specific block by its hash
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
+import {SatstreamApi} from 'satstream_api';
 
-var apiInstance = new SatstreamApi.BlocksApi();
+let apiInstance = new SatstreamApi.BlocksApi();
+let hash = "hash_example"; // String | Block hash
 
-var hash = "hash_example"; // String | Block hash
-
-
-var callback = function(error, data, response) {
+apiInstance.getBlockByHash(hash, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getBlockByHash(hash, callback);
+});
 ```
 
 ### Parameters
@@ -53,7 +49,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getBlockInfo"></a>
@@ -66,21 +62,18 @@ Get information about a specific block by height
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
+import {SatstreamApi} from 'satstream_api';
 
-var apiInstance = new SatstreamApi.BlocksApi();
+let apiInstance = new SatstreamApi.BlocksApi();
+let height = 56; // Number | Block height
 
-var height = 56; // Number | Block height
-
-
-var callback = function(error, data, response) {
+apiInstance.getBlockInfo(height, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getBlockInfo(height, callback);
+});
 ```
 
 ### Parameters
@@ -99,7 +92,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getBlockTransactions"></a>
@@ -112,21 +105,18 @@ Get transactions for a specific block height
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
+import {SatstreamApi} from 'satstream_api';
 
-var apiInstance = new SatstreamApi.BlocksApi();
+let apiInstance = new SatstreamApi.BlocksApi();
+let height = 56; // Number | Block height
 
-var height = 56; // Number | Block height
-
-
-var callback = function(error, data, response) {
+apiInstance.getBlockTransactions(height, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getBlockTransactions(height, callback);
+});
 ```
 
 ### Parameters
@@ -145,7 +135,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCurrentBlockHeight"></a>
@@ -158,18 +148,16 @@ Get the current block height of the Bitcoin blockchain
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
+import {SatstreamApi} from 'satstream_api';
 
-var apiInstance = new SatstreamApi.BlocksApi();
-
-var callback = function(error, data, response) {
+let apiInstance = new SatstreamApi.BlocksApi();
+apiInstance.getCurrentBlockHeight((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getCurrentBlockHeight(callback);
+});
 ```
 
 ### Parameters
@@ -185,6 +173,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

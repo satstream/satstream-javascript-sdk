@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getRecommendedFees**](FeesApi.md#getRecommendedFees) | **GET** /fees | Get recommended fees
 
-
 <a name="getRecommendedFees"></a>
 # **getRecommendedFees**
 > ResponsesGetFees getRecommendedFees()
@@ -17,18 +16,16 @@ Get recommended fees for Bitcoin transactions
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
+import {SatstreamApi} from 'satstream_api';
 
-var apiInstance = new SatstreamApi.FeesApi();
-
-var callback = function(error, data, response) {
+let apiInstance = new SatstreamApi.FeesApi();
+apiInstance.getRecommendedFees((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getRecommendedFees(callback);
+});
 ```
 
 ### Parameters
@@ -44,6 +41,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

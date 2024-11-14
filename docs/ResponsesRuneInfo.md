@@ -16,5 +16,3 @@ Name | Type | Description | Notes
 **turbo** | **Boolean** |  | [optional] 
 **txHeight** | **Number** |  | [optional] 
 **txid** | **String** |  | [optional] 
-
-

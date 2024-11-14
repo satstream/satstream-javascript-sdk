@@ -8,5 +8,3 @@ Name | Type | Description | Notes
 **desc** | **String** |  | [optional] 
 **hex** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
-
-

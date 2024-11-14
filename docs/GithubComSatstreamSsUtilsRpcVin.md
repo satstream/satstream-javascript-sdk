@@ -10,5 +10,3 @@ Name | Type | Description | Notes
 **txid** | **String** |  | [optional] 
 **txinwitness** | **[String]** |  | [optional] 
 **vout** | **Number** |  | [optional] 
-
-

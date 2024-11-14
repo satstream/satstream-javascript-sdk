@@ -10,5 +10,3 @@ Name | Type | Description | Notes
 **totalUnconfirmed** | **Number** |  | [optional] 
 **totalUnconfirmedSpend** | **Number** |  | [optional] 
 **utxo** | [**[ResponsesNonInscriptionUTXO]**](ResponsesNonInscriptionUTXO.md) |  | [optional] 
-
-

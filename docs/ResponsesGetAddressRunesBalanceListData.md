@@ -4,5 +4,3 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **items** | [**[ResponsesGetAddressRunesBalanceListItem]**](ResponsesGetAddressRunesBalanceListItem.md) |  | [optional] 
-
-

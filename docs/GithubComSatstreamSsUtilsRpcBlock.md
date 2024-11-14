@@ -21,5 +21,3 @@ Name | Type | Description | Notes
 **version** | **Number** |  | [optional] 
 **versionHex** | **String** |  | [optional] 
 **weight** | **Number** |  | [optional] 
-
-

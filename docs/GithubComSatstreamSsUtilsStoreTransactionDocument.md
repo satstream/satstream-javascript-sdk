@@ -15,5 +15,3 @@ Name | Type | Description | Notes
 **version** | **Number** |  | [optional] 
 **vsize** | **Number** |  | [optional] 
 **weight** | **Number** |  | [optional] 
-
-

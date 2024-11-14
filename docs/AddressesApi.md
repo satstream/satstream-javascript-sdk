@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**getAddressRunesBalanceList**](AddressesApi.md#getAddressRunesBalanceList) | **GET** /addresses/{address}/runes | Get address runes balance list
 [**getAddressTimeframeBalance**](AddressesApi.md#getAddressTimeframeBalance) | **GET** /addresses/{address}/balance/timeframe | Get address timeframe balance
 
-
 <a name="getAddressBalance"></a>
 # **getAddressBalance**
 > ResponsesGetAddressBalance getAddressBalance(address)
@@ -21,28 +20,25 @@ Get the current balance of a Bitcoin address
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.AddressesApi();
+let apiInstance = new SatstreamApi.AddressesApi();
+let address = "address_example"; // String | Bitcoin address
 
-var address = "address_example"; // String | Bitcoin address
-
-
-var callback = function(error, data, response) {
+apiInstance.getAddressBalance(address, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAddressBalance(address, callback);
+});
 ```
 
 ### Parameters
@@ -61,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getAddressNonInscriptionUtxos"></a>
@@ -74,28 +70,25 @@ Get all non-inscription UTXOs for a Bitcoin address
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.AddressesApi();
+let apiInstance = new SatstreamApi.AddressesApi();
+let address = "address_example"; // String | Bitcoin address
 
-var address = "address_example"; // String | Bitcoin address
-
-
-var callback = function(error, data, response) {
+apiInstance.getAddressNonInscriptionUtxos(address, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAddressNonInscriptionUtxos(address, callback);
+});
 ```
 
 ### Parameters
@@ -114,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getAddressRuneBalance"></a>
@@ -127,30 +120,26 @@ Get the balance of a specific rune for a Bitcoin address
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.AddressesApi();
+let apiInstance = new SatstreamApi.AddressesApi();
+let address = "address_example"; // String | Bitcoin address
+let runeid = "runeid_example"; // String | Rune ID
 
-var address = "address_example"; // String | Bitcoin address
-
-var runeid = "runeid_example"; // String | Rune ID
-
-
-var callback = function(error, data, response) {
+apiInstance.getAddressRuneBalance(address, runeid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAddressRuneBalance(address, runeid, callback);
+});
 ```
 
 ### Parameters
@@ -170,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getAddressRunesBalanceList"></a>
@@ -183,28 +172,25 @@ Get the balance of all runes for a Bitcoin address
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.AddressesApi();
+let apiInstance = new SatstreamApi.AddressesApi();
+let address = "address_example"; // String | Bitcoin address
 
-var address = "address_example"; // String | Bitcoin address
-
-
-var callback = function(error, data, response) {
+apiInstance.getAddressRunesBalanceList(address, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAddressRunesBalanceList(address, callback);
+});
 ```
 
 ### Parameters
@@ -223,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getAddressTimeframeBalance"></a>
@@ -236,33 +222,28 @@ Get the balance of a Bitcoin address for a specific timeframe
 
 ### Example
 ```javascript
-var SatstreamApi = require('satstream_api');
-var defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamApi} from 'satstream_api';
+let defaultClient = SatstreamApi.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
-var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-var apiInstance = new SatstreamApi.AddressesApi();
-
-var address = "address_example"; // String | Bitcoin address
-
-var timeframe = "timeframe_example"; // String | Timeframe
-
-var opts = { 
+let apiInstance = new SatstreamApi.AddressesApi();
+let address = "address_example"; // String | Bitcoin address
+let timeframe = "timeframe_example"; // String | Timeframe
+let opts = { 
   'token': "token_example" // String | Token
 };
-
-var callback = function(error, data, response) {
+apiInstance.getAddressTimeframeBalance(address, timeframe, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.getAddressTimeframeBalance(address, timeframe, opts, callback);
+});
 ```
 
 ### Parameters
@@ -283,6 +264,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

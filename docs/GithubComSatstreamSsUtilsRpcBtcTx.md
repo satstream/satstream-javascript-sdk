@@ -16,5 +16,3 @@ Name | Type | Description | Notes
 **vout** | [**[GithubComSatstreamSsUtilsRpcVout]**](GithubComSatstreamSsUtilsRpcVout.md) | Vout will be stored in a separate collection in the DB | [optional] 
 **vsize** | **Number** |  | [optional] 
 **weight** | **Number** |  | [optional] 
-
-

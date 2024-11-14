@@ -7,5 +7,3 @@ Name | Type | Description | Notes
 **perPage** | **Number** |  | [optional] 
 **total** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 
-
-

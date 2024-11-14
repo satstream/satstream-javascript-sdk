@@ -10,5 +10,3 @@ Name | Type | Description | Notes
 **spacedAmount** | **String** |  | [optional] 
 **spacedRune** | **String** |  | [optional] 
 **symbol** | **String** |  | [optional] 
-
-

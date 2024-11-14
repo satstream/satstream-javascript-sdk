@@ -17,5 +17,3 @@ Name | Type | Description | Notes
 **outSatoshi** | [**BigInt**](BigInt.md) |  | [optional] 
 **size** | **Number** |  | [optional] 
 **txid** | **String** |  | [optional] 
-
-
