@@ -1,4 +1,4 @@
-# SatstreamApi.MempoolApi
+# SatstreamJavascriptSdk.MempoolApi
 
 All URIs are relative to *https://api.satstream.io/api/v1*
 
@@ -18,8 +18,8 @@ Get all mempool transactions for a specific address
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -27,7 +27,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.MempoolApi();
+let apiInstance = new SatstreamJavascriptSdk.MempoolApi();
 let address = "address_example"; // String | Bitcoin address
 
 apiInstance.getAddressMempoolTransactions(address, (error, data, response) => {
@@ -68,8 +68,8 @@ Get information about a specific transaction in the mempool
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -77,7 +77,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.MempoolApi();
+let apiInstance = new SatstreamJavascriptSdk.MempoolApi();
 let txid = "txid_example"; // String | Transaction ID
 
 apiInstance.getMempoolTransactionInfo(txid, (error, data, response) => {
@@ -118,9 +118,9 @@ Get all transactions currently in the mempool
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
 
-let apiInstance = new SatstreamApi.MempoolApi();
+let apiInstance = new SatstreamJavascriptSdk.MempoolApi();
 apiInstance.getMempoolTransactions((error, data, response) => {
   if (error) {
     console.error(error);

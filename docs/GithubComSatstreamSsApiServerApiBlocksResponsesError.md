@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsApiServerApiBlocksResponsesError
+# SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiBlocksResponsesError
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesError
+# SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiTransactionsResponsesError
 
 ## Properties
 Name | Type | Description | Notes

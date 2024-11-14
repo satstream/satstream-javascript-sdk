@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesPaginationInfo
+# SatstreamJavascriptSdk.ResponsesPaginationInfo
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetBlockTransactions
+# SatstreamJavascriptSdk.ResponsesGetBlockTransactions
 
 ## Properties
 Name | Type | Description | Notes

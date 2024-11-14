@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsUtilsRpcScriptSig
+# SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcScriptSig
 
 ## Properties
 Name | Type | Description | Notes

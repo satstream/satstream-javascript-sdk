@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsUtilsStoreTransactionDocument
+# SatstreamJavascriptSdk.GithubComSatstreamSsUtilsStoreTransactionDocument
 
 ## Properties
 Name | Type | Description | Notes

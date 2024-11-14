@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetAddressTimeframeBalance
+# SatstreamJavascriptSdk.ResponsesGetAddressTimeframeBalance
 
 ## Properties
 Name | Type | Description | Notes

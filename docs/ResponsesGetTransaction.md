@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetTransaction
+# SatstreamJavascriptSdk.ResponsesGetTransaction
 
 ## Properties
 Name | Type | Description | Notes

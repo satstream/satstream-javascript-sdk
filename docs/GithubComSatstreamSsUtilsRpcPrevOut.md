@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsUtilsRpcPrevOut
+# SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcPrevOut
 
 ## Properties
 Name | Type | Description | Notes

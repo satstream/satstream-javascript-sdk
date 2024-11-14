@@ -1,4 +1,4 @@
-# SatstreamApi.FeesApi
+# SatstreamJavascriptSdk.FeesApi
 
 All URIs are relative to *https://api.satstream.io/api/v1*
 
@@ -16,9 +16,9 @@ Get recommended fees for Bitcoin transactions
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
 
-let apiInstance = new SatstreamApi.FeesApi();
+let apiInstance = new SatstreamJavascriptSdk.FeesApi();
 apiInstance.getRecommendedFees((error, data, response) => {
   if (error) {
     console.error(error);

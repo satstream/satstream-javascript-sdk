@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetFeesData
+# SatstreamJavascriptSdk.ResponsesGetFeesData
 
 ## Properties
 Name | Type | Description | Notes

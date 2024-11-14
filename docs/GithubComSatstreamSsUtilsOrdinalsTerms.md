@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsUtilsOrdinalsTerms
+# SatstreamJavascriptSdk.GithubComSatstreamSsUtilsOrdinalsTerms
 
 ## Properties
 Name | Type | Description | Notes

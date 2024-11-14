@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetBlockByHash
+# SatstreamJavascriptSdk.ResponsesGetBlockByHash
 
 ## Properties
 Name | Type | Description | Notes

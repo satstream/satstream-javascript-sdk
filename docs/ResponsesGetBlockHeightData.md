@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetBlockHeightData
+# SatstreamJavascriptSdk.ResponsesGetBlockHeightData
 
 ## Properties
 Name | Type | Description | Notes

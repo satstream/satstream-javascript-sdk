@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsUtilsRpcBlock
+# SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcBlock
 
 ## Properties
 Name | Type | Description | Notes

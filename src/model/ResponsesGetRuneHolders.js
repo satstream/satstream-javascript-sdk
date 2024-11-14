@@ -19,7 +19,7 @@ import ResponsesGetRuneHoldersData from './ResponsesGetRuneHoldersData';
 /**
  * The ResponsesGetRuneHolders model module.
  * @module model/ResponsesGetRuneHolders
- * @version 1.0
+ * @version 1.0.0
  */
 export default class ResponsesGetRuneHolders {
   /**

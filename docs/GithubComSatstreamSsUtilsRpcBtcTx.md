@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx
+# SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcBtcTx
 
 ## Properties
 Name | Type | Description | Notes

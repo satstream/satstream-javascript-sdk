@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetMempoolTransactions
+# SatstreamJavascriptSdk.ResponsesGetMempoolTransactions
 
 ## Properties
 Name | Type | Description | Notes

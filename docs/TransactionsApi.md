@@ -1,4 +1,4 @@
-# SatstreamApi.TransactionsApi
+# SatstreamJavascriptSdk.TransactionsApi
 
 All URIs are relative to *https://api.satstream.io/api/v1*
 
@@ -18,8 +18,8 @@ Broadcast a raw transaction to the Bitcoin network
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -27,7 +27,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.TransactionsApi();
+let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
 let body = "body_example"; // String | Raw transaction hex
 
 apiInstance.broadcastTransaction(body, (error, data, response) => {
@@ -68,9 +68,9 @@ Get a transaction by its hash
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
 
-let apiInstance = new SatstreamApi.TransactionsApi();
+let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
 let hash = "hash_example"; // String | Transaction hash
 
 apiInstance.getTransaction(hash, (error, data, response) => {
@@ -111,8 +111,8 @@ Get detailed information about a specific transaction
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -120,7 +120,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.TransactionsApi();
+let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
 let txid = "txid_example"; // String | Transaction ID
 
 apiInstance.getTransactionInfo(txid, (error, data, response) => {

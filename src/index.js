@@ -76,14 +76,14 @@ import RunesApi from './api/RunesApi';
 import TransactionsApi from './api/TransactionsApi';
 
 /**
-* Satstream_API.<br>
+* Satstream JavaScript SDK.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var SatstreamApi = require('index'); // See note below*.
-* var xxxSvc = new SatstreamApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new SatstreamApi.Yyy(); // Construct a model instance.
+* var SatstreamJavascriptSdk = require('index'); // See note below*.
+* var xxxSvc = new SatstreamJavascriptSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new SatstreamJavascriptSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -95,8 +95,8 @@ import TransactionsApi from './api/TransactionsApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new SatstreamApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new SatstreamApi.Yyy(); // Construct a model instance.
+* var xxxSvc = new SatstreamJavascriptSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new SatstreamJavascriptSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -104,7 +104,7 @@ import TransactionsApi from './api/TransactionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0
+* @version 1.0.0
 */
 export {
     /**

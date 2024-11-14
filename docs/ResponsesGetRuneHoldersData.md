@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetRuneHoldersData
+# SatstreamJavascriptSdk.ResponsesGetRuneHoldersData
 
 ## Properties
 Name | Type | Description | Notes

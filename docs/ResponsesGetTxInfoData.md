@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetTxInfoData
+# SatstreamJavascriptSdk.ResponsesGetTxInfoData
 
 ## Properties
 Name | Type | Description | Notes

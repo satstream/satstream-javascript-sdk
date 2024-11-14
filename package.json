@@ -1,7 +1,7 @@
 {
-  "name": "satstream_api",
-  "version": "1.0",
-  "description": "Satstream_API",
+  "name": "satstream-javascript-sdk",
+  "version": "1.0.0",
+  "description": "Satstream JavaScript SDK",
   "license": "Apache 2.0",
   "main": "src/index.js",
   "scripts": {

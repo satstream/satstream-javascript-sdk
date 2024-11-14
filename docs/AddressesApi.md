@@ -1,4 +1,4 @@
-# SatstreamApi.AddressesApi
+# SatstreamJavascriptSdk.AddressesApi
 
 All URIs are relative to *https://api.satstream.io/api/v1*
 
@@ -20,8 +20,8 @@ Get the current balance of a Bitcoin address
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -29,7 +29,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.AddressesApi();
+let apiInstance = new SatstreamJavascriptSdk.AddressesApi();
 let address = "address_example"; // String | Bitcoin address
 
 apiInstance.getAddressBalance(address, (error, data, response) => {
@@ -70,8 +70,8 @@ Get all non-inscription UTXOs for a Bitcoin address
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -79,7 +79,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.AddressesApi();
+let apiInstance = new SatstreamJavascriptSdk.AddressesApi();
 let address = "address_example"; // String | Bitcoin address
 
 apiInstance.getAddressNonInscriptionUtxos(address, (error, data, response) => {
@@ -120,8 +120,8 @@ Get the balance of a specific rune for a Bitcoin address
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -129,7 +129,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.AddressesApi();
+let apiInstance = new SatstreamJavascriptSdk.AddressesApi();
 let address = "address_example"; // String | Bitcoin address
 let runeid = "runeid_example"; // String | Rune ID
 
@@ -172,8 +172,8 @@ Get the balance of all runes for a Bitcoin address
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -181,7 +181,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.AddressesApi();
+let apiInstance = new SatstreamJavascriptSdk.AddressesApi();
 let address = "address_example"; // String | Bitcoin address
 
 apiInstance.getAddressRunesBalanceList(address, (error, data, response) => {
@@ -222,8 +222,8 @@ Get the balance of a Bitcoin address for a specific timeframe
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -231,7 +231,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.AddressesApi();
+let apiInstance = new SatstreamJavascriptSdk.AddressesApi();
 let address = "address_example"; // String | Bitcoin address
 let timeframe = "timeframe_example"; // String | Timeframe
 let opts = { 

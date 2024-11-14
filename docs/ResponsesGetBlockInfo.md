@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetBlockInfo
+# SatstreamJavascriptSdk.ResponsesGetBlockInfo
 
 ## Properties
 Name | Type | Description | Notes

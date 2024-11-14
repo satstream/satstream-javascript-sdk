@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsApiServerApiRunesResponsesError
+# SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiRunesResponsesError
 
 ## Properties
 Name | Type | Description | Notes

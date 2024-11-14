@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesNonInscriptionUTXO
+# SatstreamJavascriptSdk.ResponsesNonInscriptionUTXO
 
 ## Properties
 Name | Type | Description | Notes

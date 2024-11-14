@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesRuneInfo
+# SatstreamJavascriptSdk.ResponsesRuneInfo
 
 ## Properties
 Name | Type | Description | Notes

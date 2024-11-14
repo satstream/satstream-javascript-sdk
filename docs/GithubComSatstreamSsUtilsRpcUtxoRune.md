@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsUtilsRpcUtxoRune
+# SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcUtxoRune
 
 ## Properties
 Name | Type | Description | Notes

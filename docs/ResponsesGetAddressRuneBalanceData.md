@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetAddressRuneBalanceData
+# SatstreamJavascriptSdk.ResponsesGetAddressRuneBalanceData
 
 ## Properties
 Name | Type | Description | Notes

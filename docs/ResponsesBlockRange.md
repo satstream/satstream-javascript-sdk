@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesBlockRange
+# SatstreamJavascriptSdk.ResponsesBlockRange
 
 ## Properties
 Name | Type | Description | Notes

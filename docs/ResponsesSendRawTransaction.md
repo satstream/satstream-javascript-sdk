@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesSendRawTransaction
+# SatstreamJavascriptSdk.ResponsesSendRawTransaction
 
 ## Properties
 Name | Type | Description | Notes

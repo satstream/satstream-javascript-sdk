@@ -1,4 +1,4 @@
-# SatstreamApi.RunesApi
+# SatstreamJavascriptSdk.RunesApi
 
 All URIs are relative to *https://api.satstream.io/api/v1*
 
@@ -18,8 +18,8 @@ Get a list of addresses holding a specific rune
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -27,7 +27,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.RunesApi();
+let apiInstance = new SatstreamJavascriptSdk.RunesApi();
 let runeId = "runeId_example"; // String | Rune ID
 
 apiInstance.getRunesHolders(runeId, (error, data, response) => {
@@ -68,8 +68,8 @@ Get detailed information about a specific rune
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -77,7 +77,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.RunesApi();
+let apiInstance = new SatstreamJavascriptSdk.RunesApi();
 let runeId = "runeId_example"; // String | Rune ID
 
 apiInstance.getRunesInfo(runeId, (error, data, response) => {
@@ -118,8 +118,8 @@ Get information about all runes
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
-let defaultClient = SatstreamApi.ApiClient.instance;
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -127,7 +127,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SatstreamApi.RunesApi();
+let apiInstance = new SatstreamJavascriptSdk.RunesApi();
 let opts = { 
   'page': 56, // Number | Page number (default: 1)
   'perPage': 56 // Number | Items per page (default: 10)

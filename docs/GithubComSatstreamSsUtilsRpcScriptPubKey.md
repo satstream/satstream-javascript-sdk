@@ -1,4 +1,4 @@
-# SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey
+# SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcScriptPubKey
 
 ## Properties
 Name | Type | Description | Notes

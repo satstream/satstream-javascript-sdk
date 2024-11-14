@@ -1,4 +1,4 @@
-# SatstreamApi.ResponsesGetMempoolTxInfo
+# SatstreamJavascriptSdk.ResponsesGetMempoolTxInfo
 
 ## Properties
 Name | Type | Description | Notes

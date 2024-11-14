@@ -1,4 +1,4 @@
-# SatstreamApi.BlocksApi
+# SatstreamJavascriptSdk.BlocksApi
 
 All URIs are relative to *https://api.satstream.io/api/v1*
 
@@ -19,9 +19,9 @@ Get information about a specific block by its hash
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
 
-let apiInstance = new SatstreamApi.BlocksApi();
+let apiInstance = new SatstreamJavascriptSdk.BlocksApi();
 let hash = "hash_example"; // String | Block hash
 
 apiInstance.getBlockByHash(hash, (error, data, response) => {
@@ -62,9 +62,9 @@ Get information about a specific block by height
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
 
-let apiInstance = new SatstreamApi.BlocksApi();
+let apiInstance = new SatstreamJavascriptSdk.BlocksApi();
 let height = 56; // Number | Block height
 
 apiInstance.getBlockInfo(height, (error, data, response) => {
@@ -105,9 +105,9 @@ Get transactions for a specific block height
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
 
-let apiInstance = new SatstreamApi.BlocksApi();
+let apiInstance = new SatstreamJavascriptSdk.BlocksApi();
 let height = 56; // Number | Block height
 
 apiInstance.getBlockTransactions(height, (error, data, response) => {
@@ -148,9 +148,9 @@ Get the current block height of the Bitcoin blockchain
 
 ### Example
 ```javascript
-import {SatstreamApi} from 'satstream_api';
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
 
-let apiInstance = new SatstreamApi.BlocksApi();
+let apiInstance = new SatstreamJavascriptSdk.BlocksApi();
 apiInstance.getCurrentBlockHeight((error, data, response) => {
   if (error) {
     console.error(error);
