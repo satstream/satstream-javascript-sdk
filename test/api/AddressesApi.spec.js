@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SatstreamApi.AddressesApi();
+    instance = new SatstreamJavascriptSdk.AddressesApi();
   });
 
   describe('(package)', function() {
@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetAddressBalance);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetAddressBalance);
 
             done();
           });
@@ -66,7 +66,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetAddressNonInscriptionUTXO);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetAddressNonInscriptionUTXO);
 
             done();
           });
@@ -86,7 +86,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetAddressRuneBalance);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetAddressRuneBalance);
 
             done();
           });
@@ -106,7 +106,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetAddressRunesBalanceList);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetAddressRunesBalanceList);
 
             done();
           });
@@ -127,7 +127,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalance);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetAddressTimeframeBalance);
 
             done();
           });

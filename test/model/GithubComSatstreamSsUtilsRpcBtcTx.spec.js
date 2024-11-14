@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('GithubComSatstreamSsUtilsRpcBtcTx', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx();
+        instance = new SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcBtcTx();
       });
 
       it('should create an instance of GithubComSatstreamSsUtilsRpcBtcTx', function() {
         // TODO: update the code to test GithubComSatstreamSsUtilsRpcBtcTx
-        expect(instance).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcBtcTx);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcBtcTx);
       });
 
       it('should have the property blockheight (base name: "blockheight")', function() {

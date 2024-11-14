@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesGetFeesData', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesGetFeesData();
+        instance = new SatstreamJavascriptSdk.ResponsesGetFeesData();
       });
 
       it('should create an instance of ResponsesGetFeesData', function() {
         // TODO: update the code to test ResponsesGetFeesData
-        expect(instance).to.be.a(SatstreamApi.ResponsesGetFeesData);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesGetFeesData);
       });
 
       it('should have the property confirmationBlocks (base name: "confirmation_blocks")', function() {

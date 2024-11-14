@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesGetMempoolTxInfo', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesGetMempoolTxInfo();
+        instance = new SatstreamJavascriptSdk.ResponsesGetMempoolTxInfo();
       });
 
       it('should create an instance of ResponsesGetMempoolTxInfo', function() {
         // TODO: update the code to test ResponsesGetMempoolTxInfo
-        expect(instance).to.be.a(SatstreamApi.ResponsesGetMempoolTxInfo);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesGetMempoolTxInfo);
       });
 
       it('should have the property code (base name: "code")', function() {

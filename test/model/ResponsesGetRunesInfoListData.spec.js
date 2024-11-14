@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesGetRunesInfoListData', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesGetRunesInfoListData();
+        instance = new SatstreamJavascriptSdk.ResponsesGetRunesInfoListData();
       });
 
       it('should create an instance of ResponsesGetRunesInfoListData', function() {
         // TODO: update the code to test ResponsesGetRunesInfoListData
-        expect(instance).to.be.a(SatstreamApi.ResponsesGetRunesInfoListData);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesGetRunesInfoListData);
       });
 
       it('should have the property pagination (base name: "pagination")', function() {

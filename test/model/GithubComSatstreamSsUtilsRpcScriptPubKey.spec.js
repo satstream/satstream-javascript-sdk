@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('GithubComSatstreamSsUtilsRpcScriptPubKey', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey();
+        instance = new SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcScriptPubKey();
       });
 
       it('should create an instance of GithubComSatstreamSsUtilsRpcScriptPubKey', function() {
         // TODO: update the code to test GithubComSatstreamSsUtilsRpcScriptPubKey
-        expect(instance).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcScriptPubKey);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcScriptPubKey);
       });
 
       it('should have the property address (base name: "address")', function() {

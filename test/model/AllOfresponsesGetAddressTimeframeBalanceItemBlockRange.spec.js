@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('AllOfresponsesGetAddressTimeframeBalanceItemBlockRange', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.AllOfresponsesGetAddressTimeframeBalanceItemBlockRange();
+        instance = new SatstreamJavascriptSdk.AllOfresponsesGetAddressTimeframeBalanceItemBlockRange();
       });
 
       it('should create an instance of AllOfresponsesGetAddressTimeframeBalanceItemBlockRange', function() {
         // TODO: update the code to test AllOfresponsesGetAddressTimeframeBalanceItemBlockRange
-        expect(instance).to.be.a(SatstreamApi.AllOfresponsesGetAddressTimeframeBalanceItemBlockRange);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.AllOfresponsesGetAddressTimeframeBalanceItemBlockRange);
       });
 
     });

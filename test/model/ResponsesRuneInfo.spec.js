@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesRuneInfo', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesRuneInfo();
+        instance = new SatstreamJavascriptSdk.ResponsesRuneInfo();
       });
 
       it('should create an instance of ResponsesRuneInfo', function() {
         // TODO: update the code to test ResponsesRuneInfo
-        expect(instance).to.be.a(SatstreamApi.ResponsesRuneInfo);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesRuneInfo);
       });
 
       it('should have the property blockHeight (base name: "block_height")', function() {

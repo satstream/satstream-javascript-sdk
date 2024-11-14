@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesPaginationInfo', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesPaginationInfo();
+        instance = new SatstreamJavascriptSdk.ResponsesPaginationInfo();
       });
 
       it('should create an instance of ResponsesPaginationInfo', function() {
         // TODO: update the code to test ResponsesPaginationInfo
-        expect(instance).to.be.a(SatstreamApi.ResponsesPaginationInfo);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesPaginationInfo);
       });
 
       it('should have the property page (base name: "page")', function() {

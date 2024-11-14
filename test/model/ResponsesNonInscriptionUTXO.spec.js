@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesNonInscriptionUTXO', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesNonInscriptionUTXO();
+        instance = new SatstreamJavascriptSdk.ResponsesNonInscriptionUTXO();
       });
 
       it('should create an instance of ResponsesNonInscriptionUTXO', function() {
         // TODO: update the code to test ResponsesNonInscriptionUTXO
-        expect(instance).to.be.a(SatstreamApi.ResponsesNonInscriptionUTXO);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesNonInscriptionUTXO);
       });
 
       it('should have the property address (base name: "address")', function() {

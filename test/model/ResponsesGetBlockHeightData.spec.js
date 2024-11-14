@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesGetBlockHeightData', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesGetBlockHeightData();
+        instance = new SatstreamJavascriptSdk.ResponsesGetBlockHeightData();
       });
 
       it('should create an instance of ResponsesGetBlockHeightData', function() {
         // TODO: update the code to test ResponsesGetBlockHeightData
-        expect(instance).to.be.a(SatstreamApi.ResponsesGetBlockHeightData);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockHeightData);
       });
 
       it('should have the property height (base name: "height")', function() {

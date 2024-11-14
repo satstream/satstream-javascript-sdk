@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SatstreamApi.RunesApi();
+    instance = new SatstreamJavascriptSdk.RunesApi();
   });
 
   describe('(package)', function() {
@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetRuneHolders);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetRuneHolders);
 
             done();
           });
@@ -66,7 +66,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetRuneInfo);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetRuneInfo);
 
             done();
           });
@@ -87,7 +87,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetRunesInfoList);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetRunesInfoList);
 
             done();
           });

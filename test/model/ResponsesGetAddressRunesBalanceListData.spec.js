@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesGetAddressRunesBalanceListData', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesGetAddressRunesBalanceListData();
+        instance = new SatstreamJavascriptSdk.ResponsesGetAddressRunesBalanceListData();
       });
 
       it('should create an instance of ResponsesGetAddressRunesBalanceListData', function() {
         // TODO: update the code to test ResponsesGetAddressRunesBalanceListData
-        expect(instance).to.be.a(SatstreamApi.ResponsesGetAddressRunesBalanceListData);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesGetAddressRunesBalanceListData);
       });
 
       it('should have the property items (base name: "items")', function() {

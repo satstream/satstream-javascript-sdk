@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesRuneHolder', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesRuneHolder();
+        instance = new SatstreamJavascriptSdk.ResponsesRuneHolder();
       });
 
       it('should create an instance of ResponsesRuneHolder', function() {
         // TODO: update the code to test ResponsesRuneHolder
-        expect(instance).to.be.a(SatstreamApi.ResponsesRuneHolder);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesRuneHolder);
       });
 
       it('should have the property address (base name: "address")', function() {

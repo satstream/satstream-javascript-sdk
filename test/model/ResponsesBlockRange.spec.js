@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesBlockRange', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesBlockRange();
+        instance = new SatstreamJavascriptSdk.ResponsesBlockRange();
       });
 
       it('should create an instance of ResponsesBlockRange', function() {
         // TODO: update the code to test ResponsesBlockRange
-        expect(instance).to.be.a(SatstreamApi.ResponsesBlockRange);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesBlockRange);
       });
 
       it('should have the property end (base name: "end")', function() {

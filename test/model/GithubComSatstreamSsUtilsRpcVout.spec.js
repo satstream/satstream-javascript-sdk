@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('GithubComSatstreamSsUtilsRpcVout', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.GithubComSatstreamSsUtilsRpcVout();
+        instance = new SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcVout();
       });
 
       it('should create an instance of GithubComSatstreamSsUtilsRpcVout', function() {
         // TODO: update the code to test GithubComSatstreamSsUtilsRpcVout
-        expect(instance).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVout);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcVout);
       });
 
       it('should have the property n (base name: "n")', function() {

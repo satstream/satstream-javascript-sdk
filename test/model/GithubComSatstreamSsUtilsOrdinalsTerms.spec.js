@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('GithubComSatstreamSsUtilsOrdinalsTerms', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.GithubComSatstreamSsUtilsOrdinalsTerms();
+        instance = new SatstreamJavascriptSdk.GithubComSatstreamSsUtilsOrdinalsTerms();
       });
 
       it('should create an instance of GithubComSatstreamSsUtilsOrdinalsTerms', function() {
         // TODO: update the code to test GithubComSatstreamSsUtilsOrdinalsTerms
-        expect(instance).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsOrdinalsTerms);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsUtilsOrdinalsTerms);
       });
 
       it('should have the property amount (base name: "amount")', function() {

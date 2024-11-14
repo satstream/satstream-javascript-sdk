@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('GithubComSatstreamSsUtilsRpcVin', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.GithubComSatstreamSsUtilsRpcVin();
+        instance = new SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcVin();
       });
 
       it('should create an instance of GithubComSatstreamSsUtilsRpcVin', function() {
         // TODO: update the code to test GithubComSatstreamSsUtilsRpcVin
-        expect(instance).to.be.a(SatstreamApi.GithubComSatstreamSsUtilsRpcVin);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsUtilsRpcVin);
       });
 
       it('should have the property coinbase (base name: "coinbase")', function() {

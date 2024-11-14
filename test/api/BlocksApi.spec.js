@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SatstreamApi.BlocksApi();
+    instance = new SatstreamJavascriptSdk.BlocksApi();
   });
 
   describe('(package)', function() {
@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetBlockByHash);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockByHash);
 
             done();
           });
@@ -66,7 +66,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetBlockInfo);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockInfo);
 
             done();
           });
@@ -86,7 +86,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetBlockTransactions);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockTransactions);
 
             done();
           });
@@ -106,7 +106,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamApi.ResponsesGetBlockHeight);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockHeight);
 
             done();
           });

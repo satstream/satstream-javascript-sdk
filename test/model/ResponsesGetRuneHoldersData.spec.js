@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesGetRuneHoldersData', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesGetRuneHoldersData();
+        instance = new SatstreamJavascriptSdk.ResponsesGetRuneHoldersData();
       });
 
       it('should create an instance of ResponsesGetRuneHoldersData', function() {
         // TODO: update the code to test ResponsesGetRuneHoldersData
-        expect(instance).to.be.a(SatstreamApi.ResponsesGetRuneHoldersData);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesGetRuneHoldersData);
       });
 
       it('should have the property holders (base name: "holders")', function() {

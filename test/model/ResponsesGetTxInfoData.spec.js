@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesGetTxInfoData', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesGetTxInfoData();
+        instance = new SatstreamJavascriptSdk.ResponsesGetTxInfoData();
       });
 
       it('should create an instance of ResponsesGetTxInfoData', function() {
         // TODO: update the code to test ResponsesGetTxInfoData
-        expect(instance).to.be.a(SatstreamApi.ResponsesGetTxInfoData);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesGetTxInfoData);
       });
 
       it('should have the property blkid (base name: "blkid")', function() {

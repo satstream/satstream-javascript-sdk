@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesSendRawTransaction', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesSendRawTransaction();
+        instance = new SatstreamJavascriptSdk.ResponsesSendRawTransaction();
       });
 
       it('should create an instance of ResponsesSendRawTransaction', function() {
         // TODO: update the code to test ResponsesSendRawTransaction
-        expect(instance).to.be.a(SatstreamApi.ResponsesSendRawTransaction);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesSendRawTransaction);
       });
 
       it('should have the property code (base name: "code")', function() {

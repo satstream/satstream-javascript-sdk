@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('GithubComSatstreamSsApiServerApiTransactionsResponsesError', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesError();
+        instance = new SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiTransactionsResponsesError();
       });
 
       it('should create an instance of GithubComSatstreamSsApiServerApiTransactionsResponsesError', function() {
         // TODO: update the code to test GithubComSatstreamSsApiServerApiTransactionsResponsesError
-        expect(instance).to.be.a(SatstreamApi.GithubComSatstreamSsApiServerApiTransactionsResponsesError);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiTransactionsResponsesError);
       });
 
       it('should have the property code (base name: "code")', function() {

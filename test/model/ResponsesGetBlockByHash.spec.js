@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesGetBlockByHash', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesGetBlockByHash();
+        instance = new SatstreamJavascriptSdk.ResponsesGetBlockByHash();
       });
 
       it('should create an instance of ResponsesGetBlockByHash', function() {
         // TODO: update the code to test ResponsesGetBlockByHash
-        expect(instance).to.be.a(SatstreamApi.ResponsesGetBlockByHash);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockByHash);
       });
 
       it('should have the property code (base name: "code")', function() {

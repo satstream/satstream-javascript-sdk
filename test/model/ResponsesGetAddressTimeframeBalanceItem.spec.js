@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SatstreamApi);
+    factory(root.expect, root.SatstreamJavascriptSdk);
   }
-}(this, function(expect, SatstreamApi) {
+}(this, function(expect, SatstreamJavascriptSdk) {
   'use strict';
 
   var instance;
@@ -32,12 +32,12 @@
   describe('(package)', function() {
     describe('ResponsesGetAddressTimeframeBalanceItem', function() {
       beforeEach(function() {
-        instance = new SatstreamApi.ResponsesGetAddressTimeframeBalanceItem();
+        instance = new SatstreamJavascriptSdk.ResponsesGetAddressTimeframeBalanceItem();
       });
 
       it('should create an instance of ResponsesGetAddressTimeframeBalanceItem', function() {
         // TODO: update the code to test ResponsesGetAddressTimeframeBalanceItem
-        expect(instance).to.be.a(SatstreamApi.ResponsesGetAddressTimeframeBalanceItem);
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ResponsesGetAddressTimeframeBalanceItem);
       });
 
       it('should have the property balance (base name: "balance")', function() {
