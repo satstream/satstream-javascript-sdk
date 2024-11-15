@@ -19,7 +19,7 @@ import ResponsesGetAddressTimeframeBalanceData from './ResponsesGetAddressTimefr
 /**
  * The ResponsesGetAddressTimeframeBalance model module.
  * @module model/ResponsesGetAddressTimeframeBalance
- * @version 1.0.8
+ * @version 1.0.10
  */
 export default class ResponsesGetAddressTimeframeBalance {
   /**

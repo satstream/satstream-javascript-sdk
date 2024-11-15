@@ -19,7 +19,7 @@ import ResponsesGetBlockHeightData from './ResponsesGetBlockHeightData';
 /**
  * The ResponsesGetBlockHeight model module.
  * @module model/ResponsesGetBlockHeight
- * @version 1.0.8
+ * @version 1.0.10
  */
 export default class ResponsesGetBlockHeight {
   /**

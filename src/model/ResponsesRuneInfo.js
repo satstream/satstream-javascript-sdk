@@ -20,7 +20,7 @@ import GithubComSatstreamSsUtilsOrdinalsTerms from './GithubComSatstreamSsUtilsO
 /**
  * The ResponsesRuneInfo model module.
  * @module model/ResponsesRuneInfo
- * @version 1.0.8
+ * @version 1.0.10
  */
 export default class ResponsesRuneInfo {
   /**

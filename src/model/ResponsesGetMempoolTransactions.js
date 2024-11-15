@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsRpcBtcTx from './GithubComSatstreamSsUtilsRpcBtc
 /**
  * The ResponsesGetMempoolTransactions model module.
  * @module model/ResponsesGetMempoolTransactions
- * @version 1.0.8
+ * @version 1.0.10
  */
 export default class ResponsesGetMempoolTransactions {
   /**

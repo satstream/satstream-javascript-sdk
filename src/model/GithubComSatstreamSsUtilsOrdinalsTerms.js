@@ -20,7 +20,7 @@ import GithubComSatstreamSsUtilsOrdinalsTermsRange from './GithubComSatstreamSsU
 /**
  * The GithubComSatstreamSsUtilsOrdinalsTerms model module.
  * @module model/GithubComSatstreamSsUtilsOrdinalsTerms
- * @version 1.0.8
+ * @version 1.0.10
  */
 export default class GithubComSatstreamSsUtilsOrdinalsTerms {
   /**

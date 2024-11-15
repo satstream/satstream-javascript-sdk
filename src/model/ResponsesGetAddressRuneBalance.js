@@ -19,7 +19,7 @@ import ResponsesGetAddressRuneBalanceData from './ResponsesGetAddressRuneBalance
 /**
  * The ResponsesGetAddressRuneBalance model module.
  * @module model/ResponsesGetAddressRuneBalance
- * @version 1.0.8
+ * @version 1.0.10
  */
 export default class ResponsesGetAddressRuneBalance {
   /**

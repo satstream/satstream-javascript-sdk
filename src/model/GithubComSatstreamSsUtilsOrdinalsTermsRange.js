@@ -19,7 +19,7 @@ import BigInt from './BigInt';
 /**
  * The GithubComSatstreamSsUtilsOrdinalsTermsRange model module.
  * @module model/GithubComSatstreamSsUtilsOrdinalsTermsRange
- * @version 1.0.8
+ * @version 1.0.10
  */
 export default class GithubComSatstreamSsUtilsOrdinalsTermsRange {
   /**
