@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GithubComSatstreamSsUtilsRpcScriptPubKey model module.
  * @module model/GithubComSatstreamSsUtilsRpcScriptPubKey
- * @version 1.0.10
+ * @version 1.0.13
  */
 export default class GithubComSatstreamSsUtilsRpcScriptPubKey {
   /**

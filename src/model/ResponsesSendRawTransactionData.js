@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResponsesSendRawTransactionData model module.
  * @module model/ResponsesSendRawTransactionData
- * @version 1.0.10
+ * @version 1.0.13
  */
 export default class ResponsesSendRawTransactionData {
   /**

@@ -22,7 +22,7 @@ import ResponsesGetRunesInfoList from '../model/ResponsesGetRunesInfoList';
 /**
 * Runes service.
 * @module api/RunesApi
-* @version 1.0.10
+* @version 1.0.13
 */
 export default class RunesApi {
 

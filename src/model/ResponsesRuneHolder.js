@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResponsesRuneHolder model module.
  * @module model/ResponsesRuneHolder
- * @version 1.0.10
+ * @version 1.0.13
  */
 export default class ResponsesRuneHolder {
   /**

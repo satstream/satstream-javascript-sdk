@@ -17,7 +17,7 @@ import superagent from "superagent";
 
 /**
 * @module ApiClient
-* @version 1.0.10
+* @version 1.0.13
 */
 
 /**

@@ -19,7 +19,7 @@ import ResponsesGetAddressRunesBalanceListData from './ResponsesGetAddressRunesB
 /**
  * The ResponsesGetAddressRunesBalanceList model module.
  * @module model/ResponsesGetAddressRunesBalanceList
- * @version 1.0.10
+ * @version 1.0.13
  */
 export default class ResponsesGetAddressRunesBalanceList {
   /**

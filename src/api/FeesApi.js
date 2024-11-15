@@ -20,7 +20,7 @@ import ResponsesGetFees from '../model/ResponsesGetFees';
 /**
 * Fees service.
 * @module api/FeesApi
-* @version 1.0.10
+* @version 1.0.13
 */
 export default class FeesApi {
 
