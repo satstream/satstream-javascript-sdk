@@ -19,7 +19,7 @@ import ResponsesBlockRange from './ResponsesBlockRange';
 /**
  * The AllOfresponsesGetAddressTimeframeBalanceItemBlockRange model module.
  * @module model/AllOfresponsesGetAddressTimeframeBalanceItemBlockRange
- * @version 1.0.15
+ * @version 1.0.16
  */
 export default class AllOfresponsesGetAddressTimeframeBalanceItemBlockRange extends ResponsesBlockRange {
   /**

@@ -19,7 +19,7 @@ import ResponsesGetAddressNonInscriptionUTXOData from './ResponsesGetAddressNonI
 /**
  * The ResponsesGetAddressNonInscriptionUTXO model module.
  * @module model/ResponsesGetAddressNonInscriptionUTXO
- * @version 1.0.15
+ * @version 1.0.16
  */
 export default class ResponsesGetAddressNonInscriptionUTXO {
   /**

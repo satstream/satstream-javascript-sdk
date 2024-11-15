@@ -23,7 +23,7 @@ import ResponsesGetBlockTransactions from '../model/ResponsesGetBlockTransaction
 /**
 * Blocks service.
 * @module api/BlocksApi
-* @version 1.0.15
+* @version 1.0.16
 */
 export default class BlocksApi {
 

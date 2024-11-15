@@ -19,7 +19,7 @@ import ResponsesRuneInfo from './ResponsesRuneInfo';
 /**
  * The ResponsesGetRuneInfo model module.
  * @module model/ResponsesGetRuneInfo
- * @version 1.0.15
+ * @version 1.0.16
  */
 export default class ResponsesGetRuneInfo {
   /**

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GithubComSatstreamSsApiServerApiBlocksResponsesError model module.
  * @module model/GithubComSatstreamSsApiServerApiBlocksResponsesError
- * @version 1.0.15
+ * @version 1.0.16
  */
 export default class GithubComSatstreamSsApiServerApiBlocksResponsesError {
   /**

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResponsesGetAddressTimeframeBalanceItem model module.
  * @module model/ResponsesGetAddressTimeframeBalanceItem
- * @version 1.0.15
+ * @version 1.0.16
  */
 export default class ResponsesGetAddressTimeframeBalanceItem {
   /**

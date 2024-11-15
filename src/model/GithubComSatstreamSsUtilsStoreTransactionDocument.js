@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GithubComSatstreamSsUtilsStoreTransactionDocument model module.
  * @module model/GithubComSatstreamSsUtilsStoreTransactionDocument
- * @version 1.0.15
+ * @version 1.0.16
  */
 export default class GithubComSatstreamSsUtilsStoreTransactionDocument {
   /**
