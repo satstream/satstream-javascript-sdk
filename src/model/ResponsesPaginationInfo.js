@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResponsesPaginationInfo model module.
  * @module model/ResponsesPaginationInfo
- * @version 1.0.14
+ * @version 1.0.15
  */
 export default class ResponsesPaginationInfo {
   /**

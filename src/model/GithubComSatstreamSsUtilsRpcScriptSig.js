@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GithubComSatstreamSsUtilsRpcScriptSig model module.
  * @module model/GithubComSatstreamSsUtilsRpcScriptSig
- * @version 1.0.14
+ * @version 1.0.15
  */
 export default class GithubComSatstreamSsUtilsRpcScriptSig {
   /**

@@ -22,7 +22,7 @@ import ResponsesSendRawTransaction from '../model/ResponsesSendRawTransaction';
 /**
 * Transactions service.
 * @module api/TransactionsApi
-* @version 1.0.14
+* @version 1.0.15
 */
 export default class TransactionsApi {
 

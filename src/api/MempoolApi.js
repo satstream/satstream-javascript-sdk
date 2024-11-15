@@ -22,7 +22,7 @@ import ResponsesGetMempoolTxInfo from '../model/ResponsesGetMempoolTxInfo';
 /**
 * Mempool service.
 * @module api/MempoolApi
-* @version 1.0.14
+* @version 1.0.15
 */
 export default class MempoolApi {
 

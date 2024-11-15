@@ -19,7 +19,7 @@ import ResponsesGetRunesInfoListData from './ResponsesGetRunesInfoListData';
 /**
  * The ResponsesGetRunesInfoList model module.
  * @module model/ResponsesGetRunesInfoList
- * @version 1.0.14
+ * @version 1.0.15
  */
 export default class ResponsesGetRunesInfoList {
   /**

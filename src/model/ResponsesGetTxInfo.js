@@ -19,7 +19,7 @@ import ResponsesGetTxInfoData from './ResponsesGetTxInfoData';
 /**
  * The ResponsesGetTxInfo model module.
  * @module model/ResponsesGetTxInfo
- * @version 1.0.14
+ * @version 1.0.15
  */
 export default class ResponsesGetTxInfo {
   /**

@@ -20,7 +20,7 @@ import GithubComSatstreamSsUtilsRpcVout from './GithubComSatstreamSsUtilsRpcVout
 /**
  * The GithubComSatstreamSsUtilsRpcBtcTx model module.
  * @module model/GithubComSatstreamSsUtilsRpcBtcTx
- * @version 1.0.14
+ * @version 1.0.15
  */
 export default class GithubComSatstreamSsUtilsRpcBtcTx {
   /**

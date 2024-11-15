@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResponsesGetFeesData model module.
  * @module model/ResponsesGetFeesData
- * @version 1.0.14
+ * @version 1.0.15
  */
 export default class ResponsesGetFeesData {
   /**

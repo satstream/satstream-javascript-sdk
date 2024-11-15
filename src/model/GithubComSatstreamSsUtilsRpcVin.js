@@ -20,7 +20,7 @@ import GithubComSatstreamSsUtilsRpcScriptSig from './GithubComSatstreamSsUtilsRp
 /**
  * The GithubComSatstreamSsUtilsRpcVin model module.
  * @module model/GithubComSatstreamSsUtilsRpcVin
- * @version 1.0.14
+ * @version 1.0.15
  */
 export default class GithubComSatstreamSsUtilsRpcVin {
   /**

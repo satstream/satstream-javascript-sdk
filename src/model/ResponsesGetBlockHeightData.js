@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResponsesGetBlockHeightData model module.
  * @module model/ResponsesGetBlockHeightData
- * @version 1.0.14
+ * @version 1.0.15
  */
 export default class ResponsesGetBlockHeightData {
   /**

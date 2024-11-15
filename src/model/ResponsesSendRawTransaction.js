@@ -19,7 +19,7 @@ import ResponsesSendRawTransactionData from './ResponsesSendRawTransactionData';
 /**
  * The ResponsesSendRawTransaction model module.
  * @module model/ResponsesSendRawTransaction
- * @version 1.0.14
+ * @version 1.0.15
  */
 export default class ResponsesSendRawTransaction {
   /**
