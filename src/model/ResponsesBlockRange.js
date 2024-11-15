@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResponsesBlockRange model module.
  * @module model/ResponsesBlockRange
- * @version 1.0.13
+ * @version 1.0.14
  */
 export default class ResponsesBlockRange {
   /**

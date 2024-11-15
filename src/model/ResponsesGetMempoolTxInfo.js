@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsRpcBtcTx from './GithubComSatstreamSsUtilsRpcBtc
 /**
  * The ResponsesGetMempoolTxInfo model module.
  * @module model/ResponsesGetMempoolTxInfo
- * @version 1.0.13
+ * @version 1.0.14
  */
 export default class ResponsesGetMempoolTxInfo {
   /**

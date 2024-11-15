@@ -104,7 +104,7 @@ import TransactionsApi from './api/TransactionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.13
+* @version 1.0.14
 */
 export {
     /**

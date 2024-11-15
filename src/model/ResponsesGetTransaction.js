@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsRpcBtcTx from './GithubComSatstreamSsUtilsRpcBtc
 /**
  * The ResponsesGetTransaction model module.
  * @module model/ResponsesGetTransaction
- * @version 1.0.13
+ * @version 1.0.14
  */
 export default class ResponsesGetTransaction {
   /**
