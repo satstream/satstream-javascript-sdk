@@ -20,7 +20,7 @@ import GithubComSatstreamSsUtilsRpcUtxoRune from './GithubComSatstreamSsUtilsRpc
 /**
  * The GithubComSatstreamSsUtilsRpcPrevOut model module.
  * @module model/GithubComSatstreamSsUtilsRpcPrevOut
- * @version 1.0.0
+ * @version 1.0.8
  */
 export default class GithubComSatstreamSsUtilsRpcPrevOut {
   /**

@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsRpcBlock from './GithubComSatstreamSsUtilsRpcBlo
 /**
  * The ResponsesGetBlockByHash model module.
  * @module model/ResponsesGetBlockByHash
- * @version 1.0.0
+ * @version 1.0.8
  */
 export default class ResponsesGetBlockByHash {
   /**

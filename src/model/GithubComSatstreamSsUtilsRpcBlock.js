@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsRpcBtcTx from './GithubComSatstreamSsUtilsRpcBtc
 /**
  * The GithubComSatstreamSsUtilsRpcBlock model module.
  * @module model/GithubComSatstreamSsUtilsRpcBlock
- * @version 1.0.0
+ * @version 1.0.8
  */
 export default class GithubComSatstreamSsUtilsRpcBlock {
   /**

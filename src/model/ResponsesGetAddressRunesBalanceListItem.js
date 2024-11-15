@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResponsesGetAddressRunesBalanceListItem model module.
  * @module model/ResponsesGetAddressRunesBalanceListItem
- * @version 1.0.0
+ * @version 1.0.8
  */
 export default class ResponsesGetAddressRunesBalanceListItem {
   /**
