@@ -24,7 +24,7 @@ import ResponsesGetAddressTimeframeBalance from '../model/ResponsesGetAddressTim
 /**
 * Addresses service.
 * @module api/AddressesApi
-* @version 1.0.16
+* @version 1.0.17
 */
 export default class AddressesApi {
 

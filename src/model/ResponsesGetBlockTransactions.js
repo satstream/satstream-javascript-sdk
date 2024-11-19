@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsStoreTransactionDocument from './GithubComSatstr
 /**
  * The ResponsesGetBlockTransactions model module.
  * @module model/ResponsesGetBlockTransactions
- * @version 1.0.16
+ * @version 1.0.17
  */
 export default class ResponsesGetBlockTransactions {
   /**

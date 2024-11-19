@@ -19,7 +19,7 @@ import ResponsesGetAddressBalanceData from './ResponsesGetAddressBalanceData';
 /**
  * The ResponsesGetAddressBalance model module.
  * @module model/ResponsesGetAddressBalance
- * @version 1.0.16
+ * @version 1.0.17
  */
 export default class ResponsesGetAddressBalance {
   /**

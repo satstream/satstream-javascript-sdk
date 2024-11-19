@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsRpcBlock from './GithubComSatstreamSsUtilsRpcBlo
 /**
  * The ResponsesGetBlockInfo model module.
  * @module model/ResponsesGetBlockInfo
- * @version 1.0.16
+ * @version 1.0.17
  */
 export default class ResponsesGetBlockInfo {
   /**

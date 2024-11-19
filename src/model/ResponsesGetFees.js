@@ -19,7 +19,7 @@ import ResponsesGetFeesData from './ResponsesGetFeesData';
 /**
  * The ResponsesGetFees model module.
  * @module model/ResponsesGetFees
- * @version 1.0.16
+ * @version 1.0.17
  */
 export default class ResponsesGetFees {
   /**

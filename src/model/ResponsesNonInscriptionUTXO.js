@@ -19,7 +19,7 @@ import BigInt from './BigInt';
 /**
  * The ResponsesNonInscriptionUTXO model module.
  * @module model/ResponsesNonInscriptionUTXO
- * @version 1.0.16
+ * @version 1.0.17
  */
 export default class ResponsesNonInscriptionUTXO {
   /**

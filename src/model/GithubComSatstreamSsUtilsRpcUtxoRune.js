@@ -19,7 +19,7 @@ import BigInt from './BigInt';
 /**
  * The GithubComSatstreamSsUtilsRpcUtxoRune model module.
  * @module model/GithubComSatstreamSsUtilsRpcUtxoRune
- * @version 1.0.16
+ * @version 1.0.17
  */
 export default class GithubComSatstreamSsUtilsRpcUtxoRune {
   /**

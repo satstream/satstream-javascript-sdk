@@ -19,7 +19,7 @@ import BigInt from './BigInt';
 /**
  * The ResponsesGetTxInfoData model module.
  * @module model/ResponsesGetTxInfoData
- * @version 1.0.16
+ * @version 1.0.17
  */
 export default class ResponsesGetTxInfoData {
   /**
