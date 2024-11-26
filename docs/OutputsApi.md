@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getOutputByOutpoint"></a>
 # **getOutputByOutpoint**
-> InlineResponse20026 getOutputByOutpoint(outpoint)
+> InlineResponse20022 getOutputByOutpoint(outpoint)
 
 Get output info by outpoint
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 <a name="getOutputs"></a>
 # **getOutputs**
-> InlineResponse2002 getOutputs(body)
+> InlineResponse20023 getOutputs(body)
 
 Get multiple outputs
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse20023**](InlineResponse20023.md)
 
 ### Authorization
 

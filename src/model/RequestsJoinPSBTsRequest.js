@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsJoinPSBTsRequest model module.
  * @module model/RequestsJoinPSBTsRequest
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class RequestsJoinPSBTsRequest {
   /**

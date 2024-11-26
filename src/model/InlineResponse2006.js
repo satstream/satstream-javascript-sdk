@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import Block3 from './Block3';
+import BlockchainInfo from './BlockchainInfo';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse2006 model module.
  * @module model/InlineResponse2006
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse2006 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse2006 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse2006();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = Block3.constructFromObject(data['data']);
+        obj.data = BlockchainInfo.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/Block3} data
+ * @member {module:model/BlockchainInfo} data
  */
 InlineResponse2006.prototype.data = undefined;
 

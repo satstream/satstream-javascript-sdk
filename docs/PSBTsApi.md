@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="analyzePsbt"></a>
 # **analyzePsbt**
-> InlineResponse20027 analyzePsbt(body)
+> InlineResponse20024 analyzePsbt(body)
 
 Analyze PSBT
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 <a name="combinePsbt"></a>
 # **combinePsbt**
-> InlineResponse2005 combinePsbt(body)
+> InlineResponse2001 combinePsbt(body)
 
 Combine PSBTs
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 <a name="createPsbt"></a>
 # **createPsbt**
-> InlineResponse2005 createPsbt(body)
+> InlineResponse2001 createPsbt(body)
 
 Create PSBT
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 <a name="decodePsbt"></a>
 # **decodePsbt**
-> InlineResponse20028 decodePsbt(body)
+> InlineResponse20025 decodePsbt(body)
 
 Decode PSBT
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 <a name="joinPsbts"></a>
 # **joinPsbts**
-> InlineResponse2005 joinPsbts(body)
+> InlineResponse2001 joinPsbts(body)
 
 Join PSBTs
 
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 

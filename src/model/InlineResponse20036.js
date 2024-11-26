@@ -14,12 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
+import DecodeResponse from './DecodeResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20036 model module.
  * @module model/InlineResponse20036
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20036 extends UtilsResponseEnvelope {
   /**
@@ -44,14 +45,14 @@ export default class InlineResponse20036 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20036();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], ['String']);
+        obj.data = DecodeResponse.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {Array.<String>} data
+ * @member {module:model/DecodeResponse} data
  */
 InlineResponse20036.prototype.data = undefined;
 

@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**BlockResponse**](BlockResponse.md) |  | [optional] 
+**data** | **Number** |  | [optional] 

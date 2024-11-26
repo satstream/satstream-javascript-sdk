@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **partialSignatures** | **{String: String}** | The public key and signature pairs | [optional] 
 **redeemScript** | **AllOfDecodedPSBTInputRedeemScript** | The redeem script | [optional] 
 **sighash** | **String** | The sighash type to be used | [optional] 
-**unknown** | **{String: Object}** | Unknown fields | [optional] 
+**unknown** | **AllOfDecodedPSBTInputUnknown** | Unknown fields | [optional] 
 **witnessScript** | **AllOfDecodedPSBTInputWitnessScript** | The witness script | [optional] 
 **witnessUtxo** | **AllOfDecodedPSBTInputWitnessUtxo** | Transaction output for witness UTXOs | [optional] 

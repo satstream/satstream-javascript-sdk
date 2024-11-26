@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ChainTxStats**](ChainTxStats.md) |  | [optional] 
+**data** | [**LatestInscriptionsResponse**](LatestInscriptionsResponse.md) |  | [optional] 

@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**BlockchainInfo**](BlockchainInfo.md) |  | [optional] 
+**data** | [**ChainTxStats**](ChainTxStats.md) |  | [optional] 

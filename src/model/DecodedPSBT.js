@@ -20,7 +20,7 @@ import DecodedPSBTOutput from './DecodedPSBTOutput';
 /**
  * The DecodedPSBT model module.
  * @module model/DecodedPSBT
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class DecodedPSBT {
   /**
@@ -50,7 +50,7 @@ export default class DecodedPSBT {
       if (data.hasOwnProperty('tx'))
         obj.tx = ApiClient.convertToType(data['tx'], Object);
       if (data.hasOwnProperty('unknown'))
-        obj.unknown = ApiClient.convertToType(data['unknown'], {'String': Object});
+        obj.unknown = ApiClient.convertToType(data['unknown'], Object);
     }
     return obj;
   }
@@ -82,7 +82,7 @@ DecodedPSBT.prototype.tx = undefined;
 
 /**
  * The unknown global fields
- * @member {Object.<String, Object>} unknown
+ * @member {Object} unknown
  */
 DecodedPSBT.prototype.unknown = undefined;
 

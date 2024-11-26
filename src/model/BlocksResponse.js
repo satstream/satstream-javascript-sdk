@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BlocksResponse model module.
  * @module model/BlocksResponse
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class BlocksResponse {
   /**

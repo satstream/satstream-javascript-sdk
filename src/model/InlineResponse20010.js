@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import BlockchainInfo from './BlockchainInfo';
+import ChainTxStats from './ChainTxStats';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20010 model module.
  * @module model/InlineResponse20010
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20010 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20010 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20010();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = BlockchainInfo.constructFromObject(data['data']);
+        obj.data = ChainTxStats.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/BlockchainInfo} data
+ * @member {module:model/ChainTxStats} data
  */
 InlineResponse20010.prototype.data = undefined;
 

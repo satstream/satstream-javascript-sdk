@@ -19,7 +19,7 @@ import PSBTBip32Deriv from './PSBTBip32Deriv';
 /**
  * The DecodedPSBTOutput model module.
  * @module model/DecodedPSBTOutput
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class DecodedPSBTOutput {
   /**
@@ -45,7 +45,7 @@ export default class DecodedPSBTOutput {
       if (data.hasOwnProperty('redeem_script'))
         obj.redeemScript = ApiClient.convertToType(data['redeem_script'], Object);
       if (data.hasOwnProperty('unknown'))
-        obj.unknown = ApiClient.convertToType(data['unknown'], {'String': Object});
+        obj.unknown = ApiClient.convertToType(data['unknown'], Object);
       if (data.hasOwnProperty('witness_script'))
         obj.witnessScript = ApiClient.convertToType(data['witness_script'], Object);
     }
@@ -67,7 +67,7 @@ DecodedPSBTOutput.prototype.redeemScript = undefined;
 
 /**
  * Unknown fields
- * @member {Object.<String, Object>} unknown
+ * @member {Object} unknown
  */
 DecodedPSBTOutput.prototype.unknown = undefined;
 

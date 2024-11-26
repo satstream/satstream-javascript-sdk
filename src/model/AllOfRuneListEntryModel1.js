@@ -20,7 +20,7 @@ import RuneTerms from './RuneTerms';
 /**
  * The AllOfRuneListEntryModel1 model module.
  * @module model/AllOfRuneListEntryModel1
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class AllOfRuneListEntryModel1 extends RuneEntry {
   /**

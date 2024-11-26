@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import ChainTxStats from './ChainTxStats';
+import LatestInscriptionsResponse from './LatestInscriptionsResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20014 model module.
  * @module model/InlineResponse20014
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20014 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20014 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20014();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = ChainTxStats.constructFromObject(data['data']);
+        obj.data = LatestInscriptionsResponse.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/ChainTxStats} data
+ * @member {module:model/LatestInscriptionsResponse} data
  */
 InlineResponse20014.prototype.data = undefined;
 

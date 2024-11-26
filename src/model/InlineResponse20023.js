@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import RawMempoolData from './RawMempoolData';
+import OutputResponse from './OutputResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20023 model module.
  * @module model/InlineResponse20023
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20023 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20023 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20023();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = RawMempoolData.constructFromObject(data['data']);
+        obj.data = ApiClient.convertToType(data['data'], [OutputResponse]);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/RawMempoolData} data
+ * @member {Array.<module:model/OutputResponse>} data
  */
 InlineResponse20023.prototype.data = undefined;
 

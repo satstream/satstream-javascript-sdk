@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getMiningInfo"></a>
 # **getMiningInfo**
-> InlineResponse20025 getMiningInfo()
+> InlineResponse20021 getMiningInfo()
 
 Get mining information
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ This endpoint does not need any parameter.
 
 <a name="getNetworkHashps"></a>
 # **getNetworkHashps**
-> InlineResponse20013 getNetworkHashps(body)
+> InlineResponse2009 getNetworkHashps(body)
 
 Get network hash per second
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 

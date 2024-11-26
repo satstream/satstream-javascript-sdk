@@ -14,12 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
+import Block2 from './Block2';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse200 model module.
  * @module model/InlineResponse200
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse200 extends UtilsResponseEnvelope {
   /**
@@ -44,14 +45,14 @@ export default class InlineResponse200 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse200();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], 'Boolean');
+        obj.data = Block2.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {Boolean} data
+ * @member {module:model/Block2} data
  */
 InlineResponse200.prototype.data = undefined;
 

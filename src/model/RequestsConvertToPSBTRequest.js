@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsConvertToPSBTRequest model module.
  * @module model/RequestsConvertToPSBTRequest
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class RequestsConvertToPSBTRequest {
   /**

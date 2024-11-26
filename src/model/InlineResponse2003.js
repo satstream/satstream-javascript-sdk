@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
+import Block1 from './Block1';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
-import ValidateAddressResult from './ValidateAddressResult';
 
 /**
  * The InlineResponse2003 model module.
  * @module model/InlineResponse2003
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse2003 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse2003 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse2003();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = ValidateAddressResult.constructFromObject(data['data']);
+        obj.data = Block1.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/ValidateAddressResult} data
+ * @member {module:model/Block1} data
  */
 InlineResponse2003.prototype.data = undefined;
 

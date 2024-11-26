@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 <a name="combineRawTransaction"></a>
 # **combineRawTransaction**
-> InlineResponse2005 combineRawTransaction(body)
+> InlineResponse2001 combineRawTransaction(body)
 
 Combine Raw Transactions
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 <a name="convertToPsbt"></a>
 # **convertToPsbt**
-> InlineResponse2005 convertToPsbt(body)
+> InlineResponse2001 convertToPsbt(body)
 
 Convert Raw Transaction to PSBT
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 <a name="createRawTransaction"></a>
 # **createRawTransaction**
-> InlineResponse2005 createRawTransaction(body)
+> InlineResponse2001 createRawTransaction(body)
 
 Create Raw Transaction
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 <a name="decodeTx"></a>
 # **decodeTx**
-> InlineResponse20039 decodeTx(txid)
+> InlineResponse20036 decodeTx(txid)
 
 Decode a transaction
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 <a name="getRawTransactionDecoded"></a>
 # **getRawTransactionDecoded**
-> InlineResponse20040 getRawTransactionDecoded(txid)
+> InlineResponse20037 getRawTransactionDecoded(txid)
 
 Get raw transaction (verbosity 1)
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20037**](InlineResponse20037.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 <a name="getRawTransactionHex"></a>
 # **getRawTransactionHex**
-> InlineResponse2005 getRawTransactionHex(txid)
+> InlineResponse2001 getRawTransactionHex(txid)
 
 Get raw transaction (verbosity 0)
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 <a name="getRawTransactionPrevout"></a>
 # **getRawTransactionPrevout**
-> InlineResponse20041 getRawTransactionPrevout(txid)
+> InlineResponse20038 getRawTransactionPrevout(txid)
 
 Get raw transaction (verbosity 2)
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20041**](InlineResponse20041.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 <a name="getTransaction"></a>
 # **getTransaction**
-> InlineResponse20038 getTransaction(txid)
+> InlineResponse20035 getTransaction(txid)
 
 Get transaction info
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxOut"></a>
 # **getTxOut**
-> InlineResponse20034 getTxOut(body)
+> InlineResponse20031 getTxOut(body)
 
 Get transaction output
 
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxOutProof"></a>
 # **getTxOutProof**
-> InlineResponse2005 getTxOutProof(body)
+> InlineResponse2001 getTxOutProof(body)
 
 Get transaction output proof
 
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxOutSetInfo"></a>
 # **getTxOutSetInfo**
-> InlineResponse20035 getTxOutSetInfo(body)
+> InlineResponse20032 getTxOutSetInfo(body)
 
 Get transaction output set information
 
@@ -558,7 +558,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxSpendingPrevout"></a>
 # **getTxSpendingPrevout**
-> InlineResponse20037 getTxSpendingPrevout(body)
+> InlineResponse20034 getTxSpendingPrevout(body)
 
 Get transaction spending prevout
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -621,7 +621,7 @@ Name | Type | Description  | Notes
 
 <a name="sendRawTransaction"></a>
 # **sendRawTransaction**
-> InlineResponse2005 sendRawTransaction(body)
+> InlineResponse2001 sendRawTransaction(body)
 
 Send raw transaction
 
@@ -658,7 +658,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -671,7 +671,7 @@ Name | Type | Description  | Notes
 
 <a name="verifyTxOutProof"></a>
 # **verifyTxOutProof**
-> InlineResponse20036 verifyTxOutProof(body)
+> InlineResponse20033 verifyTxOutProof(body)
 
 Verify transaction output proof
 
@@ -708,7 +708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 

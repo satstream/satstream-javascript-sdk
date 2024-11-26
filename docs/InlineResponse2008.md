@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**BlockStats**](BlockStats.md) |  | [optional] 
+**data** | [**BlocksResponse**](BlocksResponse.md) |  | [optional] 

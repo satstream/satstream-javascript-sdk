@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UtilsResponseEnvelope model module.
  * @module model/UtilsResponseEnvelope
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class UtilsResponseEnvelope {
   /**

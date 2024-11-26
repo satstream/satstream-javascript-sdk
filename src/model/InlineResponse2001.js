@@ -14,13 +14,12 @@
  *
  */
 import ApiClient from '../ApiClient';
-import AddressResponse from './AddressResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse2001 model module.
  * @module model/InlineResponse2001
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse2001 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +44,14 @@ export default class InlineResponse2001 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse2001();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = AddressResponse.constructFromObject(data['data']);
+        obj.data = ApiClient.convertToType(data['data'], 'String');
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/AddressResponse} data
+ * @member {String} data
  */
 InlineResponse2001.prototype.data = undefined;
 

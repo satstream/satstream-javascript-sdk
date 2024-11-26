@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import TransactionResponse from './TransactionResponse';
+import RawTx2 from './RawTx2';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20038 model module.
  * @module model/InlineResponse20038
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20038 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20038 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20038();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = TransactionResponse.constructFromObject(data['data']);
+        obj.data = RawTx2.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/TransactionResponse} data
+ * @member {module:model/RawTx2} data
  */
 InlineResponse20038.prototype.data = undefined;
 

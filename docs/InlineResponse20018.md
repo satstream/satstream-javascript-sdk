@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**LatestInscriptionsResponse**](LatestInscriptionsResponse.md) |  | [optional] 
+**data** | [**MempoolInfo**](MempoolInfo.md) |  | [optional] 

@@ -14,17 +14,17 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse200 from '../model/InlineResponse200';
-import InlineResponse2001 from '../model/InlineResponse2001';
-import InlineResponse2002 from '../model/InlineResponse2002';
-import InlineResponse2003 from '../model/InlineResponse2003';
-import RequestsVerifyMessageRequest from '../model/RequestsVerifyMessageRequest';
+import GetAddressResponse from '../model/GetAddressResponse';
+import GetAddressUTXOsResponse from '../model/GetAddressUTXOsResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
+import ValidateAddressResponse from '../model/ValidateAddressResponse';
+import VerifyMessageRequest from '../model/VerifyMessageRequest';
+import VerifyMessageResponse from '../model/VerifyMessageResponse';
 
 /**
 * Addresses service.
 * @module api/AddressesApi
-* @version 1.0.22
+* @version 1.0.23
 */
 export default class AddressesApi {
 
@@ -44,7 +44,7 @@ export default class AddressesApi {
      * Callback function to receive the result of the getAddress operation.
      * @callback moduleapi/AddressesApi~getAddressCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
+     * @param {module:model/GetAddressResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -79,7 +79,7 @@ export default class AddressesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = GetAddressResponse;
 
       return this.apiClient.callApi(
         '/address/{address}', 'GET',
@@ -91,7 +91,7 @@ export default class AddressesApi {
      * Callback function to receive the result of the getAddressUtxos operation.
      * @callback moduleapi/AddressesApi~getAddressUtxosCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002{ data The data returned by the service call.
+     * @param {module:model/GetAddressUTXOsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -128,7 +128,7 @@ export default class AddressesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2002;
+      let returnType = GetAddressUTXOsResponse;
 
       return this.apiClient.callApi(
         '/address/{address}/outputs', 'GET',
@@ -140,7 +140,7 @@ export default class AddressesApi {
      * Callback function to receive the result of the validateAddress operation.
      * @callback moduleapi/AddressesApi~validateAddressCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2003{ data The data returned by the service call.
+     * @param {module:model/ValidateAddressResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -175,7 +175,7 @@ export default class AddressesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2003;
+      let returnType = ValidateAddressResponse;
 
       return this.apiClient.callApi(
         '/address/{address}/validate', 'GET',
@@ -187,14 +187,14 @@ export default class AddressesApi {
      * Callback function to receive the result of the verifyMessage operation.
      * @callback moduleapi/AddressesApi~verifyMessageCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200{ data The data returned by the service call.
+     * @param {module:model/VerifyMessageResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Verify message
      * Verifies a signed message
-     * @param {module:model/RequestsVerifyMessageRequest} body Message verification parameters
+     * @param {module:model/VerifyMessageRequest} body Message verification parameters
      * @param {module:api/AddressesApi~verifyMessageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -222,7 +222,7 @@ export default class AddressesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse200;
+      let returnType = VerifyMessageResponse;
 
       return this.apiClient.callApi(
         '/address/verify-message', 'POST',

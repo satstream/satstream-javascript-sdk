@@ -19,7 +19,7 @@ import FeeRange from './FeeRange';
 /**
  * The AllOfFeeHorizonEstimatePass model module.
  * @module model/AllOfFeeHorizonEstimatePass
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class AllOfFeeHorizonEstimatePass extends FeeRange {
   /**

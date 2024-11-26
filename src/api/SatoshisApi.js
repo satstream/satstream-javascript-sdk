@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20031 from '../model/InlineResponse20031';
+import InlineResponse20028 from '../model/InlineResponse20028';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Satoshis service.
 * @module api/SatoshisApi
-* @version 1.0.22
+* @version 1.0.23
 */
 export default class SatoshisApi {
 
@@ -40,7 +40,7 @@ export default class SatoshisApi {
      * Callback function to receive the result of the getSatoshi operation.
      * @callback moduleapi/SatoshisApi~getSatoshiCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20031{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20028{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -75,7 +75,7 @@ export default class SatoshisApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20031;
+      let returnType = InlineResponse20028;
 
       return this.apiClient.callApi(
         '/sat/{number}', 'GET',

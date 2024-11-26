@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**UTXOSetInfo**](UTXOSetInfo.md) |  | [optional] 
+**data** | [**TransactionResponse**](TransactionResponse.md) |  | [optional] 

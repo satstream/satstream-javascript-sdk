@@ -1,4 +1,4 @@
-# SatstreamJavascriptSdk.RequestsVerifyMessageRequest
+# SatstreamJavascriptSdk.VerifyMessageRequest
 
 ## Properties
 Name | Type | Description | Notes

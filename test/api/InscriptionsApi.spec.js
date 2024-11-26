@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20017);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20013);
 
             done();
           });
@@ -66,7 +66,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20019);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20015);
 
             done();
           });
@@ -86,7 +86,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20018);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20014);
 
             done();
           });
@@ -106,7 +106,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20017);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20013);
 
             done();
           });
@@ -126,7 +126,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20018);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20014);
 
             done();
           });
@@ -146,7 +146,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20018);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20014);
 
             done();
           });

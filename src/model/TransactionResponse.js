@@ -19,7 +19,7 @@ import TransactionDetails from './TransactionDetails';
 /**
  * The TransactionResponse model module.
  * @module model/TransactionResponse
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class TransactionResponse {
   /**

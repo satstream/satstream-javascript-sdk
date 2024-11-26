@@ -14,9 +14,9 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20027 from '../model/InlineResponse20027';
-import InlineResponse20028 from '../model/InlineResponse20028';
-import InlineResponse2005 from '../model/InlineResponse2005';
+import InlineResponse2001 from '../model/InlineResponse2001';
+import InlineResponse20024 from '../model/InlineResponse20024';
+import InlineResponse20025 from '../model/InlineResponse20025';
 import RequestsAnalyzePSBTRequest from '../model/RequestsAnalyzePSBTRequest';
 import RequestsCombinePSBTRequest from '../model/RequestsCombinePSBTRequest';
 import RequestsCreatePSBTRequest from '../model/RequestsCreatePSBTRequest';
@@ -26,7 +26,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * PSBTs service.
 * @module api/PSBTsApi
-* @version 1.0.22
+* @version 1.0.23
 */
 export default class PSBTsApi {
 
@@ -46,7 +46,7 @@ export default class PSBTsApi {
      * Callback function to receive the result of the analyzePsbt operation.
      * @callback moduleapi/PSBTsApi~analyzePsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20027{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20024{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -81,7 +81,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20027;
+      let returnType = InlineResponse20024;
 
       return this.apiClient.callApi(
         '/psbt/analyze', 'POST',
@@ -93,7 +93,7 @@ export default class PSBTsApi {
      * Callback function to receive the result of the combinePsbt operation.
      * @callback moduleapi/PSBTsApi~combinePsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005{ data The data returned by the service call.
+     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -128,7 +128,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2005;
+      let returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/psbt/combine', 'POST',
@@ -140,7 +140,7 @@ export default class PSBTsApi {
      * Callback function to receive the result of the createPsbt operation.
      * @callback moduleapi/PSBTsApi~createPsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005{ data The data returned by the service call.
+     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -175,7 +175,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2005;
+      let returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/psbt/create', 'POST',
@@ -187,7 +187,7 @@ export default class PSBTsApi {
      * Callback function to receive the result of the decodePsbt operation.
      * @callback moduleapi/PSBTsApi~decodePsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20028{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20025{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -222,7 +222,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20028;
+      let returnType = InlineResponse20025;
 
       return this.apiClient.callApi(
         '/psbt/decode', 'POST',
@@ -234,7 +234,7 @@ export default class PSBTsApi {
      * Callback function to receive the result of the joinPsbts operation.
      * @callback moduleapi/PSBTsApi~joinPsbtsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005{ data The data returned by the service call.
+     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -269,7 +269,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2005;
+      let returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/psbt/join', 'POST',

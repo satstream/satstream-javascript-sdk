@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import RuneResponse from './RuneResponse';
+import DecodedScript from './DecodedScript';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20029 model module.
  * @module model/InlineResponse20029
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20029 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20029 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20029();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = RuneResponse.constructFromObject(data['data']);
+        obj.data = DecodedScript.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/RuneResponse} data
+ * @member {module:model/DecodedScript} data
  */
 InlineResponse20029.prototype.data = undefined;
 

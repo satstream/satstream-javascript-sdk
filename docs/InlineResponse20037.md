@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[TxSpendingPrevoutResult]**](TxSpendingPrevoutResult.md) |  | [optional] 
+**data** | [**RawTx1**](RawTx1.md) |  | [optional] 

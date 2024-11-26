@@ -16,29 +16,29 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The RequestsVerifyMessageRequest model module.
- * @module model/RequestsVerifyMessageRequest
- * @version 1.0.22
+ * The VerifyMessageRequest model module.
+ * @module model/VerifyMessageRequest
+ * @version 1.0.23
  */
-export default class RequestsVerifyMessageRequest {
+export default class VerifyMessageRequest {
   /**
-   * Constructs a new <code>RequestsVerifyMessageRequest</code>.
-   * @alias module:model/RequestsVerifyMessageRequest
+   * Constructs a new <code>VerifyMessageRequest</code>.
+   * @alias module:model/VerifyMessageRequest
    * @class
    */
   constructor() {
   }
 
   /**
-   * Constructs a <code>RequestsVerifyMessageRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>VerifyMessageRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RequestsVerifyMessageRequest} obj Optional instance to populate.
-   * @return {module:model/RequestsVerifyMessageRequest} The populated <code>RequestsVerifyMessageRequest</code> instance.
+   * @param {module:model/VerifyMessageRequest} obj Optional instance to populate.
+   * @return {module:model/VerifyMessageRequest} The populated <code>VerifyMessageRequest</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new RequestsVerifyMessageRequest();
+      obj = obj || new VerifyMessageRequest();
       if (data.hasOwnProperty('address'))
         obj.address = ApiClient.convertToType(data['address'], 'String');
       if (data.hasOwnProperty('message'))
@@ -54,17 +54,17 @@ export default class RequestsVerifyMessageRequest {
  * The bitcoin address to use for the signature
  * @member {String} address
  */
-RequestsVerifyMessageRequest.prototype.address = undefined;
+VerifyMessageRequest.prototype.address = undefined;
 
 /**
  * The message that was signed
  * @member {String} message
  */
-RequestsVerifyMessageRequest.prototype.message = undefined;
+VerifyMessageRequest.prototype.message = undefined;
 
 /**
  * The signature provided by the signer in base 64 encoding
  * @member {String} signature
  */
-RequestsVerifyMessageRequest.prototype.signature = undefined;
+VerifyMessageRequest.prototype.signature = undefined;
 

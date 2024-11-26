@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PSBTWitnessUtxo model module.
  * @module model/PSBTWitnessUtxo
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class PSBTWitnessUtxo {
   /**

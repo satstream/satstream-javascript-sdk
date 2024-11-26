@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="getStatus"></a>
 # **getStatus**
-> InlineResponse20033 getStatus()
+> InlineResponse20030 getStatus()
 
 Get server status
 
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 

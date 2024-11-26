@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**PSBTAnalysis**](PSBTAnalysis.md) |  | [optional] 
+**data** | [**RunesListResponse**](RunesListResponse.md) |  | [optional] 

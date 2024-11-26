@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **Number** |  | [optional] 
+**data** | [**RawFeeEstimate**](RawFeeEstimate.md) |  | [optional] 

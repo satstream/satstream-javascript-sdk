@@ -14,8 +14,8 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20015 from '../model/InlineResponse20015';
-import InlineResponse20016 from '../model/InlineResponse20016';
+import InlineResponse20011 from '../model/InlineResponse20011';
+import InlineResponse20012 from '../model/InlineResponse20012';
 import RequestsEstimateRawFeeRequest from '../model/RequestsEstimateRawFeeRequest';
 import RequestsEstimateSmartFeeRequest from '../model/RequestsEstimateSmartFeeRequest';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
@@ -23,7 +23,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Fees service.
 * @module api/FeesApi
-* @version 1.0.22
+* @version 1.0.23
 */
 export default class FeesApi {
 
@@ -43,7 +43,7 @@ export default class FeesApi {
      * Callback function to receive the result of the estimateRawFee operation.
      * @callback moduleapi/FeesApi~estimateRawFeeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20015{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20011{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -78,7 +78,7 @@ export default class FeesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20015;
+      let returnType = InlineResponse20011;
 
       return this.apiClient.callApi(
         '/fee/estimate-raw', 'POST',
@@ -90,7 +90,7 @@ export default class FeesApi {
      * Callback function to receive the result of the estimateSmartFee operation.
      * @callback moduleapi/FeesApi~estimateSmartFeeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20016{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20012{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -125,7 +125,7 @@ export default class FeesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20016;
+      let returnType = InlineResponse20012;
 
       return this.apiClient.callApi(
         '/fee/estimate-smart', 'POST',

@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import MempoolInfo from './MempoolInfo';
+import OutputResponse from './OutputResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20022 model module.
  * @module model/InlineResponse20022
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20022 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20022 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20022();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = MempoolInfo.constructFromObject(data['data']);
+        obj.data = OutputResponse.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/MempoolInfo} data
+ * @member {module:model/OutputResponse} data
  */
 InlineResponse20022.prototype.data = undefined;
 

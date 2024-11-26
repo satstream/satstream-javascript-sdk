@@ -19,7 +19,7 @@ import Bip32Deriv from './Bip32Deriv';
 /**
  * The DecodedPSBTInput model module.
  * @module model/DecodedPSBTInput
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class DecodedPSBTInput {
   /**
@@ -55,7 +55,7 @@ export default class DecodedPSBTInput {
       if (data.hasOwnProperty('sighash'))
         obj.sighash = ApiClient.convertToType(data['sighash'], 'String');
       if (data.hasOwnProperty('unknown'))
-        obj.unknown = ApiClient.convertToType(data['unknown'], {'String': Object});
+        obj.unknown = ApiClient.convertToType(data['unknown'], Object);
       if (data.hasOwnProperty('witness_script'))
         obj.witnessScript = ApiClient.convertToType(data['witness_script'], Object);
       if (data.hasOwnProperty('witness_utxo'))
@@ -109,7 +109,7 @@ DecodedPSBTInput.prototype.sighash = undefined;
 
 /**
  * Unknown fields
- * @member {Object.<String, Object>} unknown
+ * @member {Object} unknown
  */
 DecodedPSBTInput.prototype.unknown = undefined;
 

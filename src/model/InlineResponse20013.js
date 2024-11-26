@@ -14,12 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
+import InscriptionResponse from './InscriptionResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20013 model module.
  * @module model/InlineResponse20013
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20013 extends UtilsResponseEnvelope {
   /**
@@ -44,14 +45,14 @@ export default class InlineResponse20013 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20013();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], 'Number');
+        obj.data = InscriptionResponse.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {Number} data
+ * @member {module:model/InscriptionResponse} data
  */
 InlineResponse20013.prototype.data = undefined;
 

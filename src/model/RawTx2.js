@@ -20,7 +20,7 @@ import Vout from './Vout';
 /**
  * The RawTx2 model module.
  * @module model/RawTx2
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class RawTx2 {
   /**

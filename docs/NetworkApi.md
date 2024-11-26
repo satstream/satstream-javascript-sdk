@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getChainTxStats"></a>
 # **getChainTxStats**
-> InlineResponse20014 getChainTxStats(body)
+> InlineResponse20010 getChainTxStats(body)
 
 Get chain tx stats
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 <a name="getDifficulty"></a>
 # **getDifficulty**
-> InlineResponse20013 getDifficulty()
+> InlineResponse2009 getDifficulty()
 
 Get difficulty
 
@@ -91,7 +91,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 

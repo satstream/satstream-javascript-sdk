@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import RawFeeEstimate from './RawFeeEstimate';
+import InscriptionResponse from './InscriptionResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20015 model module.
  * @module model/InlineResponse20015
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20015 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20015 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20015();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = RawFeeEstimate.constructFromObject(data['data']);
+        obj.data = ApiClient.convertToType(data['data'], [InscriptionResponse]);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/RawFeeEstimate} data
+ * @member {Array.<module:model/InscriptionResponse>} data
  */
 InlineResponse20015.prototype.data = undefined;
 

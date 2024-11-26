@@ -20,7 +20,7 @@ import RequestsCreateRawTxOutput from './RequestsCreateRawTxOutput';
 /**
  * The RequestsCreateRawTxRequest model module.
  * @module model/RequestsCreateRawTxRequest
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class RequestsCreateRawTxRequest {
   /**

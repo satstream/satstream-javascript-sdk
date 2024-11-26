@@ -30,20 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('InlineResponse20039', function() {
+    describe('AllOfDecodedPSBTOutputUnknown', function() {
       beforeEach(function() {
-        instance = new SatstreamJavascriptSdk.InlineResponse20039();
+        instance = new SatstreamJavascriptSdk.AllOfDecodedPSBTOutputUnknown();
       });
 
-      it('should create an instance of InlineResponse20039', function() {
-        // TODO: update the code to test InlineResponse20039
-        expect(instance).to.be.a(SatstreamJavascriptSdk.InlineResponse20039);
-      });
-
-      it('should have the property data (base name: "data")', function() {
-        // TODO: update the code to test the property data
-        expect(instance).to.have.property('data');
-        // expect(instance.data).to.be(expectedValueLiteral);
+      it('should create an instance of AllOfDecodedPSBTOutputUnknown', function() {
+        // TODO: update the code to test AllOfDecodedPSBTOutputUnknown
+        expect(instance).to.be.a(SatstreamJavascriptSdk.AllOfDecodedPSBTOutputUnknown);
       });
 
     });

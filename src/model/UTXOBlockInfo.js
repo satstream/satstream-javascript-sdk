@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UTXOBlockInfo model module.
  * @module model/UTXOBlockInfo
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class UTXOBlockInfo {
   /**

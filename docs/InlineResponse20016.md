@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**SmartFeeEstimate**](SmartFeeEstimate.md) |  | [optional] 
+**data** | [**MempoolAncestorsData**](MempoolAncestorsData.md) |  | [optional] 

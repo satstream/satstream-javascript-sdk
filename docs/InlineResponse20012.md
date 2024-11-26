@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**BlocksResponse**](BlocksResponse.md) |  | [optional] 
+**data** | [**SmartFeeEstimate**](SmartFeeEstimate.md) |  | [optional] 

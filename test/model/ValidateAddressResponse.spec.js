@@ -30,20 +30,32 @@
   var instance;
 
   describe('(package)', function() {
-    describe('InlineResponse20040', function() {
+    describe('ValidateAddressResponse', function() {
       beforeEach(function() {
-        instance = new SatstreamJavascriptSdk.InlineResponse20040();
+        instance = new SatstreamJavascriptSdk.ValidateAddressResponse();
       });
 
-      it('should create an instance of InlineResponse20040', function() {
-        // TODO: update the code to test InlineResponse20040
-        expect(instance).to.be.a(SatstreamJavascriptSdk.InlineResponse20040);
+      it('should create an instance of ValidateAddressResponse', function() {
+        // TODO: update the code to test ValidateAddressResponse
+        expect(instance).to.be.a(SatstreamJavascriptSdk.ValidateAddressResponse);
+      });
+
+      it('should have the property code (base name: "code")', function() {
+        // TODO: update the code to test the property code
+        expect(instance).to.have.property('code');
+        // expect(instance.code).to.be(expectedValueLiteral);
       });
 
       it('should have the property data (base name: "data")', function() {
         // TODO: update the code to test the property data
         expect(instance).to.have.property('data');
         // expect(instance.data).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property msg (base name: "msg")', function() {
+        // TODO: update the code to test the property msg
+        expect(instance).to.have.property('msg');
+        // expect(instance.msg).to.be(expectedValueLiteral);
       });
 
     });

@@ -14,15 +14,15 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20013 from '../model/InlineResponse20013';
-import InlineResponse20025 from '../model/InlineResponse20025';
+import InlineResponse20021 from '../model/InlineResponse20021';
+import InlineResponse2009 from '../model/InlineResponse2009';
 import RequestsGetNetworkHashPSRequest from '../model/RequestsGetNetworkHashPSRequest';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Mining service.
 * @module api/MiningApi
-* @version 1.0.22
+* @version 1.0.23
 */
 export default class MiningApi {
 
@@ -42,7 +42,7 @@ export default class MiningApi {
      * Callback function to receive the result of the getMiningInfo operation.
      * @callback moduleapi/MiningApi~getMiningInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20025{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20021{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -72,7 +72,7 @@ export default class MiningApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20025;
+      let returnType = InlineResponse20021;
 
       return this.apiClient.callApi(
         '/mining/info', 'GET',
@@ -84,7 +84,7 @@ export default class MiningApi {
      * Callback function to receive the result of the getNetworkHashps operation.
      * @callback moduleapi/MiningApi~getNetworkHashpsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20013{ data The data returned by the service call.
+     * @param {module:model/InlineResponse2009{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -119,7 +119,7 @@ export default class MiningApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20013;
+      let returnType = InlineResponse2009;
 
       return this.apiClient.callApi(
         '/mining/networkhashps', 'POST',

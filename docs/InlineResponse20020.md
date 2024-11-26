@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**MempoolAncestorsData**](MempoolAncestorsData.md) |  | [optional] 
+**data** | [**[TestMempoolAcceptResult]**](TestMempoolAcceptResult.md) |  | [optional] 

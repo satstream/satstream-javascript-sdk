@@ -20,11 +20,14 @@ import AllOfBlockVin3Prevout from './model/AllOfBlockVin3Prevout';
 import AllOfDecodedPSBTInputFinalScriptsig from './model/AllOfDecodedPSBTInputFinalScriptsig';
 import AllOfDecodedPSBTInputNonWitnessUtxo from './model/AllOfDecodedPSBTInputNonWitnessUtxo';
 import AllOfDecodedPSBTInputRedeemScript from './model/AllOfDecodedPSBTInputRedeemScript';
+import AllOfDecodedPSBTInputUnknown from './model/AllOfDecodedPSBTInputUnknown';
 import AllOfDecodedPSBTInputWitnessScript from './model/AllOfDecodedPSBTInputWitnessScript';
 import AllOfDecodedPSBTInputWitnessUtxo from './model/AllOfDecodedPSBTInputWitnessUtxo';
 import AllOfDecodedPSBTOutputRedeemScript from './model/AllOfDecodedPSBTOutputRedeemScript';
+import AllOfDecodedPSBTOutputUnknown from './model/AllOfDecodedPSBTOutputUnknown';
 import AllOfDecodedPSBTOutputWitnessScript from './model/AllOfDecodedPSBTOutputWitnessScript';
 import AllOfDecodedPSBTTx from './model/AllOfDecodedPSBTTx';
+import AllOfDecodedPSBTUnknown from './model/AllOfDecodedPSBTUnknown';
 import AllOfDecodedScriptSegwit from './model/AllOfDecodedScriptSegwit';
 import AllOfFeeHorizonEstimateFail from './model/AllOfFeeHorizonEstimateFail';
 import AllOfFeeHorizonEstimatePass from './model/AllOfFeeHorizonEstimatePass';
@@ -61,6 +64,8 @@ import DecodedScript from './model/DecodedScript';
 import Duration from './model/Duration';
 import FeeHorizonEstimate from './model/FeeHorizonEstimate';
 import FeeRange from './model/FeeRange';
+import GetAddressResponse from './model/GetAddressResponse';
+import GetAddressUTXOsResponse from './model/GetAddressUTXOsResponse';
 import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
 import InlineResponse20010 from './model/InlineResponse20010';
@@ -94,10 +99,7 @@ import InlineResponse20035 from './model/InlineResponse20035';
 import InlineResponse20036 from './model/InlineResponse20036';
 import InlineResponse20037 from './model/InlineResponse20037';
 import InlineResponse20038 from './model/InlineResponse20038';
-import InlineResponse20039 from './model/InlineResponse20039';
 import InlineResponse2004 from './model/InlineResponse2004';
-import InlineResponse20040 from './model/InlineResponse20040';
-import InlineResponse20041 from './model/InlineResponse20041';
 import InlineResponse2005 from './model/InlineResponse2005';
 import InlineResponse2006 from './model/InlineResponse2006';
 import InlineResponse2007 from './model/InlineResponse2007';
@@ -152,7 +154,6 @@ import RequestsGetTxSpendingPrevoutRequest from './model/RequestsGetTxSpendingPr
 import RequestsJoinPSBTsRequest from './model/RequestsJoinPSBTsRequest';
 import RequestsSendRawTransactionRequest from './model/RequestsSendRawTransactionRequest';
 import RequestsTestMempoolAcceptRequest from './model/RequestsTestMempoolAcceptRequest';
-import RequestsVerifyMessageRequest from './model/RequestsVerifyMessageRequest';
 import RequestsVerifyTxOutProofRequest from './model/RequestsVerifyTxOutProofRequest';
 import RuneEntry from './model/RuneEntry';
 import RuneListEntry from './model/RuneListEntry';
@@ -183,8 +184,12 @@ import TxVin2 from './model/TxVin2';
 import UTXOBlockInfo from './model/UTXOBlockInfo';
 import UTXOSetInfo from './model/UTXOSetInfo';
 import UTXOUnspendables from './model/UTXOUnspendables';
+import UnknownFields from './model/UnknownFields';
 import UtilsResponseEnvelope from './model/UtilsResponseEnvelope';
+import ValidateAddressResponse from './model/ValidateAddressResponse';
 import ValidateAddressResult from './model/ValidateAddressResult';
+import VerifyMessageRequest from './model/VerifyMessageRequest';
+import VerifyMessageResponse from './model/VerifyMessageResponse';
 import Vout from './model/Vout';
 import AddressesApi from './api/AddressesApi';
 import BlocksApi from './api/BlocksApi';
@@ -230,7 +235,7 @@ import TransactionsApi from './api/TransactionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.22
+* @version 1.0.23
 */
 export {
     /**
@@ -276,6 +281,12 @@ export {
     AllOfDecodedPSBTInputRedeemScript,
 
     /**
+     * The AllOfDecodedPSBTInputUnknown model constructor.
+     * @property {module:model/AllOfDecodedPSBTInputUnknown}
+     */
+    AllOfDecodedPSBTInputUnknown,
+
+    /**
      * The AllOfDecodedPSBTInputWitnessScript model constructor.
      * @property {module:model/AllOfDecodedPSBTInputWitnessScript}
      */
@@ -294,6 +305,12 @@ export {
     AllOfDecodedPSBTOutputRedeemScript,
 
     /**
+     * The AllOfDecodedPSBTOutputUnknown model constructor.
+     * @property {module:model/AllOfDecodedPSBTOutputUnknown}
+     */
+    AllOfDecodedPSBTOutputUnknown,
+
+    /**
      * The AllOfDecodedPSBTOutputWitnessScript model constructor.
      * @property {module:model/AllOfDecodedPSBTOutputWitnessScript}
      */
@@ -304,6 +321,12 @@ export {
      * @property {module:model/AllOfDecodedPSBTTx}
      */
     AllOfDecodedPSBTTx,
+
+    /**
+     * The AllOfDecodedPSBTUnknown model constructor.
+     * @property {module:model/AllOfDecodedPSBTUnknown}
+     */
+    AllOfDecodedPSBTUnknown,
 
     /**
      * The AllOfDecodedScriptSegwit model constructor.
@@ -522,6 +545,18 @@ export {
     FeeRange,
 
     /**
+     * The GetAddressResponse model constructor.
+     * @property {module:model/GetAddressResponse}
+     */
+    GetAddressResponse,
+
+    /**
+     * The GetAddressUTXOsResponse model constructor.
+     * @property {module:model/GetAddressUTXOsResponse}
+     */
+    GetAddressUTXOsResponse,
+
+    /**
      * The InlineResponse200 model constructor.
      * @property {module:model/InlineResponse200}
      */
@@ -720,28 +755,10 @@ export {
     InlineResponse20038,
 
     /**
-     * The InlineResponse20039 model constructor.
-     * @property {module:model/InlineResponse20039}
-     */
-    InlineResponse20039,
-
-    /**
      * The InlineResponse2004 model constructor.
      * @property {module:model/InlineResponse2004}
      */
     InlineResponse2004,
-
-    /**
-     * The InlineResponse20040 model constructor.
-     * @property {module:model/InlineResponse20040}
-     */
-    InlineResponse20040,
-
-    /**
-     * The InlineResponse20041 model constructor.
-     * @property {module:model/InlineResponse20041}
-     */
-    InlineResponse20041,
 
     /**
      * The InlineResponse2005 model constructor.
@@ -1068,12 +1085,6 @@ export {
     RequestsTestMempoolAcceptRequest,
 
     /**
-     * The RequestsVerifyMessageRequest model constructor.
-     * @property {module:model/RequestsVerifyMessageRequest}
-     */
-    RequestsVerifyMessageRequest,
-
-    /**
      * The RequestsVerifyTxOutProofRequest model constructor.
      * @property {module:model/RequestsVerifyTxOutProofRequest}
      */
@@ -1254,16 +1265,40 @@ export {
     UTXOUnspendables,
 
     /**
+     * The UnknownFields model constructor.
+     * @property {module:model/UnknownFields}
+     */
+    UnknownFields,
+
+    /**
      * The UtilsResponseEnvelope model constructor.
      * @property {module:model/UtilsResponseEnvelope}
      */
     UtilsResponseEnvelope,
 
     /**
+     * The ValidateAddressResponse model constructor.
+     * @property {module:model/ValidateAddressResponse}
+     */
+    ValidateAddressResponse,
+
+    /**
      * The ValidateAddressResult model constructor.
      * @property {module:model/ValidateAddressResult}
      */
     ValidateAddressResult,
+
+    /**
+     * The VerifyMessageRequest model constructor.
+     * @property {module:model/VerifyMessageRequest}
+     */
+    VerifyMessageRequest,
+
+    /**
+     * The VerifyMessageResponse model constructor.
+     * @property {module:model/VerifyMessageResponse}
+     */
+    VerifyMessageResponse,
 
     /**
      * The Vout model constructor.

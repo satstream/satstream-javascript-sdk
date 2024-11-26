@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import SmartFeeEstimate from './SmartFeeEstimate';
+import MempoolAncestorsData from './MempoolAncestorsData';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20016 model module.
  * @module model/InlineResponse20016
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20016 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20016 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20016();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = SmartFeeEstimate.constructFromObject(data['data']);
+        obj.data = MempoolAncestorsData.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/SmartFeeEstimate} data
+ * @member {module:model/MempoolAncestorsData} data
  */
 InlineResponse20016.prototype.data = undefined;
 

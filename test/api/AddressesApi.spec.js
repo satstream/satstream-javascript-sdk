@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2001);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetAddressResponse);
 
             done();
           });
@@ -67,7 +67,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2002);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetAddressUTXOsResponse);
 
             done();
           });
@@ -87,7 +87,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2003);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ValidateAddressResponse);
 
             done();
           });
@@ -107,7 +107,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse200);
+            expect(data).to.be.a(SatstreamJavascriptSdk.VerifyMessageResponse);
 
             done();
           });

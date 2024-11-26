@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="estimateRawFee"></a>
 # **estimateRawFee**
-> InlineResponse20015 estimateRawFee(body)
+> InlineResponse20011 estimateRawFee(body)
 
 Estimate Raw Fee
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 <a name="estimateSmartFee"></a>
 # **estimateSmartFee**
-> InlineResponse20016 estimateSmartFee(body)
+> InlineResponse20012 estimateSmartFee(body)
 
 Estimate smart fee
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 

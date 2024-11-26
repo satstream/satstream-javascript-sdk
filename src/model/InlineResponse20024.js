@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import TestMempoolAcceptResult from './TestMempoolAcceptResult';
+import PSBTAnalysis from './PSBTAnalysis';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20024 model module.
  * @module model/InlineResponse20024
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20024 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20024 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20024();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], [TestMempoolAcceptResult]);
+        obj.data = PSBTAnalysis.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {Array.<module:model/TestMempoolAcceptResult>} data
+ * @member {module:model/PSBTAnalysis} data
  */
 InlineResponse20024.prototype.data = undefined;
 

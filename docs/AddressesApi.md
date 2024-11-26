@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getAddress"></a>
 # **getAddress**
-> InlineResponse2001 getAddress(address)
+> GetAddressResponse getAddress(address)
 
 Get address info
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetAddressResponse**](GetAddressResponse.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 <a name="getAddressUtxos"></a>
 # **getAddressUtxos**
-> InlineResponse2002 getAddressUtxos(address, opts)
+> GetAddressUTXOsResponse getAddressUtxos(address, opts)
 
 Get UTXOs for an address
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**GetAddressUTXOsResponse**](GetAddressUTXOsResponse.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 <a name="validateAddress"></a>
 # **validateAddress**
-> InlineResponse2003 validateAddress(address)
+> ValidateAddressResponse validateAddress(address)
 
 Validate address
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**ValidateAddressResponse**](ValidateAddressResponse.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 <a name="verifyMessage"></a>
 # **verifyMessage**
-> InlineResponse200 verifyMessage(body)
+> VerifyMessageResponse verifyMessage(body)
 
 Verify message
 
@@ -182,7 +182,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.AddressesApi();
-let body = new SatstreamJavascriptSdk.RequestsVerifyMessageRequest(); // RequestsVerifyMessageRequest | Message verification parameters
+let body = new SatstreamJavascriptSdk.VerifyMessageRequest(); // VerifyMessageRequest | Message verification parameters
 
 apiInstance.verifyMessage(body, (error, data, response) => {
   if (error) {
@@ -197,11 +197,11 @@ apiInstance.verifyMessage(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsVerifyMessageRequest**](RequestsVerifyMessageRequest.md)| Message verification parameters | 
+ **body** | [**VerifyMessageRequest**](VerifyMessageRequest.md)| Message verification parameters | 
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**VerifyMessageResponse**](VerifyMessageResponse.md)
 
 ### Authorization
 

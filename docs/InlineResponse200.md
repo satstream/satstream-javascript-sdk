@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **Boolean** |  | [optional] 
+**data** | [**Block2**](Block2.md) |  | [optional] 

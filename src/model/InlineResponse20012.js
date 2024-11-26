@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import BlocksResponse from './BlocksResponse';
+import SmartFeeEstimate from './SmartFeeEstimate';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20012 model module.
  * @module model/InlineResponse20012
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20012 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20012 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20012();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = BlocksResponse.constructFromObject(data['data']);
+        obj.data = SmartFeeEstimate.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/BlocksResponse} data
+ * @member {module:model/SmartFeeEstimate} data
  */
 InlineResponse20012.prototype.data = undefined;
 

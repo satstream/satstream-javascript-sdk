@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getMempoolAncestors"></a>
 # **getMempoolAncestors**
-> InlineResponse20020 getMempoolAncestors(body)
+> InlineResponse20016 getMempoolAncestors(body)
 
 Get mempool ancestors
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 <a name="getMempoolDescendants"></a>
 # **getMempoolDescendants**
-> InlineResponse20021 getMempoolDescendants(body)
+> InlineResponse20017 getMempoolDescendants(body)
 
 Get mempool descendants
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 <a name="getMempoolInfo"></a>
 # **getMempoolInfo**
-> InlineResponse20022 getMempoolInfo()
+> InlineResponse20018 getMempoolInfo()
 
 Get mempool information
 
@@ -144,7 +144,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 <a name="getRawMempool"></a>
 # **getRawMempool**
-> InlineResponse20023 getRawMempool(body)
+> InlineResponse20019 getRawMempool(body)
 
 Get raw mempool
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 <a name="testMempoolAccept"></a>
 # **testMempoolAccept**
-> InlineResponse20024 testMempoolAccept(body)
+> InlineResponse20020 testMempoolAccept(body)
 
 Test mempool accept
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 

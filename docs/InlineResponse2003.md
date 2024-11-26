@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ValidateAddressResult**](ValidateAddressResult.md) |  | [optional] 
+**data** | [**Block1**](Block1.md) |  | [optional] 

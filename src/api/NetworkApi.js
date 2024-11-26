@@ -14,15 +14,15 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20013 from '../model/InlineResponse20013';
-import InlineResponse20014 from '../model/InlineResponse20014';
+import InlineResponse20010 from '../model/InlineResponse20010';
+import InlineResponse2009 from '../model/InlineResponse2009';
 import RequestsGetChainTxStatsRequest from '../model/RequestsGetChainTxStatsRequest';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Network service.
 * @module api/NetworkApi
-* @version 1.0.22
+* @version 1.0.23
 */
 export default class NetworkApi {
 
@@ -42,7 +42,7 @@ export default class NetworkApi {
      * Callback function to receive the result of the getChainTxStats operation.
      * @callback moduleapi/NetworkApi~getChainTxStatsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20014{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20010{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -77,7 +77,7 @@ export default class NetworkApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20014;
+      let returnType = InlineResponse20010;
 
       return this.apiClient.callApi(
         '/chain/txstats', 'POST',
@@ -89,7 +89,7 @@ export default class NetworkApi {
      * Callback function to receive the result of the getDifficulty operation.
      * @callback moduleapi/NetworkApi~getDifficultyCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20013{ data The data returned by the service call.
+     * @param {module:model/InlineResponse2009{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -119,7 +119,7 @@ export default class NetworkApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20013;
+      let returnType = InlineResponse2009;
 
       return this.apiClient.callApi(
         '/chain/difficulty', 'GET',

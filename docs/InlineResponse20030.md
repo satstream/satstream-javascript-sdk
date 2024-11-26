@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**RunesListResponse**](RunesListResponse.md) |  | [optional] 
+**data** | [**StatusResponse**](StatusResponse.md) |  | [optional] 

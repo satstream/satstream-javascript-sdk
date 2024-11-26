@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import PSBTAnalysis from './PSBTAnalysis';
+import RunesListResponse from './RunesListResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20027 model module.
  * @module model/InlineResponse20027
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class InlineResponse20027 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20027 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20027();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = PSBTAnalysis.constructFromObject(data['data']);
+        obj.data = RunesListResponse.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/PSBTAnalysis} data
+ * @member {module:model/RunesListResponse} data
  */
 InlineResponse20027.prototype.data = undefined;
 

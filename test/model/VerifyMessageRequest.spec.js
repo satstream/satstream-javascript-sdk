@@ -30,14 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('RequestsVerifyMessageRequest', function() {
+    describe('VerifyMessageRequest', function() {
       beforeEach(function() {
-        instance = new SatstreamJavascriptSdk.RequestsVerifyMessageRequest();
+        instance = new SatstreamJavascriptSdk.VerifyMessageRequest();
       });
 
-      it('should create an instance of RequestsVerifyMessageRequest', function() {
-        // TODO: update the code to test RequestsVerifyMessageRequest
-        expect(instance).to.be.a(SatstreamJavascriptSdk.RequestsVerifyMessageRequest);
+      it('should create an instance of VerifyMessageRequest', function() {
+        // TODO: update the code to test VerifyMessageRequest
+        expect(instance).to.be.a(SatstreamJavascriptSdk.VerifyMessageRequest);
       });
 
       it('should have the property address (base name: "address")', function() {

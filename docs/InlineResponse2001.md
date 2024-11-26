@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**AddressResponse**](AddressResponse.md) |  | [optional] 
+**data** | **String** |  | [optional] 

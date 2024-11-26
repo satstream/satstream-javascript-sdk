@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsEstimateRawFeeRequest model module.
  * @module model/RequestsEstimateRawFeeRequest
- * @version 1.0.22
+ * @version 1.0.23
  */
 export default class RequestsEstimateRawFeeRequest {
   /**
