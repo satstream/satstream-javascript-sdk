@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**RuneResponse**](RuneResponse.md) |  | [optional] 
+**data** | [**DecodedPSBT**](DecodedPSBT.md) |  | [optional] 

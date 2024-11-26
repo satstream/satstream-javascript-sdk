@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**DecodedPSBT**](DecodedPSBT.md) |  | [optional] 
+**data** | [**PSBTAnalysis**](PSBTAnalysis.md) |  | [optional] 

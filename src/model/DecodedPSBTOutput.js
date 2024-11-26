@@ -19,7 +19,7 @@ import PSBTBip32Deriv from './PSBTBip32Deriv';
 /**
  * The DecodedPSBTOutput model module.
  * @module model/DecodedPSBTOutput
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class DecodedPSBTOutput {
   /**

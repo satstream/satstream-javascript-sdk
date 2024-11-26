@@ -19,7 +19,7 @@ import Script from './Script';
 /**
  * The AllOfPSBTWitnessUtxoScriptPubKey model module.
  * @module model/AllOfPSBTWitnessUtxoScriptPubKey
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class AllOfPSBTWitnessUtxoScriptPubKey extends Script {
   /**

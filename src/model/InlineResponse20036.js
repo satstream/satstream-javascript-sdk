@@ -14,13 +14,12 @@
  *
  */
 import ApiClient from '../ApiClient';
-import TxSpendingPrevoutResult from './TxSpendingPrevoutResult';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20036 model module.
  * @module model/InlineResponse20036
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class InlineResponse20036 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +44,14 @@ export default class InlineResponse20036 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20036();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], [TxSpendingPrevoutResult]);
+        obj.data = ApiClient.convertToType(data['data'], ['String']);
     }
     return obj;
   }
 }
 
 /**
- * @member {Array.<module:model/TxSpendingPrevoutResult>} data
+ * @member {Array.<String>} data
  */
 InlineResponse20036.prototype.data = undefined;
 

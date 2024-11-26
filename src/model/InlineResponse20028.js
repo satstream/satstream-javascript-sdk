@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import RuneResponse from './RuneResponse';
+import DecodedPSBT from './DecodedPSBT';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20028 model module.
  * @module model/InlineResponse20028
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class InlineResponse20028 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20028 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20028();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = RuneResponse.constructFromObject(data['data']);
+        obj.data = DecodedPSBT.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/RuneResponse} data
+ * @member {module:model/DecodedPSBT} data
  */
 InlineResponse20028.prototype.data = undefined;
 

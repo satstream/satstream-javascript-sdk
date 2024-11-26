@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import TxOut from './TxOut';
+import StatusResponse from './StatusResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20033 model module.
  * @module model/InlineResponse20033
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class InlineResponse20033 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20033 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20033();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = TxOut.constructFromObject(data['data']);
+        obj.data = StatusResponse.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/TxOut} data
+ * @member {module:model/StatusResponse} data
  */
 InlineResponse20033.prototype.data = undefined;
 

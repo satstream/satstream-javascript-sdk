@@ -15,13 +15,13 @@
  */
 import ApiClient from "../ApiClient";
 import InlineResponse2002 from '../model/InlineResponse2002';
-import InlineResponse20025 from '../model/InlineResponse20025';
+import InlineResponse20026 from '../model/InlineResponse20026';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Outputs service.
 * @module api/OutputsApi
-* @version 1.0.20
+* @version 1.0.21
 */
 export default class OutputsApi {
 
@@ -41,7 +41,7 @@ export default class OutputsApi {
      * Callback function to receive the result of the getOutputByOutpoint operation.
      * @callback moduleapi/OutputsApi~getOutputByOutpointCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20025{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20026{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -76,7 +76,7 @@ export default class OutputsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20025;
+      let returnType = InlineResponse20026;
 
       return this.apiClient.callApi(
         '/output/{outpoint}', 'GET',

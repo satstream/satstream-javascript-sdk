@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import SatoshiResponse from './SatoshiResponse';
+import RunesListResponse from './RunesListResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20030 model module.
  * @module model/InlineResponse20030
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class InlineResponse20030 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20030 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20030();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = SatoshiResponse.constructFromObject(data['data']);
+        obj.data = RunesListResponse.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/SatoshiResponse} data
+ * @member {module:model/RunesListResponse} data
  */
 InlineResponse20030.prototype.data = undefined;
 

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsCreateRawTxInput model module.
  * @module model/RequestsCreateRawTxInput
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class RequestsCreateRawTxInput {
   /**

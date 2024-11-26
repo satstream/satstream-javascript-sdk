@@ -14,8 +14,8 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20026 from '../model/InlineResponse20026';
 import InlineResponse20027 from '../model/InlineResponse20027';
+import InlineResponse20028 from '../model/InlineResponse20028';
 import InlineResponse2005 from '../model/InlineResponse2005';
 import RequestsAnalyzePSBTRequest from '../model/RequestsAnalyzePSBTRequest';
 import RequestsCombinePSBTRequest from '../model/RequestsCombinePSBTRequest';
@@ -26,7 +26,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * PSBTs service.
 * @module api/PSBTsApi
-* @version 1.0.20
+* @version 1.0.21
 */
 export default class PSBTsApi {
 
@@ -46,7 +46,7 @@ export default class PSBTsApi {
      * Callback function to receive the result of the analyzePsbt operation.
      * @callback moduleapi/PSBTsApi~analyzePsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20026{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20027{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -81,7 +81,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20026;
+      let returnType = InlineResponse20027;
 
       return this.apiClient.callApi(
         '/psbt/analyze', 'POST',
@@ -187,7 +187,7 @@ export default class PSBTsApi {
      * Callback function to receive the result of the decodePsbt operation.
      * @callback moduleapi/PSBTsApi~decodePsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20027{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20028{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -222,7 +222,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20027;
+      let returnType = InlineResponse20028;
 
       return this.apiClient.callApi(
         '/psbt/decode', 'POST',

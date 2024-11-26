@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getOutputByOutpoint"></a>
 # **getOutputByOutpoint**
-> InlineResponse20025 getOutputByOutpoint(outpoint)
+> InlineResponse20026 getOutputByOutpoint(outpoint)
 
 Get output info by outpoint
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 

@@ -14,14 +14,14 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20031 from '../model/InlineResponse20031';
+import InlineResponse20032 from '../model/InlineResponse20032';
 import RequestsDecodeScriptRequest from '../model/RequestsDecodeScriptRequest';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Scripts service.
 * @module api/ScriptsApi
-* @version 1.0.20
+* @version 1.0.21
 */
 export default class ScriptsApi {
 
@@ -41,7 +41,7 @@ export default class ScriptsApi {
      * Callback function to receive the result of the decodeScript operation.
      * @callback moduleapi/ScriptsApi~decodeScriptCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20031{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20032{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -76,7 +76,7 @@ export default class ScriptsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20031;
+      let returnType = InlineResponse20032;
 
       return this.apiClient.callApi(
         '/script/decode', 'POST',

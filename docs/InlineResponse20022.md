@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**RawMempoolData**](RawMempoolData.md) |  | [optional] 
+**data** | [**MempoolInfo**](MempoolInfo.md) |  | [optional] 

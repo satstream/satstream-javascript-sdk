@@ -24,7 +24,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Addresses service.
 * @module api/AddressesApi
-* @version 1.0.20
+* @version 1.0.21
 */
 export default class AddressesApi {
 

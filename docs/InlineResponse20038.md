@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**DecodeResponse**](DecodeResponse.md) |  | [optional] 
+**data** | [**TransactionResponse**](TransactionResponse.md) |  | [optional] 

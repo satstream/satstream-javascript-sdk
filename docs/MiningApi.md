@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getMiningInfo"></a>
 # **getMiningInfo**
-> InlineResponse20024 getMiningInfo()
+> InlineResponse20025 getMiningInfo()
 
 Get mining information
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 

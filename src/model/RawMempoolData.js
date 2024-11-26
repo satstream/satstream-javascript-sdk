@@ -19,7 +19,7 @@ import MempoolEntry from './MempoolEntry';
 /**
  * The RawMempoolData model module.
  * @module model/RawMempoolData
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class RawMempoolData {
   /**

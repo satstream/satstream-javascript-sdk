@@ -14,17 +14,18 @@
  *
  */
 import ApiClient from '../ApiClient';
+import RawTx2 from './RawTx2';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
- * The InlineResponse20011 model module.
- * @module model/InlineResponse20011
+ * The InlineResponse20041 model module.
+ * @module model/InlineResponse20041
  * @version 1.0.21
  */
-export default class InlineResponse20011 extends UtilsResponseEnvelope {
+export default class InlineResponse20041 extends UtilsResponseEnvelope {
   /**
-   * Constructs a new <code>InlineResponse20011</code>.
-   * @alias module:model/InlineResponse20011
+   * Constructs a new <code>InlineResponse20041</code>.
+   * @alias module:model/InlineResponse20041
    * @class
    * @extends module:model/UtilsResponseEnvelope
    */
@@ -33,25 +34,25 @@ export default class InlineResponse20011 extends UtilsResponseEnvelope {
   }
 
   /**
-   * Constructs a <code>InlineResponse20011</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>InlineResponse20041</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/InlineResponse20011} obj Optional instance to populate.
-   * @return {module:model/InlineResponse20011} The populated <code>InlineResponse20011</code> instance.
+   * @param {module:model/InlineResponse20041} obj Optional instance to populate.
+   * @return {module:model/InlineResponse20041} The populated <code>InlineResponse20041</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new InlineResponse20011();
+      obj = obj || new InlineResponse20041();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], 'Number');
+        obj.data = RawTx2.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {Number} data
+ * @member {module:model/RawTx2} data
  */
-InlineResponse20011.prototype.data = undefined;
+InlineResponse20041.prototype.data = undefined;
 

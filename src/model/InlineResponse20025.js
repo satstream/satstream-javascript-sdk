@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import OutputResponse from './OutputResponse';
+import MiningInfo from './MiningInfo';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20025 model module.
  * @module model/InlineResponse20025
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class InlineResponse20025 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20025 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20025();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = OutputResponse.constructFromObject(data['data']);
+        obj.data = MiningInfo.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/OutputResponse} data
+ * @member {module:model/MiningInfo} data
  */
 InlineResponse20025.prototype.data = undefined;
 

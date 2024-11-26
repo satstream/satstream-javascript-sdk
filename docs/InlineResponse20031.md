@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**DecodedScript**](DecodedScript.md) |  | [optional] 
+**data** | [**SatoshiResponse**](SatoshiResponse.md) |  | [optional] 

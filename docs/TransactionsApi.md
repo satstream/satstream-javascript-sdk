@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 <a name="decodeTx"></a>
 # **decodeTx**
-> InlineResponse20038 decodeTx(txid)
+> InlineResponse20039 decodeTx(txid)
 
 Decode a transaction
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 <a name="getRawTransactionDecoded"></a>
 # **getRawTransactionDecoded**
-> InlineResponse20039 getRawTransactionDecoded(txid)
+> InlineResponse20040 getRawTransactionDecoded(txid)
 
 Get raw transaction (verbosity 1)
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20040**](InlineResponse20040.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 <a name="getRawTransactionPrevout"></a>
 # **getRawTransactionPrevout**
-> InlineResponse20040 getRawTransactionPrevout(txid)
+> InlineResponse20041 getRawTransactionPrevout(txid)
 
 Get raw transaction (verbosity 2)
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 <a name="getTransaction"></a>
 # **getTransaction**
-> InlineResponse20037 getTransaction(txid)
+> InlineResponse20038 getTransaction(txid)
 
 Get transaction info
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxOut"></a>
 # **getTxOut**
-> InlineResponse20033 getTxOut(body)
+> InlineResponse20034 getTxOut(body)
 
 Get transaction output
 
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxOutSetInfo"></a>
 # **getTxOutSetInfo**
-> InlineResponse20034 getTxOutSetInfo(body)
+> InlineResponse20035 getTxOutSetInfo(body)
 
 Get transaction output set information
 
@@ -558,7 +558,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxSpendingPrevout"></a>
 # **getTxSpendingPrevout**
-> InlineResponse20036 getTxSpendingPrevout(body)
+> InlineResponse20037 getTxSpendingPrevout(body)
 
 Get transaction spending prevout
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20037**](InlineResponse20037.md)
 
 ### Authorization
 
@@ -671,7 +671,7 @@ Name | Type | Description  | Notes
 
 <a name="verifyTxOutProof"></a>
 # **verifyTxOutProof**
-> InlineResponse20035 verifyTxOutProof(body)
+> InlineResponse20036 verifyTxOutProof(body)
 
 Verify transaction output proof
 
@@ -708,7 +708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 

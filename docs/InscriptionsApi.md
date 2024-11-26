@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="fetchInscriptions"></a>
 # **fetchInscriptions**
-> [Object] fetchInscriptions(body)
+> InlineResponse20019 fetchInscriptions(body)
 
 Fetch multiple inscriptions
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[Object]**
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 

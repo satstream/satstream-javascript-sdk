@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**PSBTAnalysis**](PSBTAnalysis.md) |  | [optional] 
+**data** | [**OutputResponse**](OutputResponse.md) |  | [optional] 

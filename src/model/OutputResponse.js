@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OutputResponse model module.
  * @module model/OutputResponse
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class OutputResponse {
   /**

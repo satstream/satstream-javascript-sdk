@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="analyzePsbt"></a>
 # **analyzePsbt**
-> InlineResponse20026 analyzePsbt(body)
+> InlineResponse20027 analyzePsbt(body)
 
 Analyze PSBT
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 <a name="decodePsbt"></a>
 # **decodePsbt**
-> InlineResponse20027 decodePsbt(body)
+> InlineResponse20028 decodePsbt(body)
 
 Decode PSBT
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20028**](InlineResponse20028.md)
 
 ### Authorization
 

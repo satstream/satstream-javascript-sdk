@@ -14,12 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
+import UTXOSetInfo from './UTXOSetInfo';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20035 model module.
  * @module model/InlineResponse20035
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class InlineResponse20035 extends UtilsResponseEnvelope {
   /**
@@ -44,14 +45,14 @@ export default class InlineResponse20035 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20035();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = ApiClient.convertToType(data['data'], ['String']);
+        obj.data = UTXOSetInfo.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {Array.<String>} data
+ * @member {module:model/UTXOSetInfo} data
  */
 InlineResponse20035.prototype.data = undefined;
 

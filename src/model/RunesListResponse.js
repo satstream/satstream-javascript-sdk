@@ -19,7 +19,7 @@ import RuneListEntry from './RuneListEntry';
 /**
  * The RunesListResponse model module.
  * @module model/RunesListResponse
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class RunesListResponse {
   /**

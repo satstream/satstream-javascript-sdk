@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**TransactionResponse**](TransactionResponse.md) |  | [optional] 
+**data** | [**[TxSpendingPrevoutResult]**](TxSpendingPrevoutResult.md) |  | [optional] 

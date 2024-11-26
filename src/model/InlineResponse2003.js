@@ -20,7 +20,7 @@ import ValidateAddressResult from './ValidateAddressResult';
 /**
  * The InlineResponse2003 model module.
  * @module model/InlineResponse2003
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class InlineResponse2003 extends UtilsResponseEnvelope {
   /**

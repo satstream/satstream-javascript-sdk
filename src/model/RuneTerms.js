@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RuneTerms model module.
  * @module model/RuneTerms
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class RuneTerms {
   /**

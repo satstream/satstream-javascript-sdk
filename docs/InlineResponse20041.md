@@ -1,6 +1,6 @@
-# SatstreamJavascriptSdk.InlineResponse20025
+# SatstreamJavascriptSdk.InlineResponse20041
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**MiningInfo**](MiningInfo.md) |  | [optional] 
+**data** | [**RawTx2**](RawTx2.md) |  | [optional] 

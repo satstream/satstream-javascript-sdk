@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**SatoshiResponse**](SatoshiResponse.md) |  | [optional] 
+**data** | [**RunesListResponse**](RunesListResponse.md) |  | [optional] 

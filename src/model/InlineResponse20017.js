@@ -20,7 +20,7 @@ import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 /**
  * The InlineResponse20017 model module.
  * @module model/InlineResponse20017
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class InlineResponse20017 extends UtilsResponseEnvelope {
   /**

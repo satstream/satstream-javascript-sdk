@@ -97,6 +97,7 @@ import InlineResponse20038 from './model/InlineResponse20038';
 import InlineResponse20039 from './model/InlineResponse20039';
 import InlineResponse2004 from './model/InlineResponse2004';
 import InlineResponse20040 from './model/InlineResponse20040';
+import InlineResponse20041 from './model/InlineResponse20041';
 import InlineResponse2005 from './model/InlineResponse2005';
 import InlineResponse2006 from './model/InlineResponse2006';
 import InlineResponse2007 from './model/InlineResponse2007';
@@ -229,7 +230,7 @@ import TransactionsApi from './api/TransactionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.20
+* @version 1.0.21
 */
 export {
     /**
@@ -735,6 +736,12 @@ export {
      * @property {module:model/InlineResponse20040}
      */
     InlineResponse20040,
+
+    /**
+     * The InlineResponse20041 model constructor.
+     * @property {module:model/InlineResponse20041}
+     */
+    InlineResponse20041,
 
     /**
      * The InlineResponse2005 model constructor.

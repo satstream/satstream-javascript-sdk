@@ -14,7 +14,6 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20033 from '../model/InlineResponse20033';
 import InlineResponse20034 from '../model/InlineResponse20034';
 import InlineResponse20035 from '../model/InlineResponse20035';
 import InlineResponse20036 from '../model/InlineResponse20036';
@@ -22,6 +21,7 @@ import InlineResponse20037 from '../model/InlineResponse20037';
 import InlineResponse20038 from '../model/InlineResponse20038';
 import InlineResponse20039 from '../model/InlineResponse20039';
 import InlineResponse20040 from '../model/InlineResponse20040';
+import InlineResponse20041 from '../model/InlineResponse20041';
 import InlineResponse2005 from '../model/InlineResponse2005';
 import RequestsCombineRawTransactionRequest from '../model/RequestsCombineRawTransactionRequest';
 import RequestsConvertToPSBTRequest from '../model/RequestsConvertToPSBTRequest';
@@ -37,7 +37,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Transactions service.
 * @module api/TransactionsApi
-* @version 1.0.20
+* @version 1.0.21
 */
 export default class TransactionsApi {
 
@@ -198,7 +198,7 @@ export default class TransactionsApi {
      * Callback function to receive the result of the decodeTx operation.
      * @callback moduleapi/TransactionsApi~decodeTxCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20038{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20039{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -233,7 +233,7 @@ export default class TransactionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20038;
+      let returnType = InlineResponse20039;
 
       return this.apiClient.callApi(
         '/tx/{txid}/decode', 'GET',
@@ -245,7 +245,7 @@ export default class TransactionsApi {
      * Callback function to receive the result of the getRawTransactionDecoded operation.
      * @callback moduleapi/TransactionsApi~getRawTransactionDecodedCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20039{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20040{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -280,7 +280,7 @@ export default class TransactionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20039;
+      let returnType = InlineResponse20040;
 
       return this.apiClient.callApi(
         '/tx/{txid}/decoded', 'GET',
@@ -339,7 +339,7 @@ export default class TransactionsApi {
      * Callback function to receive the result of the getRawTransactionPrevout operation.
      * @callback moduleapi/TransactionsApi~getRawTransactionPrevoutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20040{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20041{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -374,7 +374,7 @@ export default class TransactionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20040;
+      let returnType = InlineResponse20041;
 
       return this.apiClient.callApi(
         '/tx/{txid}/prevout', 'GET',
@@ -386,7 +386,7 @@ export default class TransactionsApi {
      * Callback function to receive the result of the getTransaction operation.
      * @callback moduleapi/TransactionsApi~getTransactionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20037{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20038{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -421,7 +421,7 @@ export default class TransactionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20037;
+      let returnType = InlineResponse20038;
 
       return this.apiClient.callApi(
         '/tx/{txid}', 'GET',
@@ -433,7 +433,7 @@ export default class TransactionsApi {
      * Callback function to receive the result of the getTxOut operation.
      * @callback moduleapi/TransactionsApi~getTxOutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20033{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20034{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -468,7 +468,7 @@ export default class TransactionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20033;
+      let returnType = InlineResponse20034;
 
       return this.apiClient.callApi(
         '/tx/out', 'POST',
@@ -527,7 +527,7 @@ export default class TransactionsApi {
      * Callback function to receive the result of the getTxOutSetInfo operation.
      * @callback moduleapi/TransactionsApi~getTxOutSetInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20034{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20035{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -562,7 +562,7 @@ export default class TransactionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20034;
+      let returnType = InlineResponse20035;
 
       return this.apiClient.callApi(
         '/tx/out/set/info', 'POST',
@@ -574,7 +574,7 @@ export default class TransactionsApi {
      * Callback function to receive the result of the getTxSpendingPrevout operation.
      * @callback moduleapi/TransactionsApi~getTxSpendingPrevoutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20036{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20037{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -609,7 +609,7 @@ export default class TransactionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20036;
+      let returnType = InlineResponse20037;
 
       return this.apiClient.callApi(
         '/tx/spending-prevout', 'POST',
@@ -668,7 +668,7 @@ export default class TransactionsApi {
      * Callback function to receive the result of the verifyTxOutProof operation.
      * @callback moduleapi/TransactionsApi~verifyTxOutProofCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20035{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20036{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -703,7 +703,7 @@ export default class TransactionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20035;
+      let returnType = InlineResponse20036;
 
       return this.apiClient.callApi(
         '/tx/outproof/verify', 'POST',

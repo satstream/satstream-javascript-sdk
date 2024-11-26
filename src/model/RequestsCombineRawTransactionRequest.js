@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsCombineRawTransactionRequest model module.
  * @module model/RequestsCombineRawTransactionRequest
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class RequestsCombineRawTransactionRequest {
   /**

@@ -29,32 +29,23 @@
 
   var instance;
 
-  beforeEach(function() {
-    instance = new SatstreamJavascriptSdk.StatusApi();
-  });
-
   describe('(package)', function() {
-    describe('StatusApi', function() {
-      describe('getStatus', function() {
-        it('should call getStatus successfully', function(done) {
-          // TODO: uncomment getStatus call and complete the assertions
-          /*
-
-          instance.getStatus(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20033);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
+    describe('InlineResponse20041', function() {
+      beforeEach(function() {
+        instance = new SatstreamJavascriptSdk.InlineResponse20041();
       });
+
+      it('should create an instance of InlineResponse20041', function() {
+        // TODO: update the code to test InlineResponse20041
+        expect(instance).to.be.a(SatstreamJavascriptSdk.InlineResponse20041);
+      });
+
+      it('should have the property data (base name: "data")', function() {
+        // TODO: update the code to test the property data
+        expect(instance).to.have.property('data');
+        // expect(instance.data).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

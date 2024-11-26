@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="decodeScript"></a>
 # **decodeScript**
-> InlineResponse20031 decodeScript(body)
+> InlineResponse20032 decodeScript(body)
 
 Decode Script
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20031**](InlineResponse20031.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 

@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from '../ApiClient';
-import DecodedScript from './DecodedScript';
+import SatoshiResponse from './SatoshiResponse';
 import UtilsResponseEnvelope from './UtilsResponseEnvelope';
 
 /**
  * The InlineResponse20031 model module.
  * @module model/InlineResponse20031
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class InlineResponse20031 extends UtilsResponseEnvelope {
   /**
@@ -45,14 +45,14 @@ export default class InlineResponse20031 extends UtilsResponseEnvelope {
       obj = obj || new InlineResponse20031();
       UtilsResponseEnvelope.constructFromObject(data, obj);
       if (data.hasOwnProperty('data'))
-        obj.data = DecodedScript.constructFromObject(data['data']);
+        obj.data = SatoshiResponse.constructFromObject(data['data']);
     }
     return obj;
   }
 }
 
 /**
- * @member {module:model/DecodedScript} data
+ * @member {module:model/SatoshiResponse} data
  */
 InlineResponse20031.prototype.data = undefined;
 

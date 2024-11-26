@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MempoolFees model module.
  * @module model/MempoolFees
- * @version 1.0.20
+ * @version 1.0.21
  */
 export default class MempoolFees {
   /**
