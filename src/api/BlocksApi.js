@@ -14,22 +14,26 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse200 from '../model/InlineResponse200';
-import InlineResponse2001 from '../model/InlineResponse2001';
-import InlineResponse2002 from '../model/InlineResponse2002';
-import InlineResponse2003 from '../model/InlineResponse2003';
-import InlineResponse2004 from '../model/InlineResponse2004';
-import InlineResponse2005 from '../model/InlineResponse2005';
-import InlineResponse2006 from '../model/InlineResponse2006';
-import InlineResponse2007 from '../model/InlineResponse2007';
-import InlineResponse2008 from '../model/InlineResponse2008';
-import RequestsGetBlockStatsRequest from '../model/RequestsGetBlockStatsRequest';
+import GetBlockCountResponse from '../model/GetBlockCountResponse';
+import GetBlockDecodedResponse from '../model/GetBlockDecodedResponse';
+import GetBlockHashByHeightResponse from '../model/GetBlockHashByHeightResponse';
+import GetBlockHexResponse from '../model/GetBlockHexResponse';
+import GetBlockPrevoutResponse from '../model/GetBlockPrevoutResponse';
+import GetBlockResponse from '../model/GetBlockResponse';
+import GetBlockStatsRequest from '../model/GetBlockStatsRequest';
+import GetBlockStatsResponse from '../model/GetBlockStatsResponse';
+import GetBlockSummaryResponse from '../model/GetBlockSummaryResponse';
+import GetBlockchainInfoResponse from '../model/GetBlockchainInfoResponse';
+import GetBlocksResponse from '../model/GetBlocksResponse';
+import GetLatestBlockHashResponse from '../model/GetLatestBlockHashResponse';
+import GetLatestBlockHeightResponse from '../model/GetLatestBlockHeightResponse';
+import GetLatestBlockTimeResponse from '../model/GetLatestBlockTimeResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Blocks service.
 * @module api/BlocksApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class BlocksApi {
 
@@ -49,7 +53,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockCount operation.
      * @callback moduleapi/BlocksApi~getBlockCountCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007{ data The data returned by the service call.
+     * @param {module:model/GetBlockCountResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -79,7 +83,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2007;
+      let returnType = GetBlockCountResponse;
 
       return this.apiClient.callApi(
         '/blockcount', 'GET',
@@ -91,7 +95,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockDecoded operation.
      * @callback moduleapi/BlocksApi~getBlockDecodedCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200{ data The data returned by the service call.
+     * @param {module:model/GetBlockDecodedResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -126,7 +130,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse200;
+      let returnType = GetBlockDecodedResponse;
 
       return this.apiClient.callApi(
         '/block/raw/{identifier}/decoded', 'GET',
@@ -138,7 +142,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockHashByHeight operation.
      * @callback moduleapi/BlocksApi~getBlockHashByHeightCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
+     * @param {module:model/GetBlockHashByHeightResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -173,7 +177,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = GetBlockHashByHeightResponse;
 
       return this.apiClient.callApi(
         '/blockhash/{block_height}', 'GET',
@@ -185,7 +189,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockHex operation.
      * @callback moduleapi/BlocksApi~getBlockHexCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
+     * @param {module:model/GetBlockHexResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -220,7 +224,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = GetBlockHexResponse;
 
       return this.apiClient.callApi(
         '/block/raw/{identifier}/hex', 'GET',
@@ -232,7 +236,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockInfo operation.
      * @callback moduleapi/BlocksApi~getBlockInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005{ data The data returned by the service call.
+     * @param {module:model/GetBlockResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -267,7 +271,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2005;
+      let returnType = GetBlockResponse;
 
       return this.apiClient.callApi(
         '/block/{identifier}', 'GET',
@@ -279,7 +283,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockPrevout operation.
      * @callback moduleapi/BlocksApi~getBlockPrevoutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002{ data The data returned by the service call.
+     * @param {module:model/GetBlockPrevoutResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -314,7 +318,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2002;
+      let returnType = GetBlockPrevoutResponse;
 
       return this.apiClient.callApi(
         '/block/raw/{identifier}/prevout', 'GET',
@@ -326,14 +330,14 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockStats operation.
      * @callback moduleapi/BlocksApi~getBlockStatsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2004{ data The data returned by the service call.
+     * @param {module:model/GetBlockStatsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get block stats
      * Computes per block statistics for a given window
-     * @param {module:model/RequestsGetBlockStatsRequest} body Block stats request parameters
+     * @param {module:model/GetBlockStatsRequest} body Block stats request parameters
      * @param {module:api/BlocksApi~getBlockStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -361,7 +365,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2004;
+      let returnType = GetBlockStatsResponse;
 
       return this.apiClient.callApi(
         '/block/stats', 'POST',
@@ -373,7 +377,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockSummary operation.
      * @callback moduleapi/BlocksApi~getBlockSummaryCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2003{ data The data returned by the service call.
+     * @param {module:model/GetBlockSummaryResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -408,7 +412,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2003;
+      let returnType = GetBlockSummaryResponse;
 
       return this.apiClient.callApi(
         '/block/raw/{identifier}/summary', 'GET',
@@ -420,7 +424,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockchainInfo operation.
      * @callback moduleapi/BlocksApi~getBlockchainInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2006{ data The data returned by the service call.
+     * @param {module:model/GetBlockchainInfoResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -450,7 +454,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2006;
+      let returnType = GetBlockchainInfoResponse;
 
       return this.apiClient.callApi(
         '/blockchain/info', 'GET',
@@ -462,7 +466,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlocks operation.
      * @callback moduleapi/BlocksApi~getBlocksCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2008{ data The data returned by the service call.
+     * @param {module:model/GetBlocksResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -492,7 +496,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2008;
+      let returnType = GetBlocksResponse;
 
       return this.apiClient.callApi(
         '/blocks', 'GET',
@@ -504,7 +508,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getLatestBlockHeight operation.
      * @callback moduleapi/BlocksApi~getLatestBlockHeightCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007{ data The data returned by the service call.
+     * @param {module:model/GetLatestBlockHeightResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -534,7 +538,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2007;
+      let returnType = GetLatestBlockHeightResponse;
 
       return this.apiClient.callApi(
         '/blockheight', 'GET',
@@ -546,7 +550,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getLatestBlockhash operation.
      * @callback moduleapi/BlocksApi~getLatestBlockhashCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
+     * @param {module:model/GetLatestBlockHashResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -576,7 +580,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = GetLatestBlockHashResponse;
 
       return this.apiClient.callApi(
         '/blockhash', 'GET',
@@ -588,7 +592,7 @@ export default class BlocksApi {
      * Callback function to receive the result of the getLatestBlocktime operation.
      * @callback moduleapi/BlocksApi~getLatestBlocktimeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2007{ data The data returned by the service call.
+     * @param {module:model/GetLatestBlockTimeResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -618,7 +622,7 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2007;
+      let returnType = GetLatestBlockTimeResponse;
 
       return this.apiClient.callApi(
         '/blocktime', 'GET',

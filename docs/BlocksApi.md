@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 <a name="getBlockCount"></a>
 # **getBlockCount**
-> InlineResponse2007 getBlockCount()
+> GetBlockCountResponse getBlockCount()
 
 Get the height of the latest block
 
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**GetBlockCountResponse**](GetBlockCountResponse.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ This endpoint does not need any parameter.
 
 <a name="getBlockDecoded"></a>
 # **getBlockDecoded**
-> InlineResponse200 getBlockDecoded(identifier)
+> GetBlockDecodedResponse getBlockDecoded(identifier)
 
 Get block by hash or height (verbosity 2)
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**GetBlockDecodedResponse**](GetBlockDecodedResponse.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 <a name="getBlockHashByHeight"></a>
 # **getBlockHashByHeight**
-> InlineResponse2001 getBlockHashByHeight(blockHeight)
+> GetBlockHashByHeightResponse getBlockHashByHeight(blockHeight)
 
 Returns blockhash of specified block.
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetBlockHashByHeightResponse**](GetBlockHashByHeightResponse.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 <a name="getBlockHex"></a>
 # **getBlockHex**
-> InlineResponse2001 getBlockHex(identifier)
+> GetBlockHexResponse getBlockHex(identifier)
 
 Get block by hash or height (verbosity 0)
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetBlockHexResponse**](GetBlockHexResponse.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 <a name="getBlockInfo"></a>
 # **getBlockInfo**
-> InlineResponse2005 getBlockInfo(identifier)
+> GetBlockResponse getBlockInfo(identifier)
 
 Get block info by hash or height
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**GetBlockResponse**](GetBlockResponse.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 <a name="getBlockPrevout"></a>
 # **getBlockPrevout**
-> InlineResponse2002 getBlockPrevout(identifier)
+> GetBlockPrevoutResponse getBlockPrevout(identifier)
 
 Get block by hash or height (verbosity 3)
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**GetBlockPrevoutResponse**](GetBlockPrevoutResponse.md)
 
 ### Authorization
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 <a name="getBlockStats"></a>
 # **getBlockStats**
-> InlineResponse2004 getBlockStats(body)
+> GetBlockStatsResponse getBlockStats(body)
 
 Get block stats
 
@@ -333,7 +333,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.BlocksApi();
-let body = new SatstreamJavascriptSdk.RequestsGetBlockStatsRequest(); // RequestsGetBlockStatsRequest | Block stats request parameters
+let body = new SatstreamJavascriptSdk.GetBlockStatsRequest(); // GetBlockStatsRequest | Block stats request parameters
 
 apiInstance.getBlockStats(body, (error, data, response) => {
   if (error) {
@@ -348,11 +348,11 @@ apiInstance.getBlockStats(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetBlockStatsRequest**](RequestsGetBlockStatsRequest.md)| Block stats request parameters | 
+ **body** | [**GetBlockStatsRequest**](GetBlockStatsRequest.md)| Block stats request parameters | 
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**GetBlockStatsResponse**](GetBlockStatsResponse.md)
 
 ### Authorization
 
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 
 <a name="getBlockSummary"></a>
 # **getBlockSummary**
-> InlineResponse2003 getBlockSummary(identifier)
+> GetBlockSummaryResponse getBlockSummary(identifier)
 
 Get block by hash or height (verbosity 1)
 
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**GetBlockSummaryResponse**](GetBlockSummaryResponse.md)
 
 ### Authorization
 
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
 
 <a name="getBlockchainInfo"></a>
 # **getBlockchainInfo**
-> InlineResponse2006 getBlockchainInfo()
+> GetBlockchainInfoResponse getBlockchainInfo()
 
 Get blockchain information
 
@@ -447,7 +447,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**GetBlockchainInfoResponse**](GetBlockchainInfoResponse.md)
 
 ### Authorization
 
@@ -460,7 +460,7 @@ This endpoint does not need any parameter.
 
 <a name="getBlocks"></a>
 # **getBlocks**
-> InlineResponse2008 getBlocks()
+> GetBlocksResponse getBlocks()
 
 Returns the latest block height, last 100 block hashes, and featured inscriptions
 
@@ -492,7 +492,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**GetBlocksResponse**](GetBlocksResponse.md)
 
 ### Authorization
 
@@ -505,7 +505,7 @@ This endpoint does not need any parameter.
 
 <a name="getLatestBlockHeight"></a>
 # **getLatestBlockHeight**
-> InlineResponse2007 getLatestBlockHeight()
+> GetLatestBlockHeightResponse getLatestBlockHeight()
 
 Returns the height of the latest block.
 
@@ -537,7 +537,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**GetLatestBlockHeightResponse**](GetLatestBlockHeightResponse.md)
 
 ### Authorization
 
@@ -550,7 +550,7 @@ This endpoint does not need any parameter.
 
 <a name="getLatestBlockhash"></a>
 # **getLatestBlockhash**
-> InlineResponse2001 getLatestBlockhash()
+> GetLatestBlockHashResponse getLatestBlockhash()
 
 Returns blockhash for the latest block.
 
@@ -582,7 +582,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetLatestBlockHashResponse**](GetLatestBlockHashResponse.md)
 
 ### Authorization
 
@@ -595,7 +595,7 @@ This endpoint does not need any parameter.
 
 <a name="getLatestBlocktime"></a>
 # **getLatestBlocktime**
-> InlineResponse2007 getLatestBlocktime()
+> GetLatestBlockTimeResponse getLatestBlocktime()
 
 Get the timestamp of the latest block
 
@@ -627,7 +627,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**GetLatestBlockTimeResponse**](GetLatestBlockTimeResponse.md)
 
 ### Authorization
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="analyzePsbt"></a>
 # **analyzePsbt**
-> InlineResponse20024 analyzePsbt(body)
+> AnalyzePSBTResponse analyzePsbt(body)
 
 Analyze PSBT
 
@@ -30,7 +30,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.PSBTsApi();
-let body = new SatstreamJavascriptSdk.RequestsAnalyzePSBTRequest(); // RequestsAnalyzePSBTRequest | PSBT to analyze
+let body = new SatstreamJavascriptSdk.AnalyzePSBTRequest(); // AnalyzePSBTRequest | PSBT to analyze
 
 apiInstance.analyzePsbt(body, (error, data, response) => {
   if (error) {
@@ -45,11 +45,11 @@ apiInstance.analyzePsbt(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsAnalyzePSBTRequest**](RequestsAnalyzePSBTRequest.md)| PSBT to analyze | 
+ **body** | [**AnalyzePSBTRequest**](AnalyzePSBTRequest.md)| PSBT to analyze | 
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**AnalyzePSBTResponse**](AnalyzePSBTResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 <a name="combinePsbt"></a>
 # **combinePsbt**
-> InlineResponse2001 combinePsbt(body)
+> CombinePSBTResponse combinePsbt(body)
 
 Combine PSBTs
 
@@ -80,7 +80,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.PSBTsApi();
-let body = new SatstreamJavascriptSdk.RequestsCombinePSBTRequest(); // RequestsCombinePSBTRequest | Array of PSBTs to combine
+let body = new SatstreamJavascriptSdk.CombinePSBTRequest(); // CombinePSBTRequest | Array of PSBTs to combine
 
 apiInstance.combinePsbt(body, (error, data, response) => {
   if (error) {
@@ -95,11 +95,11 @@ apiInstance.combinePsbt(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsCombinePSBTRequest**](RequestsCombinePSBTRequest.md)| Array of PSBTs to combine | 
+ **body** | [**CombinePSBTRequest**](CombinePSBTRequest.md)| Array of PSBTs to combine | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**CombinePSBTResponse**](CombinePSBTResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 <a name="createPsbt"></a>
 # **createPsbt**
-> InlineResponse2001 createPsbt(body)
+> CreatePSBTResponse createPsbt(body)
 
 Create PSBT
 
@@ -130,7 +130,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.PSBTsApi();
-let body = new SatstreamJavascriptSdk.RequestsCreatePSBTRequest(); // RequestsCreatePSBTRequest | Transaction parameters
+let body = new SatstreamJavascriptSdk.CreatePSBTRequest(); // CreatePSBTRequest | Transaction parameters
 
 apiInstance.createPsbt(body, (error, data, response) => {
   if (error) {
@@ -145,11 +145,11 @@ apiInstance.createPsbt(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsCreatePSBTRequest**](RequestsCreatePSBTRequest.md)| Transaction parameters | 
+ **body** | [**CreatePSBTRequest**](CreatePSBTRequest.md)| Transaction parameters | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**CreatePSBTResponse**](CreatePSBTResponse.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 <a name="decodePsbt"></a>
 # **decodePsbt**
-> InlineResponse20025 decodePsbt(body)
+> DecodePSBTResponse decodePsbt(body)
 
 Decode PSBT
 
@@ -180,7 +180,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.PSBTsApi();
-let body = new SatstreamJavascriptSdk.RequestsAnalyzePSBTRequest(); // RequestsAnalyzePSBTRequest | PSBT to decode
+let body = new SatstreamJavascriptSdk.DecodePSBTRequest(); // DecodePSBTRequest | PSBT to decode
 
 apiInstance.decodePsbt(body, (error, data, response) => {
   if (error) {
@@ -195,11 +195,11 @@ apiInstance.decodePsbt(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsAnalyzePSBTRequest**](RequestsAnalyzePSBTRequest.md)| PSBT to decode | 
+ **body** | [**DecodePSBTRequest**](DecodePSBTRequest.md)| PSBT to decode | 
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**DecodePSBTResponse**](DecodePSBTResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 <a name="joinPsbts"></a>
 # **joinPsbts**
-> InlineResponse2001 joinPsbts(body)
+> JoinPSBTsResponse joinPsbts(body)
 
 Join PSBTs
 
@@ -230,7 +230,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.PSBTsApi();
-let body = new SatstreamJavascriptSdk.RequestsJoinPSBTsRequest(); // RequestsJoinPSBTsRequest | PSBTs to join
+let body = new SatstreamJavascriptSdk.JoinPSBTsRequest(); // JoinPSBTsRequest | PSBTs to join
 
 apiInstance.joinPsbts(body, (error, data, response) => {
   if (error) {
@@ -245,11 +245,11 @@ apiInstance.joinPsbts(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsJoinPSBTsRequest**](RequestsJoinPSBTsRequest.md)| PSBTs to join | 
+ **body** | [**JoinPSBTsRequest**](JoinPSBTsRequest.md)| PSBTs to join | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**JoinPSBTsResponse**](JoinPSBTsResponse.md)
 
 ### Authorization
 

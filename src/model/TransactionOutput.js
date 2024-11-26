@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionOutput model module.
  * @module model/TransactionOutput
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class TransactionOutput {
   /**

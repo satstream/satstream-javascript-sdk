@@ -14,15 +14,15 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20010 from '../model/InlineResponse20010';
-import InlineResponse2009 from '../model/InlineResponse2009';
-import RequestsGetChainTxStatsRequest from '../model/RequestsGetChainTxStatsRequest';
+import GetChainTxStatsRequest from '../model/GetChainTxStatsRequest';
+import GetChainTxStatsResponse from '../model/GetChainTxStatsResponse';
+import GetDifficultyResponse from '../model/GetDifficultyResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Network service.
 * @module api/NetworkApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class NetworkApi {
 
@@ -42,14 +42,14 @@ export default class NetworkApi {
      * Callback function to receive the result of the getChainTxStats operation.
      * @callback moduleapi/NetworkApi~getChainTxStatsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20010{ data The data returned by the service call.
+     * @param {module:model/GetChainTxStatsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get chain tx stats
      * Computes statistics about the total number and rate of transactions in the chain
-     * @param {module:model/RequestsGetChainTxStatsRequest} body Chain tx stats request parameters
+     * @param {module:model/GetChainTxStatsRequest} body Chain tx stats request parameters
      * @param {module:api/NetworkApi~getChainTxStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -77,7 +77,7 @@ export default class NetworkApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20010;
+      let returnType = GetChainTxStatsResponse;
 
       return this.apiClient.callApi(
         '/chain/txstats', 'POST',
@@ -89,7 +89,7 @@ export default class NetworkApi {
      * Callback function to receive the result of the getDifficulty operation.
      * @callback moduleapi/NetworkApi~getDifficultyCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2009{ data The data returned by the service call.
+     * @param {module:model/GetDifficultyResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -119,7 +119,7 @@ export default class NetworkApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2009;
+      let returnType = GetDifficultyResponse;
 
       return this.apiClient.callApi(
         '/chain/difficulty', 'GET',

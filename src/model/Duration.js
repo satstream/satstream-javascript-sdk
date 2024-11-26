@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Duration model module.
  * @module model/Duration
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class Duration {
   /**

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MempoolSequence model module.
  * @module model/MempoolSequence
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class MempoolSequence {
   /**

@@ -14,21 +14,21 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20016 from '../model/InlineResponse20016';
-import InlineResponse20017 from '../model/InlineResponse20017';
-import InlineResponse20018 from '../model/InlineResponse20018';
-import InlineResponse20019 from '../model/InlineResponse20019';
-import InlineResponse20020 from '../model/InlineResponse20020';
-import RequestsGetMempoolAncestorsRequest from '../model/RequestsGetMempoolAncestorsRequest';
-import RequestsGetMempoolDescendantsRequest from '../model/RequestsGetMempoolDescendantsRequest';
-import RequestsGetRawMempoolRequest from '../model/RequestsGetRawMempoolRequest';
-import RequestsTestMempoolAcceptRequest from '../model/RequestsTestMempoolAcceptRequest';
+import GetMempoolAncestorsRequest from '../model/GetMempoolAncestorsRequest';
+import GetMempoolAncestorsResponse from '../model/GetMempoolAncestorsResponse';
+import GetMempoolDescendantsRequest from '../model/GetMempoolDescendantsRequest';
+import GetMempoolDescendantsResponse from '../model/GetMempoolDescendantsResponse';
+import GetMempoolInfoResponse from '../model/GetMempoolInfoResponse';
+import GetRawMempoolRequest from '../model/GetRawMempoolRequest';
+import GetRawMempoolResponse from '../model/GetRawMempoolResponse';
+import TestMempoolAcceptRequest from '../model/TestMempoolAcceptRequest';
+import TestMempoolAcceptResponse from '../model/TestMempoolAcceptResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Mempool service.
 * @module api/MempoolApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class MempoolApi {
 
@@ -48,14 +48,14 @@ export default class MempoolApi {
      * Callback function to receive the result of the getMempoolAncestors operation.
      * @callback moduleapi/MempoolApi~getMempoolAncestorsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20016{ data The data returned by the service call.
+     * @param {module:model/GetMempoolAncestorsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get mempool ancestors
      * Returns all in-mempool ancestors for a transaction in the mempool
-     * @param {module:model/RequestsGetMempoolAncestorsRequest} body Mempool ancestors request parameters
+     * @param {module:model/GetMempoolAncestorsRequest} body Mempool ancestors request parameters
      * @param {module:api/MempoolApi~getMempoolAncestorsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -83,7 +83,7 @@ export default class MempoolApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20016;
+      let returnType = GetMempoolAncestorsResponse;
 
       return this.apiClient.callApi(
         '/mempool/ancestors', 'POST',
@@ -95,14 +95,14 @@ export default class MempoolApi {
      * Callback function to receive the result of the getMempoolDescendants operation.
      * @callback moduleapi/MempoolApi~getMempoolDescendantsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20017{ data The data returned by the service call.
+     * @param {module:model/GetMempoolDescendantsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get mempool descendants
      * Returns all in-mempool descendants for a transaction in the mempool
-     * @param {module:model/RequestsGetMempoolDescendantsRequest} body Mempool descendants request parameters
+     * @param {module:model/GetMempoolDescendantsRequest} body Mempool descendants request parameters
      * @param {module:api/MempoolApi~getMempoolDescendantsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -130,7 +130,7 @@ export default class MempoolApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20017;
+      let returnType = GetMempoolDescendantsResponse;
 
       return this.apiClient.callApi(
         '/mempool/descendants', 'POST',
@@ -142,7 +142,7 @@ export default class MempoolApi {
      * Callback function to receive the result of the getMempoolInfo operation.
      * @callback moduleapi/MempoolApi~getMempoolInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20018{ data The data returned by the service call.
+     * @param {module:model/GetMempoolInfoResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -172,7 +172,7 @@ export default class MempoolApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20018;
+      let returnType = GetMempoolInfoResponse;
 
       return this.apiClient.callApi(
         '/mempool/info', 'GET',
@@ -184,14 +184,14 @@ export default class MempoolApi {
      * Callback function to receive the result of the getRawMempool operation.
      * @callback moduleapi/MempoolApi~getRawMempoolCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20019{ data The data returned by the service call.
+     * @param {module:model/GetRawMempoolResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get raw mempool
      * Returns all transaction ids in memory pool
-     * @param {module:model/RequestsGetRawMempoolRequest} body Raw mempool request parameters
+     * @param {module:model/GetRawMempoolRequest} body Raw mempool request parameters
      * @param {module:api/MempoolApi~getRawMempoolCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -219,7 +219,7 @@ export default class MempoolApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20019;
+      let returnType = GetRawMempoolResponse;
 
       return this.apiClient.callApi(
         '/mempool/raw', 'POST',
@@ -231,14 +231,14 @@ export default class MempoolApi {
      * Callback function to receive the result of the testMempoolAccept operation.
      * @callback moduleapi/MempoolApi~testMempoolAcceptCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20020{ data The data returned by the service call.
+     * @param {module:model/TestMempoolAcceptResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Test mempool accept
      * Tests whether raw transactions would be accepted by mempool
-     * @param {module:model/RequestsTestMempoolAcceptRequest} body Raw transactions to test
+     * @param {module:model/TestMempoolAcceptRequest} body Raw transactions to test
      * @param {module:api/MempoolApi~testMempoolAcceptCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -266,7 +266,7 @@ export default class MempoolApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20020;
+      let returnType = TestMempoolAcceptResponse;
 
       return this.apiClient.callApi(
         '/mempool/test-accept', 'POST',

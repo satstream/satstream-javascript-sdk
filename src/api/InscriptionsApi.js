@@ -14,15 +14,17 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20013 from '../model/InlineResponse20013';
-import InlineResponse20014 from '../model/InlineResponse20014';
-import InlineResponse20015 from '../model/InlineResponse20015';
+import FetchInscriptionsResponse from '../model/FetchInscriptionsResponse';
+import GetBlockInscriptionsResponse from '../model/GetBlockInscriptionsResponse';
+import GetInscriptionChildResponse from '../model/GetInscriptionChildResponse';
+import GetInscriptionResponse from '../model/GetInscriptionResponse';
+import GetLatestInscriptionsResponse from '../model/GetLatestInscriptionsResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Inscriptions service.
 * @module api/InscriptionsApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class InscriptionsApi {
 
@@ -42,7 +44,7 @@ export default class InscriptionsApi {
      * Callback function to receive the result of the fetchInscriptionChild operation.
      * @callback moduleapi/InscriptionsApi~fetchInscriptionChildCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20013{ data The data returned by the service call.
+     * @param {module:model/GetInscriptionChildResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -82,7 +84,7 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20013;
+      let returnType = GetInscriptionChildResponse;
 
       return this.apiClient.callApi(
         '/inscription/{inscription_id}/{child_index}', 'GET',
@@ -94,7 +96,7 @@ export default class InscriptionsApi {
      * Callback function to receive the result of the fetchInscriptions operation.
      * @callback moduleapi/InscriptionsApi~fetchInscriptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20015{ data The data returned by the service call.
+     * @param {module:model/FetchInscriptionsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -129,7 +131,7 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20015;
+      let returnType = FetchInscriptionsResponse;
 
       return this.apiClient.callApi(
         '/inscriptions', 'POST',
@@ -141,7 +143,7 @@ export default class InscriptionsApi {
      * Callback function to receive the result of the getBlockInscriptions operation.
      * @callback moduleapi/InscriptionsApi~getBlockInscriptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20014{ data The data returned by the service call.
+     * @param {module:model/GetBlockInscriptionsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -176,7 +178,7 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20014;
+      let returnType = GetBlockInscriptionsResponse;
 
       return this.apiClient.callApi(
         '/inscriptions/block/{block_height}', 'GET',
@@ -188,7 +190,7 @@ export default class InscriptionsApi {
      * Callback function to receive the result of the getInscription operation.
      * @callback moduleapi/InscriptionsApi~getInscriptionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20013{ data The data returned by the service call.
+     * @param {module:model/GetInscriptionResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -223,7 +225,7 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20013;
+      let returnType = GetInscriptionResponse;
 
       return this.apiClient.callApi(
         '/inscription/{inscription_id}', 'GET',
@@ -235,7 +237,7 @@ export default class InscriptionsApi {
      * Callback function to receive the result of the getLatestInscriptions operation.
      * @callback moduleapi/InscriptionsApi~getLatestInscriptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20014{ data The data returned by the service call.
+     * @param {module:model/GetLatestInscriptionsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -265,7 +267,7 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20014;
+      let returnType = GetLatestInscriptionsResponse;
 
       return this.apiClient.callApi(
         '/inscriptions', 'GET',
@@ -277,7 +279,7 @@ export default class InscriptionsApi {
      * Callback function to receive the result of the getLatestInscriptionsPage operation.
      * @callback moduleapi/InscriptionsApi~getLatestInscriptionsPageCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20014{ data The data returned by the service call.
+     * @param {module:model/GetLatestInscriptionsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -312,7 +314,7 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20014;
+      let returnType = GetLatestInscriptionsResponse;
 
       return this.apiClient.callApi(
         '/inscriptions/{page}', 'GET',

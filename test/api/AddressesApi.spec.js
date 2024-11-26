@@ -55,6 +55,48 @@
           done();
         });
       });
+      describe('getAddressDeltas', function() {
+        it('should call getAddressDeltas successfully', function(done) {
+          // TODO: uncomment, update parameter values for getAddressDeltas call and complete the assertions
+          /*
+          var opts = {};
+
+          instance.getAddressDeltas(address, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetAddressDeltasResponse);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getAddressRuneDeltas', function() {
+        it('should call getAddressRuneDeltas successfully', function(done) {
+          // TODO: uncomment, update parameter values for getAddressRuneDeltas call and complete the assertions
+          /*
+          var opts = {};
+
+          instance.getAddressRuneDeltas(address, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetAddressRuneDeltasResponse);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('getAddressUtxos', function() {
         it('should call getAddressUtxos successfully', function(done) {
           // TODO: uncomment, update parameter values for getAddressUtxos call and complete the assertions

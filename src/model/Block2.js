@@ -19,7 +19,7 @@ import BtcTx2 from './BtcTx2';
 /**
  * The Block2 model module.
  * @module model/Block2
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class Block2 {
   /**

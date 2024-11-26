@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20010);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetChainTxStatsResponse);
 
             done();
           });
@@ -66,7 +66,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2009);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetDifficultyResponse);
 
             done();
           });

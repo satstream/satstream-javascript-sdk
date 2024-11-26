@@ -14,15 +14,15 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20021 from '../model/InlineResponse20021';
-import InlineResponse2009 from '../model/InlineResponse2009';
-import RequestsGetNetworkHashPSRequest from '../model/RequestsGetNetworkHashPSRequest';
+import GetMiningInfoResponse from '../model/GetMiningInfoResponse';
+import GetNetworkHashPSRequest from '../model/GetNetworkHashPSRequest';
+import GetNetworkHashPSResponse from '../model/GetNetworkHashPSResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Mining service.
 * @module api/MiningApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class MiningApi {
 
@@ -42,7 +42,7 @@ export default class MiningApi {
      * Callback function to receive the result of the getMiningInfo operation.
      * @callback moduleapi/MiningApi~getMiningInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20021{ data The data returned by the service call.
+     * @param {module:model/GetMiningInfoResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -72,7 +72,7 @@ export default class MiningApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20021;
+      let returnType = GetMiningInfoResponse;
 
       return this.apiClient.callApi(
         '/mining/info', 'GET',
@@ -84,14 +84,14 @@ export default class MiningApi {
      * Callback function to receive the result of the getNetworkHashps operation.
      * @callback moduleapi/MiningApi~getNetworkHashpsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2009{ data The data returned by the service call.
+     * @param {module:model/GetNetworkHashPSResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get network hash per second
      * Returns the estimated network hashes per second based on the last n blocks
-     * @param {module:model/RequestsGetNetworkHashPSRequest} body Network hash rate parameters
+     * @param {module:model/GetNetworkHashPSRequest} body Network hash rate parameters
      * @param {module:api/MiningApi~getNetworkHashpsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -119,7 +119,7 @@ export default class MiningApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2009;
+      let returnType = GetNetworkHashPSResponse;
 
       return this.apiClient.callApi(
         '/mining/networkhashps', 'POST',

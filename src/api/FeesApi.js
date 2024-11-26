@@ -14,16 +14,16 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20011 from '../model/InlineResponse20011';
-import InlineResponse20012 from '../model/InlineResponse20012';
-import RequestsEstimateRawFeeRequest from '../model/RequestsEstimateRawFeeRequest';
-import RequestsEstimateSmartFeeRequest from '../model/RequestsEstimateSmartFeeRequest';
+import EstimateRawFeeRequest from '../model/EstimateRawFeeRequest';
+import EstimateRawFeeResponse from '../model/EstimateRawFeeResponse';
+import EstimateSmartFeeRequest from '../model/EstimateSmartFeeRequest';
+import EstimateSmartFeeResponse from '../model/EstimateSmartFeeResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Fees service.
 * @module api/FeesApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class FeesApi {
 
@@ -43,14 +43,14 @@ export default class FeesApi {
      * Callback function to receive the result of the estimateRawFee operation.
      * @callback moduleapi/FeesApi~estimateRawFeeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20011{ data The data returned by the service call.
+     * @param {module:model/EstimateRawFeeResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Estimate Raw Fee
      * Estimates the approximate fee per kilobyte needed for a transaction to begin confirmation within conf_target blocks if possible.
-     * @param {module:model/RequestsEstimateRawFeeRequest} body Fee estimation parameters
+     * @param {module:model/EstimateRawFeeRequest} body Fee estimation parameters
      * @param {module:api/FeesApi~estimateRawFeeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -78,7 +78,7 @@ export default class FeesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20011;
+      let returnType = EstimateRawFeeResponse;
 
       return this.apiClient.callApi(
         '/fee/estimate-raw', 'POST',
@@ -90,14 +90,14 @@ export default class FeesApi {
      * Callback function to receive the result of the estimateSmartFee operation.
      * @callback moduleapi/FeesApi~estimateSmartFeeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20012{ data The data returned by the service call.
+     * @param {module:model/EstimateSmartFeeResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Estimate smart fee
      * Estimates the approximate fee per kilobyte needed for a transaction to begin confirmation within conf_target blocks
-     * @param {module:model/RequestsEstimateSmartFeeRequest} body Fee estimation parameters
+     * @param {module:model/EstimateSmartFeeRequest} body Fee estimation parameters
      * @param {module:api/FeesApi~estimateSmartFeeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -125,7 +125,7 @@ export default class FeesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20012;
+      let returnType = EstimateSmartFeeResponse;
 
       return this.apiClient.callApi(
         '/fee/estimate-smart', 'POST',

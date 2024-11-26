@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2001);
+            expect(data).to.be.a(SatstreamJavascriptSdk.CombineRawTransactionResponse);
 
             done();
           });
@@ -66,7 +66,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2001);
+            expect(data).to.be.a(SatstreamJavascriptSdk.ConvertToPSBTResponse);
 
             done();
           });
@@ -86,7 +86,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2001);
+            expect(data).to.be.a(SatstreamJavascriptSdk.CreateRawTransactionResponse);
 
             done();
           });
@@ -106,7 +106,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20036);
+            expect(data).to.be.a(SatstreamJavascriptSdk.DecodeTransactionResponse);
 
             done();
           });
@@ -126,7 +126,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20037);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetRawTransactionDecodedResponse);
 
             done();
           });
@@ -146,7 +146,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2001);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetRawTransactionHexResponse);
 
             done();
           });
@@ -166,7 +166,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20038);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetRawTransactionPrevoutResponse);
 
             done();
           });
@@ -186,7 +186,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20035);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetTransactionResponse);
 
             done();
           });
@@ -206,7 +206,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20031);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetTxOutResponse);
 
             done();
           });
@@ -226,7 +226,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2001);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetTxOutProofResponse);
 
             done();
           });
@@ -246,7 +246,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20032);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2002);
 
             done();
           });
@@ -266,7 +266,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20034);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetTxSpendingPrevoutResponse);
 
             done();
           });
@@ -286,7 +286,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2001);
+            expect(data).to.be.a(SatstreamJavascriptSdk.SendRawTransactionResponse);
 
             done();
           });
@@ -306,7 +306,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20033);
+            expect(data).to.be.a(SatstreamJavascriptSdk.VerifyTxOutProofResponse);
 
             done();
           });

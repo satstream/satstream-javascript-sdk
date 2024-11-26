@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The VerifyMessageRequest model module.
  * @module model/VerifyMessageRequest
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class VerifyMessageRequest {
   /**

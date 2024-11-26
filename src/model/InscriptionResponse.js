@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InscriptionResponse model module.
  * @module model/InscriptionResponse
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class InscriptionResponse {
   /**

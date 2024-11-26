@@ -14,14 +14,14 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20022 from '../model/InlineResponse20022';
-import InlineResponse20023 from '../model/InlineResponse20023';
+import InlineResponse200 from '../model/InlineResponse200';
+import InlineResponse2001 from '../model/InlineResponse2001';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Outputs service.
 * @module api/OutputsApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class OutputsApi {
 
@@ -41,7 +41,7 @@ export default class OutputsApi {
      * Callback function to receive the result of the getOutputByOutpoint operation.
      * @callback moduleapi/OutputsApi~getOutputByOutpointCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20022{ data The data returned by the service call.
+     * @param {module:model/InlineResponse200{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -76,7 +76,7 @@ export default class OutputsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20022;
+      let returnType = InlineResponse200;
 
       return this.apiClient.callApi(
         '/output/{outpoint}', 'GET',
@@ -88,7 +88,7 @@ export default class OutputsApi {
      * Callback function to receive the result of the getOutputs operation.
      * @callback moduleapi/OutputsApi~getOutputsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20023{ data The data returned by the service call.
+     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -123,7 +123,7 @@ export default class OutputsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20023;
+      let returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/outputs', 'POST',

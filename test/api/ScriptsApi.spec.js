@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20029);
+            expect(data).to.be.a(SatstreamJavascriptSdk.DecodeScriptResponse);
 
             done();
           });

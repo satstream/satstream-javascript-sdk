@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="fetchInscriptionChild"></a>
 # **fetchInscriptionChild**
-> InlineResponse20013 fetchInscriptionChild(inscriptionId, childIndex)
+> GetInscriptionChildResponse fetchInscriptionChild(inscriptionId, childIndex)
 
 Get inscription child info
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**GetInscriptionChildResponse**](GetInscriptionChildResponse.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="fetchInscriptions"></a>
 # **fetchInscriptions**
-> InlineResponse20015 fetchInscriptions(body)
+> FetchInscriptionsResponse fetchInscriptions(body)
 
 Fetch multiple inscriptions
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**FetchInscriptionsResponse**](FetchInscriptionsResponse.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 <a name="getBlockInscriptions"></a>
 # **getBlockInscriptions**
-> InlineResponse20014 getBlockInscriptions(blockHeight)
+> GetBlockInscriptionsResponse getBlockInscriptions(blockHeight)
 
 Get inscriptions in a specific block
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**GetBlockInscriptionsResponse**](GetBlockInscriptionsResponse.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 <a name="getInscription"></a>
 # **getInscription**
-> InlineResponse20013 getInscription(inscriptionId)
+> GetInscriptionResponse getInscription(inscriptionId)
 
 Get inscription info
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**GetInscriptionResponse**](GetInscriptionResponse.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 <a name="getLatestInscriptions"></a>
 # **getLatestInscriptions**
-> InlineResponse20014 getLatestInscriptions()
+> GetLatestInscriptionsResponse getLatestInscriptions()
 
 Get latest inscriptions
 
@@ -247,7 +247,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**GetLatestInscriptionsResponse**](GetLatestInscriptionsResponse.md)
 
 ### Authorization
 
@@ -260,7 +260,7 @@ This endpoint does not need any parameter.
 
 <a name="getLatestInscriptionsPage"></a>
 # **getLatestInscriptionsPage**
-> InlineResponse20014 getLatestInscriptionsPage(page)
+> GetLatestInscriptionsResponse getLatestInscriptionsPage(page)
 
 Get latest inscriptions page
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**GetLatestInscriptionsResponse**](GetLatestInscriptionsResponse.md)
 
 ### Authorization
 

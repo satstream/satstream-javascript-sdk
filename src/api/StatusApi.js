@@ -14,13 +14,13 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20030 from '../model/InlineResponse20030';
+import GetStatusResponse from '../model/GetStatusResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Status service.
 * @module api/StatusApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class StatusApi {
 
@@ -40,7 +40,7 @@ export default class StatusApi {
      * Callback function to receive the result of the getStatus operation.
      * @callback moduleapi/StatusApi~getStatusCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20030{ data The data returned by the service call.
+     * @param {module:model/GetStatusResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -70,7 +70,7 @@ export default class StatusApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20030;
+      let returnType = GetStatusResponse;
 
       return this.apiClient.callApi(
         '/status', 'GET',

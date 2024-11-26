@@ -19,7 +19,7 @@ import RuneTerms from './RuneTerms';
 /**
  * The RuneEntry model module.
  * @module model/RuneEntry
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class RuneEntry {
   /**

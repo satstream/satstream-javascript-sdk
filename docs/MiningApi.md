@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getMiningInfo"></a>
 # **getMiningInfo**
-> InlineResponse20021 getMiningInfo()
+> GetMiningInfoResponse getMiningInfo()
 
 Get mining information
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**GetMiningInfoResponse**](GetMiningInfoResponse.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ This endpoint does not need any parameter.
 
 <a name="getNetworkHashps"></a>
 # **getNetworkHashps**
-> InlineResponse2009 getNetworkHashps(body)
+> GetNetworkHashPSResponse getNetworkHashps(body)
 
 Get network hash per second
 
@@ -72,7 +72,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.MiningApi();
-let body = new SatstreamJavascriptSdk.RequestsGetNetworkHashPSRequest(); // RequestsGetNetworkHashPSRequest | Network hash rate parameters
+let body = new SatstreamJavascriptSdk.GetNetworkHashPSRequest(); // GetNetworkHashPSRequest | Network hash rate parameters
 
 apiInstance.getNetworkHashps(body, (error, data, response) => {
   if (error) {
@@ -87,11 +87,11 @@ apiInstance.getNetworkHashps(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetNetworkHashPSRequest**](RequestsGetNetworkHashPSRequest.md)| Network hash rate parameters | 
+ **body** | [**GetNetworkHashPSRequest**](GetNetworkHashPSRequest.md)| Network hash rate parameters | 
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**GetNetworkHashPSResponse**](GetNetworkHashPSResponse.md)
 
 ### Authorization
 

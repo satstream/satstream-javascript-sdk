@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **String** |  | [optional] 
+**data** | [**[OutputResponse]**](OutputResponse.md) |  | [optional] 

@@ -14,7 +14,9 @@
  *
  */
 import ApiClient from "../ApiClient";
+import GetAddressDeltasResponse from '../model/GetAddressDeltasResponse';
 import GetAddressResponse from '../model/GetAddressResponse';
+import GetAddressRuneDeltasResponse from '../model/GetAddressRuneDeltasResponse';
 import GetAddressUTXOsResponse from '../model/GetAddressUTXOsResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 import ValidateAddressResponse from '../model/ValidateAddressResponse';
@@ -24,7 +26,7 @@ import VerifyMessageResponse from '../model/VerifyMessageResponse';
 /**
 * Addresses service.
 * @module api/AddressesApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class AddressesApi {
 
@@ -83,6 +85,110 @@ export default class AddressesApi {
 
       return this.apiClient.callApi(
         '/address/{address}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getAddressDeltas operation.
+     * @callback moduleapi/AddressesApi~getAddressDeltasCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetAddressDeltasResponse{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get address deltas
+     * Get deltas for a specific address with pagination
+     * @param {String} address Address
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.pageSize Number of results per page (default: 100, max: 1000)
+     * @param {Number} opts.startHeight Start block height
+     * @param {Number} opts.endHeight End block height
+     * @param {String} opts.cursor Base64 encoded cursor for pagination
+     * @param {module:api/AddressesApi~getAddressDeltasCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getAddressDeltas(address, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'address' is set
+      if (address === undefined || address === null) {
+        throw new Error("Missing the required parameter 'address' when calling getAddressDeltas");
+      }
+
+      let pathParams = {
+        'address': address
+      };
+      let queryParams = {
+        'page_size': opts['pageSize'],'start_height': opts['startHeight'],'end_height': opts['endHeight'],'cursor': opts['cursor']
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetAddressDeltasResponse;
+
+      return this.apiClient.callApi(
+        '/address/{address}/deltas', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getAddressRuneDeltas operation.
+     * @callback moduleapi/AddressesApi~getAddressRuneDeltasCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetAddressRuneDeltasResponse{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get address rune deltas
+     * Get rune deltas for a specific address with pagination
+     * @param {String} address Address
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.pageSize Number of results per page (default: 100, max: 1000)
+     * @param {Number} opts.startHeight Start block height
+     * @param {Number} opts.endHeight End block height
+     * @param {String} opts.cursor Cursor for pagination
+     * @param {module:api/AddressesApi~getAddressRuneDeltasCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getAddressRuneDeltas(address, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'address' is set
+      if (address === undefined || address === null) {
+        throw new Error("Missing the required parameter 'address' when calling getAddressRuneDeltas");
+      }
+
+      let pathParams = {
+        'address': address
+      };
+      let queryParams = {
+        'page_size': opts['pageSize'],'start_height': opts['startHeight'],'end_height': opts['endHeight'],'cursor': opts['cursor']
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetAddressRuneDeltasResponse;
+
+      return this.apiClient.callApi(
+        '/address/{address}/deltas/runes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

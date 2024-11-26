@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getLatestRunes"></a>
 # **getLatestRunes**
-> InlineResponse20027 getLatestRunes()
+> GetLatestRunesResponse getLatestRunes()
 
 Get latest runes
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**GetLatestRunesResponse**](GetLatestRunesResponse.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ This endpoint does not need any parameter.
 
 <a name="getLatestRunesPage"></a>
 # **getLatestRunesPage**
-> InlineResponse20027 getLatestRunesPage(page)
+> GetLatestRunesResponse getLatestRunesPage(page)
 
 Get latest runes page
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**GetLatestRunesResponse**](GetLatestRunesResponse.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 <a name="getRune"></a>
 # **getRune**
-> InlineResponse20026 getRune(runeName)
+> GetRuneResponse getRune(runeName)
 
 Get rune info
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**GetRuneResponse**](GetRuneResponse.md)
 
 ### Authorization
 

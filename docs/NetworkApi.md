@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getChainTxStats"></a>
 # **getChainTxStats**
-> InlineResponse20010 getChainTxStats(body)
+> GetChainTxStatsResponse getChainTxStats(body)
 
 Get chain tx stats
 
@@ -27,7 +27,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.NetworkApi();
-let body = new SatstreamJavascriptSdk.RequestsGetChainTxStatsRequest(); // RequestsGetChainTxStatsRequest | Chain tx stats request parameters
+let body = new SatstreamJavascriptSdk.GetChainTxStatsRequest(); // GetChainTxStatsRequest | Chain tx stats request parameters
 
 apiInstance.getChainTxStats(body, (error, data, response) => {
   if (error) {
@@ -42,11 +42,11 @@ apiInstance.getChainTxStats(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetChainTxStatsRequest**](RequestsGetChainTxStatsRequest.md)| Chain tx stats request parameters | 
+ **body** | [**GetChainTxStatsRequest**](GetChainTxStatsRequest.md)| Chain tx stats request parameters | 
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**GetChainTxStatsResponse**](GetChainTxStatsResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 <a name="getDifficulty"></a>
 # **getDifficulty**
-> InlineResponse2009 getDifficulty()
+> GetDifficultyResponse getDifficulty()
 
 Get difficulty
 
@@ -91,7 +91,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**GetDifficultyResponse**](GetDifficultyResponse.md)
 
 ### Authorization
 

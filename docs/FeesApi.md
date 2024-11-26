@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="estimateRawFee"></a>
 # **estimateRawFee**
-> InlineResponse20011 estimateRawFee(body)
+> EstimateRawFeeResponse estimateRawFee(body)
 
 Estimate Raw Fee
 
@@ -27,7 +27,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.FeesApi();
-let body = new SatstreamJavascriptSdk.RequestsEstimateRawFeeRequest(); // RequestsEstimateRawFeeRequest | Fee estimation parameters
+let body = new SatstreamJavascriptSdk.EstimateRawFeeRequest(); // EstimateRawFeeRequest | Fee estimation parameters
 
 apiInstance.estimateRawFee(body, (error, data, response) => {
   if (error) {
@@ -42,11 +42,11 @@ apiInstance.estimateRawFee(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsEstimateRawFeeRequest**](RequestsEstimateRawFeeRequest.md)| Fee estimation parameters | 
+ **body** | [**EstimateRawFeeRequest**](EstimateRawFeeRequest.md)| Fee estimation parameters | 
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**EstimateRawFeeResponse**](EstimateRawFeeResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 <a name="estimateSmartFee"></a>
 # **estimateSmartFee**
-> InlineResponse20012 estimateSmartFee(body)
+> EstimateSmartFeeResponse estimateSmartFee(body)
 
 Estimate smart fee
 
@@ -77,7 +77,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.FeesApi();
-let body = new SatstreamJavascriptSdk.RequestsEstimateSmartFeeRequest(); // RequestsEstimateSmartFeeRequest | Fee estimation parameters
+let body = new SatstreamJavascriptSdk.EstimateSmartFeeRequest(); // EstimateSmartFeeRequest | Fee estimation parameters
 
 apiInstance.estimateSmartFee(body, (error, data, response) => {
   if (error) {
@@ -92,11 +92,11 @@ apiInstance.estimateSmartFee(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsEstimateSmartFeeRequest**](RequestsEstimateSmartFeeRequest.md)| Fee estimation parameters | 
+ **body** | [**EstimateSmartFeeRequest**](EstimateSmartFeeRequest.md)| Fee estimation parameters | 
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**EstimateSmartFeeResponse**](EstimateSmartFeeResponse.md)
 
 ### Authorization
 

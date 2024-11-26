@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getMempoolAncestors"></a>
 # **getMempoolAncestors**
-> InlineResponse20016 getMempoolAncestors(body)
+> GetMempoolAncestorsResponse getMempoolAncestors(body)
 
 Get mempool ancestors
 
@@ -30,7 +30,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.MempoolApi();
-let body = new SatstreamJavascriptSdk.RequestsGetMempoolAncestorsRequest(); // RequestsGetMempoolAncestorsRequest | Mempool ancestors request parameters
+let body = new SatstreamJavascriptSdk.GetMempoolAncestorsRequest(); // GetMempoolAncestorsRequest | Mempool ancestors request parameters
 
 apiInstance.getMempoolAncestors(body, (error, data, response) => {
   if (error) {
@@ -45,11 +45,11 @@ apiInstance.getMempoolAncestors(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetMempoolAncestorsRequest**](RequestsGetMempoolAncestorsRequest.md)| Mempool ancestors request parameters | 
+ **body** | [**GetMempoolAncestorsRequest**](GetMempoolAncestorsRequest.md)| Mempool ancestors request parameters | 
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**GetMempoolAncestorsResponse**](GetMempoolAncestorsResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 <a name="getMempoolDescendants"></a>
 # **getMempoolDescendants**
-> InlineResponse20017 getMempoolDescendants(body)
+> GetMempoolDescendantsResponse getMempoolDescendants(body)
 
 Get mempool descendants
 
@@ -80,7 +80,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.MempoolApi();
-let body = new SatstreamJavascriptSdk.RequestsGetMempoolDescendantsRequest(); // RequestsGetMempoolDescendantsRequest | Mempool descendants request parameters
+let body = new SatstreamJavascriptSdk.GetMempoolDescendantsRequest(); // GetMempoolDescendantsRequest | Mempool descendants request parameters
 
 apiInstance.getMempoolDescendants(body, (error, data, response) => {
   if (error) {
@@ -95,11 +95,11 @@ apiInstance.getMempoolDescendants(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetMempoolDescendantsRequest**](RequestsGetMempoolDescendantsRequest.md)| Mempool descendants request parameters | 
+ **body** | [**GetMempoolDescendantsRequest**](GetMempoolDescendantsRequest.md)| Mempool descendants request parameters | 
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**GetMempoolDescendantsResponse**](GetMempoolDescendantsResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 <a name="getMempoolInfo"></a>
 # **getMempoolInfo**
-> InlineResponse20018 getMempoolInfo()
+> GetMempoolInfoResponse getMempoolInfo()
 
 Get mempool information
 
@@ -144,7 +144,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**GetMempoolInfoResponse**](GetMempoolInfoResponse.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ This endpoint does not need any parameter.
 
 <a name="getRawMempool"></a>
 # **getRawMempool**
-> InlineResponse20019 getRawMempool(body)
+> GetRawMempoolResponse getRawMempool(body)
 
 Get raw mempool
 
@@ -175,7 +175,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.MempoolApi();
-let body = new SatstreamJavascriptSdk.RequestsGetRawMempoolRequest(); // RequestsGetRawMempoolRequest | Raw mempool request parameters
+let body = new SatstreamJavascriptSdk.GetRawMempoolRequest(); // GetRawMempoolRequest | Raw mempool request parameters
 
 apiInstance.getRawMempool(body, (error, data, response) => {
   if (error) {
@@ -190,11 +190,11 @@ apiInstance.getRawMempool(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetRawMempoolRequest**](RequestsGetRawMempoolRequest.md)| Raw mempool request parameters | 
+ **body** | [**GetRawMempoolRequest**](GetRawMempoolRequest.md)| Raw mempool request parameters | 
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**GetRawMempoolResponse**](GetRawMempoolResponse.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 <a name="testMempoolAccept"></a>
 # **testMempoolAccept**
-> InlineResponse20020 testMempoolAccept(body)
+> TestMempoolAcceptResponse testMempoolAccept(body)
 
 Test mempool accept
 
@@ -225,7 +225,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.MempoolApi();
-let body = new SatstreamJavascriptSdk.RequestsTestMempoolAcceptRequest(); // RequestsTestMempoolAcceptRequest | Raw transactions to test
+let body = new SatstreamJavascriptSdk.TestMempoolAcceptRequest(); // TestMempoolAcceptRequest | Raw transactions to test
 
 apiInstance.testMempoolAccept(body, (error, data, response) => {
   if (error) {
@@ -240,11 +240,11 @@ apiInstance.testMempoolAccept(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsTestMempoolAcceptRequest**](RequestsTestMempoolAcceptRequest.md)| Raw transactions to test | 
+ **body** | [**TestMempoolAcceptRequest**](TestMempoolAcceptRequest.md)| Raw transactions to test | 
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**TestMempoolAcceptResponse**](TestMempoolAcceptResponse.md)
 
 ### Authorization
 

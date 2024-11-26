@@ -19,7 +19,7 @@ import ScriptSig from './ScriptSig';
 /**
  * The BlockVin3 model module.
  * @module model/BlockVin3
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class BlockVin3 {
   /**

@@ -14,19 +14,22 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse2001 from '../model/InlineResponse2001';
-import InlineResponse20024 from '../model/InlineResponse20024';
-import InlineResponse20025 from '../model/InlineResponse20025';
-import RequestsAnalyzePSBTRequest from '../model/RequestsAnalyzePSBTRequest';
-import RequestsCombinePSBTRequest from '../model/RequestsCombinePSBTRequest';
-import RequestsCreatePSBTRequest from '../model/RequestsCreatePSBTRequest';
-import RequestsJoinPSBTsRequest from '../model/RequestsJoinPSBTsRequest';
+import AnalyzePSBTRequest from '../model/AnalyzePSBTRequest';
+import AnalyzePSBTResponse from '../model/AnalyzePSBTResponse';
+import CombinePSBTRequest from '../model/CombinePSBTRequest';
+import CombinePSBTResponse from '../model/CombinePSBTResponse';
+import CreatePSBTRequest from '../model/CreatePSBTRequest';
+import CreatePSBTResponse from '../model/CreatePSBTResponse';
+import DecodePSBTRequest from '../model/DecodePSBTRequest';
+import DecodePSBTResponse from '../model/DecodePSBTResponse';
+import JoinPSBTsRequest from '../model/JoinPSBTsRequest';
+import JoinPSBTsResponse from '../model/JoinPSBTsResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * PSBTs service.
 * @module api/PSBTsApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class PSBTsApi {
 
@@ -46,14 +49,14 @@ export default class PSBTsApi {
      * Callback function to receive the result of the analyzePsbt operation.
      * @callback moduleapi/PSBTsApi~analyzePsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20024{ data The data returned by the service call.
+     * @param {module:model/AnalyzePSBTResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Analyze PSBT
      * Analyzes and provides information about the current status of a PSBT and its inputs
-     * @param {module:model/RequestsAnalyzePSBTRequest} body PSBT to analyze
+     * @param {module:model/AnalyzePSBTRequest} body PSBT to analyze
      * @param {module:api/PSBTsApi~analyzePsbtCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -81,7 +84,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20024;
+      let returnType = AnalyzePSBTResponse;
 
       return this.apiClient.callApi(
         '/psbt/analyze', 'POST',
@@ -93,14 +96,14 @@ export default class PSBTsApi {
      * Callback function to receive the result of the combinePsbt operation.
      * @callback moduleapi/PSBTsApi~combinePsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
+     * @param {module:model/CombinePSBTResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Combine PSBTs
      * Combines multiple partially signed Bitcoin transactions into one transaction
-     * @param {module:model/RequestsCombinePSBTRequest} body Array of PSBTs to combine
+     * @param {module:model/CombinePSBTRequest} body Array of PSBTs to combine
      * @param {module:api/PSBTsApi~combinePsbtCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -128,7 +131,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = CombinePSBTResponse;
 
       return this.apiClient.callApi(
         '/psbt/combine', 'POST',
@@ -140,14 +143,14 @@ export default class PSBTsApi {
      * Callback function to receive the result of the createPsbt operation.
      * @callback moduleapi/PSBTsApi~createPsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
+     * @param {module:model/CreatePSBTResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Create PSBT
      * Creates a transaction in the Partially Signed Transaction format. Implements the Creator role.
-     * @param {module:model/RequestsCreatePSBTRequest} body Transaction parameters
+     * @param {module:model/CreatePSBTRequest} body Transaction parameters
      * @param {module:api/PSBTsApi~createPsbtCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -175,7 +178,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = CreatePSBTResponse;
 
       return this.apiClient.callApi(
         '/psbt/create', 'POST',
@@ -187,14 +190,14 @@ export default class PSBTsApi {
      * Callback function to receive the result of the decodePsbt operation.
      * @callback moduleapi/PSBTsApi~decodePsbtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20025{ data The data returned by the service call.
+     * @param {module:model/DecodePSBTResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Decode PSBT
      * Return a JSON object representing the serialized, base64-encoded partially signed Bitcoin transaction.
-     * @param {module:model/RequestsAnalyzePSBTRequest} body PSBT to decode
+     * @param {module:model/DecodePSBTRequest} body PSBT to decode
      * @param {module:api/PSBTsApi~decodePsbtCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -222,7 +225,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20025;
+      let returnType = DecodePSBTResponse;
 
       return this.apiClient.callApi(
         '/psbt/decode', 'POST',
@@ -234,14 +237,14 @@ export default class PSBTsApi {
      * Callback function to receive the result of the joinPsbts operation.
      * @callback moduleapi/PSBTsApi~joinPsbtsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001{ data The data returned by the service call.
+     * @param {module:model/JoinPSBTsResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Join PSBTs
      * Joins multiple distinct PSBTs with different inputs and outputs into one PSBT
-     * @param {module:model/RequestsJoinPSBTsRequest} body PSBTs to join
+     * @param {module:model/JoinPSBTsRequest} body PSBTs to join
      * @param {module:api/PSBTsApi~joinPsbtsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
@@ -269,7 +272,7 @@ export default class PSBTsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = JoinPSBTsResponse;
 
       return this.apiClient.callApi(
         '/psbt/join', 'POST',

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BlockStats model module.
  * @module model/BlockStats
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class BlockStats {
   /**

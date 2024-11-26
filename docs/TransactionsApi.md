@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 <a name="combineRawTransaction"></a>
 # **combineRawTransaction**
-> InlineResponse2001 combineRawTransaction(body)
+> CombineRawTransactionResponse combineRawTransaction(body)
 
 Combine Raw Transactions
 
@@ -39,7 +39,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.RequestsCombineRawTransactionRequest(); // RequestsCombineRawTransactionRequest | Array of hex-encoded raw transactions
+let body = new SatstreamJavascriptSdk.TransactionCombineRawTransactionRequest(); // TransactionCombineRawTransactionRequest | Array of hex-encoded raw transactions
 
 apiInstance.combineRawTransaction(body, (error, data, response) => {
   if (error) {
@@ -54,11 +54,11 @@ apiInstance.combineRawTransaction(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsCombineRawTransactionRequest**](RequestsCombineRawTransactionRequest.md)| Array of hex-encoded raw transactions | 
+ **body** | [**TransactionCombineRawTransactionRequest**](TransactionCombineRawTransactionRequest.md)| Array of hex-encoded raw transactions | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**CombineRawTransactionResponse**](CombineRawTransactionResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 <a name="convertToPsbt"></a>
 # **convertToPsbt**
-> InlineResponse2001 convertToPsbt(body)
+> ConvertToPSBTResponse convertToPsbt(body)
 
 Convert Raw Transaction to PSBT
 
@@ -89,7 +89,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.RequestsConvertToPSBTRequest(); // RequestsConvertToPSBTRequest | Raw transaction conversion parameters
+let body = new SatstreamJavascriptSdk.TransactionConvertToPSBTRequest(); // TransactionConvertToPSBTRequest | Raw transaction conversion parameters
 
 apiInstance.convertToPsbt(body, (error, data, response) => {
   if (error) {
@@ -104,11 +104,11 @@ apiInstance.convertToPsbt(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsConvertToPSBTRequest**](RequestsConvertToPSBTRequest.md)| Raw transaction conversion parameters | 
+ **body** | [**TransactionConvertToPSBTRequest**](TransactionConvertToPSBTRequest.md)| Raw transaction conversion parameters | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**ConvertToPSBTResponse**](ConvertToPSBTResponse.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 <a name="createRawTransaction"></a>
 # **createRawTransaction**
-> InlineResponse2001 createRawTransaction(body)
+> CreateRawTransactionResponse createRawTransaction(body)
 
 Create Raw Transaction
 
@@ -139,7 +139,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.RequestsCreateRawTxRequest(); // RequestsCreateRawTxRequest | Transaction parameters
+let body = new SatstreamJavascriptSdk.TransactionCreateRawTxRequest(); // TransactionCreateRawTxRequest | Transaction parameters
 
 apiInstance.createRawTransaction(body, (error, data, response) => {
   if (error) {
@@ -154,11 +154,11 @@ apiInstance.createRawTransaction(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsCreateRawTxRequest**](RequestsCreateRawTxRequest.md)| Transaction parameters | 
+ **body** | [**TransactionCreateRawTxRequest**](TransactionCreateRawTxRequest.md)| Transaction parameters | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**CreateRawTransactionResponse**](CreateRawTransactionResponse.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 <a name="decodeTx"></a>
 # **decodeTx**
-> InlineResponse20036 decodeTx(txid)
+> DecodeTransactionResponse decodeTx(txid)
 
 Decode a transaction
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**DecodeTransactionResponse**](DecodeTransactionResponse.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 <a name="getRawTransactionDecoded"></a>
 # **getRawTransactionDecoded**
-> InlineResponse20037 getRawTransactionDecoded(txid)
+> GetRawTransactionDecodedResponse getRawTransactionDecoded(txid)
 
 Get raw transaction (verbosity 1)
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**GetRawTransactionDecodedResponse**](GetRawTransactionDecodedResponse.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 <a name="getRawTransactionHex"></a>
 # **getRawTransactionHex**
-> InlineResponse2001 getRawTransactionHex(txid)
+> GetRawTransactionHexResponse getRawTransactionHex(txid)
 
 Get raw transaction (verbosity 0)
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetRawTransactionHexResponse**](GetRawTransactionHexResponse.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 <a name="getRawTransactionPrevout"></a>
 # **getRawTransactionPrevout**
-> InlineResponse20038 getRawTransactionPrevout(txid)
+> GetRawTransactionPrevoutResponse getRawTransactionPrevout(txid)
 
 Get raw transaction (verbosity 2)
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**GetRawTransactionPrevoutResponse**](GetRawTransactionPrevoutResponse.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 <a name="getTransaction"></a>
 # **getTransaction**
-> InlineResponse20035 getTransaction(txid)
+> GetTransactionResponse getTransaction(txid)
 
 Get transaction info
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**GetTransactionResponse**](GetTransactionResponse.md)
 
 ### Authorization
 
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxOut"></a>
 # **getTxOut**
-> InlineResponse20031 getTxOut(body)
+> GetTxOutResponse getTxOut(body)
 
 Get transaction output
 
@@ -439,7 +439,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.RequestsGetTxOutRequest(); // RequestsGetTxOutRequest | Transaction output request parameters
+let body = new SatstreamJavascriptSdk.TransactionGetTxOutRequest(); // TransactionGetTxOutRequest | Transaction output request parameters
 
 apiInstance.getTxOut(body, (error, data, response) => {
   if (error) {
@@ -454,11 +454,11 @@ apiInstance.getTxOut(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetTxOutRequest**](RequestsGetTxOutRequest.md)| Transaction output request parameters | 
+ **body** | [**TransactionGetTxOutRequest**](TransactionGetTxOutRequest.md)| Transaction output request parameters | 
 
 ### Return type
 
-[**InlineResponse20031**](InlineResponse20031.md)
+[**GetTxOutResponse**](GetTxOutResponse.md)
 
 ### Authorization
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxOutProof"></a>
 # **getTxOutProof**
-> InlineResponse2001 getTxOutProof(body)
+> GetTxOutProofResponse getTxOutProof(body)
 
 Get transaction output proof
 
@@ -489,7 +489,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.RequestsGetTxOutProofRequest(); // RequestsGetTxOutProofRequest | Transaction proof request parameters
+let body = new SatstreamJavascriptSdk.TransactionGetTxOutProofRequest(); // TransactionGetTxOutProofRequest | Transaction proof request parameters
 
 apiInstance.getTxOutProof(body, (error, data, response) => {
   if (error) {
@@ -504,11 +504,11 @@ apiInstance.getTxOutProof(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetTxOutProofRequest**](RequestsGetTxOutProofRequest.md)| Transaction proof request parameters | 
+ **body** | [**TransactionGetTxOutProofRequest**](TransactionGetTxOutProofRequest.md)| Transaction proof request parameters | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetTxOutProofResponse**](GetTxOutProofResponse.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxOutSetInfo"></a>
 # **getTxOutSetInfo**
-> InlineResponse20032 getTxOutSetInfo(body)
+> InlineResponse2002 getTxOutSetInfo(body)
 
 Get transaction output set information
 
@@ -539,7 +539,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.RequestsGetTxOutSetInfoRequest(); // RequestsGetTxOutSetInfoRequest | UTXO set info request parameters
+let body = new SatstreamJavascriptSdk.TransactionGetTxOutSetInfoRequest(); // TransactionGetTxOutSetInfoRequest | UTXO set info request parameters
 
 apiInstance.getTxOutSetInfo(body, (error, data, response) => {
   if (error) {
@@ -554,11 +554,11 @@ apiInstance.getTxOutSetInfo(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetTxOutSetInfoRequest**](RequestsGetTxOutSetInfoRequest.md)| UTXO set info request parameters | 
+ **body** | [**TransactionGetTxOutSetInfoRequest**](TransactionGetTxOutSetInfoRequest.md)| UTXO set info request parameters | 
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 
 <a name="getTxSpendingPrevout"></a>
 # **getTxSpendingPrevout**
-> InlineResponse20034 getTxSpendingPrevout(body)
+> GetTxSpendingPrevoutResponse getTxSpendingPrevout(body)
 
 Get transaction spending prevout
 
@@ -589,7 +589,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.RequestsGetTxSpendingPrevoutRequest(); // RequestsGetTxSpendingPrevoutRequest | Transaction spending prevout request
+let body = new SatstreamJavascriptSdk.TransactionGetTxSpendingPrevoutRequest(); // TransactionGetTxSpendingPrevoutRequest | Transaction spending prevout request
 
 apiInstance.getTxSpendingPrevout(body, (error, data, response) => {
   if (error) {
@@ -604,11 +604,11 @@ apiInstance.getTxSpendingPrevout(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsGetTxSpendingPrevoutRequest**](RequestsGetTxSpendingPrevoutRequest.md)| Transaction spending prevout request | 
+ **body** | [**TransactionGetTxSpendingPrevoutRequest**](TransactionGetTxSpendingPrevoutRequest.md)| Transaction spending prevout request | 
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**GetTxSpendingPrevoutResponse**](GetTxSpendingPrevoutResponse.md)
 
 ### Authorization
 
@@ -621,7 +621,7 @@ Name | Type | Description  | Notes
 
 <a name="sendRawTransaction"></a>
 # **sendRawTransaction**
-> InlineResponse2001 sendRawTransaction(body)
+> SendRawTransactionResponse sendRawTransaction(body)
 
 Send raw transaction
 
@@ -639,7 +639,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.RequestsSendRawTransactionRequest(); // RequestsSendRawTransactionRequest | Raw transaction to send
+let body = new SatstreamJavascriptSdk.TransactionSendRawTransactionRequest(); // TransactionSendRawTransactionRequest | Raw transaction to send
 
 apiInstance.sendRawTransaction(body, (error, data, response) => {
   if (error) {
@@ -654,11 +654,11 @@ apiInstance.sendRawTransaction(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsSendRawTransactionRequest**](RequestsSendRawTransactionRequest.md)| Raw transaction to send | 
+ **body** | [**TransactionSendRawTransactionRequest**](TransactionSendRawTransactionRequest.md)| Raw transaction to send | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**SendRawTransactionResponse**](SendRawTransactionResponse.md)
 
 ### Authorization
 
@@ -671,7 +671,7 @@ Name | Type | Description  | Notes
 
 <a name="verifyTxOutProof"></a>
 # **verifyTxOutProof**
-> InlineResponse20033 verifyTxOutProof(body)
+> VerifyTxOutProofResponse verifyTxOutProof(body)
 
 Verify transaction output proof
 
@@ -689,7 +689,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.RequestsVerifyTxOutProofRequest(); // RequestsVerifyTxOutProofRequest | Proof to verify
+let body = new SatstreamJavascriptSdk.TransactionVerifyTxOutProofRequest(); // TransactionVerifyTxOutProofRequest | Proof to verify
 
 apiInstance.verifyTxOutProof(body, (error, data, response) => {
   if (error) {
@@ -704,11 +704,11 @@ apiInstance.verifyTxOutProof(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsVerifyTxOutProofRequest**](RequestsVerifyTxOutProofRequest.md)| Proof to verify | 
+ **body** | [**TransactionVerifyTxOutProofRequest**](TransactionVerifyTxOutProofRequest.md)| Proof to verify | 
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**VerifyTxOutProofResponse**](VerifyTxOutProofResponse.md)
 
 ### Authorization
 

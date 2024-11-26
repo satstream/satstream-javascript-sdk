@@ -19,7 +19,7 @@ import OutputResponse from './OutputResponse';
 /**
  * The GetAddressUTXOsResponse model module.
  * @module model/GetAddressUTXOsResponse
- * @version 1.0.23
+ * @version 1.0.25
  */
 export default class GetAddressUTXOsResponse {
   /**

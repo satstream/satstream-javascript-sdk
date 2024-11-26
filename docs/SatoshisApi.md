@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="getSatoshi"></a>
 # **getSatoshi**
-> InlineResponse20028 getSatoshi(_number)
+> GetSatoshiResponse getSatoshi(_number)
 
 Get satoshi info
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**GetSatoshiResponse**](GetSatoshiResponse.md)
 
 ### Authorization
 

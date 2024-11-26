@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="decodeScript"></a>
 # **decodeScript**
-> InlineResponse20029 decodeScript(body)
+> DecodeScriptResponse decodeScript(body)
 
 Decode Script
 
@@ -26,7 +26,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.ScriptsApi();
-let body = new SatstreamJavascriptSdk.RequestsDecodeScriptRequest(); // RequestsDecodeScriptRequest | Script to decode
+let body = new SatstreamJavascriptSdk.DecodeScriptRequest(); // DecodeScriptRequest | Script to decode
 
 apiInstance.decodeScript(body, (error, data, response) => {
   if (error) {
@@ -41,11 +41,11 @@ apiInstance.decodeScript(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RequestsDecodeScriptRequest**](RequestsDecodeScriptRequest.md)| Script to decode | 
+ **body** | [**DecodeScriptRequest**](DecodeScriptRequest.md)| Script to decode | 
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**DecodeScriptResponse**](DecodeScriptResponse.md)
 
 ### Authorization
 

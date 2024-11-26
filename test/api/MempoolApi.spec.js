@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20016);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetMempoolAncestorsResponse);
 
             done();
           });
@@ -66,7 +66,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20017);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetMempoolDescendantsResponse);
 
             done();
           });
@@ -86,7 +86,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20018);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetMempoolInfoResponse);
 
             done();
           });
@@ -106,7 +106,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20019);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetRawMempoolResponse);
 
             done();
           });
@@ -126,7 +126,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20020);
+            expect(data).to.be.a(SatstreamJavascriptSdk.TestMempoolAcceptResponse);
 
             done();
           });

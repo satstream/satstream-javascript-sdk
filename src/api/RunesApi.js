@@ -14,14 +14,14 @@
  *
  */
 import ApiClient from "../ApiClient";
-import InlineResponse20026 from '../model/InlineResponse20026';
-import InlineResponse20027 from '../model/InlineResponse20027';
+import GetLatestRunesResponse from '../model/GetLatestRunesResponse';
+import GetRuneResponse from '../model/GetRuneResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Runes service.
 * @module api/RunesApi
-* @version 1.0.23
+* @version 1.0.25
 */
 export default class RunesApi {
 
@@ -41,7 +41,7 @@ export default class RunesApi {
      * Callback function to receive the result of the getLatestRunes operation.
      * @callback moduleapi/RunesApi~getLatestRunesCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20027{ data The data returned by the service call.
+     * @param {module:model/GetLatestRunesResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -71,7 +71,7 @@ export default class RunesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20027;
+      let returnType = GetLatestRunesResponse;
 
       return this.apiClient.callApi(
         '/runes', 'GET',
@@ -83,7 +83,7 @@ export default class RunesApi {
      * Callback function to receive the result of the getLatestRunesPage operation.
      * @callback moduleapi/RunesApi~getLatestRunesPageCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20027{ data The data returned by the service call.
+     * @param {module:model/GetLatestRunesResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -118,7 +118,7 @@ export default class RunesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20027;
+      let returnType = GetLatestRunesResponse;
 
       return this.apiClient.callApi(
         '/runes/{page}', 'GET',
@@ -130,7 +130,7 @@ export default class RunesApi {
      * Callback function to receive the result of the getRune operation.
      * @callback moduleapi/RunesApi~getRuneCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20026{ data The data returned by the service call.
+     * @param {module:model/GetRuneResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -165,7 +165,7 @@ export default class RunesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse20026;
+      let returnType = GetRuneResponse;
 
       return this.apiClient.callApi(
         '/rune/{rune_name}', 'GET',

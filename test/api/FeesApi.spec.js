@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20011);
+            expect(data).to.be.a(SatstreamJavascriptSdk.EstimateRawFeeResponse);
 
             done();
           });
@@ -66,7 +66,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20012);
+            expect(data).to.be.a(SatstreamJavascriptSdk.EstimateSmartFeeResponse);
 
             done();
           });
