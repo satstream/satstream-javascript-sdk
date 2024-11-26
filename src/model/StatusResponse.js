@@ -19,7 +19,7 @@ import Duration from './Duration';
 /**
  * The StatusResponse model module.
  * @module model/StatusResponse
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class StatusResponse {
   /**

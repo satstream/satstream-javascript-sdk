@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsCombinePSBTRequest model module.
  * @module model/RequestsCombinePSBTRequest
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class RequestsCombinePSBTRequest {
   /**

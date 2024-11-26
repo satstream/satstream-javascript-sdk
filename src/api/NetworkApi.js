@@ -22,7 +22,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Network service.
 * @module api/NetworkApi
-* @version 1.0.21
+* @version 1.0.22
 */
 export default class NetworkApi {
 

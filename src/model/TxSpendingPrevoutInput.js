@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TxSpendingPrevoutInput model module.
  * @module model/TxSpendingPrevoutInput
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class TxSpendingPrevoutInput {
   /**

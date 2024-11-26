@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsDecodeScriptRequest model module.
  * @module model/RequestsDecodeScriptRequest
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class RequestsDecodeScriptRequest {
   /**

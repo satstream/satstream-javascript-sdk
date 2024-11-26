@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RuneListEntry model module.
  * @module model/RuneListEntry
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class RuneListEntry {
   /**

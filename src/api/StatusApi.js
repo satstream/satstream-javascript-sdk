@@ -20,7 +20,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Status service.
 * @module api/StatusApi
-* @version 1.0.21
+* @version 1.0.22
 */
 export default class StatusApi {
 

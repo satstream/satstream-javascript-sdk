@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsAnalyzePSBTRequest model module.
  * @module model/RequestsAnalyzePSBTRequest
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class RequestsAnalyzePSBTRequest {
   /**

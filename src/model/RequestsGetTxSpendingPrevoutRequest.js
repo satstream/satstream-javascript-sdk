@@ -19,7 +19,7 @@ import TxSpendingPrevoutInput from './TxSpendingPrevoutInput';
 /**
  * The RequestsGetTxSpendingPrevoutRequest model module.
  * @module model/RequestsGetTxSpendingPrevoutRequest
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class RequestsGetTxSpendingPrevoutRequest {
   /**

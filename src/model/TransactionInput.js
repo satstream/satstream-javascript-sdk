@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionInput model module.
  * @module model/TransactionInput
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class TransactionInput {
   /**

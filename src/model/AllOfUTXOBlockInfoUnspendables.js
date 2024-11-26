@@ -19,7 +19,7 @@ import UTXOUnspendables from './UTXOUnspendables';
 /**
  * The AllOfUTXOBlockInfoUnspendables model module.
  * @module model/AllOfUTXOBlockInfoUnspendables
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class AllOfUTXOBlockInfoUnspendables extends UTXOUnspendables {
   /**

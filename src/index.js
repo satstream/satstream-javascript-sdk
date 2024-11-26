@@ -230,7 +230,7 @@ import TransactionsApi from './api/TransactionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.21
+* @version 1.0.22
 */
 export {
     /**

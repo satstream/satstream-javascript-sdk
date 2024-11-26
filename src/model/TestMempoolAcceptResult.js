@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestMempoolAcceptResult model module.
  * @module model/TestMempoolAcceptResult
- * @version 1.0.21
+ * @version 1.0.22
  */
 export default class TestMempoolAcceptResult {
   /**

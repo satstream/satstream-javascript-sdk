@@ -20,7 +20,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Satoshis service.
 * @module api/SatoshisApi
-* @version 1.0.21
+* @version 1.0.22
 */
 export default class SatoshisApi {
 
