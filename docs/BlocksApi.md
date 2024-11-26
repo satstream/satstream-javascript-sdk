@@ -4,27 +4,31 @@ All URIs are relative to *https://api.satstream.io/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getBlockByHash**](BlocksApi.md#getBlockByHash) | **GET** /blocks/hash/{hash} | Get block by hash
-[**getBlockInfo**](BlocksApi.md#getBlockInfo) | **GET** /blocks/{height} | Get block info
-[**getBlockTransactions**](BlocksApi.md#getBlockTransactions) | **GET** /blocks/{height}/transactions | Get block transactions
-[**getCurrentBlockHeight**](BlocksApi.md#getCurrentBlockHeight) | **GET** /blocks/current-height | Get current block height
+[**getBlockByHash**](BlocksApi.md#getBlockByHash) | **GET** /block/hash/{block_hash} | Get block info by hash
 
 <a name="getBlockByHash"></a>
 # **getBlockByHash**
-> ResponsesGetBlockByHash getBlockByHash(hash)
+> GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse getBlockByHash(blockHash)
 
-Get block by hash
+Get block info by hash
 
-Get information about a specific block by its hash
+Get detailed information about a specific block by hash
 
 ### Example
 ```javascript
 import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.BlocksApi();
-let hash = "hash_example"; // String | Block hash
+let blockHash = "blockHash_example"; // String | Block Hash
 
-apiInstance.getBlockByHash(hash, (error, data, response) => {
+apiInstance.getBlockByHash(blockHash, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -37,139 +41,15 @@ apiInstance.getBlockByHash(hash, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hash** | **String**| Block hash | 
+ **blockHash** | **String**| Block Hash | 
 
 ### Return type
 
-[**ResponsesGetBlockByHash**](ResponsesGetBlockByHash.md)
+[**GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse**](GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse.md)
 
 ### Authorization
 
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getBlockInfo"></a>
-# **getBlockInfo**
-> ResponsesGetBlockInfo getBlockInfo(height)
-
-Get block info
-
-Get information about a specific block by height
-
-### Example
-```javascript
-import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
-
-let apiInstance = new SatstreamJavascriptSdk.BlocksApi();
-let height = 56; // Number | Block height
-
-apiInstance.getBlockInfo(height, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **height** | **Number**| Block height | 
-
-### Return type
-
-[**ResponsesGetBlockInfo**](ResponsesGetBlockInfo.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getBlockTransactions"></a>
-# **getBlockTransactions**
-> ResponsesGetBlockTransactions getBlockTransactions(height)
-
-Get block transactions
-
-Get transactions for a specific block height
-
-### Example
-```javascript
-import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
-
-let apiInstance = new SatstreamJavascriptSdk.BlocksApi();
-let height = 56; // Number | Block height
-
-apiInstance.getBlockTransactions(height, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **height** | **Number**| Block height | 
-
-### Return type
-
-[**ResponsesGetBlockTransactions**](ResponsesGetBlockTransactions.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getCurrentBlockHeight"></a>
-# **getCurrentBlockHeight**
-> ResponsesGetBlockHeight getCurrentBlockHeight()
-
-Get current block height
-
-Get the current block height of the Bitcoin blockchain
-
-### Example
-```javascript
-import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
-
-let apiInstance = new SatstreamJavascriptSdk.BlocksApi();
-apiInstance.getCurrentBlockHeight((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ResponsesGetBlockHeight**](ResponsesGetBlockHeight.md)
-
-### Authorization
-
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

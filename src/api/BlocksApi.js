@@ -14,16 +14,13 @@
  *
  */
 import ApiClient from "../ApiClient";
-import GithubComSatstreamSsApiServerApiBlocksResponsesError from '../model/GithubComSatstreamSsApiServerApiBlocksResponsesError';
-import ResponsesGetBlockByHash from '../model/ResponsesGetBlockByHash';
-import ResponsesGetBlockHeight from '../model/ResponsesGetBlockHeight';
-import ResponsesGetBlockInfo from '../model/ResponsesGetBlockInfo';
-import ResponsesGetBlockTransactions from '../model/ResponsesGetBlockTransactions';
+import GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse from '../model/GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse';
+import GithubComSatstreamSsApiServerApiBlockResponsesError from '../model/GithubComSatstreamSsApiServerApiBlockResponsesError';
 
 /**
 * Blocks service.
 * @module api/BlocksApi
-* @version 1.0.17
+* @version 1.0.19
 */
 export default class BlocksApi {
 
@@ -43,27 +40,27 @@ export default class BlocksApi {
      * Callback function to receive the result of the getBlockByHash operation.
      * @callback moduleapi/BlocksApi~getBlockByHashCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesGetBlockByHash{ data The data returned by the service call.
+     * @param {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get block by hash
-     * Get information about a specific block by its hash
-     * @param {String} hash Block hash
+     * Get block info by hash
+     * Get detailed information about a specific block by hash
+     * @param {String} blockHash Block Hash
      * @param {module:api/BlocksApi~getBlockByHashCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getBlockByHash(hash, callback) {
+    getBlockByHash(blockHash, callback) {
       
       let postBody = null;
-      // verify the required parameter 'hash' is set
-      if (hash === undefined || hash === null) {
-        throw new Error("Missing the required parameter 'hash' when calling getBlockByHash");
+      // verify the required parameter 'blockHash' is set
+      if (blockHash === undefined || blockHash === null) {
+        throw new Error("Missing the required parameter 'blockHash' when calling getBlockByHash");
       }
 
       let pathParams = {
-        'hash': hash
+        'block_hash': blockHash
       };
       let queryParams = {
         
@@ -75,149 +72,13 @@ export default class BlocksApi {
         
       };
 
-      let authNames = [];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ResponsesGetBlockByHash;
+      let returnType = GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse;
 
       return this.apiClient.callApi(
-        '/blocks/hash/{hash}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getBlockInfo operation.
-     * @callback moduleapi/BlocksApi~getBlockInfoCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesGetBlockInfo{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get block info
-     * Get information about a specific block by height
-     * @param {Number} height Block height
-     * @param {module:api/BlocksApi~getBlockInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getBlockInfo(height, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'height' is set
-      if (height === undefined || height === null) {
-        throw new Error("Missing the required parameter 'height' when calling getBlockInfo");
-      }
-
-      let pathParams = {
-        'height': height
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ResponsesGetBlockInfo;
-
-      return this.apiClient.callApi(
-        '/blocks/{height}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getBlockTransactions operation.
-     * @callback moduleapi/BlocksApi~getBlockTransactionsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesGetBlockTransactions{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get block transactions
-     * Get transactions for a specific block height
-     * @param {Number} height Block height
-     * @param {module:api/BlocksApi~getBlockTransactionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getBlockTransactions(height, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'height' is set
-      if (height === undefined || height === null) {
-        throw new Error("Missing the required parameter 'height' when calling getBlockTransactions");
-      }
-
-      let pathParams = {
-        'height': height
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ResponsesGetBlockTransactions;
-
-      return this.apiClient.callApi(
-        '/blocks/{height}/transactions', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getCurrentBlockHeight operation.
-     * @callback moduleapi/BlocksApi~getCurrentBlockHeightCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesGetBlockHeight{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get current block height
-     * Get the current block height of the Bitcoin blockchain
-     * @param {module:api/BlocksApi~getCurrentBlockHeightCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getCurrentBlockHeight(callback) {
-      
-      let postBody = null;
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ResponsesGetBlockHeight;
-
-      return this.apiClient.callApi(
-        '/blocks/current-height', 'GET',
+        '/block/hash/{block_hash}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

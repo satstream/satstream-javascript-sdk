@@ -40,73 +40,13 @@
           // TODO: uncomment, update parameter values for getBlockByHash call and complete the assertions
           /*
 
-          instance.getBlockByHash(hash, function(error, data, response) {
+          instance.getBlockByHash(blockHash, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockByHash);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getBlockInfo', function() {
-        it('should call getBlockInfo successfully', function(done) {
-          // TODO: uncomment, update parameter values for getBlockInfo call and complete the assertions
-          /*
-
-          instance.getBlockInfo(height, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockInfo);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getBlockTransactions', function() {
-        it('should call getBlockTransactions successfully', function(done) {
-          // TODO: uncomment, update parameter values for getBlockTransactions call and complete the assertions
-          /*
-
-          instance.getBlockTransactions(height, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockTransactions);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getCurrentBlockHeight', function() {
-        it('should call getCurrentBlockHeight successfully', function(done) {
-          // TODO: uncomment getCurrentBlockHeight call and complete the assertions
-          /*
-
-          instance.getCurrentBlockHeight(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetBlockHeight);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse);
 
             done();
           });
