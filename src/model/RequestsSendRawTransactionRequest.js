@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsSendRawTransactionRequest model module.
  * @module model/RequestsSendRawTransactionRequest
- * @version 1.0.19
+ * @version 1.0.20
  */
 export default class RequestsSendRawTransactionRequest {
   /**

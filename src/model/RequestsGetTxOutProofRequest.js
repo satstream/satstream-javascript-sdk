@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsGetTxOutProofRequest model module.
  * @module model/RequestsGetTxOutProofRequest
- * @version 1.0.19
+ * @version 1.0.20
  */
 export default class RequestsGetTxOutProofRequest {
   /**

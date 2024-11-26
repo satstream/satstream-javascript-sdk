@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsGetMempoolAncestorsRequest model module.
  * @module model/RequestsGetMempoolAncestorsRequest
- * @version 1.0.19
+ * @version 1.0.20
  */
 export default class RequestsGetMempoolAncestorsRequest {
   /**

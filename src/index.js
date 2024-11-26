@@ -14,149 +14,127 @@
  *
  */
 import ApiClient from './ApiClient';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin2ScriptSig from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin2ScriptSig';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin3Prevout from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin3Prevout';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputFinalScriptsig from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputFinalScriptsig';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputNonWitnessUtxo from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputNonWitnessUtxo';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputRedeemScript from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputRedeemScript';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessScript from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessScript';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessUtxo from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessUtxo';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputRedeemScript from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputRedeemScript';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputWitnessScript from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputWitnessScript';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTTx from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTTx';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedScriptSegwit from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedScriptSegwit';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeMedium from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeMedium';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelLong from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelLong';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelShort from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelShort';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimateFail from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimateFail';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimatePass from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimatePass';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxoScriptPubKey from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxoScriptPubKey';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResultFees from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResultFees';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliTxOutScriptPubKey from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliTxOutScriptPubKey';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfoUnspendables from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfoUnspendables';
-import AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOSetInfoBlockInfo from './model/AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOSetInfoBlockInfo';
-import AllOfgithubComSatstreamSsUtilsOrdServerResponsesRuneListEntryModel1 from './model/AllOfgithubComSatstreamSsUtilsOrdServerResponsesRuneListEntryModel1';
-import AllOfresponsesDecodePSBTResponseData from './model/AllOfresponsesDecodePSBTResponseData';
-import AllOfresponsesDecodeScriptResponseData from './model/AllOfresponsesDecodeScriptResponseData';
-import AllOfresponsesEstimateRawFeeResponseData from './model/AllOfresponsesEstimateRawFeeResponseData';
-import AllOfresponsesEstimateSmartFeeResponseData from './model/AllOfresponsesEstimateSmartFeeResponseData';
-import AllOfresponsesGetBlockStatsResponseData from './model/AllOfresponsesGetBlockStatsResponseData';
-import AllOfresponsesGetBlockchainInfoResponseData from './model/AllOfresponsesGetBlockchainInfoResponseData';
-import AllOfresponsesGetChainTxStatsResponseData from './model/AllOfresponsesGetChainTxStatsResponseData';
-import AllOfresponsesGetMempoolInfoResponseData from './model/AllOfresponsesGetMempoolInfoResponseData';
-import AllOfresponsesGetMiningInfoResponseData from './model/AllOfresponsesGetMiningInfoResponseData';
-import AllOfresponsesGetTxOutResponseData from './model/AllOfresponsesGetTxOutResponseData';
-import AllOfresponsesGetTxOutSetInfoResponseData from './model/AllOfresponsesGetTxOutSetInfoResponseData';
-import AllOfresponsesValidateAddressResponseData from './model/AllOfresponsesValidateAddressResponseData';
-import GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse from './model/GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse';
-import GithubComSatstreamSsApiServerApiAddressResponsesError from './model/GithubComSatstreamSsApiServerApiAddressResponsesError';
-import GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse from './model/GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse from './model/GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse from './model/GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse from './model/GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse from './model/GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesError from './model/GithubComSatstreamSsApiServerApiBlockResponsesError';
-import GithubComSatstreamSsApiServerApiFeeResponsesError from './model/GithubComSatstreamSsApiServerApiFeeResponsesError';
-import GithubComSatstreamSsApiServerApiInscriptionResponsesError from './model/GithubComSatstreamSsApiServerApiInscriptionResponsesError';
-import GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse from './model/GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse';
-import GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse from './model/GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse';
-import GithubComSatstreamSsApiServerApiMempoolResponsesError from './model/GithubComSatstreamSsApiServerApiMempoolResponsesError';
-import GithubComSatstreamSsApiServerApiMiningResponsesError from './model/GithubComSatstreamSsApiServerApiMiningResponsesError';
-import GithubComSatstreamSsApiServerApiNetworkResponsesError from './model/GithubComSatstreamSsApiServerApiNetworkResponsesError';
-import GithubComSatstreamSsApiServerApiOutputResponsesError from './model/GithubComSatstreamSsApiServerApiOutputResponsesError';
-import GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTInput from './model/GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTInput';
-import GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTOutput from './model/GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTOutput';
-import GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTRequest from './model/GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTRequest';
-import GithubComSatstreamSsApiServerApiPsbtResponsesError from './model/GithubComSatstreamSsApiServerApiPsbtResponsesError';
-import GithubComSatstreamSsApiServerApiRuneResponsesError from './model/GithubComSatstreamSsApiServerApiRuneResponsesError';
-import GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse from './model/GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse';
-import GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse from './model/GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse';
-import GithubComSatstreamSsApiServerApiSatoshiResponsesError from './model/GithubComSatstreamSsApiServerApiSatoshiResponsesError';
-import GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse from './model/GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse';
-import GithubComSatstreamSsApiServerApiScriptResponsesError from './model/GithubComSatstreamSsApiServerApiScriptResponsesError';
-import GithubComSatstreamSsApiServerApiStatusResponsesError from './model/GithubComSatstreamSsApiServerApiStatusResponsesError';
-import GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse from './model/GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse';
-import GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTInput from './model/GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTInput';
-import GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTOutput from './model/GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTOutput';
-import GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTRequest from './model/GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTRequest';
-import GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse from './model/GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse';
-import GithubComSatstreamSsApiServerApiTransactionResponsesError from './model/GithubComSatstreamSsApiServerApiTransactionResponsesError';
-import GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse from './model/GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse';
-import GithubComSatstreamSsUtilsBitcoinCliBip32Deriv from './model/GithubComSatstreamSsUtilsBitcoinCliBip32Deriv';
-import GithubComSatstreamSsUtilsBitcoinCliBlock1 from './model/GithubComSatstreamSsUtilsBitcoinCliBlock1';
-import GithubComSatstreamSsUtilsBitcoinCliBlock2 from './model/GithubComSatstreamSsUtilsBitcoinCliBlock2';
-import GithubComSatstreamSsUtilsBitcoinCliBlock3 from './model/GithubComSatstreamSsUtilsBitcoinCliBlock3';
-import GithubComSatstreamSsUtilsBitcoinCliBlockStats from './model/GithubComSatstreamSsUtilsBitcoinCliBlockStats';
-import GithubComSatstreamSsUtilsBitcoinCliBlockVin2 from './model/GithubComSatstreamSsUtilsBitcoinCliBlockVin2';
-import GithubComSatstreamSsUtilsBitcoinCliBlockVin3 from './model/GithubComSatstreamSsUtilsBitcoinCliBlockVin3';
-import GithubComSatstreamSsUtilsBitcoinCliBlockchainInfo from './model/GithubComSatstreamSsUtilsBitcoinCliBlockchainInfo';
-import GithubComSatstreamSsUtilsBitcoinCliBtcTx2 from './model/GithubComSatstreamSsUtilsBitcoinCliBtcTx2';
-import GithubComSatstreamSsUtilsBitcoinCliBtcTx3 from './model/GithubComSatstreamSsUtilsBitcoinCliBtcTx3';
-import GithubComSatstreamSsUtilsBitcoinCliChainTxStats from './model/GithubComSatstreamSsUtilsBitcoinCliChainTxStats';
-import GithubComSatstreamSsUtilsBitcoinCliDecodedPSBT from './model/GithubComSatstreamSsUtilsBitcoinCliDecodedPSBT';
-import GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInput from './model/GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInput';
-import GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutput from './model/GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutput';
-import GithubComSatstreamSsUtilsBitcoinCliDecodedScript from './model/GithubComSatstreamSsUtilsBitcoinCliDecodedScript';
-import GithubComSatstreamSsUtilsBitcoinCliEstimateRawFee from './model/GithubComSatstreamSsUtilsBitcoinCliEstimateRawFee';
-import GithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimate from './model/GithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimate';
-import GithubComSatstreamSsUtilsBitcoinCliFeeRange from './model/GithubComSatstreamSsUtilsBitcoinCliFeeRange';
-import GithubComSatstreamSsUtilsBitcoinCliMempoolInfo from './model/GithubComSatstreamSsUtilsBitcoinCliMempoolInfo';
-import GithubComSatstreamSsUtilsBitcoinCliMiningInfo from './model/GithubComSatstreamSsUtilsBitcoinCliMiningInfo';
-import GithubComSatstreamSsUtilsBitcoinCliPSBTAnalysis from './model/GithubComSatstreamSsUtilsBitcoinCliPSBTAnalysis';
-import GithubComSatstreamSsUtilsBitcoinCliPSBTBip32Deriv from './model/GithubComSatstreamSsUtilsBitcoinCliPSBTBip32Deriv';
-import GithubComSatstreamSsUtilsBitcoinCliPSBTInputAnalysis from './model/GithubComSatstreamSsUtilsBitcoinCliPSBTInputAnalysis';
-import GithubComSatstreamSsUtilsBitcoinCliPSBTMissingData from './model/GithubComSatstreamSsUtilsBitcoinCliPSBTMissingData';
-import GithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxo from './model/GithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxo';
-import GithubComSatstreamSsUtilsBitcoinCliPrevOut from './model/GithubComSatstreamSsUtilsBitcoinCliPrevOut';
-import GithubComSatstreamSsUtilsBitcoinCliRawTx1 from './model/GithubComSatstreamSsUtilsBitcoinCliRawTx1';
-import GithubComSatstreamSsUtilsBitcoinCliRawTx2 from './model/GithubComSatstreamSsUtilsBitcoinCliRawTx2';
-import GithubComSatstreamSsUtilsBitcoinCliScript from './model/GithubComSatstreamSsUtilsBitcoinCliScript';
-import GithubComSatstreamSsUtilsBitcoinCliScriptPubKey from './model/GithubComSatstreamSsUtilsBitcoinCliScriptPubKey';
-import GithubComSatstreamSsUtilsBitcoinCliScriptSig from './model/GithubComSatstreamSsUtilsBitcoinCliScriptSig';
-import GithubComSatstreamSsUtilsBitcoinCliSegwitDetails from './model/GithubComSatstreamSsUtilsBitcoinCliSegwitDetails';
-import GithubComSatstreamSsUtilsBitcoinCliSmartFeeEstimate from './model/GithubComSatstreamSsUtilsBitcoinCliSmartFeeEstimate';
-import GithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResult from './model/GithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResult';
-import GithubComSatstreamSsUtilsBitcoinCliTestMempoolFees from './model/GithubComSatstreamSsUtilsBitcoinCliTestMempoolFees';
-import GithubComSatstreamSsUtilsBitcoinCliTxOut from './model/GithubComSatstreamSsUtilsBitcoinCliTxOut';
-import GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput from './model/GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput';
-import GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutResult from './model/GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutResult';
-import GithubComSatstreamSsUtilsBitcoinCliTxVin1 from './model/GithubComSatstreamSsUtilsBitcoinCliTxVin1';
-import GithubComSatstreamSsUtilsBitcoinCliTxVin2 from './model/GithubComSatstreamSsUtilsBitcoinCliTxVin2';
-import GithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfo from './model/GithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfo';
-import GithubComSatstreamSsUtilsBitcoinCliUTXOSetInfo from './model/GithubComSatstreamSsUtilsBitcoinCliUTXOSetInfo';
-import GithubComSatstreamSsUtilsBitcoinCliUTXOUnspendables from './model/GithubComSatstreamSsUtilsBitcoinCliUTXOUnspendables';
-import GithubComSatstreamSsUtilsBitcoinCliValidateAddressResult from './model/GithubComSatstreamSsUtilsBitcoinCliValidateAddressResult';
-import GithubComSatstreamSsUtilsBitcoinCliVout from './model/GithubComSatstreamSsUtilsBitcoinCliVout';
-import GithubComSatstreamSsUtilsOrdServerResponsesAddressResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesAddressResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesBlockResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesBlockResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesBlocksResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesBlocksResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesDecodeResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesDecodeResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesDecodedInscription from './model/GithubComSatstreamSsUtilsOrdServerResponsesDecodedInscription';
-import GithubComSatstreamSsUtilsOrdServerResponsesDuration from './model/GithubComSatstreamSsUtilsOrdServerResponsesDuration';
-import GithubComSatstreamSsUtilsOrdServerResponsesInput from './model/GithubComSatstreamSsUtilsOrdServerResponsesInput';
-import GithubComSatstreamSsUtilsOrdServerResponsesInscriptionData from './model/GithubComSatstreamSsUtilsOrdServerResponsesInscriptionData';
-import GithubComSatstreamSsUtilsOrdServerResponsesInscriptionResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesInscriptionResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesLatestInscriptionsResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesLatestInscriptionsResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesOutput from './model/GithubComSatstreamSsUtilsOrdServerResponsesOutput';
-import GithubComSatstreamSsUtilsOrdServerResponsesOutputResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesOutputResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesRuneEntry from './model/GithubComSatstreamSsUtilsOrdServerResponsesRuneEntry';
-import GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry from './model/GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry';
-import GithubComSatstreamSsUtilsOrdServerResponsesRuneResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesRuneResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesRuneTerms from './model/GithubComSatstreamSsUtilsOrdServerResponsesRuneTerms';
-import GithubComSatstreamSsUtilsOrdServerResponsesRunesBalance from './model/GithubComSatstreamSsUtilsOrdServerResponsesRunesBalance';
-import GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesRunestoneData from './model/GithubComSatstreamSsUtilsOrdServerResponsesRunestoneData';
-import GithubComSatstreamSsUtilsOrdServerResponsesSatoshiResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesSatoshiResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesStatusResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesStatusResponse';
-import GithubComSatstreamSsUtilsOrdServerResponsesTransaction from './model/GithubComSatstreamSsUtilsOrdServerResponsesTransaction';
-import GithubComSatstreamSsUtilsOrdServerResponsesTransactionDetails from './model/GithubComSatstreamSsUtilsOrdServerResponsesTransactionDetails';
-import GithubComSatstreamSsUtilsOrdServerResponsesTransactionInput from './model/GithubComSatstreamSsUtilsOrdServerResponsesTransactionInput';
-import GithubComSatstreamSsUtilsOrdServerResponsesTransactionOutput from './model/GithubComSatstreamSsUtilsOrdServerResponsesTransactionOutput';
-import GithubComSatstreamSsUtilsOrdServerResponsesTransactionResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesTransactionResponse';
+import AddressResponse from './model/AddressResponse';
+import AllOfBlockVin2ScriptSig from './model/AllOfBlockVin2ScriptSig';
+import AllOfBlockVin3Prevout from './model/AllOfBlockVin3Prevout';
+import AllOfDecodedPSBTInputFinalScriptsig from './model/AllOfDecodedPSBTInputFinalScriptsig';
+import AllOfDecodedPSBTInputNonWitnessUtxo from './model/AllOfDecodedPSBTInputNonWitnessUtxo';
+import AllOfDecodedPSBTInputRedeemScript from './model/AllOfDecodedPSBTInputRedeemScript';
+import AllOfDecodedPSBTInputWitnessScript from './model/AllOfDecodedPSBTInputWitnessScript';
+import AllOfDecodedPSBTInputWitnessUtxo from './model/AllOfDecodedPSBTInputWitnessUtxo';
+import AllOfDecodedPSBTOutputRedeemScript from './model/AllOfDecodedPSBTOutputRedeemScript';
+import AllOfDecodedPSBTOutputWitnessScript from './model/AllOfDecodedPSBTOutputWitnessScript';
+import AllOfDecodedPSBTTx from './model/AllOfDecodedPSBTTx';
+import AllOfDecodedScriptSegwit from './model/AllOfDecodedScriptSegwit';
+import AllOfFeeHorizonEstimateFail from './model/AllOfFeeHorizonEstimateFail';
+import AllOfFeeHorizonEstimatePass from './model/AllOfFeeHorizonEstimatePass';
+import AllOfMempoolEntryFees from './model/AllOfMempoolEntryFees';
+import AllOfPSBTWitnessUtxoScriptPubKey from './model/AllOfPSBTWitnessUtxoScriptPubKey';
+import AllOfRawFeeEstimateMedium from './model/AllOfRawFeeEstimateMedium';
+import AllOfRawFeeEstimateModelLong from './model/AllOfRawFeeEstimateModelLong';
+import AllOfRawFeeEstimateModelShort from './model/AllOfRawFeeEstimateModelShort';
+import AllOfRawMempoolDataSequence from './model/AllOfRawMempoolDataSequence';
+import AllOfRuneListEntryModel1 from './model/AllOfRuneListEntryModel1';
+import AllOfTestMempoolAcceptResultFees from './model/AllOfTestMempoolAcceptResultFees';
+import AllOfTxOutScriptPubKey from './model/AllOfTxOutScriptPubKey';
+import AllOfUTXOBlockInfoUnspendables from './model/AllOfUTXOBlockInfoUnspendables';
+import AllOfUTXOSetInfoBlockInfo from './model/AllOfUTXOSetInfoBlockInfo';
+import Bip32Deriv from './model/Bip32Deriv';
+import Block1 from './model/Block1';
+import Block2 from './model/Block2';
+import Block3 from './model/Block3';
+import BlockResponse from './model/BlockResponse';
+import BlockStats from './model/BlockStats';
+import BlockVin2 from './model/BlockVin2';
+import BlockVin3 from './model/BlockVin3';
+import BlockchainInfo from './model/BlockchainInfo';
+import BlocksResponse from './model/BlocksResponse';
+import BtcTx2 from './model/BtcTx2';
+import BtcTx3 from './model/BtcTx3';
+import ChainTxStats from './model/ChainTxStats';
+import DecodeResponse from './model/DecodeResponse';
+import DecodedInscription from './model/DecodedInscription';
+import DecodedPSBT from './model/DecodedPSBT';
+import DecodedPSBTInput from './model/DecodedPSBTInput';
+import DecodedPSBTOutput from './model/DecodedPSBTOutput';
+import DecodedScript from './model/DecodedScript';
+import Duration from './model/Duration';
+import FeeHorizonEstimate from './model/FeeHorizonEstimate';
+import FeeRange from './model/FeeRange';
+import InlineResponse200 from './model/InlineResponse200';
+import InlineResponse2001 from './model/InlineResponse2001';
+import InlineResponse20010 from './model/InlineResponse20010';
+import InlineResponse20011 from './model/InlineResponse20011';
+import InlineResponse20012 from './model/InlineResponse20012';
+import InlineResponse20013 from './model/InlineResponse20013';
+import InlineResponse20014 from './model/InlineResponse20014';
+import InlineResponse20015 from './model/InlineResponse20015';
+import InlineResponse20016 from './model/InlineResponse20016';
+import InlineResponse20017 from './model/InlineResponse20017';
+import InlineResponse20018 from './model/InlineResponse20018';
+import InlineResponse20019 from './model/InlineResponse20019';
+import InlineResponse2002 from './model/InlineResponse2002';
+import InlineResponse20020 from './model/InlineResponse20020';
+import InlineResponse20021 from './model/InlineResponse20021';
+import InlineResponse20022 from './model/InlineResponse20022';
+import InlineResponse20023 from './model/InlineResponse20023';
+import InlineResponse20024 from './model/InlineResponse20024';
+import InlineResponse20025 from './model/InlineResponse20025';
+import InlineResponse20026 from './model/InlineResponse20026';
+import InlineResponse20027 from './model/InlineResponse20027';
+import InlineResponse20028 from './model/InlineResponse20028';
+import InlineResponse20029 from './model/InlineResponse20029';
+import InlineResponse2003 from './model/InlineResponse2003';
+import InlineResponse20030 from './model/InlineResponse20030';
+import InlineResponse20031 from './model/InlineResponse20031';
+import InlineResponse20032 from './model/InlineResponse20032';
+import InlineResponse20033 from './model/InlineResponse20033';
+import InlineResponse20034 from './model/InlineResponse20034';
+import InlineResponse20035 from './model/InlineResponse20035';
+import InlineResponse20036 from './model/InlineResponse20036';
+import InlineResponse20037 from './model/InlineResponse20037';
+import InlineResponse20038 from './model/InlineResponse20038';
+import InlineResponse20039 from './model/InlineResponse20039';
+import InlineResponse2004 from './model/InlineResponse2004';
+import InlineResponse20040 from './model/InlineResponse20040';
+import InlineResponse2005 from './model/InlineResponse2005';
+import InlineResponse2006 from './model/InlineResponse2006';
+import InlineResponse2007 from './model/InlineResponse2007';
+import InlineResponse2008 from './model/InlineResponse2008';
+import InlineResponse2009 from './model/InlineResponse2009';
+import Input from './model/Input';
+import InscriptionData from './model/InscriptionData';
+import InscriptionResponse from './model/InscriptionResponse';
+import LatestInscriptionsResponse from './model/LatestInscriptionsResponse';
+import MempoolAncestorsData from './model/MempoolAncestorsData';
+import MempoolDescendantsData from './model/MempoolDescendantsData';
+import MempoolEntry from './model/MempoolEntry';
+import MempoolFees from './model/MempoolFees';
+import MempoolInfo from './model/MempoolInfo';
+import MempoolSequence from './model/MempoolSequence';
+import MiningInfo from './model/MiningInfo';
+import Output from './model/Output';
+import OutputResponse from './model/OutputResponse';
+import PSBTAnalysis from './model/PSBTAnalysis';
+import PSBTBip32Deriv from './model/PSBTBip32Deriv';
+import PSBTInputAnalysis from './model/PSBTInputAnalysis';
+import PSBTMissingData from './model/PSBTMissingData';
+import PSBTWitnessUtxo from './model/PSBTWitnessUtxo';
+import PrevOut from './model/PrevOut';
+import RawFeeEstimate from './model/RawFeeEstimate';
+import RawMempoolData from './model/RawMempoolData';
+import RawTx1 from './model/RawTx1';
+import RawTx2 from './model/RawTx2';
 import RequestsAnalyzePSBTRequest from './model/RequestsAnalyzePSBTRequest';
 import RequestsCombinePSBTRequest from './model/RequestsCombinePSBTRequest';
 import RequestsCombineRawTransactionRequest from './model/RequestsCombineRawTransactionRequest';
 import RequestsConvertToPSBTRequest from './model/RequestsConvertToPSBTRequest';
+import RequestsCreatePSBTInput from './model/RequestsCreatePSBTInput';
+import RequestsCreatePSBTOutput from './model/RequestsCreatePSBTOutput';
+import RequestsCreatePSBTRequest from './model/RequestsCreatePSBTRequest';
+import RequestsCreateRawTxInput from './model/RequestsCreateRawTxInput';
+import RequestsCreateRawTxOutput from './model/RequestsCreateRawTxOutput';
+import RequestsCreateRawTxRequest from './model/RequestsCreateRawTxRequest';
 import RequestsDecodeScriptRequest from './model/RequestsDecodeScriptRequest';
 import RequestsEstimateRawFeeRequest from './model/RequestsEstimateRawFeeRequest';
 import RequestsEstimateSmartFeeRequest from './model/RequestsEstimateSmartFeeRequest';
@@ -175,51 +153,52 @@ import RequestsSendRawTransactionRequest from './model/RequestsSendRawTransactio
 import RequestsTestMempoolAcceptRequest from './model/RequestsTestMempoolAcceptRequest';
 import RequestsVerifyMessageRequest from './model/RequestsVerifyMessageRequest';
 import RequestsVerifyTxOutProofRequest from './model/RequestsVerifyTxOutProofRequest';
-import ResponsesAnalyzePSBTResponse from './model/ResponsesAnalyzePSBTResponse';
-import ResponsesCombinePSBTResponse from './model/ResponsesCombinePSBTResponse';
-import ResponsesCombineRawTransactionResponse from './model/ResponsesCombineRawTransactionResponse';
-import ResponsesConvertToPSBTResponse from './model/ResponsesConvertToPSBTResponse';
-import ResponsesCreatePSBTResponse from './model/ResponsesCreatePSBTResponse';
-import ResponsesCreateRawTransactionResponse from './model/ResponsesCreateRawTransactionResponse';
-import ResponsesDecodePSBTResponse from './model/ResponsesDecodePSBTResponse';
-import ResponsesDecodeScriptResponse from './model/ResponsesDecodeScriptResponse';
-import ResponsesEstimateRawFeeResponse from './model/ResponsesEstimateRawFeeResponse';
-import ResponsesEstimateSmartFeeResponse from './model/ResponsesEstimateSmartFeeResponse';
-import ResponsesGetBlockDecodedResponse from './model/ResponsesGetBlockDecodedResponse';
-import ResponsesGetBlockHexResponse from './model/ResponsesGetBlockHexResponse';
-import ResponsesGetBlockPrevoutResponse from './model/ResponsesGetBlockPrevoutResponse';
-import ResponsesGetBlockStatsResponse from './model/ResponsesGetBlockStatsResponse';
-import ResponsesGetBlockSummaryResponse from './model/ResponsesGetBlockSummaryResponse';
-import ResponsesGetBlockchainInfoResponse from './model/ResponsesGetBlockchainInfoResponse';
-import ResponsesGetChainTxStatsResponse from './model/ResponsesGetChainTxStatsResponse';
-import ResponsesGetDifficultyResponse from './model/ResponsesGetDifficultyResponse';
-import ResponsesGetMempoolAncestorsResponse from './model/ResponsesGetMempoolAncestorsResponse';
-import ResponsesGetMempoolDescendantsResponse from './model/ResponsesGetMempoolDescendantsResponse';
-import ResponsesGetMempoolInfoResponse from './model/ResponsesGetMempoolInfoResponse';
-import ResponsesGetMiningInfoResponse from './model/ResponsesGetMiningInfoResponse';
-import ResponsesGetNetworkHashPSResponse from './model/ResponsesGetNetworkHashPSResponse';
-import ResponsesGetOutputByOutpointResponse from './model/ResponsesGetOutputByOutpointResponse';
-import ResponsesGetOutputsResponse from './model/ResponsesGetOutputsResponse';
-import ResponsesGetRawMempoolResponse from './model/ResponsesGetRawMempoolResponse';
-import ResponsesGetRawTransactionDecodedResponse from './model/ResponsesGetRawTransactionDecodedResponse';
-import ResponsesGetRawTransactionHexResponse from './model/ResponsesGetRawTransactionHexResponse';
-import ResponsesGetRawTransactionPrevoutResponse from './model/ResponsesGetRawTransactionPrevoutResponse';
-import ResponsesGetTxOutProofResponse from './model/ResponsesGetTxOutProofResponse';
-import ResponsesGetTxOutResponse from './model/ResponsesGetTxOutResponse';
-import ResponsesGetTxOutSetInfoResponse from './model/ResponsesGetTxOutSetInfoResponse';
-import ResponsesGetTxSpendingPrevoutResponse from './model/ResponsesGetTxSpendingPrevoutResponse';
-import ResponsesJoinPSBTsResponse from './model/ResponsesJoinPSBTsResponse';
-import ResponsesLatestBlockHashResponse from './model/ResponsesLatestBlockHashResponse';
-import ResponsesLatestBlockHeightResponse from './model/ResponsesLatestBlockHeightResponse';
-import ResponsesLatestBlockTimeResponse from './model/ResponsesLatestBlockTimeResponse';
-import ResponsesSendRawTransactionResponse from './model/ResponsesSendRawTransactionResponse';
-import ResponsesTestMempoolAcceptResponse from './model/ResponsesTestMempoolAcceptResponse';
-import ResponsesValidateAddressResponse from './model/ResponsesValidateAddressResponse';
-import ResponsesVerifyMessageResponse from './model/ResponsesVerifyMessageResponse';
-import ResponsesVerifyTxOutProofResponse from './model/ResponsesVerifyTxOutProofResponse';
-import BitcoinApi from './api/BitcoinApi';
+import RuneEntry from './model/RuneEntry';
+import RuneListEntry from './model/RuneListEntry';
+import RuneResponse from './model/RuneResponse';
+import RuneTerms from './model/RuneTerms';
+import RunesBalance from './model/RunesBalance';
+import RunesListResponse from './model/RunesListResponse';
+import RunestoneData from './model/RunestoneData';
+import SatoshiResponse from './model/SatoshiResponse';
+import Script from './model/Script';
+import ScriptPubKey from './model/ScriptPubKey';
+import ScriptSig from './model/ScriptSig';
+import SegwitDetails from './model/SegwitDetails';
+import SmartFeeEstimate from './model/SmartFeeEstimate';
+import StatusResponse from './model/StatusResponse';
+import TestMempoolAcceptResult from './model/TestMempoolAcceptResult';
+import TestMempoolFees from './model/TestMempoolFees';
+import Transaction from './model/Transaction';
+import TransactionDetails from './model/TransactionDetails';
+import TransactionInput from './model/TransactionInput';
+import TransactionOutput from './model/TransactionOutput';
+import TransactionResponse from './model/TransactionResponse';
+import TxOut from './model/TxOut';
+import TxSpendingPrevoutInput from './model/TxSpendingPrevoutInput';
+import TxSpendingPrevoutResult from './model/TxSpendingPrevoutResult';
+import TxVin1 from './model/TxVin1';
+import TxVin2 from './model/TxVin2';
+import UTXOBlockInfo from './model/UTXOBlockInfo';
+import UTXOSetInfo from './model/UTXOSetInfo';
+import UTXOUnspendables from './model/UTXOUnspendables';
+import UtilsResponseEnvelope from './model/UtilsResponseEnvelope';
+import ValidateAddressResult from './model/ValidateAddressResult';
+import Vout from './model/Vout';
+import AddressesApi from './api/AddressesApi';
 import BlocksApi from './api/BlocksApi';
+import FeesApi from './api/FeesApi';
 import InscriptionsApi from './api/InscriptionsApi';
+import MempoolApi from './api/MempoolApi';
+import MiningApi from './api/MiningApi';
+import NetworkApi from './api/NetworkApi';
+import OutputsApi from './api/OutputsApi';
+import PSBTsApi from './api/PSBTsApi';
+import RunesApi from './api/RunesApi';
+import SatoshisApi from './api/SatoshisApi';
+import ScriptsApi from './api/ScriptsApi';
+import StatusApi from './api/StatusApi';
+import TransactionsApi from './api/TransactionsApi';
 
 /**
 * Satstream JavaScript SDK.<br>
@@ -250,7 +229,7 @@ import InscriptionsApi from './api/InscriptionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.19
+* @version 1.0.20
 */
 export {
     /**
@@ -260,838 +239,670 @@ export {
     ApiClient,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin2ScriptSig model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin2ScriptSig}
+     * The AddressResponse model constructor.
+     * @property {module:model/AddressResponse}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin2ScriptSig,
+    AddressResponse,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin3Prevout model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin3Prevout}
+     * The AllOfBlockVin2ScriptSig model constructor.
+     * @property {module:model/AllOfBlockVin2ScriptSig}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliBlockVin3Prevout,
+    AllOfBlockVin2ScriptSig,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputFinalScriptsig model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputFinalScriptsig}
+     * The AllOfBlockVin3Prevout model constructor.
+     * @property {module:model/AllOfBlockVin3Prevout}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputFinalScriptsig,
+    AllOfBlockVin3Prevout,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputNonWitnessUtxo model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputNonWitnessUtxo}
+     * The AllOfDecodedPSBTInputFinalScriptsig model constructor.
+     * @property {module:model/AllOfDecodedPSBTInputFinalScriptsig}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputNonWitnessUtxo,
+    AllOfDecodedPSBTInputFinalScriptsig,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputRedeemScript model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputRedeemScript}
+     * The AllOfDecodedPSBTInputNonWitnessUtxo model constructor.
+     * @property {module:model/AllOfDecodedPSBTInputNonWitnessUtxo}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputRedeemScript,
+    AllOfDecodedPSBTInputNonWitnessUtxo,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessScript model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessScript}
+     * The AllOfDecodedPSBTInputRedeemScript model constructor.
+     * @property {module:model/AllOfDecodedPSBTInputRedeemScript}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessScript,
+    AllOfDecodedPSBTInputRedeemScript,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessUtxo model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessUtxo}
+     * The AllOfDecodedPSBTInputWitnessScript model constructor.
+     * @property {module:model/AllOfDecodedPSBTInputWitnessScript}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInputWitnessUtxo,
+    AllOfDecodedPSBTInputWitnessScript,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputRedeemScript model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputRedeemScript}
+     * The AllOfDecodedPSBTInputWitnessUtxo model constructor.
+     * @property {module:model/AllOfDecodedPSBTInputWitnessUtxo}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputRedeemScript,
+    AllOfDecodedPSBTInputWitnessUtxo,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputWitnessScript model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputWitnessScript}
+     * The AllOfDecodedPSBTOutputRedeemScript model constructor.
+     * @property {module:model/AllOfDecodedPSBTOutputRedeemScript}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutputWitnessScript,
+    AllOfDecodedPSBTOutputRedeemScript,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTTx model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTTx}
+     * The AllOfDecodedPSBTOutputWitnessScript model constructor.
+     * @property {module:model/AllOfDecodedPSBTOutputWitnessScript}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedPSBTTx,
+    AllOfDecodedPSBTOutputWitnessScript,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedScriptSegwit model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedScriptSegwit}
+     * The AllOfDecodedPSBTTx model constructor.
+     * @property {module:model/AllOfDecodedPSBTTx}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliDecodedScriptSegwit,
+    AllOfDecodedPSBTTx,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeMedium model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeMedium}
+     * The AllOfDecodedScriptSegwit model constructor.
+     * @property {module:model/AllOfDecodedScriptSegwit}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeMedium,
+    AllOfDecodedScriptSegwit,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelLong model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelLong}
+     * The AllOfFeeHorizonEstimateFail model constructor.
+     * @property {module:model/AllOfFeeHorizonEstimateFail}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelLong,
+    AllOfFeeHorizonEstimateFail,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelShort model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelShort}
+     * The AllOfFeeHorizonEstimatePass model constructor.
+     * @property {module:model/AllOfFeeHorizonEstimatePass}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliEstimateRawFeeModelShort,
+    AllOfFeeHorizonEstimatePass,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimateFail model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimateFail}
+     * The AllOfMempoolEntryFees model constructor.
+     * @property {module:model/AllOfMempoolEntryFees}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimateFail,
+    AllOfMempoolEntryFees,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimatePass model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimatePass}
+     * The AllOfPSBTWitnessUtxoScriptPubKey model constructor.
+     * @property {module:model/AllOfPSBTWitnessUtxoScriptPubKey}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimatePass,
+    AllOfPSBTWitnessUtxoScriptPubKey,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxoScriptPubKey model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxoScriptPubKey}
+     * The AllOfRawFeeEstimateMedium model constructor.
+     * @property {module:model/AllOfRawFeeEstimateMedium}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxoScriptPubKey,
+    AllOfRawFeeEstimateMedium,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResultFees model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResultFees}
+     * The AllOfRawFeeEstimateModelLong model constructor.
+     * @property {module:model/AllOfRawFeeEstimateModelLong}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResultFees,
+    AllOfRawFeeEstimateModelLong,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliTxOutScriptPubKey model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliTxOutScriptPubKey}
+     * The AllOfRawFeeEstimateModelShort model constructor.
+     * @property {module:model/AllOfRawFeeEstimateModelShort}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliTxOutScriptPubKey,
+    AllOfRawFeeEstimateModelShort,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfoUnspendables model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfoUnspendables}
+     * The AllOfRawMempoolDataSequence model constructor.
+     * @property {module:model/AllOfRawMempoolDataSequence}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfoUnspendables,
+    AllOfRawMempoolDataSequence,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOSetInfoBlockInfo model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOSetInfoBlockInfo}
+     * The AllOfRuneListEntryModel1 model constructor.
+     * @property {module:model/AllOfRuneListEntryModel1}
      */
-    AllOfgithubComSatstreamSsUtilsBitcoinCliUTXOSetInfoBlockInfo,
+    AllOfRuneListEntryModel1,
 
     /**
-     * The AllOfgithubComSatstreamSsUtilsOrdServerResponsesRuneListEntryModel1 model constructor.
-     * @property {module:model/AllOfgithubComSatstreamSsUtilsOrdServerResponsesRuneListEntryModel1}
+     * The AllOfTestMempoolAcceptResultFees model constructor.
+     * @property {module:model/AllOfTestMempoolAcceptResultFees}
      */
-    AllOfgithubComSatstreamSsUtilsOrdServerResponsesRuneListEntryModel1,
+    AllOfTestMempoolAcceptResultFees,
 
     /**
-     * The AllOfresponsesDecodePSBTResponseData model constructor.
-     * @property {module:model/AllOfresponsesDecodePSBTResponseData}
+     * The AllOfTxOutScriptPubKey model constructor.
+     * @property {module:model/AllOfTxOutScriptPubKey}
      */
-    AllOfresponsesDecodePSBTResponseData,
+    AllOfTxOutScriptPubKey,
 
     /**
-     * The AllOfresponsesDecodeScriptResponseData model constructor.
-     * @property {module:model/AllOfresponsesDecodeScriptResponseData}
+     * The AllOfUTXOBlockInfoUnspendables model constructor.
+     * @property {module:model/AllOfUTXOBlockInfoUnspendables}
      */
-    AllOfresponsesDecodeScriptResponseData,
+    AllOfUTXOBlockInfoUnspendables,
 
     /**
-     * The AllOfresponsesEstimateRawFeeResponseData model constructor.
-     * @property {module:model/AllOfresponsesEstimateRawFeeResponseData}
+     * The AllOfUTXOSetInfoBlockInfo model constructor.
+     * @property {module:model/AllOfUTXOSetInfoBlockInfo}
      */
-    AllOfresponsesEstimateRawFeeResponseData,
+    AllOfUTXOSetInfoBlockInfo,
 
     /**
-     * The AllOfresponsesEstimateSmartFeeResponseData model constructor.
-     * @property {module:model/AllOfresponsesEstimateSmartFeeResponseData}
+     * The Bip32Deriv model constructor.
+     * @property {module:model/Bip32Deriv}
      */
-    AllOfresponsesEstimateSmartFeeResponseData,
+    Bip32Deriv,
 
     /**
-     * The AllOfresponsesGetBlockStatsResponseData model constructor.
-     * @property {module:model/AllOfresponsesGetBlockStatsResponseData}
+     * The Block1 model constructor.
+     * @property {module:model/Block1}
      */
-    AllOfresponsesGetBlockStatsResponseData,
+    Block1,
 
     /**
-     * The AllOfresponsesGetBlockchainInfoResponseData model constructor.
-     * @property {module:model/AllOfresponsesGetBlockchainInfoResponseData}
+     * The Block2 model constructor.
+     * @property {module:model/Block2}
      */
-    AllOfresponsesGetBlockchainInfoResponseData,
+    Block2,
 
     /**
-     * The AllOfresponsesGetChainTxStatsResponseData model constructor.
-     * @property {module:model/AllOfresponsesGetChainTxStatsResponseData}
+     * The Block3 model constructor.
+     * @property {module:model/Block3}
      */
-    AllOfresponsesGetChainTxStatsResponseData,
+    Block3,
 
     /**
-     * The AllOfresponsesGetMempoolInfoResponseData model constructor.
-     * @property {module:model/AllOfresponsesGetMempoolInfoResponseData}
+     * The BlockResponse model constructor.
+     * @property {module:model/BlockResponse}
      */
-    AllOfresponsesGetMempoolInfoResponseData,
+    BlockResponse,
 
     /**
-     * The AllOfresponsesGetMiningInfoResponseData model constructor.
-     * @property {module:model/AllOfresponsesGetMiningInfoResponseData}
+     * The BlockStats model constructor.
+     * @property {module:model/BlockStats}
      */
-    AllOfresponsesGetMiningInfoResponseData,
+    BlockStats,
 
     /**
-     * The AllOfresponsesGetTxOutResponseData model constructor.
-     * @property {module:model/AllOfresponsesGetTxOutResponseData}
+     * The BlockVin2 model constructor.
+     * @property {module:model/BlockVin2}
      */
-    AllOfresponsesGetTxOutResponseData,
+    BlockVin2,
 
     /**
-     * The AllOfresponsesGetTxOutSetInfoResponseData model constructor.
-     * @property {module:model/AllOfresponsesGetTxOutSetInfoResponseData}
+     * The BlockVin3 model constructor.
+     * @property {module:model/BlockVin3}
      */
-    AllOfresponsesGetTxOutSetInfoResponseData,
+    BlockVin3,
 
     /**
-     * The AllOfresponsesValidateAddressResponseData model constructor.
-     * @property {module:model/AllOfresponsesValidateAddressResponseData}
+     * The BlockchainInfo model constructor.
+     * @property {module:model/BlockchainInfo}
      */
-    AllOfresponsesValidateAddressResponseData,
+    BlockchainInfo,
 
     /**
-     * The GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse}
+     * The BlocksResponse model constructor.
+     * @property {module:model/BlocksResponse}
      */
-    GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse,
+    BlocksResponse,
 
     /**
-     * The GithubComSatstreamSsApiServerApiAddressResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiAddressResponsesError}
+     * The BtcTx2 model constructor.
+     * @property {module:model/BtcTx2}
      */
-    GithubComSatstreamSsApiServerApiAddressResponsesError,
+    BtcTx2,
 
     /**
-     * The GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse}
+     * The BtcTx3 model constructor.
+     * @property {module:model/BtcTx3}
      */
-    GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse,
+    BtcTx3,
 
     /**
-     * The GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse}
+     * The ChainTxStats model constructor.
+     * @property {module:model/ChainTxStats}
      */
-    GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse,
+    ChainTxStats,
 
     /**
-     * The GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse}
+     * The DecodeResponse model constructor.
+     * @property {module:model/DecodeResponse}
      */
-    GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse,
+    DecodeResponse,
 
     /**
-     * The GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse}
+     * The DecodedInscription model constructor.
+     * @property {module:model/DecodedInscription}
      */
-    GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse,
+    DecodedInscription,
 
     /**
-     * The GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse}
+     * The DecodedPSBT model constructor.
+     * @property {module:model/DecodedPSBT}
      */
-    GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse,
+    DecodedPSBT,
 
     /**
-     * The GithubComSatstreamSsApiServerApiBlockResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiBlockResponsesError}
+     * The DecodedPSBTInput model constructor.
+     * @property {module:model/DecodedPSBTInput}
      */
-    GithubComSatstreamSsApiServerApiBlockResponsesError,
+    DecodedPSBTInput,
 
     /**
-     * The GithubComSatstreamSsApiServerApiFeeResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiFeeResponsesError}
+     * The DecodedPSBTOutput model constructor.
+     * @property {module:model/DecodedPSBTOutput}
      */
-    GithubComSatstreamSsApiServerApiFeeResponsesError,
+    DecodedPSBTOutput,
 
     /**
-     * The GithubComSatstreamSsApiServerApiInscriptionResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiInscriptionResponsesError}
+     * The DecodedScript model constructor.
+     * @property {module:model/DecodedScript}
      */
-    GithubComSatstreamSsApiServerApiInscriptionResponsesError,
+    DecodedScript,
 
     /**
-     * The GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse}
+     * The Duration model constructor.
+     * @property {module:model/Duration}
      */
-    GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse,
+    Duration,
 
     /**
-     * The GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse}
+     * The FeeHorizonEstimate model constructor.
+     * @property {module:model/FeeHorizonEstimate}
      */
-    GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse,
+    FeeHorizonEstimate,
 
     /**
-     * The GithubComSatstreamSsApiServerApiMempoolResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiMempoolResponsesError}
+     * The FeeRange model constructor.
+     * @property {module:model/FeeRange}
      */
-    GithubComSatstreamSsApiServerApiMempoolResponsesError,
+    FeeRange,
 
     /**
-     * The GithubComSatstreamSsApiServerApiMiningResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiMiningResponsesError}
+     * The InlineResponse200 model constructor.
+     * @property {module:model/InlineResponse200}
      */
-    GithubComSatstreamSsApiServerApiMiningResponsesError,
+    InlineResponse200,
 
     /**
-     * The GithubComSatstreamSsApiServerApiNetworkResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiNetworkResponsesError}
+     * The InlineResponse2001 model constructor.
+     * @property {module:model/InlineResponse2001}
      */
-    GithubComSatstreamSsApiServerApiNetworkResponsesError,
+    InlineResponse2001,
 
     /**
-     * The GithubComSatstreamSsApiServerApiOutputResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiOutputResponsesError}
+     * The InlineResponse20010 model constructor.
+     * @property {module:model/InlineResponse20010}
      */
-    GithubComSatstreamSsApiServerApiOutputResponsesError,
+    InlineResponse20010,
 
     /**
-     * The GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTInput model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTInput}
+     * The InlineResponse20011 model constructor.
+     * @property {module:model/InlineResponse20011}
      */
-    GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTInput,
+    InlineResponse20011,
 
     /**
-     * The GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTOutput model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTOutput}
+     * The InlineResponse20012 model constructor.
+     * @property {module:model/InlineResponse20012}
      */
-    GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTOutput,
+    InlineResponse20012,
 
     /**
-     * The GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTRequest model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTRequest}
+     * The InlineResponse20013 model constructor.
+     * @property {module:model/InlineResponse20013}
      */
-    GithubComSatstreamSsApiServerApiPsbtRequestsCreatePSBTRequest,
+    InlineResponse20013,
 
     /**
-     * The GithubComSatstreamSsApiServerApiPsbtResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiPsbtResponsesError}
+     * The InlineResponse20014 model constructor.
+     * @property {module:model/InlineResponse20014}
      */
-    GithubComSatstreamSsApiServerApiPsbtResponsesError,
+    InlineResponse20014,
 
     /**
-     * The GithubComSatstreamSsApiServerApiRuneResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiRuneResponsesError}
+     * The InlineResponse20015 model constructor.
+     * @property {module:model/InlineResponse20015}
      */
-    GithubComSatstreamSsApiServerApiRuneResponsesError,
+    InlineResponse20015,
 
     /**
-     * The GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse}
+     * The InlineResponse20016 model constructor.
+     * @property {module:model/InlineResponse20016}
      */
-    GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse,
+    InlineResponse20016,
 
     /**
-     * The GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse}
+     * The InlineResponse20017 model constructor.
+     * @property {module:model/InlineResponse20017}
      */
-    GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse,
+    InlineResponse20017,
 
     /**
-     * The GithubComSatstreamSsApiServerApiSatoshiResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiSatoshiResponsesError}
+     * The InlineResponse20018 model constructor.
+     * @property {module:model/InlineResponse20018}
      */
-    GithubComSatstreamSsApiServerApiSatoshiResponsesError,
+    InlineResponse20018,
 
     /**
-     * The GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse}
+     * The InlineResponse20019 model constructor.
+     * @property {module:model/InlineResponse20019}
      */
-    GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse,
+    InlineResponse20019,
 
     /**
-     * The GithubComSatstreamSsApiServerApiScriptResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiScriptResponsesError}
+     * The InlineResponse2002 model constructor.
+     * @property {module:model/InlineResponse2002}
      */
-    GithubComSatstreamSsApiServerApiScriptResponsesError,
+    InlineResponse2002,
 
     /**
-     * The GithubComSatstreamSsApiServerApiStatusResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiStatusResponsesError}
+     * The InlineResponse20020 model constructor.
+     * @property {module:model/InlineResponse20020}
      */
-    GithubComSatstreamSsApiServerApiStatusResponsesError,
+    InlineResponse20020,
 
     /**
-     * The GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse}
+     * The InlineResponse20021 model constructor.
+     * @property {module:model/InlineResponse20021}
      */
-    GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse,
+    InlineResponse20021,
 
     /**
-     * The GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTInput model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTInput}
+     * The InlineResponse20022 model constructor.
+     * @property {module:model/InlineResponse20022}
      */
-    GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTInput,
+    InlineResponse20022,
 
     /**
-     * The GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTOutput model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTOutput}
+     * The InlineResponse20023 model constructor.
+     * @property {module:model/InlineResponse20023}
      */
-    GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTOutput,
+    InlineResponse20023,
 
     /**
-     * The GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTRequest model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTRequest}
+     * The InlineResponse20024 model constructor.
+     * @property {module:model/InlineResponse20024}
      */
-    GithubComSatstreamSsApiServerApiTransactionRequestsCreatePSBTRequest,
+    InlineResponse20024,
 
     /**
-     * The GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse}
+     * The InlineResponse20025 model constructor.
+     * @property {module:model/InlineResponse20025}
      */
-    GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse,
+    InlineResponse20025,
 
     /**
-     * The GithubComSatstreamSsApiServerApiTransactionResponsesError model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiTransactionResponsesError}
+     * The InlineResponse20026 model constructor.
+     * @property {module:model/InlineResponse20026}
      */
-    GithubComSatstreamSsApiServerApiTransactionResponsesError,
+    InlineResponse20026,
 
     /**
-     * The GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse}
+     * The InlineResponse20027 model constructor.
+     * @property {module:model/InlineResponse20027}
      */
-    GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse,
+    InlineResponse20027,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBip32Deriv model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBip32Deriv}
+     * The InlineResponse20028 model constructor.
+     * @property {module:model/InlineResponse20028}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBip32Deriv,
+    InlineResponse20028,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBlock1 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBlock1}
+     * The InlineResponse20029 model constructor.
+     * @property {module:model/InlineResponse20029}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBlock1,
+    InlineResponse20029,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBlock2 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBlock2}
+     * The InlineResponse2003 model constructor.
+     * @property {module:model/InlineResponse2003}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBlock2,
+    InlineResponse2003,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBlock3 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBlock3}
+     * The InlineResponse20030 model constructor.
+     * @property {module:model/InlineResponse20030}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBlock3,
+    InlineResponse20030,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBlockStats model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBlockStats}
+     * The InlineResponse20031 model constructor.
+     * @property {module:model/InlineResponse20031}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBlockStats,
+    InlineResponse20031,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBlockVin2 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBlockVin2}
+     * The InlineResponse20032 model constructor.
+     * @property {module:model/InlineResponse20032}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBlockVin2,
+    InlineResponse20032,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBlockVin3 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBlockVin3}
+     * The InlineResponse20033 model constructor.
+     * @property {module:model/InlineResponse20033}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBlockVin3,
+    InlineResponse20033,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBlockchainInfo model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBlockchainInfo}
+     * The InlineResponse20034 model constructor.
+     * @property {module:model/InlineResponse20034}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBlockchainInfo,
+    InlineResponse20034,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBtcTx2 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBtcTx2}
+     * The InlineResponse20035 model constructor.
+     * @property {module:model/InlineResponse20035}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBtcTx2,
+    InlineResponse20035,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliBtcTx3 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliBtcTx3}
+     * The InlineResponse20036 model constructor.
+     * @property {module:model/InlineResponse20036}
      */
-    GithubComSatstreamSsUtilsBitcoinCliBtcTx3,
+    InlineResponse20036,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliChainTxStats model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliChainTxStats}
+     * The InlineResponse20037 model constructor.
+     * @property {module:model/InlineResponse20037}
      */
-    GithubComSatstreamSsUtilsBitcoinCliChainTxStats,
+    InlineResponse20037,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliDecodedPSBT model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliDecodedPSBT}
+     * The InlineResponse20038 model constructor.
+     * @property {module:model/InlineResponse20038}
      */
-    GithubComSatstreamSsUtilsBitcoinCliDecodedPSBT,
+    InlineResponse20038,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInput model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInput}
+     * The InlineResponse20039 model constructor.
+     * @property {module:model/InlineResponse20039}
      */
-    GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTInput,
+    InlineResponse20039,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutput model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutput}
+     * The InlineResponse2004 model constructor.
+     * @property {module:model/InlineResponse2004}
      */
-    GithubComSatstreamSsUtilsBitcoinCliDecodedPSBTOutput,
+    InlineResponse2004,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliDecodedScript model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliDecodedScript}
+     * The InlineResponse20040 model constructor.
+     * @property {module:model/InlineResponse20040}
      */
-    GithubComSatstreamSsUtilsBitcoinCliDecodedScript,
+    InlineResponse20040,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliEstimateRawFee model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliEstimateRawFee}
+     * The InlineResponse2005 model constructor.
+     * @property {module:model/InlineResponse2005}
      */
-    GithubComSatstreamSsUtilsBitcoinCliEstimateRawFee,
+    InlineResponse2005,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimate model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimate}
+     * The InlineResponse2006 model constructor.
+     * @property {module:model/InlineResponse2006}
      */
-    GithubComSatstreamSsUtilsBitcoinCliFeeHorizonEstimate,
+    InlineResponse2006,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliFeeRange model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliFeeRange}
+     * The InlineResponse2007 model constructor.
+     * @property {module:model/InlineResponse2007}
      */
-    GithubComSatstreamSsUtilsBitcoinCliFeeRange,
+    InlineResponse2007,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliMempoolInfo model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliMempoolInfo}
+     * The InlineResponse2008 model constructor.
+     * @property {module:model/InlineResponse2008}
      */
-    GithubComSatstreamSsUtilsBitcoinCliMempoolInfo,
+    InlineResponse2008,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliMiningInfo model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliMiningInfo}
+     * The InlineResponse2009 model constructor.
+     * @property {module:model/InlineResponse2009}
      */
-    GithubComSatstreamSsUtilsBitcoinCliMiningInfo,
+    InlineResponse2009,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliPSBTAnalysis model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliPSBTAnalysis}
+     * The Input model constructor.
+     * @property {module:model/Input}
      */
-    GithubComSatstreamSsUtilsBitcoinCliPSBTAnalysis,
+    Input,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliPSBTBip32Deriv model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliPSBTBip32Deriv}
+     * The InscriptionData model constructor.
+     * @property {module:model/InscriptionData}
      */
-    GithubComSatstreamSsUtilsBitcoinCliPSBTBip32Deriv,
+    InscriptionData,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliPSBTInputAnalysis model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliPSBTInputAnalysis}
+     * The InscriptionResponse model constructor.
+     * @property {module:model/InscriptionResponse}
      */
-    GithubComSatstreamSsUtilsBitcoinCliPSBTInputAnalysis,
+    InscriptionResponse,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliPSBTMissingData model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliPSBTMissingData}
+     * The LatestInscriptionsResponse model constructor.
+     * @property {module:model/LatestInscriptionsResponse}
      */
-    GithubComSatstreamSsUtilsBitcoinCliPSBTMissingData,
+    LatestInscriptionsResponse,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxo model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxo}
+     * The MempoolAncestorsData model constructor.
+     * @property {module:model/MempoolAncestorsData}
      */
-    GithubComSatstreamSsUtilsBitcoinCliPSBTWitnessUtxo,
+    MempoolAncestorsData,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliPrevOut model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliPrevOut}
+     * The MempoolDescendantsData model constructor.
+     * @property {module:model/MempoolDescendantsData}
      */
-    GithubComSatstreamSsUtilsBitcoinCliPrevOut,
+    MempoolDescendantsData,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliRawTx1 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliRawTx1}
+     * The MempoolEntry model constructor.
+     * @property {module:model/MempoolEntry}
      */
-    GithubComSatstreamSsUtilsBitcoinCliRawTx1,
+    MempoolEntry,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliRawTx2 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliRawTx2}
+     * The MempoolFees model constructor.
+     * @property {module:model/MempoolFees}
      */
-    GithubComSatstreamSsUtilsBitcoinCliRawTx2,
+    MempoolFees,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliScript model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliScript}
+     * The MempoolInfo model constructor.
+     * @property {module:model/MempoolInfo}
      */
-    GithubComSatstreamSsUtilsBitcoinCliScript,
+    MempoolInfo,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliScriptPubKey model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliScriptPubKey}
+     * The MempoolSequence model constructor.
+     * @property {module:model/MempoolSequence}
      */
-    GithubComSatstreamSsUtilsBitcoinCliScriptPubKey,
+    MempoolSequence,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliScriptSig model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliScriptSig}
+     * The MiningInfo model constructor.
+     * @property {module:model/MiningInfo}
      */
-    GithubComSatstreamSsUtilsBitcoinCliScriptSig,
+    MiningInfo,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliSegwitDetails model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliSegwitDetails}
+     * The Output model constructor.
+     * @property {module:model/Output}
      */
-    GithubComSatstreamSsUtilsBitcoinCliSegwitDetails,
+    Output,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliSmartFeeEstimate model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliSmartFeeEstimate}
+     * The OutputResponse model constructor.
+     * @property {module:model/OutputResponse}
      */
-    GithubComSatstreamSsUtilsBitcoinCliSmartFeeEstimate,
+    OutputResponse,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResult model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResult}
+     * The PSBTAnalysis model constructor.
+     * @property {module:model/PSBTAnalysis}
      */
-    GithubComSatstreamSsUtilsBitcoinCliTestMempoolAcceptResult,
+    PSBTAnalysis,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliTestMempoolFees model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliTestMempoolFees}
+     * The PSBTBip32Deriv model constructor.
+     * @property {module:model/PSBTBip32Deriv}
      */
-    GithubComSatstreamSsUtilsBitcoinCliTestMempoolFees,
+    PSBTBip32Deriv,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliTxOut model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliTxOut}
+     * The PSBTInputAnalysis model constructor.
+     * @property {module:model/PSBTInputAnalysis}
      */
-    GithubComSatstreamSsUtilsBitcoinCliTxOut,
+    PSBTInputAnalysis,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput}
+     * The PSBTMissingData model constructor.
+     * @property {module:model/PSBTMissingData}
      */
-    GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput,
+    PSBTMissingData,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutResult model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutResult}
+     * The PSBTWitnessUtxo model constructor.
+     * @property {module:model/PSBTWitnessUtxo}
      */
-    GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutResult,
+    PSBTWitnessUtxo,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliTxVin1 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliTxVin1}
+     * The PrevOut model constructor.
+     * @property {module:model/PrevOut}
      */
-    GithubComSatstreamSsUtilsBitcoinCliTxVin1,
+    PrevOut,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliTxVin2 model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliTxVin2}
+     * The RawFeeEstimate model constructor.
+     * @property {module:model/RawFeeEstimate}
      */
-    GithubComSatstreamSsUtilsBitcoinCliTxVin2,
+    RawFeeEstimate,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfo model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfo}
+     * The RawMempoolData model constructor.
+     * @property {module:model/RawMempoolData}
      */
-    GithubComSatstreamSsUtilsBitcoinCliUTXOBlockInfo,
+    RawMempoolData,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliUTXOSetInfo model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliUTXOSetInfo}
+     * The RawTx1 model constructor.
+     * @property {module:model/RawTx1}
      */
-    GithubComSatstreamSsUtilsBitcoinCliUTXOSetInfo,
+    RawTx1,
 
     /**
-     * The GithubComSatstreamSsUtilsBitcoinCliUTXOUnspendables model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliUTXOUnspendables}
+     * The RawTx2 model constructor.
+     * @property {module:model/RawTx2}
      */
-    GithubComSatstreamSsUtilsBitcoinCliUTXOUnspendables,
-
-    /**
-     * The GithubComSatstreamSsUtilsBitcoinCliValidateAddressResult model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliValidateAddressResult}
-     */
-    GithubComSatstreamSsUtilsBitcoinCliValidateAddressResult,
-
-    /**
-     * The GithubComSatstreamSsUtilsBitcoinCliVout model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsBitcoinCliVout}
-     */
-    GithubComSatstreamSsUtilsBitcoinCliVout,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesAddressResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesAddressResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesAddressResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesBlockResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesBlockResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesBlockResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesBlocksResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesBlocksResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesBlocksResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesDecodeResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesDecodeResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesDecodeResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesDecodedInscription model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesDecodedInscription}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesDecodedInscription,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesDuration model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesDuration}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesDuration,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesInput model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesInput}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesInput,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesInscriptionData model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesInscriptionData}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesInscriptionData,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesInscriptionResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesInscriptionResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesInscriptionResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesLatestInscriptionsResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesLatestInscriptionsResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesLatestInscriptionsResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesOutput model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesOutput}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesOutput,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesOutputResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesOutputResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesOutputResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesRuneEntry model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneEntry}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesRuneEntry,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesRuneResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesRuneResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesRuneTerms model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneTerms}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesRuneTerms,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesRunesBalance model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRunesBalance}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesRunesBalance,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesRunestoneData model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRunestoneData}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesRunestoneData,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesSatoshiResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesSatoshiResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesSatoshiResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesStatusResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesStatusResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesStatusResponse,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesTransaction model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesTransaction}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesTransaction,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesTransactionDetails model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesTransactionDetails}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesTransactionDetails,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesTransactionInput model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesTransactionInput}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesTransactionInput,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesTransactionOutput model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesTransactionOutput}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesTransactionOutput,
-
-    /**
-     * The GithubComSatstreamSsUtilsOrdServerResponsesTransactionResponse model constructor.
-     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesTransactionResponse}
-     */
-    GithubComSatstreamSsUtilsOrdServerResponsesTransactionResponse,
+    RawTx2,
 
     /**
      * The RequestsAnalyzePSBTRequest model constructor.
@@ -1116,6 +927,42 @@ export {
      * @property {module:model/RequestsConvertToPSBTRequest}
      */
     RequestsConvertToPSBTRequest,
+
+    /**
+     * The RequestsCreatePSBTInput model constructor.
+     * @property {module:model/RequestsCreatePSBTInput}
+     */
+    RequestsCreatePSBTInput,
+
+    /**
+     * The RequestsCreatePSBTOutput model constructor.
+     * @property {module:model/RequestsCreatePSBTOutput}
+     */
+    RequestsCreatePSBTOutput,
+
+    /**
+     * The RequestsCreatePSBTRequest model constructor.
+     * @property {module:model/RequestsCreatePSBTRequest}
+     */
+    RequestsCreatePSBTRequest,
+
+    /**
+     * The RequestsCreateRawTxInput model constructor.
+     * @property {module:model/RequestsCreateRawTxInput}
+     */
+    RequestsCreateRawTxInput,
+
+    /**
+     * The RequestsCreateRawTxOutput model constructor.
+     * @property {module:model/RequestsCreateRawTxOutput}
+     */
+    RequestsCreateRawTxOutput,
+
+    /**
+     * The RequestsCreateRawTxRequest model constructor.
+     * @property {module:model/RequestsCreateRawTxRequest}
+     */
+    RequestsCreateRawTxRequest,
 
     /**
      * The RequestsDecodeScriptRequest model constructor.
@@ -1226,262 +1073,202 @@ export {
     RequestsVerifyTxOutProofRequest,
 
     /**
-     * The ResponsesAnalyzePSBTResponse model constructor.
-     * @property {module:model/ResponsesAnalyzePSBTResponse}
+     * The RuneEntry model constructor.
+     * @property {module:model/RuneEntry}
      */
-    ResponsesAnalyzePSBTResponse,
+    RuneEntry,
 
     /**
-     * The ResponsesCombinePSBTResponse model constructor.
-     * @property {module:model/ResponsesCombinePSBTResponse}
+     * The RuneListEntry model constructor.
+     * @property {module:model/RuneListEntry}
      */
-    ResponsesCombinePSBTResponse,
+    RuneListEntry,
 
     /**
-     * The ResponsesCombineRawTransactionResponse model constructor.
-     * @property {module:model/ResponsesCombineRawTransactionResponse}
+     * The RuneResponse model constructor.
+     * @property {module:model/RuneResponse}
      */
-    ResponsesCombineRawTransactionResponse,
+    RuneResponse,
 
     /**
-     * The ResponsesConvertToPSBTResponse model constructor.
-     * @property {module:model/ResponsesConvertToPSBTResponse}
+     * The RuneTerms model constructor.
+     * @property {module:model/RuneTerms}
      */
-    ResponsesConvertToPSBTResponse,
+    RuneTerms,
 
     /**
-     * The ResponsesCreatePSBTResponse model constructor.
-     * @property {module:model/ResponsesCreatePSBTResponse}
+     * The RunesBalance model constructor.
+     * @property {module:model/RunesBalance}
      */
-    ResponsesCreatePSBTResponse,
+    RunesBalance,
 
     /**
-     * The ResponsesCreateRawTransactionResponse model constructor.
-     * @property {module:model/ResponsesCreateRawTransactionResponse}
+     * The RunesListResponse model constructor.
+     * @property {module:model/RunesListResponse}
      */
-    ResponsesCreateRawTransactionResponse,
+    RunesListResponse,
 
     /**
-     * The ResponsesDecodePSBTResponse model constructor.
-     * @property {module:model/ResponsesDecodePSBTResponse}
+     * The RunestoneData model constructor.
+     * @property {module:model/RunestoneData}
      */
-    ResponsesDecodePSBTResponse,
+    RunestoneData,
 
     /**
-     * The ResponsesDecodeScriptResponse model constructor.
-     * @property {module:model/ResponsesDecodeScriptResponse}
+     * The SatoshiResponse model constructor.
+     * @property {module:model/SatoshiResponse}
      */
-    ResponsesDecodeScriptResponse,
+    SatoshiResponse,
 
     /**
-     * The ResponsesEstimateRawFeeResponse model constructor.
-     * @property {module:model/ResponsesEstimateRawFeeResponse}
+     * The Script model constructor.
+     * @property {module:model/Script}
      */
-    ResponsesEstimateRawFeeResponse,
+    Script,
 
     /**
-     * The ResponsesEstimateSmartFeeResponse model constructor.
-     * @property {module:model/ResponsesEstimateSmartFeeResponse}
+     * The ScriptPubKey model constructor.
+     * @property {module:model/ScriptPubKey}
      */
-    ResponsesEstimateSmartFeeResponse,
+    ScriptPubKey,
 
     /**
-     * The ResponsesGetBlockDecodedResponse model constructor.
-     * @property {module:model/ResponsesGetBlockDecodedResponse}
+     * The ScriptSig model constructor.
+     * @property {module:model/ScriptSig}
      */
-    ResponsesGetBlockDecodedResponse,
+    ScriptSig,
 
     /**
-     * The ResponsesGetBlockHexResponse model constructor.
-     * @property {module:model/ResponsesGetBlockHexResponse}
+     * The SegwitDetails model constructor.
+     * @property {module:model/SegwitDetails}
      */
-    ResponsesGetBlockHexResponse,
+    SegwitDetails,
 
     /**
-     * The ResponsesGetBlockPrevoutResponse model constructor.
-     * @property {module:model/ResponsesGetBlockPrevoutResponse}
+     * The SmartFeeEstimate model constructor.
+     * @property {module:model/SmartFeeEstimate}
      */
-    ResponsesGetBlockPrevoutResponse,
+    SmartFeeEstimate,
 
     /**
-     * The ResponsesGetBlockStatsResponse model constructor.
-     * @property {module:model/ResponsesGetBlockStatsResponse}
+     * The StatusResponse model constructor.
+     * @property {module:model/StatusResponse}
      */
-    ResponsesGetBlockStatsResponse,
+    StatusResponse,
 
     /**
-     * The ResponsesGetBlockSummaryResponse model constructor.
-     * @property {module:model/ResponsesGetBlockSummaryResponse}
+     * The TestMempoolAcceptResult model constructor.
+     * @property {module:model/TestMempoolAcceptResult}
      */
-    ResponsesGetBlockSummaryResponse,
+    TestMempoolAcceptResult,
 
     /**
-     * The ResponsesGetBlockchainInfoResponse model constructor.
-     * @property {module:model/ResponsesGetBlockchainInfoResponse}
+     * The TestMempoolFees model constructor.
+     * @property {module:model/TestMempoolFees}
      */
-    ResponsesGetBlockchainInfoResponse,
+    TestMempoolFees,
 
     /**
-     * The ResponsesGetChainTxStatsResponse model constructor.
-     * @property {module:model/ResponsesGetChainTxStatsResponse}
+     * The Transaction model constructor.
+     * @property {module:model/Transaction}
      */
-    ResponsesGetChainTxStatsResponse,
+    Transaction,
 
     /**
-     * The ResponsesGetDifficultyResponse model constructor.
-     * @property {module:model/ResponsesGetDifficultyResponse}
+     * The TransactionDetails model constructor.
+     * @property {module:model/TransactionDetails}
      */
-    ResponsesGetDifficultyResponse,
+    TransactionDetails,
 
     /**
-     * The ResponsesGetMempoolAncestorsResponse model constructor.
-     * @property {module:model/ResponsesGetMempoolAncestorsResponse}
+     * The TransactionInput model constructor.
+     * @property {module:model/TransactionInput}
      */
-    ResponsesGetMempoolAncestorsResponse,
+    TransactionInput,
 
     /**
-     * The ResponsesGetMempoolDescendantsResponse model constructor.
-     * @property {module:model/ResponsesGetMempoolDescendantsResponse}
+     * The TransactionOutput model constructor.
+     * @property {module:model/TransactionOutput}
      */
-    ResponsesGetMempoolDescendantsResponse,
+    TransactionOutput,
 
     /**
-     * The ResponsesGetMempoolInfoResponse model constructor.
-     * @property {module:model/ResponsesGetMempoolInfoResponse}
+     * The TransactionResponse model constructor.
+     * @property {module:model/TransactionResponse}
      */
-    ResponsesGetMempoolInfoResponse,
+    TransactionResponse,
 
     /**
-     * The ResponsesGetMiningInfoResponse model constructor.
-     * @property {module:model/ResponsesGetMiningInfoResponse}
+     * The TxOut model constructor.
+     * @property {module:model/TxOut}
      */
-    ResponsesGetMiningInfoResponse,
+    TxOut,
 
     /**
-     * The ResponsesGetNetworkHashPSResponse model constructor.
-     * @property {module:model/ResponsesGetNetworkHashPSResponse}
+     * The TxSpendingPrevoutInput model constructor.
+     * @property {module:model/TxSpendingPrevoutInput}
      */
-    ResponsesGetNetworkHashPSResponse,
+    TxSpendingPrevoutInput,
 
     /**
-     * The ResponsesGetOutputByOutpointResponse model constructor.
-     * @property {module:model/ResponsesGetOutputByOutpointResponse}
+     * The TxSpendingPrevoutResult model constructor.
+     * @property {module:model/TxSpendingPrevoutResult}
      */
-    ResponsesGetOutputByOutpointResponse,
+    TxSpendingPrevoutResult,
 
     /**
-     * The ResponsesGetOutputsResponse model constructor.
-     * @property {module:model/ResponsesGetOutputsResponse}
+     * The TxVin1 model constructor.
+     * @property {module:model/TxVin1}
      */
-    ResponsesGetOutputsResponse,
+    TxVin1,
 
     /**
-     * The ResponsesGetRawMempoolResponse model constructor.
-     * @property {module:model/ResponsesGetRawMempoolResponse}
+     * The TxVin2 model constructor.
+     * @property {module:model/TxVin2}
      */
-    ResponsesGetRawMempoolResponse,
+    TxVin2,
 
     /**
-     * The ResponsesGetRawTransactionDecodedResponse model constructor.
-     * @property {module:model/ResponsesGetRawTransactionDecodedResponse}
+     * The UTXOBlockInfo model constructor.
+     * @property {module:model/UTXOBlockInfo}
      */
-    ResponsesGetRawTransactionDecodedResponse,
+    UTXOBlockInfo,
 
     /**
-     * The ResponsesGetRawTransactionHexResponse model constructor.
-     * @property {module:model/ResponsesGetRawTransactionHexResponse}
+     * The UTXOSetInfo model constructor.
+     * @property {module:model/UTXOSetInfo}
      */
-    ResponsesGetRawTransactionHexResponse,
+    UTXOSetInfo,
 
     /**
-     * The ResponsesGetRawTransactionPrevoutResponse model constructor.
-     * @property {module:model/ResponsesGetRawTransactionPrevoutResponse}
+     * The UTXOUnspendables model constructor.
+     * @property {module:model/UTXOUnspendables}
      */
-    ResponsesGetRawTransactionPrevoutResponse,
+    UTXOUnspendables,
 
     /**
-     * The ResponsesGetTxOutProofResponse model constructor.
-     * @property {module:model/ResponsesGetTxOutProofResponse}
+     * The UtilsResponseEnvelope model constructor.
+     * @property {module:model/UtilsResponseEnvelope}
      */
-    ResponsesGetTxOutProofResponse,
+    UtilsResponseEnvelope,
 
     /**
-     * The ResponsesGetTxOutResponse model constructor.
-     * @property {module:model/ResponsesGetTxOutResponse}
+     * The ValidateAddressResult model constructor.
+     * @property {module:model/ValidateAddressResult}
      */
-    ResponsesGetTxOutResponse,
+    ValidateAddressResult,
 
     /**
-     * The ResponsesGetTxOutSetInfoResponse model constructor.
-     * @property {module:model/ResponsesGetTxOutSetInfoResponse}
+     * The Vout model constructor.
+     * @property {module:model/Vout}
      */
-    ResponsesGetTxOutSetInfoResponse,
+    Vout,
 
     /**
-     * The ResponsesGetTxSpendingPrevoutResponse model constructor.
-     * @property {module:model/ResponsesGetTxSpendingPrevoutResponse}
-     */
-    ResponsesGetTxSpendingPrevoutResponse,
-
-    /**
-     * The ResponsesJoinPSBTsResponse model constructor.
-     * @property {module:model/ResponsesJoinPSBTsResponse}
-     */
-    ResponsesJoinPSBTsResponse,
-
-    /**
-     * The ResponsesLatestBlockHashResponse model constructor.
-     * @property {module:model/ResponsesLatestBlockHashResponse}
-     */
-    ResponsesLatestBlockHashResponse,
-
-    /**
-     * The ResponsesLatestBlockHeightResponse model constructor.
-     * @property {module:model/ResponsesLatestBlockHeightResponse}
-     */
-    ResponsesLatestBlockHeightResponse,
-
-    /**
-     * The ResponsesLatestBlockTimeResponse model constructor.
-     * @property {module:model/ResponsesLatestBlockTimeResponse}
-     */
-    ResponsesLatestBlockTimeResponse,
-
-    /**
-     * The ResponsesSendRawTransactionResponse model constructor.
-     * @property {module:model/ResponsesSendRawTransactionResponse}
-     */
-    ResponsesSendRawTransactionResponse,
-
-    /**
-     * The ResponsesTestMempoolAcceptResponse model constructor.
-     * @property {module:model/ResponsesTestMempoolAcceptResponse}
-     */
-    ResponsesTestMempoolAcceptResponse,
-
-    /**
-     * The ResponsesValidateAddressResponse model constructor.
-     * @property {module:model/ResponsesValidateAddressResponse}
-     */
-    ResponsesValidateAddressResponse,
-
-    /**
-     * The ResponsesVerifyMessageResponse model constructor.
-     * @property {module:model/ResponsesVerifyMessageResponse}
-     */
-    ResponsesVerifyMessageResponse,
-
-    /**
-     * The ResponsesVerifyTxOutProofResponse model constructor.
-     * @property {module:model/ResponsesVerifyTxOutProofResponse}
-     */
-    ResponsesVerifyTxOutProofResponse,
-
-    /**
-    * The BitcoinApi service constructor.
-    * @property {module:api/BitcoinApi}
+    * The AddressesApi service constructor.
+    * @property {module:api/AddressesApi}
     */
-    BitcoinApi,
+    AddressesApi,
 
     /**
     * The BlocksApi service constructor.
@@ -1490,8 +1277,74 @@ export {
     BlocksApi,
 
     /**
+    * The FeesApi service constructor.
+    * @property {module:api/FeesApi}
+    */
+    FeesApi,
+
+    /**
     * The InscriptionsApi service constructor.
     * @property {module:api/InscriptionsApi}
     */
-    InscriptionsApi
+    InscriptionsApi,
+
+    /**
+    * The MempoolApi service constructor.
+    * @property {module:api/MempoolApi}
+    */
+    MempoolApi,
+
+    /**
+    * The MiningApi service constructor.
+    * @property {module:api/MiningApi}
+    */
+    MiningApi,
+
+    /**
+    * The NetworkApi service constructor.
+    * @property {module:api/NetworkApi}
+    */
+    NetworkApi,
+
+    /**
+    * The OutputsApi service constructor.
+    * @property {module:api/OutputsApi}
+    */
+    OutputsApi,
+
+    /**
+    * The PSBTsApi service constructor.
+    * @property {module:api/PSBTsApi}
+    */
+    PSBTsApi,
+
+    /**
+    * The RunesApi service constructor.
+    * @property {module:api/RunesApi}
+    */
+    RunesApi,
+
+    /**
+    * The SatoshisApi service constructor.
+    * @property {module:api/SatoshisApi}
+    */
+    SatoshisApi,
+
+    /**
+    * The ScriptsApi service constructor.
+    * @property {module:api/ScriptsApi}
+    */
+    ScriptsApi,
+
+    /**
+    * The StatusApi service constructor.
+    * @property {module:api/StatusApi}
+    */
+    StatusApi,
+
+    /**
+    * The TransactionsApi service constructor.
+    * @property {module:api/TransactionsApi}
+    */
+    TransactionsApi
 };

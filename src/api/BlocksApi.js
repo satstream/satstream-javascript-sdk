@@ -14,13 +14,22 @@
  *
  */
 import ApiClient from "../ApiClient";
-import GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse from '../model/GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesError from '../model/GithubComSatstreamSsApiServerApiBlockResponsesError';
+import InlineResponse20010 from '../model/InlineResponse20010';
+import InlineResponse20011 from '../model/InlineResponse20011';
+import InlineResponse20012 from '../model/InlineResponse20012';
+import InlineResponse2004 from '../model/InlineResponse2004';
+import InlineResponse2005 from '../model/InlineResponse2005';
+import InlineResponse2006 from '../model/InlineResponse2006';
+import InlineResponse2007 from '../model/InlineResponse2007';
+import InlineResponse2008 from '../model/InlineResponse2008';
+import InlineResponse2009 from '../model/InlineResponse2009';
+import RequestsGetBlockStatsRequest from '../model/RequestsGetBlockStatsRequest';
+import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Blocks service.
 * @module api/BlocksApi
-* @version 1.0.19
+* @version 1.0.20
 */
 export default class BlocksApi {
 
@@ -37,30 +46,25 @@ export default class BlocksApi {
     }
 
     /**
-     * Callback function to receive the result of the getBlockByHash operation.
-     * @callback moduleapi/BlocksApi~getBlockByHashCallback
+     * Callback function to receive the result of the getBlockCount operation.
+     * @callback moduleapi/BlocksApi~getBlockCountCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20011{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get block info by hash
-     * Get detailed information about a specific block by hash
-     * @param {String} blockHash Block Hash
-     * @param {module:api/BlocksApi~getBlockByHashCallback} callback The callback function, accepting three arguments: error, data, response
+     * Get the height of the latest block
+     * Returns the height of the latest block
+     * @param {module:api/BlocksApi~getBlockCountCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getBlockByHash(blockHash, callback) {
+    getBlockCount(callback) {
       
       let postBody = null;
-      // verify the required parameter 'blockHash' is set
-      if (blockHash === undefined || blockHash === null) {
-        throw new Error("Missing the required parameter 'blockHash' when calling getBlockByHash");
-      }
 
       let pathParams = {
-        'block_hash': blockHash
+        
       };
       let queryParams = {
         
@@ -75,10 +79,549 @@ export default class BlocksApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse;
+      let returnType = InlineResponse20011;
 
       return this.apiClient.callApi(
-        '/block/hash/{block_hash}', 'GET',
+        '/blockcount', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlockDecoded operation.
+     * @callback moduleapi/BlocksApi~getBlockDecodedCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2004{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get block by hash or height (verbosity 2)
+     * Get block by hash or height as a decoded object
+     * @param {String} identifier Block hash or height
+     * @param {module:api/BlocksApi~getBlockDecodedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlockDecoded(identifier, callback) {
+      
+      let postBody = null;
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getBlockDecoded");
+      }
+
+      let pathParams = {
+        'identifier': identifier
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse2004;
+
+      return this.apiClient.callApi(
+        '/block/raw/{identifier}/decoded', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlockHashByHeight operation.
+     * @callback moduleapi/BlocksApi~getBlockHashByHeightCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2005{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Returns blockhash of specified block.
+     * Returns blockhash of specified block.
+     * @param {String} blockHeight Block Height
+     * @param {module:api/BlocksApi~getBlockHashByHeightCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlockHashByHeight(blockHeight, callback) {
+      
+      let postBody = null;
+      // verify the required parameter 'blockHeight' is set
+      if (blockHeight === undefined || blockHeight === null) {
+        throw new Error("Missing the required parameter 'blockHeight' when calling getBlockHashByHeight");
+      }
+
+      let pathParams = {
+        'block_height': blockHeight
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse2005;
+
+      return this.apiClient.callApi(
+        '/blockhash/{block_height}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlockHex operation.
+     * @callback moduleapi/BlocksApi~getBlockHexCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2005{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get block by hash or height (verbosity 0)
+     * Get block by hash or height as a raw hex string
+     * @param {String} identifier Block hash or height
+     * @param {module:api/BlocksApi~getBlockHexCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlockHex(identifier, callback) {
+      
+      let postBody = null;
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getBlockHex");
+      }
+
+      let pathParams = {
+        'identifier': identifier
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse2005;
+
+      return this.apiClient.callApi(
+        '/block/raw/{identifier}/hex', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlockInfo operation.
+     * @callback moduleapi/BlocksApi~getBlockInfoCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2009{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get block info by hash or height
+     * Get detailed information about a specific block by hash or height
+     * @param {String} identifier Block hash or height
+     * @param {module:api/BlocksApi~getBlockInfoCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlockInfo(identifier, callback) {
+      
+      let postBody = null;
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getBlockInfo");
+      }
+
+      let pathParams = {
+        'identifier': identifier
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse2009;
+
+      return this.apiClient.callApi(
+        '/block/{identifier}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlockPrevout operation.
+     * @callback moduleapi/BlocksApi~getBlockPrevoutCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2006{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get block by hash or height (verbosity 3)
+     * Get block by hash or height with prevout information
+     * @param {String} identifier Block hash or height
+     * @param {module:api/BlocksApi~getBlockPrevoutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlockPrevout(identifier, callback) {
+      
+      let postBody = null;
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getBlockPrevout");
+      }
+
+      let pathParams = {
+        'identifier': identifier
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse2006;
+
+      return this.apiClient.callApi(
+        '/block/raw/{identifier}/prevout', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlockStats operation.
+     * @callback moduleapi/BlocksApi~getBlockStatsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2008{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get block stats
+     * Computes per block statistics for a given window
+     * @param {module:model/RequestsGetBlockStatsRequest} body Block stats request parameters
+     * @param {module:api/BlocksApi~getBlockStatsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlockStats(body, callback) {
+      
+      let postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling getBlockStats");
+      }
+
+      let pathParams = {
+        
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse2008;
+
+      return this.apiClient.callApi(
+        '/block/stats', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlockSummary operation.
+     * @callback moduleapi/BlocksApi~getBlockSummaryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2007{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get block by hash or height (verbosity 1)
+     * Get block by hash or height as a summary object
+     * @param {String} identifier Block hash or height
+     * @param {module:api/BlocksApi~getBlockSummaryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlockSummary(identifier, callback) {
+      
+      let postBody = null;
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getBlockSummary");
+      }
+
+      let pathParams = {
+        'identifier': identifier
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse2007;
+
+      return this.apiClient.callApi(
+        '/block/raw/{identifier}/summary', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlockchainInfo operation.
+     * @callback moduleapi/BlocksApi~getBlockchainInfoCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20010{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get blockchain information
+     * Returns an object containing various state info regarding blockchain processing
+     * @param {module:api/BlocksApi~getBlockchainInfoCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlockchainInfo(callback) {
+      
+      let postBody = null;
+
+      let pathParams = {
+        
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse20010;
+
+      return this.apiClient.callApi(
+        '/blockchain/info', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlocks operation.
+     * @callback moduleapi/BlocksApi~getBlocksCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20012{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Returns the latest block height, last 100 block hashes, and featured inscriptions
+     * Returns the latest block height, last 100 block hashes, and featured inscriptions
+     * @param {module:api/BlocksApi~getBlocksCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlocks(callback) {
+      
+      let postBody = null;
+
+      let pathParams = {
+        
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse20012;
+
+      return this.apiClient.callApi(
+        '/blocks', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getLatestBlockHeight operation.
+     * @callback moduleapi/BlocksApi~getLatestBlockHeightCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20011{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Returns the height of the latest block.
+     * Returns the height of the latest block.
+     * @param {module:api/BlocksApi~getLatestBlockHeightCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getLatestBlockHeight(callback) {
+      
+      let postBody = null;
+
+      let pathParams = {
+        
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse20011;
+
+      return this.apiClient.callApi(
+        '/blockheight', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getLatestBlockhash operation.
+     * @callback moduleapi/BlocksApi~getLatestBlockhashCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse2005{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Returns blockhash for the latest block.
+     * Returns blockhash for the latest block.
+     * @param {module:api/BlocksApi~getLatestBlockhashCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getLatestBlockhash(callback) {
+      
+      let postBody = null;
+
+      let pathParams = {
+        
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse2005;
+
+      return this.apiClient.callApi(
+        '/blockhash', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getLatestBlocktime operation.
+     * @callback moduleapi/BlocksApi~getLatestBlocktimeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InlineResponse20011{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the timestamp of the latest block
+     * Returns the UNIX timestamp of when the latest block was mined
+     * @param {module:api/BlocksApi~getLatestBlocktimeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getLatestBlocktime(callback) {
+      
+      let postBody = null;
+
+      let pathParams = {
+        
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InlineResponse20011;
+
+      return this.apiClient.callApi(
+        '/blocktime', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

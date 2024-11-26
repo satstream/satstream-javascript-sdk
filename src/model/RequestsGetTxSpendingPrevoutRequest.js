@@ -14,12 +14,12 @@
  *
  */
 import ApiClient from '../ApiClient';
-import GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput from './GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput';
+import TxSpendingPrevoutInput from './TxSpendingPrevoutInput';
 
 /**
  * The RequestsGetTxSpendingPrevoutRequest model module.
  * @module model/RequestsGetTxSpendingPrevoutRequest
- * @version 1.0.19
+ * @version 1.0.20
  */
 export default class RequestsGetTxSpendingPrevoutRequest {
   /**
@@ -41,7 +41,7 @@ export default class RequestsGetTxSpendingPrevoutRequest {
     if (data) {
       obj = obj || new RequestsGetTxSpendingPrevoutRequest();
       if (data.hasOwnProperty('outputs'))
-        obj.outputs = ApiClient.convertToType(data['outputs'], [GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput]);
+        obj.outputs = ApiClient.convertToType(data['outputs'], [TxSpendingPrevoutInput]);
     }
     return obj;
   }
@@ -49,7 +49,7 @@ export default class RequestsGetTxSpendingPrevoutRequest {
 
 /**
  * The transaction outputs to check
- * @member {Array.<module:model/GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput>} outputs
+ * @member {Array.<module:model/TxSpendingPrevoutInput>} outputs
  */
 RequestsGetTxSpendingPrevoutRequest.prototype.outputs = undefined;
 

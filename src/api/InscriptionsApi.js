@@ -14,38 +14,14 @@
  *
  */
 import ApiClient from "../ApiClient";
-import GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse from '../model/GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse';
-import GithubComSatstreamSsApiServerApiAddressResponsesError from '../model/GithubComSatstreamSsApiServerApiAddressResponsesError';
-import GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse from '../model/GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse from '../model/GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse from '../model/GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse from '../model/GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse from '../model/GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse';
-import GithubComSatstreamSsApiServerApiBlockResponsesError from '../model/GithubComSatstreamSsApiServerApiBlockResponsesError';
-import GithubComSatstreamSsApiServerApiInscriptionResponsesError from '../model/GithubComSatstreamSsApiServerApiInscriptionResponsesError';
-import GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse from '../model/GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse';
-import GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse from '../model/GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse';
-import GithubComSatstreamSsApiServerApiOutputResponsesError from '../model/GithubComSatstreamSsApiServerApiOutputResponsesError';
-import GithubComSatstreamSsApiServerApiRuneResponsesError from '../model/GithubComSatstreamSsApiServerApiRuneResponsesError';
-import GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse from '../model/GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse';
-import GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse from '../model/GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse';
-import GithubComSatstreamSsApiServerApiSatoshiResponsesError from '../model/GithubComSatstreamSsApiServerApiSatoshiResponsesError';
-import GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse from '../model/GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse';
-import GithubComSatstreamSsApiServerApiStatusResponsesError from '../model/GithubComSatstreamSsApiServerApiStatusResponsesError';
-import GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse from '../model/GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse';
-import GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse from '../model/GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse';
-import GithubComSatstreamSsApiServerApiTransactionResponsesError from '../model/GithubComSatstreamSsApiServerApiTransactionResponsesError';
-import GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse from '../model/GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse';
-import ResponsesGetOutputByOutpointResponse from '../model/ResponsesGetOutputByOutpointResponse';
-import ResponsesGetOutputsResponse from '../model/ResponsesGetOutputsResponse';
-import ResponsesLatestBlockHashResponse from '../model/ResponsesLatestBlockHashResponse';
-import ResponsesLatestBlockHeightResponse from '../model/ResponsesLatestBlockHeightResponse';
-import ResponsesLatestBlockTimeResponse from '../model/ResponsesLatestBlockTimeResponse';
+import InlineResponse20017 from '../model/InlineResponse20017';
+import InlineResponse20018 from '../model/InlineResponse20018';
+import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 
 /**
 * Inscriptions service.
 * @module api/InscriptionsApi
-* @version 1.0.19
+* @version 1.0.20
 */
 export default class InscriptionsApi {
 
@@ -62,57 +38,10 @@ export default class InscriptionsApi {
     }
 
     /**
-     * Callback function to receive the result of the decodeTx operation.
-     * @callback moduleapi/InscriptionsApi~decodeTxCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Decode a transaction
-     * Decodes a transaction and returns its inscriptions and runestone data
-     * @param {String} txid Transaction ID
-     * @param {module:api/InscriptionsApi~decodeTxCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    decodeTx(txid, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'txid' is set
-      if (txid === undefined || txid === null) {
-        throw new Error("Missing the required parameter 'txid' when calling decodeTx");
-      }
-
-      let pathParams = {
-        'txid': txid
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse;
-
-      return this.apiClient.callApi(
-        '/decode/{txid}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
      * Callback function to receive the result of the fetchInscriptionChild operation.
      * @callback moduleapi/InscriptionsApi~fetchInscriptionChildCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20017{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -152,10 +81,10 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse;
+      let returnType = InlineResponse20017;
 
       return this.apiClient.callApi(
-        '/inscription/{inscription_id}/child/{child_index}', 'GET',
+        '/inscription/{inscription_id}/{child_index}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -164,7 +93,7 @@ export default class InscriptionsApi {
      * Callback function to receive the result of the fetchInscriptions operation.
      * @callback moduleapi/InscriptionsApi~fetchInscriptionsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse>{ data The data returned by the service call.
+     * @param {Array.<Object>{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -199,7 +128,7 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = [GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse];
+      let returnType = [Object];
 
       return this.apiClient.callApi(
         '/inscriptions', 'POST',
@@ -208,242 +137,10 @@ export default class InscriptionsApi {
       );
     }
     /**
-     * Callback function to receive the result of the getAddress operation.
-     * @callback moduleapi/InscriptionsApi~getAddressCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get address info
-     * Get detailed information about a specific address
-     * @param {String} address Address
-     * @param {module:api/InscriptionsApi~getAddressCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getAddress(address, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'address' is set
-      if (address === undefined || address === null) {
-        throw new Error("Missing the required parameter 'address' when calling getAddress");
-      }
-
-      let pathParams = {
-        'address': address
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse;
-
-      return this.apiClient.callApi(
-        '/address/{address}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getAddressUtxos operation.
-     * @callback moduleapi/InscriptionsApi~getAddressUtxosCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse>{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get UTXOs for an address
-     * Retrieve UTXOs held by a specific address with optional type filtering
-     * @param {String} address Address
-     * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.type UTXO Type
-     * @param {module:api/InscriptionsApi~getAddressUtxosCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getAddressUtxos(address, opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'address' is set
-      if (address === undefined || address === null) {
-        throw new Error("Missing the required parameter 'address' when calling getAddressUtxos");
-      }
-
-      let pathParams = {
-        'address': address
-      };
-      let queryParams = {
-        'type': opts['type']
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = [GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse];
-
-      return this.apiClient.callApi(
-        '/address/{address}/outputs', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getBlockByHeight operation.
-     * @callback moduleapi/InscriptionsApi~getBlockByHeightCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get block info by height
-     * Get detailed information about a specific block by height
-     * @param {String} blockHeight Block Height
-     * @param {module:api/InscriptionsApi~getBlockByHeightCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getBlockByHeight(blockHeight, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'blockHeight' is set
-      if (blockHeight === undefined || blockHeight === null) {
-        throw new Error("Missing the required parameter 'blockHeight' when calling getBlockByHeight");
-      }
-
-      let pathParams = {
-        'block_height': blockHeight
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse;
-
-      return this.apiClient.callApi(
-        '/block/height/{block_height}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getBlockCount operation.
-     * @callback moduleapi/InscriptionsApi~getBlockCountCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get the height of the latest block
-     * Returns the height of the latest block
-     * @param {module:api/InscriptionsApi~getBlockCountCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getBlockCount(callback) {
-      
-      let postBody = null;
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse;
-
-      return this.apiClient.callApi(
-        '/blockcount', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getBlockHashByHeight operation.
-     * @callback moduleapi/InscriptionsApi~getBlockHashByHeightCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Returns blockhash of specified block.
-     * Returns blockhash of specified block.
-     * @param {String} blockHeight Block Height
-     * @param {module:api/InscriptionsApi~getBlockHashByHeightCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getBlockHashByHeight(blockHeight, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'blockHeight' is set
-      if (blockHeight === undefined || blockHeight === null) {
-        throw new Error("Missing the required parameter 'blockHeight' when calling getBlockHashByHeight");
-      }
-
-      let pathParams = {
-        'block_height': blockHeight
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse;
-
-      return this.apiClient.callApi(
-        '/blockhash/{block_height}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
      * Callback function to receive the result of the getBlockInscriptions operation.
      * @callback moduleapi/InscriptionsApi~getBlockInscriptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20018{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -478,7 +175,7 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse;
+      let returnType = InlineResponse20018;
 
       return this.apiClient.callApi(
         '/inscriptions/block/{block_height}', 'GET',
@@ -487,52 +184,10 @@ export default class InscriptionsApi {
       );
     }
     /**
-     * Callback function to receive the result of the getBlocks operation.
-     * @callback moduleapi/InscriptionsApi~getBlocksCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Returns the latest block height, last 100 block hashes, and featured inscriptions
-     * Returns the latest block height, last 100 block hashes, and featured inscriptions
-     * @param {module:api/InscriptionsApi~getBlocksCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getBlocks(callback) {
-      
-      let postBody = null;
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse;
-
-      return this.apiClient.callApi(
-        '/blocks', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
      * Callback function to receive the result of the getInscription operation.
      * @callback moduleapi/InscriptionsApi~getInscriptionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20017{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -567,7 +222,7 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse;
+      let returnType = InlineResponse20017;
 
       return this.apiClient.callApi(
         '/inscription/{inscription_id}', 'GET',
@@ -576,136 +231,10 @@ export default class InscriptionsApi {
       );
     }
     /**
-     * Callback function to receive the result of the getLatestBlockHeight operation.
-     * @callback moduleapi/InscriptionsApi~getLatestBlockHeightCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesLatestBlockHeightResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Returns the height of the latest block.
-     * Returns the height of the latest block.
-     * @param {module:api/InscriptionsApi~getLatestBlockHeightCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getLatestBlockHeight(callback) {
-      
-      let postBody = null;
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ResponsesLatestBlockHeightResponse;
-
-      return this.apiClient.callApi(
-        '/latestblockheight', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getLatestBlockhash operation.
-     * @callback moduleapi/InscriptionsApi~getLatestBlockhashCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesLatestBlockHashResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Returns blockhash for the latest block.
-     * Returns blockhash for the latest block.
-     * @param {module:api/InscriptionsApi~getLatestBlockhashCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getLatestBlockhash(callback) {
-      
-      let postBody = null;
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ResponsesLatestBlockHashResponse;
-
-      return this.apiClient.callApi(
-        '/latestblockhash', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getLatestBlocktime operation.
-     * @callback moduleapi/InscriptionsApi~getLatestBlocktimeCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesLatestBlockTimeResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get the timestamp of the latest block
-     * Returns the UNIX timestamp of when the latest block was mined
-     * @param {module:api/InscriptionsApi~getLatestBlocktimeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getLatestBlocktime(callback) {
-      
-      let postBody = null;
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ResponsesLatestBlockTimeResponse;
-
-      return this.apiClient.callApi(
-        '/blocktime', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
      * Callback function to receive the result of the getLatestInscriptions operation.
      * @callback moduleapi/InscriptionsApi~getLatestInscriptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20018{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -735,10 +264,10 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse;
+      let returnType = InlineResponse20018;
 
       return this.apiClient.callApi(
-        '/inscriptions/latest', 'GET',
+        '/inscriptions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -747,7 +276,7 @@ export default class InscriptionsApi {
      * Callback function to receive the result of the getLatestInscriptionsPage operation.
      * @callback moduleapi/InscriptionsApi~getLatestInscriptionsPageCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse{ data The data returned by the service call.
+     * @param {module:model/InlineResponse20018{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -782,376 +311,10 @@ export default class InscriptionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse;
+      let returnType = InlineResponse20018;
 
       return this.apiClient.callApi(
-        '/inscriptions/page/{page}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getLatestRunes operation.
-     * @callback moduleapi/InscriptionsApi~getLatestRunesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get latest runes
-     * Retrieve information about the last 100 inscribed runes (first page)
-     * @param {module:api/InscriptionsApi~getLatestRunesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getLatestRunes(callback) {
-      
-      let postBody = null;
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse;
-
-      return this.apiClient.callApi(
-        '/runes/latest', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getLatestRunesPage operation.
-     * @callback moduleapi/InscriptionsApi~getLatestRunesPageCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get latest runes page
-     * Retrieve a specific page of 100 inscribed runes
-     * @param {Number} page Page number
-     * @param {module:api/InscriptionsApi~getLatestRunesPageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getLatestRunesPage(page, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'page' is set
-      if (page === undefined || page === null) {
-        throw new Error("Missing the required parameter 'page' when calling getLatestRunesPage");
-      }
-
-      let pathParams = {
-        'page': page
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse;
-
-      return this.apiClient.callApi(
-        '/runes/page/{page}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getOutputByOutpoint operation.
-     * @callback moduleapi/InscriptionsApi~getOutputByOutpointCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ResponsesGetOutputByOutpointResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get output info by outpoint
-     * Retrieve information about a specific UTXO using outpoint string
-     * @param {String} outpoint Outpoint
-     * @param {module:api/InscriptionsApi~getOutputByOutpointCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getOutputByOutpoint(outpoint, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'outpoint' is set
-      if (outpoint === undefined || outpoint === null) {
-        throw new Error("Missing the required parameter 'outpoint' when calling getOutputByOutpoint");
-      }
-
-      let pathParams = {
-        'outpoint': outpoint
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ResponsesGetOutputByOutpointResponse;
-
-      return this.apiClient.callApi(
-        '/output/outpoint/{outpoint}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getOutputs operation.
-     * @callback moduleapi/InscriptionsApi~getOutputsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ResponsesGetOutputsResponse>{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get multiple outputs
-     * Retrieve information about multiple UTXOs
-     * @param {Array.<String>} body Outpoints
-     * @param {module:api/InscriptionsApi~getOutputsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getOutputs(body, callback) {
-      
-      let postBody = body;
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling getOutputs");
-      }
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = [ResponsesGetOutputsResponse];
-
-      return this.apiClient.callApi(
-        '/outputs', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getRune operation.
-     * @callback moduleapi/InscriptionsApi~getRuneCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get rune info
-     * Retrieve information about a specific rune
-     * @param {String} runeName Rune Name
-     * @param {module:api/InscriptionsApi~getRuneCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getRune(runeName, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'runeName' is set
-      if (runeName === undefined || runeName === null) {
-        throw new Error("Missing the required parameter 'runeName' when calling getRune");
-      }
-
-      let pathParams = {
-        'rune_name': runeName
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse;
-
-      return this.apiClient.callApi(
-        '/rune/{rune_name}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getSatoshi operation.
-     * @callback moduleapi/InscriptionsApi~getSatoshiCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get satoshi info
-     * Retrieve information about a specific satoshi
-     * @param {Number} _number Satoshi Number
-     * @param {module:api/InscriptionsApi~getSatoshiCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getSatoshi(_number, callback) {
-      
-      let postBody = null;
-      // verify the required parameter '_number' is set
-      if (_number === undefined || _number === null) {
-        throw new Error("Missing the required parameter '_number' when calling getSatoshi");
-      }
-
-      let pathParams = {
-        'number': _number
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse;
-
-      return this.apiClient.callApi(
-        '/sat/{number}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getStatus operation.
-     * @callback moduleapi/InscriptionsApi~getStatusCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get server status
-     * Retrieve information about the server installation and index
-     * @param {module:api/InscriptionsApi~getStatusCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getStatus(callback) {
-      
-      let postBody = null;
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse;
-
-      return this.apiClient.callApi(
-        '/status', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getTransaction operation.
-     * @callback moduleapi/InscriptionsApi~getTransactionCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get transaction info
-     * Retrieve information about a specific transaction
-     * @param {String} txid Transaction ID
-     * @param {module:api/InscriptionsApi~getTransactionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getTransaction(txid, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'txid' is set
-      if (txid === undefined || txid === null) {
-        throw new Error("Missing the required parameter 'txid' when calling getTransaction");
-      }
-
-      let pathParams = {
-        'txid': txid
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse;
-
-      return this.apiClient.callApi(
-        '/tx/{txid}', 'GET',
+        '/inscriptions/{page}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

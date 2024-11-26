@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsGetTxOutRequest model module.
  * @module model/RequestsGetTxOutRequest
- * @version 1.0.19
+ * @version 1.0.20
  */
 export default class RequestsGetTxOutRequest {
   /**

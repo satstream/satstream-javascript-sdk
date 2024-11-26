@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**outputs** | [**[GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput]**](GithubComSatstreamSsUtilsBitcoinCliTxSpendingPrevoutInput.md) | The transaction outputs to check | [optional] 
+**outputs** | [**[TxSpendingPrevoutInput]**](TxSpendingPrevoutInput.md) | The transaction outputs to check | [optional] 

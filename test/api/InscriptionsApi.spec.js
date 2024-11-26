@@ -35,26 +35,6 @@
 
   describe('(package)', function() {
     describe('InscriptionsApi', function() {
-      describe('decodeTx', function() {
-        it('should call decodeTx successfully', function(done) {
-          // TODO: uncomment, update parameter values for decodeTx call and complete the assertions
-          /*
-
-          instance.decodeTx(txid, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiTransactionResponsesDecodeResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
       describe('fetchInscriptionChild', function() {
         it('should call fetchInscriptionChild successfully', function(done) {
           // TODO: uncomment, update parameter values for fetchInscriptionChild call and complete the assertions
@@ -66,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20017);
 
             done();
           });
@@ -91,115 +71,9 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse);
+              expect(data).to.be.a(Object);
+              // expect(data).to.be(null);
             }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getAddress', function() {
-        it('should call getAddress successfully', function(done) {
-          // TODO: uncomment, update parameter values for getAddress call and complete the assertions
-          /*
-
-          instance.getAddress(address, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiAddressResponsesAddressResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getAddressUtxos', function() {
-        it('should call getAddressUtxos successfully', function(done) {
-          // TODO: uncomment, update parameter values for getAddressUtxos call and complete the assertions
-          /*
-          var opts = {};
-
-          instance.getAddressUtxos(address, opts, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiAddressResponsesOutputResponse);
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getBlockByHeight', function() {
-        it('should call getBlockByHeight successfully', function(done) {
-          // TODO: uncomment, update parameter values for getBlockByHeight call and complete the assertions
-          /*
-
-          instance.getBlockByHeight(blockHeight, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getBlockCount', function() {
-        it('should call getBlockCount successfully', function(done) {
-          // TODO: uncomment getBlockCount call and complete the assertions
-          /*
-
-          instance.getBlockCount(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiBlockResponsesBlockCountResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getBlockHashByHeight', function() {
-        it('should call getBlockHashByHeight successfully', function(done) {
-          // TODO: uncomment, update parameter values for getBlockHashByHeight call and complete the assertions
-          /*
-
-          instance.getBlockHashByHeight(blockHeight, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiBlockResponsesBlockHashResponse);
 
             done();
           });
@@ -219,27 +93,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getBlocks', function() {
-        it('should call getBlocks successfully', function(done) {
-          // TODO: uncomment getBlocks call and complete the assertions
-          /*
-
-          instance.getBlocks(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiBlockResponsesBlocksResponse);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20018);
 
             done();
           });
@@ -259,67 +113,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiInscriptionResponsesInscriptionResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getLatestBlockHeight', function() {
-        it('should call getLatestBlockHeight successfully', function(done) {
-          // TODO: uncomment getLatestBlockHeight call and complete the assertions
-          /*
-
-          instance.getLatestBlockHeight(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesLatestBlockHeightResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getLatestBlockhash', function() {
-        it('should call getLatestBlockhash successfully', function(done) {
-          // TODO: uncomment getLatestBlockhash call and complete the assertions
-          /*
-
-          instance.getLatestBlockhash(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesLatestBlockHashResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getLatestBlocktime', function() {
-        it('should call getLatestBlocktime successfully', function(done) {
-          // TODO: uncomment getLatestBlocktime call and complete the assertions
-          /*
-
-          instance.getLatestBlocktime(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesLatestBlockTimeResponse);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20017);
 
             done();
           });
@@ -339,7 +133,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20018);
 
             done();
           });
@@ -359,173 +153,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiInscriptionResponsesLatestInscriptionsResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getLatestRunes', function() {
-        it('should call getLatestRunes successfully', function(done) {
-          // TODO: uncomment getLatestRunes call and complete the assertions
-          /*
-
-          instance.getLatestRunes(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getLatestRunesPage', function() {
-        it('should call getLatestRunesPage successfully', function(done) {
-          // TODO: uncomment, update parameter values for getLatestRunesPage call and complete the assertions
-          /*
-
-          instance.getLatestRunesPage(page, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiRuneResponsesRunesListResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getOutputByOutpoint', function() {
-        it('should call getOutputByOutpoint successfully', function(done) {
-          // TODO: uncomment, update parameter values for getOutputByOutpoint call and complete the assertions
-          /*
-
-          instance.getOutputByOutpoint(outpoint, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetOutputByOutpointResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getOutputs', function() {
-        it('should call getOutputs successfully', function(done) {
-          // TODO: uncomment, update parameter values for getOutputs call and complete the assertions
-          /*
-
-          instance.getOutputs(body, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(SatstreamJavascriptSdk.ResponsesGetOutputsResponse);
-            }
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getRune', function() {
-        it('should call getRune successfully', function(done) {
-          // TODO: uncomment, update parameter values for getRune call and complete the assertions
-          /*
-
-          instance.getRune(runeName, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiRuneResponsesRuneResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getSatoshi', function() {
-        it('should call getSatoshi successfully', function(done) {
-          // TODO: uncomment, update parameter values for getSatoshi call and complete the assertions
-          /*
-
-          instance.getSatoshi(_number, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiSatoshiResponsesSatoshiResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getStatus', function() {
-        it('should call getStatus successfully', function(done) {
-          // TODO: uncomment getStatus call and complete the assertions
-          /*
-
-          instance.getStatus(function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiStatusResponsesStatusResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getTransaction', function() {
-        it('should call getTransaction successfully', function(done) {
-          // TODO: uncomment, update parameter values for getTransaction call and complete the assertions
-          /*
-
-          instance.getTransaction(txid, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiTransactionResponsesTransactionResponse);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20018);
 
             done();
           });

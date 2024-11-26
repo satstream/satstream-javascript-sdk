@@ -18,14 +18,14 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsCombinePSBTRequest model module.
  * @module model/RequestsCombinePSBTRequest
- * @version 1.0.19
+ * @version 1.0.20
  */
 export default class RequestsCombinePSBTRequest {
   /**
    * Constructs a new <code>RequestsCombinePSBTRequest</code>.
    * @alias module:model/RequestsCombinePSBTRequest
    * @class
-   * @param psbts {Array.<String>} 
+   * @param psbts {Array.<String>} Array of base64-encoded PSBTs to combine
    */
   constructor(psbts) {
     this.psbts = psbts;
@@ -49,6 +49,7 @@ export default class RequestsCombinePSBTRequest {
 }
 
 /**
+ * Array of base64-encoded PSBTs to combine
  * @member {Array.<String>} psbts
  */
 RequestsCombinePSBTRequest.prototype.psbts = undefined;

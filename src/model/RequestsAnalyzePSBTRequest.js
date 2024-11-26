@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestsAnalyzePSBTRequest model module.
  * @module model/RequestsAnalyzePSBTRequest
- * @version 1.0.19
+ * @version 1.0.20
  */
 export default class RequestsAnalyzePSBTRequest {
   /**
@@ -47,6 +47,7 @@ export default class RequestsAnalyzePSBTRequest {
 }
 
 /**
+ * The base64-encoded PSBT to analyze
  * @member {String} psbt
  */
 RequestsAnalyzePSBTRequest.prototype.psbt = undefined;

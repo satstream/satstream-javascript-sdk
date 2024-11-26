@@ -35,18 +35,258 @@
 
   describe('(package)', function() {
     describe('BlocksApi', function() {
-      describe('getBlockByHash', function() {
-        it('should call getBlockByHash successfully', function(done) {
-          // TODO: uncomment, update parameter values for getBlockByHash call and complete the assertions
+      describe('getBlockCount', function() {
+        it('should call getBlockCount successfully', function(done) {
+          // TODO: uncomment getBlockCount call and complete the assertions
           /*
 
-          instance.getBlockByHash(blockHash, function(error, data, response) {
+          instance.getBlockCount(function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsApiServerApiBlockResponsesBlockResponse);
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20011);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockDecoded', function() {
+        it('should call getBlockDecoded successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockDecoded call and complete the assertions
+          /*
+
+          instance.getBlockDecoded(identifier, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2004);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockHashByHeight', function() {
+        it('should call getBlockHashByHeight successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockHashByHeight call and complete the assertions
+          /*
+
+          instance.getBlockHashByHeight(blockHeight, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2005);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockHex', function() {
+        it('should call getBlockHex successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockHex call and complete the assertions
+          /*
+
+          instance.getBlockHex(identifier, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2005);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockInfo', function() {
+        it('should call getBlockInfo successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockInfo call and complete the assertions
+          /*
+
+          instance.getBlockInfo(identifier, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2009);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockPrevout', function() {
+        it('should call getBlockPrevout successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockPrevout call and complete the assertions
+          /*
+
+          instance.getBlockPrevout(identifier, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2006);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockStats', function() {
+        it('should call getBlockStats successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockStats call and complete the assertions
+          /*
+
+          instance.getBlockStats(body, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2008);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockSummary', function() {
+        it('should call getBlockSummary successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockSummary call and complete the assertions
+          /*
+
+          instance.getBlockSummary(identifier, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2007);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlockchainInfo', function() {
+        it('should call getBlockchainInfo successfully', function(done) {
+          // TODO: uncomment getBlockchainInfo call and complete the assertions
+          /*
+
+          instance.getBlockchainInfo(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20010);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getBlocks', function() {
+        it('should call getBlocks successfully', function(done) {
+          // TODO: uncomment getBlocks call and complete the assertions
+          /*
+
+          instance.getBlocks(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20012);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getLatestBlockHeight', function() {
+        it('should call getLatestBlockHeight successfully', function(done) {
+          // TODO: uncomment getLatestBlockHeight call and complete the assertions
+          /*
+
+          instance.getLatestBlockHeight(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20011);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getLatestBlockhash', function() {
+        it('should call getLatestBlockhash successfully', function(done) {
+          // TODO: uncomment getLatestBlockhash call and complete the assertions
+          /*
+
+          instance.getLatestBlockhash(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2005);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getLatestBlocktime', function() {
+        it('should call getLatestBlocktime successfully', function(done) {
+          // TODO: uncomment getLatestBlocktime call and complete the assertions
+          /*
+
+          instance.getLatestBlocktime(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse20011);
 
             done();
           });

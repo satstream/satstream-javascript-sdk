@@ -1,0 +1,7 @@
+# SatstreamJavascriptSdk.MempoolAncestorsData
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**detailed** | [**{String: MempoolEntry}**](MempoolEntry.md) | Only if verbose is true | [optional] 
+**txids** | **[String]** | Only if verbose is false | [optional] 
