@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UTXOUnspendables model module.
  * @module model/UTXOUnspendables
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class UTXOUnspendables {
   /**

@@ -4,5 +4,5 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **Number** |  | [optional] 
-**data** | [**RunesListResponse**](RunesListResponse.md) |  | [optional] 
+**data** | [**GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse**](GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse.md) |  | [optional] 
 **msg** | **String** |  | [optional] 

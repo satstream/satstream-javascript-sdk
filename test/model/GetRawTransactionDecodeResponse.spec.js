@@ -30,26 +30,32 @@
   var instance;
 
   describe('(package)', function() {
-    describe('TransactionCreateRawTxOutput', function() {
+    describe('GetRawTransactionDecodeResponse', function() {
       beforeEach(function() {
-        instance = new SatstreamJavascriptSdk.TransactionCreateRawTxOutput();
+        instance = new SatstreamJavascriptSdk.GetRawTransactionDecodeResponse();
       });
 
-      it('should create an instance of TransactionCreateRawTxOutput', function() {
-        // TODO: update the code to test TransactionCreateRawTxOutput
-        expect(instance).to.be.a(SatstreamJavascriptSdk.TransactionCreateRawTxOutput);
+      it('should create an instance of GetRawTransactionDecodeResponse', function() {
+        // TODO: update the code to test GetRawTransactionDecodeResponse
+        expect(instance).to.be.a(SatstreamJavascriptSdk.GetRawTransactionDecodeResponse);
       });
 
-      it('should have the property address (base name: "address")', function() {
-        // TODO: update the code to test the property address
-        expect(instance).to.have.property('address');
-        // expect(instance.address).to.be(expectedValueLiteral);
+      it('should have the property code (base name: "code")', function() {
+        // TODO: update the code to test the property code
+        expect(instance).to.have.property('code');
+        // expect(instance.code).to.be(expectedValueLiteral);
       });
 
       it('should have the property data (base name: "data")', function() {
         // TODO: update the code to test the property data
         expect(instance).to.have.property('data');
         // expect(instance.data).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property msg (base name: "msg")', function() {
+        // TODO: update the code to test the property msg
+        expect(instance).to.have.property('msg');
+        // expect(instance.msg).to.be(expectedValueLiteral);
       });
 
     });

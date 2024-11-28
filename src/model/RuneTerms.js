@@ -14,11 +14,12 @@
  *
  */
 import ApiClient from '../ApiClient';
+import BigInt from './BigInt';
 
 /**
  * The RuneTerms model module.
  * @module model/RuneTerms
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class RuneTerms {
   /**
@@ -42,7 +43,7 @@ export default class RuneTerms {
       if (data.hasOwnProperty('amount'))
         obj.amount = ApiClient.convertToType(data['amount'], 'Number');
       if (data.hasOwnProperty('cap'))
-        obj.cap = ApiClient.convertToType(data['cap'], 'String');
+        obj.cap = BigInt.constructFromObject(data['cap']);
       if (data.hasOwnProperty('height'))
         obj.height = ApiClient.convertToType(data['height'], ['Number']);
       if (data.hasOwnProperty('offset'))
@@ -58,7 +59,7 @@ export default class RuneTerms {
 RuneTerms.prototype.amount = undefined;
 
 /**
- * @member {String} cap
+ * @member {module:model/BigInt} cap
  */
 RuneTerms.prototype.cap = undefined;
 

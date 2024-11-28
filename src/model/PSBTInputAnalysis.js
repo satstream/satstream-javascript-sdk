@@ -19,7 +19,7 @@ import PSBTMissingData from './PSBTMissingData';
 /**
  * The PSBTInputAnalysis model module.
  * @module model/PSBTInputAnalysis
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class PSBTInputAnalysis {
   /**

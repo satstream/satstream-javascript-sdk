@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **indexed** | **Boolean** |  | [optional] 
 **inscriptions** | **[String]** |  | [optional] 
 **outpoint** | **String** |  | [optional] 
-**runes** | **{String: String}** |  | [optional] 
+**runes** | [**{String: GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails}**](GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails.md) |  | [optional] 
 **satRanges** | **[[Number]]** |  | [optional] 
 **scriptPubkey** | **String** |  | [optional] 
 **spent** | **Boolean** |  | [optional] 

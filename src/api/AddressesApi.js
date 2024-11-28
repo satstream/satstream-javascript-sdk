@@ -20,13 +20,11 @@ import GetAddressRuneDeltasResponse from '../model/GetAddressRuneDeltasResponse'
 import GetAddressUTXOsResponse from '../model/GetAddressUTXOsResponse';
 import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 import ValidateAddressResponse from '../model/ValidateAddressResponse';
-import VerifyMessageRequest from '../model/VerifyMessageRequest';
-import VerifyMessageResponse from '../model/VerifyMessageResponse';
 
 /**
 * Addresses service.
 * @module api/AddressesApi
-* @version 1.0.25
+* @version 1.0.26
 */
 export default class AddressesApi {
 
@@ -285,53 +283,6 @@ export default class AddressesApi {
 
       return this.apiClient.callApi(
         '/address/{address}/validate', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the verifyMessage operation.
-     * @callback moduleapi/AddressesApi~verifyMessageCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/VerifyMessageResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Verify message
-     * Verifies a signed message
-     * @param {module:model/VerifyMessageRequest} body Message verification parameters
-     * @param {module:api/AddressesApi~verifyMessageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    verifyMessage(body, callback) {
-      
-      let postBody = body;
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling verifyMessage");
-      }
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = VerifyMessageResponse;
-
-      return this.apiClient.callApi(
-        '/address/verify-message', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RunestoneData model module.
  * @module model/RunestoneData
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class RunestoneData {
   /**
@@ -39,7 +39,36 @@ export default class RunestoneData {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new RunestoneData();
+      if (data.hasOwnProperty('edicts'))
+        obj.edicts = ApiClient.convertToType(data['edicts'], [['Number']]);
+      if (data.hasOwnProperty('etching'))
+        obj.etching = ApiClient.convertToType(data['etching'], 'String');
+      if (data.hasOwnProperty('mint'))
+        obj.mint = ApiClient.convertToType(data['mint'], 'String');
+      if (data.hasOwnProperty('pointer'))
+        obj.pointer = ApiClient.convertToType(data['pointer'], 'Number');
     }
     return obj;
   }
 }
+
+/**
+ * @member {Array.<Array.<Number>>} edicts
+ */
+RunestoneData.prototype.edicts = undefined;
+
+/**
+ * @member {String} etching
+ */
+RunestoneData.prototype.etching = undefined;
+
+/**
+ * @member {String} mint
+ */
+RunestoneData.prototype.mint = undefined;
+
+/**
+ * @member {Number} pointer
+ */
+RunestoneData.prototype.pointer = undefined;
+

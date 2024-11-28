@@ -14,12 +14,11 @@
  *
  */
 import ApiClient from '../ApiClient';
-import RuneEntry from './RuneEntry';
 
 /**
  * The RuneResponse model module.
  * @module model/RuneResponse
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class RuneResponse {
   /**
@@ -40,8 +39,6 @@ export default class RuneResponse {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new RuneResponse();
-      if (data.hasOwnProperty('entry'))
-        obj.entry = RuneEntry.constructFromObject(data['entry']);
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'String');
       if (data.hasOwnProperty('mintable'))
@@ -52,11 +49,6 @@ export default class RuneResponse {
     return obj;
   }
 }
-
-/**
- * @member {module:model/RuneEntry} entry
- */
-RuneResponse.prototype.entry = undefined;
 
 /**
  * @member {String} id

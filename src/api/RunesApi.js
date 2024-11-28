@@ -21,7 +21,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Runes service.
 * @module api/RunesApi
-* @version 1.0.25
+* @version 1.0.26
 */
 export default class RunesApi {
 
@@ -136,21 +136,21 @@ export default class RunesApi {
 
     /**
      * Get rune info
-     * Retrieve information about a specific rune
-     * @param {String} runeName Rune Name
+     * Retrieve information about a specific rune by name or ID (e.g., \&quot;UNCOMMON•GOODS\&quot; or \&quot;1:0\&quot;)
+     * @param {String} identifier Rune Name or ID
      * @param {module:api/RunesApi~getRuneCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getRune(runeName, callback) {
+    getRune(identifier, callback) {
       
       let postBody = null;
-      // verify the required parameter 'runeName' is set
-      if (runeName === undefined || runeName === null) {
-        throw new Error("Missing the required parameter 'runeName' when calling getRune");
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getRune");
       }
 
       let pathParams = {
-        'rune_name': runeName
+        'identifier': identifier
       };
       let queryParams = {
         
@@ -168,7 +168,7 @@ export default class RunesApi {
       let returnType = GetRuneResponse;
 
       return this.apiClient.callApi(
-        '/rune/{rune_name}', 'GET',
+        '/rune/{identifier}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

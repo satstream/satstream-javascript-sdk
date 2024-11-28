@@ -1,4 +1,4 @@
-# SatstreamJavascriptSdk.GetRawTransactionDecodedResponse
+# SatstreamJavascriptSdk.GetRawTransactionDecodeResponse
 
 ## Properties
 Name | Type | Description | Notes

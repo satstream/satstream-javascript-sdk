@@ -19,7 +19,7 @@ import PSBTInputAnalysis from './PSBTInputAnalysis';
 /**
  * The PSBTAnalysis model module.
  * @module model/PSBTAnalysis
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class PSBTAnalysis {
   /**

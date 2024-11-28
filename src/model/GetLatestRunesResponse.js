@@ -14,12 +14,12 @@
  *
  */
 import ApiClient from '../ApiClient';
-import RunesListResponse from './RunesListResponse';
+import GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse from './GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse';
 
 /**
  * The GetLatestRunesResponse model module.
  * @module model/GetLatestRunesResponse
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class GetLatestRunesResponse {
   /**
@@ -43,7 +43,7 @@ export default class GetLatestRunesResponse {
       if (data.hasOwnProperty('code'))
         obj.code = ApiClient.convertToType(data['code'], 'Number');
       if (data.hasOwnProperty('data'))
-        obj.data = RunesListResponse.constructFromObject(data['data']);
+        obj.data = GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse.constructFromObject(data['data']);
       if (data.hasOwnProperty('msg'))
         obj.msg = ApiClient.convertToType(data['msg'], 'String');
     }
@@ -57,7 +57,7 @@ export default class GetLatestRunesResponse {
 GetLatestRunesResponse.prototype.code = undefined;
 
 /**
- * @member {module:model/RunesListResponse} data
+ * @member {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse} data
  */
 GetLatestRunesResponse.prototype.data = undefined;
 

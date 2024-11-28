@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ChainTxStats model module.
  * @module model/ChainTxStats
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class ChainTxStats {
   /**

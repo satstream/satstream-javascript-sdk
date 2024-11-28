@@ -19,7 +19,7 @@ import MempoolEntry from './MempoolEntry';
 /**
  * The MempoolDescendantsData model module.
  * @module model/MempoolDescendantsData
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class MempoolDescendantsData {
   /**

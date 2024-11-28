@@ -30,14 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('RuneEntry', function() {
+    describe('GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry', function() {
       beforeEach(function() {
-        instance = new SatstreamJavascriptSdk.RuneEntry();
+        instance = new SatstreamJavascriptSdk.GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry();
       });
 
-      it('should create an instance of RuneEntry', function() {
-        // TODO: update the code to test RuneEntry
-        expect(instance).to.be.a(SatstreamJavascriptSdk.RuneEntry);
+      it('should create an instance of GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry', function() {
+        // TODO: update the code to test GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry
+        expect(instance).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry);
       });
 
       it('should have the property block (base name: "block")', function() {
@@ -62,6 +62,12 @@
         // TODO: update the code to test the property etching
         expect(instance).to.have.property('etching');
         // expect(instance.etching).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property id (base name: "id")', function() {
+        // TODO: update the code to test the property id
+        expect(instance).to.have.property('id');
+        // expect(instance.id).to.be(expectedValueLiteral);
       });
 
       it('should have the property mints (base name: "mints")', function() {

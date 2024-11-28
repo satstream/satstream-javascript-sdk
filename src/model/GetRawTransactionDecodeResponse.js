@@ -17,29 +17,29 @@ import ApiClient from '../ApiClient';
 import RawTx1 from './RawTx1';
 
 /**
- * The GetRawTransactionDecodedResponse model module.
- * @module model/GetRawTransactionDecodedResponse
- * @version 1.0.25
+ * The GetRawTransactionDecodeResponse model module.
+ * @module model/GetRawTransactionDecodeResponse
+ * @version 1.0.26
  */
-export default class GetRawTransactionDecodedResponse {
+export default class GetRawTransactionDecodeResponse {
   /**
-   * Constructs a new <code>GetRawTransactionDecodedResponse</code>.
-   * @alias module:model/GetRawTransactionDecodedResponse
+   * Constructs a new <code>GetRawTransactionDecodeResponse</code>.
+   * @alias module:model/GetRawTransactionDecodeResponse
    * @class
    */
   constructor() {
   }
 
   /**
-   * Constructs a <code>GetRawTransactionDecodedResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetRawTransactionDecodeResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetRawTransactionDecodedResponse} obj Optional instance to populate.
-   * @return {module:model/GetRawTransactionDecodedResponse} The populated <code>GetRawTransactionDecodedResponse</code> instance.
+   * @param {module:model/GetRawTransactionDecodeResponse} obj Optional instance to populate.
+   * @return {module:model/GetRawTransactionDecodeResponse} The populated <code>GetRawTransactionDecodeResponse</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new GetRawTransactionDecodedResponse();
+      obj = obj || new GetRawTransactionDecodeResponse();
       if (data.hasOwnProperty('code'))
         obj.code = ApiClient.convertToType(data['code'], 'Number');
       if (data.hasOwnProperty('data'))
@@ -54,15 +54,15 @@ export default class GetRawTransactionDecodedResponse {
 /**
  * @member {Number} code
  */
-GetRawTransactionDecodedResponse.prototype.code = undefined;
+GetRawTransactionDecodeResponse.prototype.code = undefined;
 
 /**
  * @member {module:model/RawTx1} data
  */
-GetRawTransactionDecodedResponse.prototype.data = undefined;
+GetRawTransactionDecodeResponse.prototype.data = undefined;
 
 /**
  * @member {String} msg
  */
-GetRawTransactionDecodedResponse.prototype.msg = undefined;
+GetRawTransactionDecodeResponse.prototype.msg = undefined;
 

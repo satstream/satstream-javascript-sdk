@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionGetTxOutRequest model module.
  * @module model/TransactionGetTxOutRequest
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class TransactionGetTxOutRequest {
   /**
@@ -41,10 +41,10 @@ export default class TransactionGetTxOutRequest {
       obj = obj || new TransactionGetTxOutRequest();
       if (data.hasOwnProperty('include_mempool'))
         obj.includeMempool = ApiClient.convertToType(data['include_mempool'], 'Boolean');
-      if (data.hasOwnProperty('n'))
-        obj.n = ApiClient.convertToType(data['n'], 'Number');
       if (data.hasOwnProperty('txid'))
         obj.txid = ApiClient.convertToType(data['txid'], 'String');
+      if (data.hasOwnProperty('vout'))
+        obj.vout = ApiClient.convertToType(data['vout'], 'Number');
     }
     return obj;
   }
@@ -57,14 +57,14 @@ export default class TransactionGetTxOutRequest {
 TransactionGetTxOutRequest.prototype.includeMempool = undefined;
 
 /**
- * Required: vout number
- * @member {Number} n
- */
-TransactionGetTxOutRequest.prototype.n = undefined;
-
-/**
  * Required: The transaction id
  * @member {String} txid
  */
 TransactionGetTxOutRequest.prototype.txid = undefined;
+
+/**
+ * Required: vout number
+ * @member {Number} vout
+ */
+TransactionGetTxOutRequest.prototype.vout = undefined;
 

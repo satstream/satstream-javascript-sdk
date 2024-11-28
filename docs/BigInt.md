@@ -1,4 +1,4 @@
-# SatstreamJavascriptSdk.AllOfRuneListEntryModel1
+# SatstreamJavascriptSdk.BigInt
 
 ## Properties
 Name | Type | Description | Notes

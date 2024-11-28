@@ -19,7 +19,7 @@ import MiningInfo from './MiningInfo';
 /**
  * The GetMiningInfoResponse model module.
  * @module model/GetMiningInfoResponse
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class GetMiningInfoResponse {
   /**

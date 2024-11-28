@@ -15,12 +15,11 @@
  */
 import ApiClient from '../ApiClient';
 import TransactionCreateRawTxInput from './TransactionCreateRawTxInput';
-import TransactionCreateRawTxOutput from './TransactionCreateRawTxOutput';
 
 /**
  * The TransactionCreateRawTxRequest model module.
  * @module model/TransactionCreateRawTxRequest
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class TransactionCreateRawTxRequest {
   /**
@@ -28,7 +27,7 @@ export default class TransactionCreateRawTxRequest {
    * @alias module:model/TransactionCreateRawTxRequest
    * @class
    * @param inputs {Array.<module:model/TransactionCreateRawTxInput>} The inputs for the transaction
-   * @param outputs {Array.<module:model/TransactionCreateRawTxOutput>} The outputs for the transaction Each address can only appear once and there can only be one 'data' object
+   * @param outputs {Array.<Object.<String, Number>>} The outputs for the transaction Each address can only appear once and there can only be one 'data' object
    */
   constructor(inputs, outputs) {
     this.inputs = inputs;
@@ -50,7 +49,7 @@ export default class TransactionCreateRawTxRequest {
       if (data.hasOwnProperty('locktime'))
         obj.locktime = ApiClient.convertToType(data['locktime'], 'Number');
       if (data.hasOwnProperty('outputs'))
-        obj.outputs = ApiClient.convertToType(data['outputs'], [TransactionCreateRawTxOutput]);
+        obj.outputs = ApiClient.convertToType(data['outputs'], [{'String': 'Number'}]);
       if (data.hasOwnProperty('replaceable'))
         obj.replaceable = ApiClient.convertToType(data['replaceable'], 'Boolean');
     }
@@ -72,7 +71,7 @@ TransactionCreateRawTxRequest.prototype.locktime = undefined;
 
 /**
  * The outputs for the transaction Each address can only appear once and there can only be one 'data' object
- * @member {Array.<module:model/TransactionCreateRawTxOutput>} outputs
+ * @member {Array.<Object.<String, Number>>} outputs
  */
 TransactionCreateRawTxRequest.prototype.outputs = undefined;
 

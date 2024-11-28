@@ -46,16 +46,16 @@
         // expect(instance.includeMempool).to.be(expectedValueLiteral);
       });
 
-      it('should have the property n (base name: "n")', function() {
-        // TODO: update the code to test the property n
-        expect(instance).to.have.property('n');
-        // expect(instance.n).to.be(expectedValueLiteral);
-      });
-
       it('should have the property txid (base name: "txid")', function() {
         // TODO: update the code to test the property txid
         expect(instance).to.have.property('txid');
         // expect(instance.txid).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property vout (base name: "vout")', function() {
+        // TODO: update the code to test the property vout
+        expect(instance).to.have.property('vout');
+        // expect(instance.vout).to.be(expectedValueLiteral);
       });
 
     });

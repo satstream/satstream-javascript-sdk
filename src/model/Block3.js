@@ -19,7 +19,7 @@ import BtcTx3 from './BtcTx3';
 /**
  * The Block3 model module.
  * @module model/Block3
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class Block3 {
   /**

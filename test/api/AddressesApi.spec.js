@@ -138,26 +138,6 @@
           done();
         });
       });
-      describe('verifyMessage', function() {
-        it('should call verifyMessage successfully', function(done) {
-          // TODO: uncomment, update parameter values for verifyMessage call and complete the assertions
-          /*
-
-          instance.verifyMessage(body, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.VerifyMessageResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
     });
   });
 

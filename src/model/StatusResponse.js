@@ -14,12 +14,11 @@
  *
  */
 import ApiClient from '../ApiClient';
-import Duration from './Duration';
 
 /**
  * The StatusResponse model module.
  * @module model/StatusResponse
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class StatusResponse {
   /**
@@ -40,8 +39,6 @@ export default class StatusResponse {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new StatusResponse();
-      if (data.hasOwnProperty('address_index'))
-        obj.addressIndex = ApiClient.convertToType(data['address_index'], 'Boolean');
       if (data.hasOwnProperty('blessed_inscriptions'))
         obj.blessedInscriptions = ApiClient.convertToType(data['blessed_inscriptions'], 'Number');
       if (data.hasOwnProperty('chain'))
@@ -50,37 +47,18 @@ export default class StatusResponse {
         obj.cursedInscriptions = ApiClient.convertToType(data['cursed_inscriptions'], 'Number');
       if (data.hasOwnProperty('height'))
         obj.height = ApiClient.convertToType(data['height'], 'Number');
-      if (data.hasOwnProperty('initial_sync_time'))
-        obj.initialSyncTime = Duration.constructFromObject(data['initial_sync_time']);
       if (data.hasOwnProperty('inscriptions'))
         obj.inscriptions = ApiClient.convertToType(data['inscriptions'], 'Number');
       if (data.hasOwnProperty('lost_sats'))
         obj.lostSats = ApiClient.convertToType(data['lost_sats'], 'Number');
       if (data.hasOwnProperty('minimum_rune_for_next_block'))
         obj.minimumRuneForNextBlock = ApiClient.convertToType(data['minimum_rune_for_next_block'], 'String');
-      if (data.hasOwnProperty('rune_index'))
-        obj.runeIndex = ApiClient.convertToType(data['rune_index'], 'Boolean');
       if (data.hasOwnProperty('runes'))
         obj.runes = ApiClient.convertToType(data['runes'], 'Number');
-      if (data.hasOwnProperty('sat_index'))
-        obj.satIndex = ApiClient.convertToType(data['sat_index'], 'Boolean');
-      if (data.hasOwnProperty('started'))
-        obj.started = ApiClient.convertToType(data['started'], 'String');
-      if (data.hasOwnProperty('transaction_index'))
-        obj.transactionIndex = ApiClient.convertToType(data['transaction_index'], 'Boolean');
-      if (data.hasOwnProperty('unrecoverably_reorged'))
-        obj.unrecoverablyReorged = ApiClient.convertToType(data['unrecoverably_reorged'], 'Boolean');
-      if (data.hasOwnProperty('uptime'))
-        obj.uptime = Duration.constructFromObject(data['uptime']);
     }
     return obj;
   }
 }
-
-/**
- * @member {Boolean} addressIndex
- */
-StatusResponse.prototype.addressIndex = undefined;
 
 /**
  * @member {Number} blessedInscriptions
@@ -103,11 +81,6 @@ StatusResponse.prototype.cursedInscriptions = undefined;
 StatusResponse.prototype.height = undefined;
 
 /**
- * @member {module:model/Duration} initialSyncTime
- */
-StatusResponse.prototype.initialSyncTime = undefined;
-
-/**
  * @member {Number} inscriptions
  */
 StatusResponse.prototype.inscriptions = undefined;
@@ -123,37 +96,7 @@ StatusResponse.prototype.lostSats = undefined;
 StatusResponse.prototype.minimumRuneForNextBlock = undefined;
 
 /**
- * @member {Boolean} runeIndex
- */
-StatusResponse.prototype.runeIndex = undefined;
-
-/**
  * @member {Number} runes
  */
 StatusResponse.prototype.runes = undefined;
-
-/**
- * @member {Boolean} satIndex
- */
-StatusResponse.prototype.satIndex = undefined;
-
-/**
- * @member {String} started
- */
-StatusResponse.prototype.started = undefined;
-
-/**
- * @member {Boolean} transactionIndex
- */
-StatusResponse.prototype.transactionIndex = undefined;
-
-/**
- * @member {Boolean} unrecoverablyReorged
- */
-StatusResponse.prototype.unrecoverablyReorged = undefined;
-
-/**
- * @member {module:model/Duration} uptime
- */
-StatusResponse.prototype.uptime = undefined;
 

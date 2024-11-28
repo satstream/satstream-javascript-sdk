@@ -40,6 +40,30 @@
         expect(instance).to.be.a(SatstreamJavascriptSdk.RunestoneData);
       });
 
+      it('should have the property edicts (base name: "edicts")', function() {
+        // TODO: update the code to test the property edicts
+        expect(instance).to.have.property('edicts');
+        // expect(instance.edicts).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property etching (base name: "etching")', function() {
+        // TODO: update the code to test the property etching
+        expect(instance).to.have.property('etching');
+        // expect(instance.etching).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property mint (base name: "mint")', function() {
+        // TODO: update the code to test the property mint
+        expect(instance).to.have.property('mint');
+        // expect(instance.mint).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property pointer (base name: "pointer")', function() {
+        // TODO: update the code to test the property pointer
+        expect(instance).to.have.property('pointer');
+        // expect(instance.pointer).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

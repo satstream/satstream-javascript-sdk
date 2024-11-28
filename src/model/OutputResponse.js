@@ -14,11 +14,12 @@
  *
  */
 import ApiClient from '../ApiClient';
+import GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails from './GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails';
 
 /**
  * The OutputResponse model module.
  * @module model/OutputResponse
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class OutputResponse {
   /**
@@ -48,7 +49,7 @@ export default class OutputResponse {
       if (data.hasOwnProperty('outpoint'))
         obj.outpoint = ApiClient.convertToType(data['outpoint'], 'String');
       if (data.hasOwnProperty('runes'))
-        obj.runes = ApiClient.convertToType(data['runes'], {'String': 'String'});
+        obj.runes = ApiClient.convertToType(data['runes'], {'String': GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails});
       if (data.hasOwnProperty('sat_ranges'))
         obj.satRanges = ApiClient.convertToType(data['sat_ranges'], [['Number']]);
       if (data.hasOwnProperty('script_pubkey'))
@@ -85,7 +86,7 @@ OutputResponse.prototype.inscriptions = undefined;
 OutputResponse.prototype.outpoint = undefined;
 
 /**
- * @member {Object.<String, String>} runes
+ * @member {Object.<String, module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails>} runes
  */
 OutputResponse.prototype.runes = undefined;
 

@@ -80,7 +80,7 @@
           // TODO: uncomment, update parameter values for getRune call and complete the assertions
           /*
 
-          instance.getRune(runeName, function(error, data, response) {
+          instance.getRune(identifier, function(error, data, response) {
             if (error) {
               done(error);
               return;

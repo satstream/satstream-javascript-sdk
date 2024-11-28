@@ -19,7 +19,7 @@ import UnknownFields from './UnknownFields';
 /**
  * The AllOfDecodedPSBTOutputUnknown model module.
  * @module model/AllOfDecodedPSBTOutputUnknown
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class AllOfDecodedPSBTOutputUnknown extends UnknownFields {
   /**

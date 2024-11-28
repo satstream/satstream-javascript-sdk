@@ -40,12 +40,6 @@
         expect(instance).to.be.a(SatstreamJavascriptSdk.StatusResponse);
       });
 
-      it('should have the property addressIndex (base name: "address_index")', function() {
-        // TODO: update the code to test the property addressIndex
-        expect(instance).to.have.property('addressIndex');
-        // expect(instance.addressIndex).to.be(expectedValueLiteral);
-      });
-
       it('should have the property blessedInscriptions (base name: "blessed_inscriptions")', function() {
         // TODO: update the code to test the property blessedInscriptions
         expect(instance).to.have.property('blessedInscriptions');
@@ -70,12 +64,6 @@
         // expect(instance.height).to.be(expectedValueLiteral);
       });
 
-      it('should have the property initialSyncTime (base name: "initial_sync_time")', function() {
-        // TODO: update the code to test the property initialSyncTime
-        expect(instance).to.have.property('initialSyncTime');
-        // expect(instance.initialSyncTime).to.be(expectedValueLiteral);
-      });
-
       it('should have the property inscriptions (base name: "inscriptions")', function() {
         // TODO: update the code to test the property inscriptions
         expect(instance).to.have.property('inscriptions');
@@ -94,46 +82,10 @@
         // expect(instance.minimumRuneForNextBlock).to.be(expectedValueLiteral);
       });
 
-      it('should have the property runeIndex (base name: "rune_index")', function() {
-        // TODO: update the code to test the property runeIndex
-        expect(instance).to.have.property('runeIndex');
-        // expect(instance.runeIndex).to.be(expectedValueLiteral);
-      });
-
       it('should have the property runes (base name: "runes")', function() {
         // TODO: update the code to test the property runes
         expect(instance).to.have.property('runes');
         // expect(instance.runes).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property satIndex (base name: "sat_index")', function() {
-        // TODO: update the code to test the property satIndex
-        expect(instance).to.have.property('satIndex');
-        // expect(instance.satIndex).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property started (base name: "started")', function() {
-        // TODO: update the code to test the property started
-        expect(instance).to.have.property('started');
-        // expect(instance.started).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property transactionIndex (base name: "transaction_index")', function() {
-        // TODO: update the code to test the property transactionIndex
-        expect(instance).to.have.property('transactionIndex');
-        // expect(instance.transactionIndex).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property unrecoverablyReorged (base name: "unrecoverably_reorged")', function() {
-        // TODO: update the code to test the property unrecoverablyReorged
-        expect(instance).to.have.property('unrecoverablyReorged');
-        // expect(instance.unrecoverablyReorged).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property uptime (base name: "uptime")', function() {
-        // TODO: update the code to test the property uptime
-        expect(instance).to.have.property('uptime');
-        // expect(instance.uptime).to.be(expectedValueLiteral);
       });
 
     });

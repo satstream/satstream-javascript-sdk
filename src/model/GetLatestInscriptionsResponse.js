@@ -19,7 +19,7 @@ import LatestInscriptionsResponse from './LatestInscriptionsResponse';
 /**
  * The GetLatestInscriptionsResponse model module.
  * @module model/GetLatestInscriptionsResponse
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class GetLatestInscriptionsResponse {
   /**

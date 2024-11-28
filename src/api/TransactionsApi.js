@@ -18,10 +18,9 @@ import CombineRawTransactionResponse from '../model/CombineRawTransactionRespons
 import ConvertToPSBTResponse from '../model/ConvertToPSBTResponse';
 import CreateRawTransactionResponse from '../model/CreateRawTransactionResponse';
 import DecodeTransactionResponse from '../model/DecodeTransactionResponse';
-import GetRawTransactionDecodedResponse from '../model/GetRawTransactionDecodedResponse';
+import GetRawTransactionDecodeResponse from '../model/GetRawTransactionDecodeResponse';
 import GetRawTransactionHexResponse from '../model/GetRawTransactionHexResponse';
 import GetRawTransactionPrevoutResponse from '../model/GetRawTransactionPrevoutResponse';
-import GetTransactionResponse from '../model/GetTransactionResponse';
 import GetTxOutProofResponse from '../model/GetTxOutProofResponse';
 import GetTxOutResponse from '../model/GetTxOutResponse';
 import GetTxSpendingPrevoutResponse from '../model/GetTxSpendingPrevoutResponse';
@@ -42,7 +41,7 @@ import VerifyTxOutProofResponse from '../model/VerifyTxOutProofResponse';
 /**
 * Transactions service.
 * @module api/TransactionsApi
-* @version 1.0.25
+* @version 1.0.26
 */
 export default class TransactionsApi {
 
@@ -200,26 +199,26 @@ export default class TransactionsApi {
       );
     }
     /**
-     * Callback function to receive the result of the decodeTx operation.
-     * @callback moduleapi/TransactionsApi~decodeTxCallback
+     * Callback function to receive the result of the decodeTxInscriptions operation.
+     * @callback moduleapi/TransactionsApi~decodeTxInscriptionsCallback
      * @param {String} error Error message, if any.
      * @param {module:model/DecodeTransactionResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Decode a transaction
+     * Decode transaction inscriptions
      * Decodes a transaction and returns its inscriptions and runestone data
      * @param {String} txid Transaction ID
-     * @param {module:api/TransactionsApi~decodeTxCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransactionsApi~decodeTxInscriptionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    decodeTx(txid, callback) {
+    decodeTxInscriptions(txid, callback) {
       
       let postBody = null;
       // verify the required parameter 'txid' is set
       if (txid === undefined || txid === null) {
-        throw new Error("Missing the required parameter 'txid' when calling decodeTx");
+        throw new Error("Missing the required parameter 'txid' when calling decodeTxInscriptions");
       }
 
       let pathParams = {
@@ -241,32 +240,32 @@ export default class TransactionsApi {
       let returnType = DecodeTransactionResponse;
 
       return this.apiClient.callApi(
-        '/tx/{txid}/decode', 'GET',
+        '/tx/{txid}/inscriptions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
     }
     /**
-     * Callback function to receive the result of the getRawTransactionDecoded operation.
-     * @callback moduleapi/TransactionsApi~getRawTransactionDecodedCallback
+     * Callback function to receive the result of the getRawTransaction operation.
+     * @callback moduleapi/TransactionsApi~getRawTransactionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GetRawTransactionDecodedResponse{ data The data returned by the service call.
+     * @param {module:model/GetRawTransactionDecodeResponse{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get raw transaction (verbosity 1)
-     * Get raw transaction as a decoded object
+     * Get raw transaction with basic decoded information
      * @param {String} txid Transaction ID
-     * @param {module:api/TransactionsApi~getRawTransactionDecodedCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/TransactionsApi~getRawTransactionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getRawTransactionDecoded(txid, callback) {
+    getRawTransaction(txid, callback) {
       
       let postBody = null;
       // verify the required parameter 'txid' is set
       if (txid === undefined || txid === null) {
-        throw new Error("Missing the required parameter 'txid' when calling getRawTransactionDecoded");
+        throw new Error("Missing the required parameter 'txid' when calling getRawTransaction");
       }
 
       let pathParams = {
@@ -285,10 +284,10 @@ export default class TransactionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GetRawTransactionDecodedResponse;
+      let returnType = GetRawTransactionDecodeResponse;
 
       return this.apiClient.callApi(
-        '/tx/{txid}/decoded', 'GET',
+        '/tx/{txid}/raw/decode', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -349,7 +348,7 @@ export default class TransactionsApi {
      */
 
     /**
-     * Get raw transaction (verbosity 2)
+     * Get raw transaction with prevouts (verbosity 2)
      * Get raw transaction with prevout information
      * @param {String} txid Transaction ID
      * @param {module:api/TransactionsApi~getRawTransactionPrevoutCallback} callback The callback function, accepting three arguments: error, data, response
@@ -382,54 +381,7 @@ export default class TransactionsApi {
       let returnType = GetRawTransactionPrevoutResponse;
 
       return this.apiClient.callApi(
-        '/tx/{txid}/prevout', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getTransaction operation.
-     * @callback moduleapi/TransactionsApi~getTransactionCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GetTransactionResponse{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get transaction info
-     * Retrieve information about a specific transaction
-     * @param {String} txid Transaction ID
-     * @param {module:api/TransactionsApi~getTransactionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getTransaction(txid, callback) {
-      
-      let postBody = null;
-      // verify the required parameter 'txid' is set
-      if (txid === undefined || txid === null) {
-        throw new Error("Missing the required parameter 'txid' when calling getTransaction");
-      }
-
-      let pathParams = {
-        'txid': txid
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetTransactionResponse;
-
-      return this.apiClient.callApi(
-        '/tx/{txid}', 'GET',
+        '/tx/{txid}/raw/prevout', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

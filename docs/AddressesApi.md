@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**getAddressRuneDeltas**](AddressesApi.md#getAddressRuneDeltas) | **GET** /address/{address}/deltas/runes | Get address rune deltas
 [**getAddressUtxos**](AddressesApi.md#getAddressUtxos) | **GET** /address/{address}/outputs | Get UTXOs for an address
 [**validateAddress**](AddressesApi.md#validateAddress) | **GET** /address/{address}/validate | Validate address
-[**verifyMessage**](AddressesApi.md#verifyMessage) | **POST** /address/verify-message | Verify message
 
 <a name="getAddress"></a>
 # **getAddress**
@@ -280,55 +279,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="verifyMessage"></a>
-# **verifyMessage**
-> VerifyMessageResponse verifyMessage(body)
-
-Verify message
-
-Verifies a signed message
-
-### Example
-```javascript
-import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
-let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
-
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SatstreamJavascriptSdk.AddressesApi();
-let body = new SatstreamJavascriptSdk.VerifyMessageRequest(); // VerifyMessageRequest | Message verification parameters
-
-apiInstance.verifyMessage(body, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**VerifyMessageRequest**](VerifyMessageRequest.md)| Message verification parameters | 
-
-### Return type
-
-[**VerifyMessageResponse**](VerifyMessageResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 

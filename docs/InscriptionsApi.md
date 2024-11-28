@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**fetchInscriptionChild**](InscriptionsApi.md#fetchInscriptionChild) | **GET** /inscription/{inscription_id}/{child_index} | Get inscription child info
 [**fetchInscriptions**](InscriptionsApi.md#fetchInscriptions) | **POST** /inscriptions | Fetch multiple inscriptions
 [**getBlockInscriptions**](InscriptionsApi.md#getBlockInscriptions) | **GET** /inscriptions/block/{block_height} | Get inscriptions in a specific block
+[**getBlockInscriptionsPage**](InscriptionsApi.md#getBlockInscriptionsPage) | **GET** /inscriptions/block/{block_height}/{page} | Get paginated inscriptions in a specific block
 [**getInscription**](InscriptionsApi.md#getInscription) | **GET** /inscription/{inscription_id} | Get inscription info
 [**getLatestInscriptions**](InscriptionsApi.md#getLatestInscriptions) | **GET** /inscriptions | Get latest inscriptions
 [**getLatestInscriptionsPage**](InscriptionsApi.md#getLatestInscriptionsPage) | **GET** /inscriptions/{page} | Get latest inscriptions page
@@ -149,6 +150,58 @@ apiInstance.getBlockInscriptions(blockHeight, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blockHeight** | **Number**| Block Height | 
+
+### Return type
+
+[**GetBlockInscriptionsResponse**](GetBlockInscriptionsResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getBlockInscriptionsPage"></a>
+# **getBlockInscriptionsPage**
+> GetBlockInscriptionsResponse getBlockInscriptionsPage(blockHeight, page)
+
+Get paginated inscriptions in a specific block
+
+Retrieve paginated inscriptions in a specific block
+
+### Example
+```javascript
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SatstreamJavascriptSdk.InscriptionsApi();
+let blockHeight = 56; // Number | Block Height
+let page = 56; // Number | Page Number
+
+apiInstance.getBlockInscriptionsPage(blockHeight, page, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blockHeight** | **Number**| Block Height | 
+ **page** | **Number**| Page Number | 
 
 ### Return type
 

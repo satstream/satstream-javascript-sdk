@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getLatestRunes**](RunesApi.md#getLatestRunes) | **GET** /runes | Get latest runes
 [**getLatestRunesPage**](RunesApi.md#getLatestRunesPage) | **GET** /runes/{page} | Get latest runes page
-[**getRune**](RunesApi.md#getRune) | **GET** /rune/{rune_name} | Get rune info
+[**getRune**](RunesApi.md#getRune) | **GET** /rune/{identifier} | Get rune info
 
 <a name="getLatestRunes"></a>
 # **getLatestRunes**
@@ -105,11 +105,11 @@ Name | Type | Description  | Notes
 
 <a name="getRune"></a>
 # **getRune**
-> GetRuneResponse getRune(runeName)
+> GetRuneResponse getRune(identifier)
 
 Get rune info
 
-Retrieve information about a specific rune
+Retrieve information about a specific rune by name or ID (e.g., \&quot;UNCOMMON•GOODS\&quot; or \&quot;1:0\&quot;)
 
 ### Example
 ```javascript
@@ -123,9 +123,9 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SatstreamJavascriptSdk.RunesApi();
-let runeName = "runeName_example"; // String | Rune Name
+let identifier = "identifier_example"; // String | Rune Name or ID
 
-apiInstance.getRune(runeName, (error, data, response) => {
+apiInstance.getRune(identifier, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -138,7 +138,7 @@ apiInstance.getRune(runeName, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **runeName** | **String**| Rune Name | 
+ **identifier** | **String**| Rune Name or ID | 
 
 ### Return type
 

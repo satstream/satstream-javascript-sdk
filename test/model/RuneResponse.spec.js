@@ -40,12 +40,6 @@
         expect(instance).to.be.a(SatstreamJavascriptSdk.RuneResponse);
       });
 
-      it('should have the property entry (base name: "entry")', function() {
-        // TODO: update the code to test the property entry
-        expect(instance).to.have.property('entry');
-        // expect(instance.entry).to.be(expectedValueLiteral);
-      });
-
       it('should have the property id (base name: "id")', function() {
         // TODO: update the code to test the property id
         expect(instance).to.have.property('id');

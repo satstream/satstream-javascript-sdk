@@ -30,26 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('Duration', function() {
+    describe('BigInt', function() {
       beforeEach(function() {
-        instance = new SatstreamJavascriptSdk.Duration();
+        instance = new SatstreamJavascriptSdk.BigInt();
       });
 
-      it('should create an instance of Duration', function() {
-        // TODO: update the code to test Duration
-        expect(instance).to.be.a(SatstreamJavascriptSdk.Duration);
-      });
-
-      it('should have the property nanos (base name: "nanos")', function() {
-        // TODO: update the code to test the property nanos
-        expect(instance).to.have.property('nanos');
-        // expect(instance.nanos).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property secs (base name: "secs")', function() {
-        // TODO: update the code to test the property secs
-        expect(instance).to.have.property('secs');
-        // expect(instance.secs).to.be(expectedValueLiteral);
+      it('should create an instance of BigInt', function() {
+        // TODO: update the code to test BigInt
+        expect(instance).to.be.a(SatstreamJavascriptSdk.BigInt);
       });
 
     });

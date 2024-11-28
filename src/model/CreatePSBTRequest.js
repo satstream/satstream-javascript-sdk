@@ -15,12 +15,11 @@
  */
 import ApiClient from '../ApiClient';
 import CreatePSBTInput from './CreatePSBTInput';
-import CreatePSBTOutput from './CreatePSBTOutput';
 
 /**
  * The CreatePSBTRequest model module.
  * @module model/CreatePSBTRequest
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class CreatePSBTRequest {
   /**
@@ -28,7 +27,7 @@ export default class CreatePSBTRequest {
    * @alias module:model/CreatePSBTRequest
    * @class
    * @param inputs {Array.<module:model/CreatePSBTInput>} The inputs for the transaction
-   * @param outputs {Array.<module:model/CreatePSBTOutput>} The outputs for the transaction (each address can only appear once)
+   * @param outputs {Array.<Object.<String, Object>>} The outputs (address:amount pairs or {\"data\":\"hex\"})
    */
   constructor(inputs, outputs) {
     this.inputs = inputs;
@@ -50,7 +49,7 @@ export default class CreatePSBTRequest {
       if (data.hasOwnProperty('locktime'))
         obj.locktime = ApiClient.convertToType(data['locktime'], 'Number');
       if (data.hasOwnProperty('outputs'))
-        obj.outputs = ApiClient.convertToType(data['outputs'], [CreatePSBTOutput]);
+        obj.outputs = ApiClient.convertToType(data['outputs'], [{'String': Object}]);
       if (data.hasOwnProperty('replaceable'))
         obj.replaceable = ApiClient.convertToType(data['replaceable'], 'Boolean');
     }
@@ -71,8 +70,8 @@ CreatePSBTRequest.prototype.inputs = undefined;
 CreatePSBTRequest.prototype.locktime = undefined;
 
 /**
- * The outputs for the transaction (each address can only appear once)
- * @member {Array.<module:model/CreatePSBTOutput>} outputs
+ * The outputs (address:amount pairs or {\"data\":\"hex\"})
+ * @member {Array.<Object.<String, Object>>} outputs
  */
 CreatePSBTRequest.prototype.outputs = undefined;
 

@@ -14,32 +14,33 @@
  *
  */
 import ApiClient from '../ApiClient';
+import BigInt from './BigInt';
 import RuneTerms from './RuneTerms';
 
 /**
- * The RuneEntry model module.
- * @module model/RuneEntry
- * @version 1.0.25
+ * The GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry model module.
+ * @module model/GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry
+ * @version 1.0.26
  */
-export default class RuneEntry {
+export default class GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry {
   /**
-   * Constructs a new <code>RuneEntry</code>.
-   * @alias module:model/RuneEntry
+   * Constructs a new <code>GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry</code>.
+   * @alias module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry
    * @class
    */
   constructor() {
   }
 
   /**
-   * Constructs a <code>RuneEntry</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RuneEntry} obj Optional instance to populate.
-   * @return {module:model/RuneEntry} The populated <code>RuneEntry</code> instance.
+   * @param {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry} obj Optional instance to populate.
+   * @return {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry} The populated <code>GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new RuneEntry();
+      obj = obj || new GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry();
       if (data.hasOwnProperty('block'))
         obj.block = ApiClient.convertToType(data['block'], 'Number');
       if (data.hasOwnProperty('burned'))
@@ -48,12 +49,14 @@ export default class RuneEntry {
         obj.divisibility = ApiClient.convertToType(data['divisibility'], 'Number');
       if (data.hasOwnProperty('etching'))
         obj.etching = ApiClient.convertToType(data['etching'], 'String');
+      if (data.hasOwnProperty('id'))
+        obj.id = ApiClient.convertToType(data['id'], 'String');
       if (data.hasOwnProperty('mints'))
         obj.mints = ApiClient.convertToType(data['mints'], 'Number');
       if (data.hasOwnProperty('number'))
         obj._number = ApiClient.convertToType(data['number'], 'Number');
       if (data.hasOwnProperty('premine'))
-        obj.premine = ApiClient.convertToType(data['premine'], 'Number');
+        obj.premine = BigInt.constructFromObject(data['premine']);
       if (data.hasOwnProperty('spaced_rune'))
         obj.spacedRune = ApiClient.convertToType(data['spaced_rune'], 'String');
       if (data.hasOwnProperty('symbol'))
@@ -72,60 +75,65 @@ export default class RuneEntry {
 /**
  * @member {Number} block
  */
-RuneEntry.prototype.block = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.block = undefined;
 
 /**
  * @member {Number} burned
  */
-RuneEntry.prototype.burned = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.burned = undefined;
 
 /**
  * @member {Number} divisibility
  */
-RuneEntry.prototype.divisibility = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.divisibility = undefined;
 
 /**
  * @member {String} etching
  */
-RuneEntry.prototype.etching = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.etching = undefined;
+
+/**
+ * @member {String} id
+ */
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.id = undefined;
 
 /**
  * @member {Number} mints
  */
-RuneEntry.prototype.mints = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.mints = undefined;
 
 /**
  * @member {Number} _number
  */
-RuneEntry.prototype._number = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype._number = undefined;
 
 /**
- * @member {Number} premine
+ * @member {module:model/BigInt} premine
  */
-RuneEntry.prototype.premine = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.premine = undefined;
 
 /**
  * @member {String} spacedRune
  */
-RuneEntry.prototype.spacedRune = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.spacedRune = undefined;
 
 /**
  * @member {String} symbol
  */
-RuneEntry.prototype.symbol = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.symbol = undefined;
 
 /**
  * @member {module:model/RuneTerms} terms
  */
-RuneEntry.prototype.terms = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.terms = undefined;
 
 /**
  * @member {Number} timestamp
  */
-RuneEntry.prototype.timestamp = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.timestamp = undefined;
 
 /**
  * @member {Boolean} turbo
  */
-RuneEntry.prototype.turbo = undefined;
+GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry.prototype.turbo = undefined;
 

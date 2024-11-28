@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InscriptionResponse model module.
  * @module model/InscriptionResponse
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class InscriptionResponse {
   /**
@@ -68,7 +68,7 @@ export default class InscriptionResponse {
       if (data.hasOwnProperty('rune'))
         obj.rune = ApiClient.convertToType(data['rune'], 'String');
       if (data.hasOwnProperty('sat'))
-        obj.sat = ApiClient.convertToType(data['sat'], 'String');
+        obj.sat = ApiClient.convertToType(data['sat'], 'Number');
       if (data.hasOwnProperty('satpoint'))
         obj.satpoint = ApiClient.convertToType(data['satpoint'], 'String');
       if (data.hasOwnProperty('timestamp'))
@@ -151,7 +151,7 @@ InscriptionResponse.prototype.previous = undefined;
 InscriptionResponse.prototype.rune = undefined;
 
 /**
- * @member {String} sat
+ * @member {Number} sat
  */
 InscriptionResponse.prototype.sat = undefined;
 

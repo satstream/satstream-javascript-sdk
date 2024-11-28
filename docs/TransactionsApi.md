@@ -7,11 +7,10 @@ Method | HTTP request | Description
 [**combineRawTransaction**](TransactionsApi.md#combineRawTransaction) | **POST** /tx/combine | Combine Raw Transactions
 [**convertToPsbt**](TransactionsApi.md#convertToPsbt) | **POST** /tx/convert-to-psbt | Convert Raw Transaction to PSBT
 [**createRawTransaction**](TransactionsApi.md#createRawTransaction) | **POST** /tx/create | Create Raw Transaction
-[**decodeTx**](TransactionsApi.md#decodeTx) | **GET** /tx/{txid}/decode | Decode a transaction
-[**getRawTransactionDecoded**](TransactionsApi.md#getRawTransactionDecoded) | **GET** /tx/{txid}/decoded | Get raw transaction (verbosity 1)
+[**decodeTxInscriptions**](TransactionsApi.md#decodeTxInscriptions) | **GET** /tx/{txid}/inscriptions | Decode transaction inscriptions
+[**getRawTransaction**](TransactionsApi.md#getRawTransaction) | **GET** /tx/{txid}/raw/decode | Get raw transaction (verbosity 1)
 [**getRawTransactionHex**](TransactionsApi.md#getRawTransactionHex) | **GET** /tx/{txid}/hex | Get raw transaction (verbosity 0)
-[**getRawTransactionPrevout**](TransactionsApi.md#getRawTransactionPrevout) | **GET** /tx/{txid}/prevout | Get raw transaction (verbosity 2)
-[**getTransaction**](TransactionsApi.md#getTransaction) | **GET** /tx/{txid} | Get transaction info
+[**getRawTransactionPrevout**](TransactionsApi.md#getRawTransactionPrevout) | **GET** /tx/{txid}/raw/prevout | Get raw transaction with prevouts (verbosity 2)
 [**getTxOut**](TransactionsApi.md#getTxOut) | **POST** /tx/out | Get transaction output
 [**getTxOutProof**](TransactionsApi.md#getTxOutProof) | **POST** /tx/outproof | Get transaction output proof
 [**getTxOutSetInfo**](TransactionsApi.md#getTxOutSetInfo) | **POST** /tx/out/set/info | Get transaction output set information
@@ -169,11 +168,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="decodeTx"></a>
-# **decodeTx**
-> DecodeTransactionResponse decodeTx(txid)
+<a name="decodeTxInscriptions"></a>
+# **decodeTxInscriptions**
+> DecodeTransactionResponse decodeTxInscriptions(txid)
 
-Decode a transaction
+Decode transaction inscriptions
 
 Decodes a transaction and returns its inscriptions and runestone data
 
@@ -191,7 +190,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
 let txid = "txid_example"; // String | Transaction ID
 
-apiInstance.decodeTx(txid, (error, data, response) => {
+apiInstance.decodeTxInscriptions(txid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -219,13 +218,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getRawTransactionDecoded"></a>
-# **getRawTransactionDecoded**
-> GetRawTransactionDecodedResponse getRawTransactionDecoded(txid)
+<a name="getRawTransaction"></a>
+# **getRawTransaction**
+> GetRawTransactionDecodeResponse getRawTransaction(txid)
 
 Get raw transaction (verbosity 1)
 
-Get raw transaction as a decoded object
+Get raw transaction with basic decoded information
 
 ### Example
 ```javascript
@@ -241,7 +240,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
 let txid = "txid_example"; // String | Transaction ID
 
-apiInstance.getRawTransactionDecoded(txid, (error, data, response) => {
+apiInstance.getRawTransaction(txid, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -258,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetRawTransactionDecodedResponse**](GetRawTransactionDecodedResponse.md)
+[**GetRawTransactionDecodeResponse**](GetRawTransactionDecodeResponse.md)
 
 ### Authorization
 
@@ -323,7 +322,7 @@ Name | Type | Description  | Notes
 # **getRawTransactionPrevout**
 > GetRawTransactionPrevoutResponse getRawTransactionPrevout(txid)
 
-Get raw transaction (verbosity 2)
+Get raw transaction with prevouts (verbosity 2)
 
 Get raw transaction with prevout information
 
@@ -359,56 +358,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetRawTransactionPrevoutResponse**](GetRawTransactionPrevoutResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getTransaction"></a>
-# **getTransaction**
-> GetTransactionResponse getTransaction(txid)
-
-Get transaction info
-
-Retrieve information about a specific transaction
-
-### Example
-```javascript
-import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
-let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
-
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let txid = "txid_example"; // String | Transaction ID
-
-apiInstance.getTransaction(txid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **txid** | **String**| Transaction ID | 
-
-### Return type
-
-[**GetTransactionResponse**](GetTransactionResponse.md)
 
 ### Authorization
 

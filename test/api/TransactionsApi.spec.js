@@ -95,12 +95,12 @@
           done();
         });
       });
-      describe('decodeTx', function() {
-        it('should call decodeTx successfully', function(done) {
-          // TODO: uncomment, update parameter values for decodeTx call and complete the assertions
+      describe('decodeTxInscriptions', function() {
+        it('should call decodeTxInscriptions successfully', function(done) {
+          // TODO: uncomment, update parameter values for decodeTxInscriptions call and complete the assertions
           /*
 
-          instance.decodeTx(txid, function(error, data, response) {
+          instance.decodeTxInscriptions(txid, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -115,18 +115,18 @@
           done();
         });
       });
-      describe('getRawTransactionDecoded', function() {
-        it('should call getRawTransactionDecoded successfully', function(done) {
-          // TODO: uncomment, update parameter values for getRawTransactionDecoded call and complete the assertions
+      describe('getRawTransaction', function() {
+        it('should call getRawTransaction successfully', function(done) {
+          // TODO: uncomment, update parameter values for getRawTransaction call and complete the assertions
           /*
 
-          instance.getRawTransactionDecoded(txid, function(error, data, response) {
+          instance.getRawTransaction(txid, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GetRawTransactionDecodedResponse);
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetRawTransactionDecodeResponse);
 
             done();
           });
@@ -167,26 +167,6 @@
             }
             // TODO: update response assertions
             expect(data).to.be.a(SatstreamJavascriptSdk.GetRawTransactionPrevoutResponse);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getTransaction', function() {
-        it('should call getTransaction successfully', function(done) {
-          // TODO: uncomment, update parameter values for getTransaction call and complete the assertions
-          /*
-
-          instance.getTransaction(txid, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.GetTransactionResponse);
 
             done();
           });

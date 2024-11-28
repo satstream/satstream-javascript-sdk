@@ -30,14 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('RunesListResponse', function() {
+    describe('GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse', function() {
       beforeEach(function() {
-        instance = new SatstreamJavascriptSdk.RunesListResponse();
+        instance = new SatstreamJavascriptSdk.GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse();
       });
 
-      it('should create an instance of RunesListResponse', function() {
-        // TODO: update the code to test RunesListResponse
-        expect(instance).to.be.a(SatstreamJavascriptSdk.RunesListResponse);
+      it('should create an instance of GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse', function() {
+        // TODO: update the code to test GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse
+        expect(instance).to.be.a(SatstreamJavascriptSdk.GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse);
       });
 
       it('should have the property entries (base name: "entries")', function() {

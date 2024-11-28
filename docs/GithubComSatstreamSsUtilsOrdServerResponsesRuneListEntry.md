@@ -1,4 +1,4 @@
-# SatstreamJavascriptSdk.RuneEntry
+# SatstreamJavascriptSdk.GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,9 +7,10 @@ Name | Type | Description | Notes
 **burned** | **Number** |  | [optional] 
 **divisibility** | **Number** |  | [optional] 
 **etching** | **String** |  | [optional] 
+**id** | **String** |  | [optional] 
 **mints** | **Number** |  | [optional] 
 **_number** | **Number** |  | [optional] 
-**premine** | **Number** |  | [optional] 
+**premine** | [**BigInt**](BigInt.md) |  | [optional] 
 **spacedRune** | **String** |  | [optional] 
 **symbol** | **String** |  | [optional] 
 **terms** | [**RuneTerms**](RuneTerms.md) |  | [optional] 

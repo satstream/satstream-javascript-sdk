@@ -95,6 +95,26 @@
           done();
         });
       });
+      describe('getBlockInscriptionsPage', function() {
+        it('should call getBlockInscriptionsPage successfully', function(done) {
+          // TODO: uncomment, update parameter values for getBlockInscriptionsPage call and complete the assertions
+          /*
+
+          instance.getBlockInscriptionsPage(blockHeight, page, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(SatstreamJavascriptSdk.GetBlockInscriptionsResponse);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('getInscription', function() {
         it('should call getInscription successfully', function(done) {
           // TODO: uncomment, update parameter values for getInscription call and complete the assertions

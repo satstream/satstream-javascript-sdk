@@ -38,13 +38,13 @@ import AllOfRawFeeEstimateMedium from './model/AllOfRawFeeEstimateMedium';
 import AllOfRawFeeEstimateModelLong from './model/AllOfRawFeeEstimateModelLong';
 import AllOfRawFeeEstimateModelShort from './model/AllOfRawFeeEstimateModelShort';
 import AllOfRawMempoolDataSequence from './model/AllOfRawMempoolDataSequence';
-import AllOfRuneListEntryModel1 from './model/AllOfRuneListEntryModel1';
 import AllOfTestMempoolAcceptResultFees from './model/AllOfTestMempoolAcceptResultFees';
 import AllOfTxOutScriptPubKey from './model/AllOfTxOutScriptPubKey';
 import AllOfUTXOBlockInfoUnspendables from './model/AllOfUTXOBlockInfoUnspendables';
 import AllOfUTXOSetInfoBlockInfo from './model/AllOfUTXOSetInfoBlockInfo';
 import AnalyzePSBTRequest from './model/AnalyzePSBTRequest';
 import AnalyzePSBTResponse from './model/AnalyzePSBTResponse';
+import BigInt from './model/BigInt';
 import Bip32Deriv from './model/Bip32Deriv';
 import Block1 from './model/Block1';
 import Block2 from './model/Block2';
@@ -63,7 +63,6 @@ import CombinePSBTResponse from './model/CombinePSBTResponse';
 import CombineRawTransactionResponse from './model/CombineRawTransactionResponse';
 import ConvertToPSBTResponse from './model/ConvertToPSBTResponse';
 import CreatePSBTInput from './model/CreatePSBTInput';
-import CreatePSBTOutput from './model/CreatePSBTOutput';
 import CreatePSBTRequest from './model/CreatePSBTRequest';
 import CreatePSBTResponse from './model/CreatePSBTResponse';
 import CreateRawTransactionResponse from './model/CreateRawTransactionResponse';
@@ -78,7 +77,6 @@ import DecodedPSBT from './model/DecodedPSBT';
 import DecodedPSBTInput from './model/DecodedPSBTInput';
 import DecodedPSBTOutput from './model/DecodedPSBTOutput';
 import DecodedScript from './model/DecodedScript';
-import Duration from './model/Duration';
 import EstimateRawFeeRequest from './model/EstimateRawFeeRequest';
 import EstimateRawFeeResponse from './model/EstimateRawFeeResponse';
 import EstimateSmartFeeRequest from './model/EstimateSmartFeeRequest';
@@ -122,17 +120,19 @@ import GetNetworkHashPSRequest from './model/GetNetworkHashPSRequest';
 import GetNetworkHashPSResponse from './model/GetNetworkHashPSResponse';
 import GetRawMempoolRequest from './model/GetRawMempoolRequest';
 import GetRawMempoolResponse from './model/GetRawMempoolResponse';
-import GetRawTransactionDecodedResponse from './model/GetRawTransactionDecodedResponse';
+import GetRawTransactionDecodeResponse from './model/GetRawTransactionDecodeResponse';
 import GetRawTransactionHexResponse from './model/GetRawTransactionHexResponse';
 import GetRawTransactionPrevoutResponse from './model/GetRawTransactionPrevoutResponse';
 import GetRuneResponse from './model/GetRuneResponse';
 import GetSatoshiResponse from './model/GetSatoshiResponse';
 import GetStatusResponse from './model/GetStatusResponse';
-import GetTransactionResponse from './model/GetTransactionResponse';
 import GetTxOutProofResponse from './model/GetTxOutProofResponse';
 import GetTxOutResponse from './model/GetTxOutResponse';
 import GetTxSpendingPrevoutResponse from './model/GetTxSpendingPrevoutResponse';
 import GithubComSatstreamSsUtilsDatabaseAddressDelta from './model/GithubComSatstreamSsUtilsDatabaseAddressDelta';
+import GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails from './model/GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails';
+import GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry from './model/GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry';
+import GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse';
 import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
 import InlineResponse2002 from './model/InlineResponse2002';
@@ -161,12 +161,9 @@ import RawFeeEstimate from './model/RawFeeEstimate';
 import RawMempoolData from './model/RawMempoolData';
 import RawTx1 from './model/RawTx1';
 import RawTx2 from './model/RawTx2';
-import RuneEntry from './model/RuneEntry';
-import RuneListEntry from './model/RuneListEntry';
 import RuneResponse from './model/RuneResponse';
 import RuneTerms from './model/RuneTerms';
 import RunesBalance from './model/RunesBalance';
-import RunesListResponse from './model/RunesListResponse';
 import RunestoneData from './model/RunestoneData';
 import SatoshiResponse from './model/SatoshiResponse';
 import Script from './model/Script';
@@ -184,16 +181,11 @@ import Transaction from './model/Transaction';
 import TransactionCombineRawTransactionRequest from './model/TransactionCombineRawTransactionRequest';
 import TransactionConvertToPSBTRequest from './model/TransactionConvertToPSBTRequest';
 import TransactionCreateRawTxInput from './model/TransactionCreateRawTxInput';
-import TransactionCreateRawTxOutput from './model/TransactionCreateRawTxOutput';
 import TransactionCreateRawTxRequest from './model/TransactionCreateRawTxRequest';
-import TransactionDetails from './model/TransactionDetails';
 import TransactionGetTxOutProofRequest from './model/TransactionGetTxOutProofRequest';
 import TransactionGetTxOutRequest from './model/TransactionGetTxOutRequest';
 import TransactionGetTxOutSetInfoRequest from './model/TransactionGetTxOutSetInfoRequest';
 import TransactionGetTxSpendingPrevoutRequest from './model/TransactionGetTxSpendingPrevoutRequest';
-import TransactionInput from './model/TransactionInput';
-import TransactionOutput from './model/TransactionOutput';
-import TransactionResponse from './model/TransactionResponse';
 import TransactionSendRawTransactionRequest from './model/TransactionSendRawTransactionRequest';
 import TransactionVerifyTxOutProofRequest from './model/TransactionVerifyTxOutProofRequest';
 import TxOut from './model/TxOut';
@@ -208,8 +200,6 @@ import UnknownFields from './model/UnknownFields';
 import UtilsResponseEnvelope from './model/UtilsResponseEnvelope';
 import ValidateAddressResponse from './model/ValidateAddressResponse';
 import ValidateAddressResult from './model/ValidateAddressResult';
-import VerifyMessageRequest from './model/VerifyMessageRequest';
-import VerifyMessageResponse from './model/VerifyMessageResponse';
 import VerifyTxOutProofResponse from './model/VerifyTxOutProofResponse';
 import Vout from './model/Vout';
 import AddressesApi from './api/AddressesApi';
@@ -256,7 +246,7 @@ import TransactionsApi from './api/TransactionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.25
+* @version 1.0.26
 */
 export {
     /**
@@ -410,12 +400,6 @@ export {
     AllOfRawMempoolDataSequence,
 
     /**
-     * The AllOfRuneListEntryModel1 model constructor.
-     * @property {module:model/AllOfRuneListEntryModel1}
-     */
-    AllOfRuneListEntryModel1,
-
-    /**
      * The AllOfTestMempoolAcceptResultFees model constructor.
      * @property {module:model/AllOfTestMempoolAcceptResultFees}
      */
@@ -450,6 +434,12 @@ export {
      * @property {module:model/AnalyzePSBTResponse}
      */
     AnalyzePSBTResponse,
+
+    /**
+     * The BigInt model constructor.
+     * @property {module:model/BigInt}
+     */
+    BigInt,
 
     /**
      * The Bip32Deriv model constructor.
@@ -560,12 +550,6 @@ export {
     CreatePSBTInput,
 
     /**
-     * The CreatePSBTOutput model constructor.
-     * @property {module:model/CreatePSBTOutput}
-     */
-    CreatePSBTOutput,
-
-    /**
      * The CreatePSBTRequest model constructor.
      * @property {module:model/CreatePSBTRequest}
      */
@@ -648,12 +632,6 @@ export {
      * @property {module:model/DecodedScript}
      */
     DecodedScript,
-
-    /**
-     * The Duration model constructor.
-     * @property {module:model/Duration}
-     */
-    Duration,
 
     /**
      * The EstimateRawFeeRequest model constructor.
@@ -914,10 +892,10 @@ export {
     GetRawMempoolResponse,
 
     /**
-     * The GetRawTransactionDecodedResponse model constructor.
-     * @property {module:model/GetRawTransactionDecodedResponse}
+     * The GetRawTransactionDecodeResponse model constructor.
+     * @property {module:model/GetRawTransactionDecodeResponse}
      */
-    GetRawTransactionDecodedResponse,
+    GetRawTransactionDecodeResponse,
 
     /**
      * The GetRawTransactionHexResponse model constructor.
@@ -950,12 +928,6 @@ export {
     GetStatusResponse,
 
     /**
-     * The GetTransactionResponse model constructor.
-     * @property {module:model/GetTransactionResponse}
-     */
-    GetTransactionResponse,
-
-    /**
      * The GetTxOutProofResponse model constructor.
      * @property {module:model/GetTxOutProofResponse}
      */
@@ -978,6 +950,24 @@ export {
      * @property {module:model/GithubComSatstreamSsUtilsDatabaseAddressDelta}
      */
     GithubComSatstreamSsUtilsDatabaseAddressDelta,
+
+    /**
+     * The GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails model constructor.
+     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails}
+     */
+    GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails,
+
+    /**
+     * The GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry model constructor.
+     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry}
+     */
+    GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry,
+
+    /**
+     * The GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse model constructor.
+     * @property {module:model/GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse}
+     */
+    GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse,
 
     /**
      * The InlineResponse200 model constructor.
@@ -1148,18 +1138,6 @@ export {
     RawTx2,
 
     /**
-     * The RuneEntry model constructor.
-     * @property {module:model/RuneEntry}
-     */
-    RuneEntry,
-
-    /**
-     * The RuneListEntry model constructor.
-     * @property {module:model/RuneListEntry}
-     */
-    RuneListEntry,
-
-    /**
      * The RuneResponse model constructor.
      * @property {module:model/RuneResponse}
      */
@@ -1176,12 +1154,6 @@ export {
      * @property {module:model/RunesBalance}
      */
     RunesBalance,
-
-    /**
-     * The RunesListResponse model constructor.
-     * @property {module:model/RunesListResponse}
-     */
-    RunesListResponse,
 
     /**
      * The RunestoneData model constructor.
@@ -1286,22 +1258,10 @@ export {
     TransactionCreateRawTxInput,
 
     /**
-     * The TransactionCreateRawTxOutput model constructor.
-     * @property {module:model/TransactionCreateRawTxOutput}
-     */
-    TransactionCreateRawTxOutput,
-
-    /**
      * The TransactionCreateRawTxRequest model constructor.
      * @property {module:model/TransactionCreateRawTxRequest}
      */
     TransactionCreateRawTxRequest,
-
-    /**
-     * The TransactionDetails model constructor.
-     * @property {module:model/TransactionDetails}
-     */
-    TransactionDetails,
 
     /**
      * The TransactionGetTxOutProofRequest model constructor.
@@ -1326,24 +1286,6 @@ export {
      * @property {module:model/TransactionGetTxSpendingPrevoutRequest}
      */
     TransactionGetTxSpendingPrevoutRequest,
-
-    /**
-     * The TransactionInput model constructor.
-     * @property {module:model/TransactionInput}
-     */
-    TransactionInput,
-
-    /**
-     * The TransactionOutput model constructor.
-     * @property {module:model/TransactionOutput}
-     */
-    TransactionOutput,
-
-    /**
-     * The TransactionResponse model constructor.
-     * @property {module:model/TransactionResponse}
-     */
-    TransactionResponse,
 
     /**
      * The TransactionSendRawTransactionRequest model constructor.
@@ -1428,18 +1370,6 @@ export {
      * @property {module:model/ValidateAddressResult}
      */
     ValidateAddressResult,
-
-    /**
-     * The VerifyMessageRequest model constructor.
-     * @property {module:model/VerifyMessageRequest}
-     */
-    VerifyMessageRequest,
-
-    /**
-     * The VerifyMessageResponse model constructor.
-     * @property {module:model/VerifyMessageResponse}
-     */
-    VerifyMessageResponse,
 
     /**
      * The VerifyTxOutProofResponse model constructor.

@@ -24,7 +24,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Inscriptions service.
 * @module api/InscriptionsApi
-* @version 1.0.25
+* @version 1.0.26
 */
 export default class InscriptionsApi {
 
@@ -182,6 +182,58 @@ export default class InscriptionsApi {
 
       return this.apiClient.callApi(
         '/inscriptions/block/{block_height}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getBlockInscriptionsPage operation.
+     * @callback moduleapi/InscriptionsApi~getBlockInscriptionsPageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetBlockInscriptionsResponse{ data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get paginated inscriptions in a specific block
+     * Retrieve paginated inscriptions in a specific block
+     * @param {Number} blockHeight Block Height
+     * @param {Number} page Page Number
+     * @param {module:api/InscriptionsApi~getBlockInscriptionsPageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
+     */
+    getBlockInscriptionsPage(blockHeight, page, callback) {
+      
+      let postBody = null;
+      // verify the required parameter 'blockHeight' is set
+      if (blockHeight === undefined || blockHeight === null) {
+        throw new Error("Missing the required parameter 'blockHeight' when calling getBlockInscriptionsPage");
+      }
+      // verify the required parameter 'page' is set
+      if (page === undefined || page === null) {
+        throw new Error("Missing the required parameter 'page' when calling getBlockInscriptionsPage");
+      }
+
+      let pathParams = {
+        'block_height': blockHeight,'page': page
+      };
+      let queryParams = {
+        
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetBlockInscriptionsResponse;
+
+      return this.apiClient.callApi(
+        '/inscriptions/block/{block_height}/{page}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

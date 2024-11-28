@@ -19,7 +19,7 @@ import SatoshiResponse from './SatoshiResponse';
 /**
  * The GetSatoshiResponse model module.
  * @module model/GetSatoshiResponse
- * @version 1.0.25
+ * @version 1.0.26
  */
 export default class GetSatoshiResponse {
   /**
