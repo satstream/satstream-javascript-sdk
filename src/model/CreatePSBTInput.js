@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreatePSBTInput model module.
  * @module model/CreatePSBTInput
- * @version 1.0.26
+ * @version 1.0.32
  */
 export default class CreatePSBTInput {
   /**

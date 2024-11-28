@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MiningInfo model module.
  * @module model/MiningInfo
- * @version 1.0.26
+ * @version 1.0.32
  */
 export default class MiningInfo {
   /**

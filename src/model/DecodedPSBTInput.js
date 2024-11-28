@@ -19,7 +19,7 @@ import Bip32Deriv from './Bip32Deriv';
 /**
  * The DecodedPSBTInput model module.
  * @module model/DecodedPSBTInput
- * @version 1.0.26
+ * @version 1.0.32
  */
 export default class DecodedPSBTInput {
   /**

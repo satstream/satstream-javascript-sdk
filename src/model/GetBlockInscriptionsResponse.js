@@ -19,7 +19,7 @@ import LatestInscriptionsResponse from './LatestInscriptionsResponse';
 /**
  * The GetBlockInscriptionsResponse model module.
  * @module model/GetBlockInscriptionsResponse
- * @version 1.0.26
+ * @version 1.0.32
  */
 export default class GetBlockInscriptionsResponse {
   /**

@@ -20,7 +20,7 @@ import ScriptPubKey from './ScriptPubKey';
 /**
  * The AllOfBlockVin3Prevout model module.
  * @module model/AllOfBlockVin3Prevout
- * @version 1.0.26
+ * @version 1.0.32
  */
 export default class AllOfBlockVin3Prevout extends PrevOut {
   /**

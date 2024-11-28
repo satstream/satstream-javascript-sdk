@@ -19,7 +19,7 @@ import MempoolSequence from './MempoolSequence';
 /**
  * The AllOfRawMempoolDataSequence model module.
  * @module model/AllOfRawMempoolDataSequence
- * @version 1.0.26
+ * @version 1.0.32
  */
 export default class AllOfRawMempoolDataSequence extends MempoolSequence {
   /**

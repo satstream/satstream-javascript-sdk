@@ -18,14 +18,13 @@ import ApiClient from '../ApiClient';
 /**
  * The UnknownFields model module.
  * @module model/UnknownFields
- * @version 1.0.26
+ * @version 1.0.32
  */
 export default class UnknownFields {
   /**
    * Constructs a new <code>UnknownFields</code>.
    * @alias module:model/UnknownFields
    * @class
-   * @extends Object
    */
   constructor() {
   }
@@ -40,8 +39,16 @@ export default class UnknownFields {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new UnknownFields();
-      ApiClient.constructFromObject(data, obj, 'String');
+      if (data.hasOwnProperty('fields'))
+        obj.fields = ApiClient.convertToType(data['fields'], {'String': 'String'});
     }
     return obj;
   }
 }
+
+/**
+ * Map of unknown field names to their values
+ * @member {Object.<String, String>} fields
+ */
+UnknownFields.prototype.fields = undefined;
+

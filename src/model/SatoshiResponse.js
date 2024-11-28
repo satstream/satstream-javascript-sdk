@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SatoshiResponse model module.
  * @module model/SatoshiResponse
- * @version 1.0.26
+ * @version 1.0.32
  */
 export default class SatoshiResponse {
   /**

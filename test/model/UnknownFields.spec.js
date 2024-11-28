@@ -40,6 +40,12 @@
         expect(instance).to.be.a(SatstreamJavascriptSdk.UnknownFields);
       });
 
+      it('should have the property fields (base name: "fields")', function() {
+        // TODO: update the code to test the property fields
+        expect(instance).to.have.property('fields');
+        // expect(instance.fields).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

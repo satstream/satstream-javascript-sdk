@@ -19,7 +19,7 @@ import MempoolInfo from './MempoolInfo';
 /**
  * The GetMempoolInfoResponse model module.
  * @module model/GetMempoolInfoResponse
- * @version 1.0.26
+ * @version 1.0.32
  */
 export default class GetMempoolInfoResponse {
   /**
