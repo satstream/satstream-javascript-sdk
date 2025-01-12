@@ -98,6 +98,7 @@ All URIs are relative to *https://api.satstream.io/api/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SatstreamJavascriptSdk.AddressesApi* | [**getAddress**](docs/AddressesApi.md#getAddress) | **GET** /address/{address} | Get address info
+*SatstreamJavascriptSdk.AddressesApi* | [**getAddressBalance**](docs/AddressesApi.md#getAddressBalance) | **GET** /address/{address}/balance | Get address balance
 *SatstreamJavascriptSdk.AddressesApi* | [**getAddressDeltas**](docs/AddressesApi.md#getAddressDeltas) | **GET** /address/{address}/deltas | Get address deltas
 *SatstreamJavascriptSdk.AddressesApi* | [**getAddressRuneDeltas**](docs/AddressesApi.md#getAddressRuneDeltas) | **GET** /address/{address}/deltas/runes | Get address rune deltas
 *SatstreamJavascriptSdk.AddressesApi* | [**getAddressUtxos**](docs/AddressesApi.md#getAddressUtxos) | **GET** /address/{address}/outputs | Get UTXOs for an address
@@ -232,6 +233,8 @@ Class | Method | HTTP request | Description
  - [SatstreamJavascriptSdk.FeeHorizonEstimate](docs/FeeHorizonEstimate.md)
  - [SatstreamJavascriptSdk.FeeRange](docs/FeeRange.md)
  - [SatstreamJavascriptSdk.FetchInscriptionsResponse](docs/FetchInscriptionsResponse.md)
+ - [SatstreamJavascriptSdk.GetAddressBalanceResponse](docs/GetAddressBalanceResponse.md)
+ - [SatstreamJavascriptSdk.GetAddressBalanceResponseData](docs/GetAddressBalanceResponseData.md)
  - [SatstreamJavascriptSdk.GetAddressDeltasResponse](docs/GetAddressDeltasResponse.md)
  - [SatstreamJavascriptSdk.GetAddressResponse](docs/GetAddressResponse.md)
  - [SatstreamJavascriptSdk.GetAddressRuneDeltasResponse](docs/GetAddressRuneDeltasResponse.md)

@@ -5,6 +5,7 @@ All URIs are relative to *https://api.satstream.io/api/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAddress**](AddressesApi.md#getAddress) | **GET** /address/{address} | Get address info
+[**getAddressBalance**](AddressesApi.md#getAddressBalance) | **GET** /address/{address}/balance | Get address balance
 [**getAddressDeltas**](AddressesApi.md#getAddressDeltas) | **GET** /address/{address}/deltas | Get address deltas
 [**getAddressRuneDeltas**](AddressesApi.md#getAddressRuneDeltas) | **GET** /address/{address}/deltas/runes | Get address rune deltas
 [**getAddressUtxos**](AddressesApi.md#getAddressUtxos) | **GET** /address/{address}/outputs | Get UTXOs for an address
@@ -50,6 +51,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAddressResponse**](GetAddressResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getAddressBalance"></a>
+# **getAddressBalance**
+> GetAddressBalanceResponse getAddressBalance(address)
+
+Get address balance
+
+Get the total BTC balance of an address by summing all its deltas
+
+### Example
+```javascript
+import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
+let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
+
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SatstreamJavascriptSdk.AddressesApi();
+let address = "address_example"; // String | Address
+
+apiInstance.getAddressBalance(address, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | **String**| Address | 
+
+### Return type
+
+[**GetAddressBalanceResponse**](GetAddressBalanceResponse.md)
 
 ### Authorization
 
