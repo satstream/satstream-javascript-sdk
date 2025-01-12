@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SmartFeeEstimate model module.
  * @module model/SmartFeeEstimate
- * @version 1.0.32
+ * @version 1.0.34
  */
 export default class SmartFeeEstimate {
   /**

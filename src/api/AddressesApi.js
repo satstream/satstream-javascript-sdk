@@ -25,7 +25,7 @@ import ValidateAddressResponse from '../model/ValidateAddressResponse';
 /**
 * Addresses service.
 * @module api/AddressesApi
-* @version 1.0.32
+* @version 1.0.34
 */
 export default class AddressesApi {
 
@@ -98,7 +98,7 @@ export default class AddressesApi {
 
     /**
      * Get address balance
-     * Get the total BTC balance of an address by summing all its deltas
+     * Get the total BTC balance in satoshis of an address by summing all its deltas
      * @param {String} address Address
      * @param {module:api/AddressesApi~getAddressBalanceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}

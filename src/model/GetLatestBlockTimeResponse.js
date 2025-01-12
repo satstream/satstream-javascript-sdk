@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetLatestBlockTimeResponse model module.
  * @module model/GetLatestBlockTimeResponse
- * @version 1.0.32
+ * @version 1.0.34
  */
 export default class GetLatestBlockTimeResponse {
   /**

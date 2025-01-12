@@ -19,7 +19,7 @@ import Block2 from './Block2';
 /**
  * The GetBlockDecodedResponse model module.
  * @module model/GetBlockDecodedResponse
- * @version 1.0.32
+ * @version 1.0.34
  */
 export default class GetBlockDecodedResponse {
   /**

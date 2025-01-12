@@ -19,7 +19,7 @@ import ScriptPubKey from './ScriptPubKey';
 /**
  * The AllOfTxOutScriptPubKey model module.
  * @module model/AllOfTxOutScriptPubKey
- * @version 1.0.32
+ * @version 1.0.34
  */
 export default class AllOfTxOutScriptPubKey extends ScriptPubKey {
   /**

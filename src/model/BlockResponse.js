@@ -19,7 +19,7 @@ import Transaction from './Transaction';
 /**
  * The BlockResponse model module.
  * @module model/BlockResponse
- * @version 1.0.32
+ * @version 1.0.34
  */
 export default class BlockResponse {
   /**

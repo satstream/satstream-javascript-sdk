@@ -20,7 +20,7 @@ import ScriptSig from './ScriptSig';
 /**
  * The TxVin2 model module.
  * @module model/TxVin2
- * @version 1.0.32
+ * @version 1.0.34
  */
 export default class TxVin2 {
   /**

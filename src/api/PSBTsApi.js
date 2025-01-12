@@ -29,7 +29,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * PSBTs service.
 * @module api/PSBTsApi
-* @version 1.0.32
+* @version 1.0.34
 */
 export default class PSBTsApi {
 

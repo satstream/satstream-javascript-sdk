@@ -19,7 +19,7 @@ import PSBTWitnessUtxo from './PSBTWitnessUtxo';
 /**
  * The AllOfDecodedPSBTInputWitnessUtxo model module.
  * @module model/AllOfDecodedPSBTInputWitnessUtxo
- * @version 1.0.32
+ * @version 1.0.34
  */
 export default class AllOfDecodedPSBTInputWitnessUtxo extends PSBTWitnessUtxo {
   /**

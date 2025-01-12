@@ -21,7 +21,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Scripts service.
 * @module api/ScriptsApi
-* @version 1.0.32
+* @version 1.0.34
 */
 export default class ScriptsApi {
 
