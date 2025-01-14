@@ -25,7 +25,7 @@ import ValidateAddressResponse from '../model/ValidateAddressResponse';
 /**
 * Addresses service.
 * @module api/AddressesApi
-* @version 1.0.36
+* @version 1.0.37
 */
 export default class AddressesApi {
 

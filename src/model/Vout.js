@@ -19,7 +19,7 @@ import ScriptPubKey from './ScriptPubKey';
 /**
  * The Vout model module.
  * @module model/Vout
- * @version 1.0.36
+ * @version 1.0.37
  */
 export default class Vout {
   /**

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddressRuneDelta model module.
  * @module model/AddressRuneDelta
- * @version 1.0.36
+ * @version 1.0.37
  */
 export default class AddressRuneDelta {
   /**
@@ -39,32 +39,20 @@ export default class AddressRuneDelta {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new AddressRuneDelta();
-      if (data.hasOwnProperty('address'))
-        obj.address = ApiClient.convertToType(data['address'], 'String');
-      if (data.hasOwnProperty('amount'))
-        obj.amount = ApiClient.convertToType(data['amount'], 'String');
       if (data.hasOwnProperty('block_height'))
         obj.blockHeight = ApiClient.convertToType(data['block_height'], 'Number');
+      if (data.hasOwnProperty('delta'))
+        obj.delta = ApiClient.convertToType(data['delta'], 'String');
+      if (data.hasOwnProperty('incoming'))
+        obj.incoming = ApiClient.convertToType(data['incoming'], 'String');
+      if (data.hasOwnProperty('outgoing'))
+        obj.outgoing = ApiClient.convertToType(data['outgoing'], 'String');
       if (data.hasOwnProperty('rune_id'))
         obj.runeId = ApiClient.convertToType(data['rune_id'], 'String');
-      if (data.hasOwnProperty('txid'))
-        obj.txid = ApiClient.convertToType(data['txid'], 'String');
-      if (data.hasOwnProperty('vout'))
-        obj.vout = ApiClient.convertToType(data['vout'], 'Number');
     }
     return obj;
   }
 }
-
-/**
- * @member {String} address
- */
-AddressRuneDelta.prototype.address = undefined;
-
-/**
- * @member {String} amount
- */
-AddressRuneDelta.prototype.amount = undefined;
 
 /**
  * @member {Number} blockHeight
@@ -72,17 +60,22 @@ AddressRuneDelta.prototype.amount = undefined;
 AddressRuneDelta.prototype.blockHeight = undefined;
 
 /**
+ * @member {String} delta
+ */
+AddressRuneDelta.prototype.delta = undefined;
+
+/**
+ * @member {String} incoming
+ */
+AddressRuneDelta.prototype.incoming = undefined;
+
+/**
+ * @member {String} outgoing
+ */
+AddressRuneDelta.prototype.outgoing = undefined;
+
+/**
  * @member {String} runeId
  */
 AddressRuneDelta.prototype.runeId = undefined;
-
-/**
- * @member {String} txid
- */
-AddressRuneDelta.prototype.txid = undefined;
-
-/**
- * @member {Number} vout
- */
-AddressRuneDelta.prototype.vout = undefined;
 

@@ -24,7 +24,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Inscriptions service.
 * @module api/InscriptionsApi
-* @version 1.0.36
+* @version 1.0.37
 */
 export default class InscriptionsApi {
 

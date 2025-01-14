@@ -19,7 +19,7 @@ import AddressRuneDelta from './AddressRuneDelta';
 /**
  * The GetAddressRuneDeltasResponse model module.
  * @module model/GetAddressRuneDeltasResponse
- * @version 1.0.36
+ * @version 1.0.37
  */
 export default class GetAddressRuneDeltasResponse {
   /**
@@ -44,6 +44,8 @@ export default class GetAddressRuneDeltasResponse {
         obj.code = ApiClient.convertToType(data['code'], 'Number');
       if (data.hasOwnProperty('data'))
         obj.data = ApiClient.convertToType(data['data'], [AddressRuneDelta]);
+      if (data.hasOwnProperty('has_more'))
+        obj.hasMore = ApiClient.convertToType(data['has_more'], 'Boolean');
       if (data.hasOwnProperty('msg'))
         obj.msg = ApiClient.convertToType(data['msg'], 'String');
     }
@@ -60,6 +62,11 @@ GetAddressRuneDeltasResponse.prototype.code = undefined;
  * @member {Array.<module:model/AddressRuneDelta>} data
  */
 GetAddressRuneDeltasResponse.prototype.data = undefined;
+
+/**
+ * @member {Boolean} hasMore
+ */
+GetAddressRuneDeltasResponse.prototype.hasMore = undefined;
 
 /**
  * @member {String} msg

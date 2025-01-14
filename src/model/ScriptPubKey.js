@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScriptPubKey model module.
  * @module model/ScriptPubKey
- * @version 1.0.36
+ * @version 1.0.37
  */
 export default class ScriptPubKey {
   /**

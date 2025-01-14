@@ -40,40 +40,34 @@
         expect(instance).to.be.a(SatstreamJavascriptSdk.AddressRuneDelta);
       });
 
-      it('should have the property address (base name: "address")', function() {
-        // TODO: update the code to test the property address
-        expect(instance).to.have.property('address');
-        // expect(instance.address).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property amount (base name: "amount")', function() {
-        // TODO: update the code to test the property amount
-        expect(instance).to.have.property('amount');
-        // expect(instance.amount).to.be(expectedValueLiteral);
-      });
-
       it('should have the property blockHeight (base name: "block_height")', function() {
         // TODO: update the code to test the property blockHeight
         expect(instance).to.have.property('blockHeight');
         // expect(instance.blockHeight).to.be(expectedValueLiteral);
       });
 
+      it('should have the property delta (base name: "delta")', function() {
+        // TODO: update the code to test the property delta
+        expect(instance).to.have.property('delta');
+        // expect(instance.delta).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property incoming (base name: "incoming")', function() {
+        // TODO: update the code to test the property incoming
+        expect(instance).to.have.property('incoming');
+        // expect(instance.incoming).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property outgoing (base name: "outgoing")', function() {
+        // TODO: update the code to test the property outgoing
+        expect(instance).to.have.property('outgoing');
+        // expect(instance.outgoing).to.be(expectedValueLiteral);
+      });
+
       it('should have the property runeId (base name: "rune_id")', function() {
         // TODO: update the code to test the property runeId
         expect(instance).to.have.property('runeId');
         // expect(instance.runeId).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property txid (base name: "txid")', function() {
-        // TODO: update the code to test the property txid
-        expect(instance).to.have.property('txid');
-        // expect(instance.txid).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property vout (base name: "vout")', function() {
-        // TODO: update the code to test the property vout
-        expect(instance).to.have.property('vout');
-        // expect(instance.vout).to.be(expectedValueLiteral);
       });
 
     });

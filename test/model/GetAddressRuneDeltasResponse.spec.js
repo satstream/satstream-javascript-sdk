@@ -52,6 +52,12 @@
         // expect(instance.data).to.be(expectedValueLiteral);
       });
 
+      it('should have the property hasMore (base name: "has_more")', function() {
+        // TODO: update the code to test the property hasMore
+        expect(instance).to.have.property('hasMore');
+        // expect(instance.hasMore).to.be(expectedValueLiteral);
+      });
+
       it('should have the property msg (base name: "msg")', function() {
         // TODO: update the code to test the property msg
         expect(instance).to.have.property('msg');

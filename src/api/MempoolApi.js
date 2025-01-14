@@ -28,7 +28,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Mempool service.
 * @module api/MempoolApi
-* @version 1.0.36
+* @version 1.0.37
 */
 export default class MempoolApi {
 

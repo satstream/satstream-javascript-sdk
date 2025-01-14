@@ -19,7 +19,7 @@ import TxOut from './TxOut';
 /**
  * The GetTxOutResponse model module.
  * @module model/GetTxOutResponse
- * @version 1.0.36
+ * @version 1.0.37
  */
 export default class GetTxOutResponse {
   /**
