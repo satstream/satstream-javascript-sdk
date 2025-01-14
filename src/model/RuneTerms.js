@@ -19,7 +19,7 @@ import BigInt from './BigInt';
 /**
  * The RuneTerms model module.
  * @module model/RuneTerms
- * @version 1.0.34
+ * @version 1.0.36
  */
 export default class RuneTerms {
   /**

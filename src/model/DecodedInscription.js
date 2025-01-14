@@ -19,7 +19,7 @@ import InscriptionData from './InscriptionData';
 /**
  * The DecodedInscription model module.
  * @module model/DecodedInscription
- * @version 1.0.34
+ * @version 1.0.36
  */
 export default class DecodedInscription {
   /**

@@ -20,7 +20,7 @@ import RunestoneData from './RunestoneData';
 /**
  * The DecodeResponse model module.
  * @module model/DecodeResponse
- * @version 1.0.34
+ * @version 1.0.36
  */
 export default class DecodeResponse {
   /**

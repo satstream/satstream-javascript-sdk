@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LatestInscriptionsResponse model module.
  * @module model/LatestInscriptionsResponse
- * @version 1.0.34
+ * @version 1.0.36
  */
 export default class LatestInscriptionsResponse {
   /**

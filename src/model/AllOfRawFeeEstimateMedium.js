@@ -19,7 +19,7 @@ import FeeHorizonEstimate from './FeeHorizonEstimate';
 /**
  * The AllOfRawFeeEstimateMedium model module.
  * @module model/AllOfRawFeeEstimateMedium
- * @version 1.0.34
+ * @version 1.0.36
  */
 export default class AllOfRawFeeEstimateMedium extends FeeHorizonEstimate {
   /**

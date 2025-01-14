@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetChainTxStatsRequest model module.
  * @module model/GetChainTxStatsRequest
- * @version 1.0.34
+ * @version 1.0.36
  */
 export default class GetChainTxStatsRequest {
   /**

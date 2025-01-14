@@ -19,7 +19,7 @@ import TestMempoolFees from './TestMempoolFees';
 /**
  * The AllOfTestMempoolAcceptResultFees model module.
  * @module model/AllOfTestMempoolAcceptResultFees
- * @version 1.0.34
+ * @version 1.0.36
  */
 export default class AllOfTestMempoolAcceptResultFees extends TestMempoolFees {
   /**

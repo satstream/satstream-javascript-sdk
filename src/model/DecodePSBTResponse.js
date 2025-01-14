@@ -19,7 +19,7 @@ import DecodedPSBT from './DecodedPSBT';
 /**
  * The DecodePSBTResponse model module.
  * @module model/DecodePSBTResponse
- * @version 1.0.34
+ * @version 1.0.36
  */
 export default class DecodePSBTResponse {
   /**
