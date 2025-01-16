@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UTXOSetInfo model module.
  * @module model/UTXOSetInfo
- * @version 1.0.38
+ * @version 1.0.39
  */
 export default class UTXOSetInfo {
   /**

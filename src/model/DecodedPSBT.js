@@ -20,7 +20,7 @@ import DecodedPSBTOutput from './DecodedPSBTOutput';
 /**
  * The DecodedPSBT model module.
  * @module model/DecodedPSBT
- * @version 1.0.38
+ * @version 1.0.39
  */
 export default class DecodedPSBT {
   /**
