@@ -19,7 +19,7 @@ import TxSpendingPrevoutResult from './TxSpendingPrevoutResult';
 /**
  * The GetTxSpendingPrevoutResponse model module.
  * @module model/GetTxSpendingPrevoutResponse
- * @version 1.0.37
+ * @version 1.0.38
  */
 export default class GetTxSpendingPrevoutResponse {
   /**

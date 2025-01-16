@@ -20,7 +20,7 @@ import RuneTerms from './RuneTerms';
 /**
  * The GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry model module.
  * @module model/GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry
- * @version 1.0.37
+ * @version 1.0.38
  */
 export default class GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry {
   /**

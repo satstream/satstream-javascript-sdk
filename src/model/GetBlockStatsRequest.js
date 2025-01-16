@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetBlockStatsRequest model module.
  * @module model/GetBlockStatsRequest
- * @version 1.0.37
+ * @version 1.0.38
  */
 export default class GetBlockStatsRequest {
   /**

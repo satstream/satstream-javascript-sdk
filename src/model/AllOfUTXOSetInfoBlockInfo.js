@@ -19,7 +19,7 @@ import UTXOBlockInfo from './UTXOBlockInfo';
 /**
  * The AllOfUTXOSetInfoBlockInfo model module.
  * @module model/AllOfUTXOSetInfoBlockInfo
- * @version 1.0.37
+ * @version 1.0.38
  */
 export default class AllOfUTXOSetInfoBlockInfo extends UTXOBlockInfo {
   /**

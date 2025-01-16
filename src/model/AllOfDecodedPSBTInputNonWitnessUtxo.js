@@ -21,7 +21,7 @@ import Vout from './Vout';
 /**
  * The AllOfDecodedPSBTInputNonWitnessUtxo model module.
  * @module model/AllOfDecodedPSBTInputNonWitnessUtxo
- * @version 1.0.37
+ * @version 1.0.38
  */
 export default class AllOfDecodedPSBTInputNonWitnessUtxo extends RawTx1 {
   /**

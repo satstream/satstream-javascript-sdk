@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetRawTransactionHexResponse model module.
  * @module model/GetRawTransactionHexResponse
- * @version 1.0.37
+ * @version 1.0.38
  */
 export default class GetRawTransactionHexResponse {
   /**

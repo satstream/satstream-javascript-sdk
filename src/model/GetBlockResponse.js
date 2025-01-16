@@ -19,7 +19,7 @@ import BlockResponse from './BlockResponse';
 /**
  * The GetBlockResponse model module.
  * @module model/GetBlockResponse
- * @version 1.0.37
+ * @version 1.0.38
  */
 export default class GetBlockResponse {
   /**

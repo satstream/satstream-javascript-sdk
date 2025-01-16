@@ -21,7 +21,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Runes service.
 * @module api/RunesApi
-* @version 1.0.37
+* @version 1.0.38
 */
 export default class RunesApi {
 
