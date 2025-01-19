@@ -19,7 +19,7 @@ import RawTx1 from './RawTx1';
 /**
  * The GetRawTransactionDecodeResponse model module.
  * @module model/GetRawTransactionDecodeResponse
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class GetRawTransactionDecodeResponse {
   /**

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RunestoneData model module.
  * @module model/RunestoneData
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class RunestoneData {
   /**

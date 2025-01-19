@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionGetTxOutRequest model module.
  * @module model/TransactionGetTxOutRequest
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class TransactionGetTxOutRequest {
   /**

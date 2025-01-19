@@ -19,7 +19,7 @@ import AddressRuneDelta from './AddressRuneDelta';
 /**
  * The GetAddressRuneDeltasResponse model module.
  * @module model/GetAddressRuneDeltasResponse
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class GetAddressRuneDeltasResponse {
   /**

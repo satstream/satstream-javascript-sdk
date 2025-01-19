@@ -19,7 +19,7 @@ import TransactionCreateRawTxInput from './TransactionCreateRawTxInput';
 /**
  * The TransactionCreateRawTxRequest model module.
  * @module model/TransactionCreateRawTxRequest
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class TransactionCreateRawTxRequest {
   /**

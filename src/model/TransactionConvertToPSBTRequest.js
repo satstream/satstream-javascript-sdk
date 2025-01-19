@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionConvertToPSBTRequest model module.
  * @module model/TransactionConvertToPSBTRequest
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class TransactionConvertToPSBTRequest {
   /**

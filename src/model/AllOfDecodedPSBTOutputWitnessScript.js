@@ -19,7 +19,7 @@ import Script from './Script';
 /**
  * The AllOfDecodedPSBTOutputWitnessScript model module.
  * @module model/AllOfDecodedPSBTOutputWitnessScript
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class AllOfDecodedPSBTOutputWitnessScript extends Script {
   /**

@@ -19,7 +19,7 @@ import PSBTAnalysis from './PSBTAnalysis';
 /**
  * The AnalyzePSBTResponse model module.
  * @module model/AnalyzePSBTResponse
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class AnalyzePSBTResponse {
   /**

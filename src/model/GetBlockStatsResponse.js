@@ -19,7 +19,7 @@ import BlockStats from './BlockStats';
 /**
  * The GetBlockStatsResponse model module.
  * @module model/GetBlockStatsResponse
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class GetBlockStatsResponse {
   /**

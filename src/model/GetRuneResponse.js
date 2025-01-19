@@ -19,7 +19,7 @@ import RuneResponse from './RuneResponse';
 /**
  * The GetRuneResponse model module.
  * @module model/GetRuneResponse
- * @version 1.0.39
+ * @version 1.0.43
  */
 export default class GetRuneResponse {
   /**
