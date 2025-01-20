@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails from './GithubComS
 /**
  * The OutputResponse model module.
  * @module model/OutputResponse
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class OutputResponse {
   /**

@@ -248,7 +248,7 @@ import TransactionsApi from './api/TransactionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.44
+* @version 1.0.45
 */
 export {
     /**

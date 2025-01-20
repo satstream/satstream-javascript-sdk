@@ -19,7 +19,7 @@ import AddressResponse from './AddressResponse';
 /**
  * The GetAddressResponse model module.
  * @module model/GetAddressResponse
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class GetAddressResponse {
   /**

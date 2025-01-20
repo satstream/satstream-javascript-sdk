@@ -21,7 +21,7 @@ import Vout from './Vout';
 /**
  * The AllOfDecodedPSBTTx model module.
  * @module model/AllOfDecodedPSBTTx
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class AllOfDecodedPSBTTx extends RawTx1 {
   /**

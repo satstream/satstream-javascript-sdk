@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DecodePSBTRequest model module.
  * @module model/DecodePSBTRequest
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class DecodePSBTRequest {
   /**

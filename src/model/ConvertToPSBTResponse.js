@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConvertToPSBTResponse model module.
  * @module model/ConvertToPSBTResponse
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class ConvertToPSBTResponse {
   /**

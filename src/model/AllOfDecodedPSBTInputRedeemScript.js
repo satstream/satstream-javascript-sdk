@@ -19,7 +19,7 @@ import Script from './Script';
 /**
  * The AllOfDecodedPSBTInputRedeemScript model module.
  * @module model/AllOfDecodedPSBTInputRedeemScript
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class AllOfDecodedPSBTInputRedeemScript extends Script {
   /**

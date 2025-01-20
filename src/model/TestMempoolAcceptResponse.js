@@ -19,7 +19,7 @@ import TestMempoolAcceptResult from './TestMempoolAcceptResult';
 /**
  * The TestMempoolAcceptResponse model module.
  * @module model/TestMempoolAcceptResponse
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class TestMempoolAcceptResponse {
   /**

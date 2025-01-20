@@ -19,7 +19,7 @@ import RunesBalance from './RunesBalance';
 /**
  * The AddressResponse model module.
  * @module model/AddressResponse
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class AddressResponse {
   /**

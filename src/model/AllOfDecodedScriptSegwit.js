@@ -19,7 +19,7 @@ import SegwitDetails from './SegwitDetails';
 /**
  * The AllOfDecodedScriptSegwit model module.
  * @module model/AllOfDecodedScriptSegwit
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class AllOfDecodedScriptSegwit extends SegwitDetails {
   /**

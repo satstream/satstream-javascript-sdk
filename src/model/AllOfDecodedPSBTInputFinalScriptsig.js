@@ -19,7 +19,7 @@ import Script from './Script';
 /**
  * The AllOfDecodedPSBTInputFinalScriptsig model module.
  * @module model/AllOfDecodedPSBTInputFinalScriptsig
- * @version 1.0.44
+ * @version 1.0.45
  */
 export default class AllOfDecodedPSBTInputFinalScriptsig extends Script {
   /**
