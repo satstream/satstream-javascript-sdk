@@ -19,7 +19,7 @@ import RawFeeEstimate from './RawFeeEstimate';
 /**
  * The EstimateRawFeeResponse model module.
  * @module model/EstimateRawFeeResponse
- * @version 1.0.43
+ * @version 1.0.44
  */
 export default class EstimateRawFeeResponse {
   /**

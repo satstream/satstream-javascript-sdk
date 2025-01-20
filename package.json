@@ -1,6 +1,6 @@
 {
   "name": "satstream-javascript-sdk",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "description": "Satstream JavaScript SDK",
   "license": "Apache 2.0",
   "main": "src/index.js",

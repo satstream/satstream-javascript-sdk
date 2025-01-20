@@ -19,7 +19,7 @@ import RawTx2 from './RawTx2';
 /**
  * The GetRawTransactionPrevoutResponse model module.
  * @module model/GetRawTransactionPrevoutResponse
- * @version 1.0.43
+ * @version 1.0.44
  */
 export default class GetRawTransactionPrevoutResponse {
   /**

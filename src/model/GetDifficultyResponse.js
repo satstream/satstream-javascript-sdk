@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetDifficultyResponse model module.
  * @module model/GetDifficultyResponse
- * @version 1.0.43
+ * @version 1.0.44
  */
 export default class GetDifficultyResponse {
   /**

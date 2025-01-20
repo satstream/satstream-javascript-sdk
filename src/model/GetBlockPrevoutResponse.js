@@ -19,7 +19,7 @@ import Block3 from './Block3';
 /**
  * The GetBlockPrevoutResponse model module.
  * @module model/GetBlockPrevoutResponse
- * @version 1.0.43
+ * @version 1.0.44
  */
 export default class GetBlockPrevoutResponse {
   /**

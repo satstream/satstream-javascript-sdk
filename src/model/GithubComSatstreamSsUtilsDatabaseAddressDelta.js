@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GithubComSatstreamSsUtilsDatabaseAddressDelta model module.
  * @module model/GithubComSatstreamSsUtilsDatabaseAddressDelta
- * @version 1.0.43
+ * @version 1.0.44
  */
 export default class GithubComSatstreamSsUtilsDatabaseAddressDelta {
   /**

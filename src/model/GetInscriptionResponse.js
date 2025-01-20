@@ -19,7 +19,7 @@ import InscriptionResponse from './InscriptionResponse';
 /**
  * The GetInscriptionResponse model module.
  * @module model/GetInscriptionResponse
- * @version 1.0.43
+ * @version 1.0.44
  */
 export default class GetInscriptionResponse {
   /**

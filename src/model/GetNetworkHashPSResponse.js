@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetNetworkHashPSResponse model module.
  * @module model/GetNetworkHashPSResponse
- * @version 1.0.43
+ * @version 1.0.44
  */
 export default class GetNetworkHashPSResponse {
   /**

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BlockVin2 model module.
  * @module model/BlockVin2
- * @version 1.0.43
+ * @version 1.0.44
  */
 export default class BlockVin2 {
   /**

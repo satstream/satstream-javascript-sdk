@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FeeHorizonEstimate model module.
  * @module model/FeeHorizonEstimate
- * @version 1.0.43
+ * @version 1.0.44
  */
 export default class FeeHorizonEstimate {
   /**
