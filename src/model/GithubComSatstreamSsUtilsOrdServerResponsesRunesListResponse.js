@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry from './GithubCo
 /**
  * The GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse model module.
  * @module model/GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse
- * @version 1.0.45
+ * @version 1.0.46
  */
 export default class GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse {
   /**

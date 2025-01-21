@@ -19,7 +19,7 @@ import ValidateAddressResult from './ValidateAddressResult';
 /**
  * The ValidateAddressResponse model module.
  * @module model/ValidateAddressResponse
- * @version 1.0.45
+ * @version 1.0.46
  */
 export default class ValidateAddressResponse {
   /**

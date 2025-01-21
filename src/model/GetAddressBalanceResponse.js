@@ -19,7 +19,7 @@ import GetAddressBalanceResponseData from './GetAddressBalanceResponseData';
 /**
  * The GetAddressBalanceResponse model module.
  * @module model/GetAddressBalanceResponse
- * @version 1.0.45
+ * @version 1.0.46
  */
 export default class GetAddressBalanceResponse {
   /**

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetBlockCountResponse model module.
  * @module model/GetBlockCountResponse
- * @version 1.0.45
+ * @version 1.0.46
  */
 export default class GetBlockCountResponse {
   /**

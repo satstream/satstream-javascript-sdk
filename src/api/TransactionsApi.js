@@ -41,7 +41,7 @@ import VerifyTxOutProofResponse from '../model/VerifyTxOutProofResponse';
 /**
 * Transactions service.
 * @module api/TransactionsApi
-* @version 1.0.45
+* @version 1.0.46
 */
 export default class TransactionsApi {
 
@@ -334,7 +334,7 @@ export default class TransactionsApi {
       let returnType = GetRawTransactionHexResponse;
 
       return this.apiClient.callApi(
-        '/tx/{txid}/hex', 'GET',
+        '/tx/{txid}/raw/hex', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

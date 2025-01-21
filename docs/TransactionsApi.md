@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**createRawTransaction**](TransactionsApi.md#createRawTransaction) | **POST** /tx/create | Create Raw Transaction
 [**decodeTxInscriptions**](TransactionsApi.md#decodeTxInscriptions) | **GET** /tx/{txid}/inscriptions | Decode transaction inscriptions
 [**getRawTransaction**](TransactionsApi.md#getRawTransaction) | **GET** /tx/{txid}/raw/decode | Get raw transaction (verbosity 1)
-[**getRawTransactionHex**](TransactionsApi.md#getRawTransactionHex) | **GET** /tx/{txid}/hex | Get raw transaction (verbosity 0)
+[**getRawTransactionHex**](TransactionsApi.md#getRawTransactionHex) | **GET** /tx/{txid}/raw/hex | Get raw transaction (verbosity 0)
 [**getRawTransactionPrevout**](TransactionsApi.md#getRawTransactionPrevout) | **GET** /tx/{txid}/raw/prevout | Get raw transaction with prevouts (verbosity 2)
 [**getTxOut**](TransactionsApi.md#getTxOut) | **POST** /tx/out | Get transaction output
 [**getTxOutProof**](TransactionsApi.md#getTxOutProof) | **POST** /tx/outproof | Get transaction output proof

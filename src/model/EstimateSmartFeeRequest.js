@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EstimateSmartFeeRequest model module.
  * @module model/EstimateSmartFeeRequest
- * @version 1.0.45
+ * @version 1.0.46
  */
 export default class EstimateSmartFeeRequest {
   /**

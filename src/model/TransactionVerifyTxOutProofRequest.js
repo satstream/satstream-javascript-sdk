@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionVerifyTxOutProofRequest model module.
  * @module model/TransactionVerifyTxOutProofRequest
- * @version 1.0.45
+ * @version 1.0.46
  */
 export default class TransactionVerifyTxOutProofRequest {
   /**

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreatePSBTResponse model module.
  * @module model/CreatePSBTResponse
- * @version 1.0.45
+ * @version 1.0.46
  */
 export default class CreatePSBTResponse {
   /**

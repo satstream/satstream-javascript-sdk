@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AddressRuneDelta model module.
  * @module model/AddressRuneDelta
- * @version 1.0.45
+ * @version 1.0.46
  */
 export default class AddressRuneDelta {
   /**

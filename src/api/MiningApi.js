@@ -22,7 +22,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Mining service.
 * @module api/MiningApi
-* @version 1.0.45
+* @version 1.0.46
 */
 export default class MiningApi {
 
