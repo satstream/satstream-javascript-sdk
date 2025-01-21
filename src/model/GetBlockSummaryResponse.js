@@ -19,7 +19,7 @@ import Block1 from './Block1';
 /**
  * The GetBlockSummaryResponse model module.
  * @module model/GetBlockSummaryResponse
- * @version 1.0.47
+ * @version 1.0.48
  */
 export default class GetBlockSummaryResponse {
   /**

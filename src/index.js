@@ -61,6 +61,7 @@ import CombinePSBTResponse from './model/CombinePSBTResponse';
 import CombineRawTransactionResponse from './model/CombineRawTransactionResponse';
 import ConvertToPSBTResponse from './model/ConvertToPSBTResponse';
 import CreatePSBTInput from './model/CreatePSBTInput';
+import CreatePSBTOutput from './model/CreatePSBTOutput';
 import CreatePSBTRequest from './model/CreatePSBTRequest';
 import CreatePSBTResponse from './model/CreatePSBTResponse';
 import CreateRawTransactionResponse from './model/CreateRawTransactionResponse';
@@ -241,7 +242,7 @@ import TransactionsApi from './api/TransactionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.47
+* @version 1.0.48
 */
 export {
     /**
@@ -531,6 +532,12 @@ export {
      * @property {module:model/CreatePSBTInput}
      */
     CreatePSBTInput,
+
+    /**
+     * The CreatePSBTOutput model constructor.
+     * @property {module:model/CreatePSBTOutput}
+     */
+    CreatePSBTOutput,
 
     /**
      * The CreatePSBTRequest model constructor.

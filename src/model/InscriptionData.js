@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InscriptionData model module.
  * @module model/InscriptionData
- * @version 1.0.47
+ * @version 1.0.48
  */
 export default class InscriptionData {
   /**

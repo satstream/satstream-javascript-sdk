@@ -19,7 +19,7 @@ import StatusResponse from './StatusResponse';
 /**
  * The GetStatusResponse model module.
  * @module model/GetStatusResponse
- * @version 1.0.47
+ * @version 1.0.48
  */
 export default class GetStatusResponse {
   /**

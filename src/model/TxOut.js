@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TxOut model module.
  * @module model/TxOut
- * @version 1.0.47
+ * @version 1.0.48
  */
 export default class TxOut {
   /**

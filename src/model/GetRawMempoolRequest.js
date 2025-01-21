@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetRawMempoolRequest model module.
  * @module model/GetRawMempoolRequest
- * @version 1.0.47
+ * @version 1.0.48
  */
 export default class GetRawMempoolRequest {
   /**

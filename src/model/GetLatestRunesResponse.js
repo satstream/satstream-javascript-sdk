@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse from './Gith
 /**
  * The GetLatestRunesResponse model module.
  * @module model/GetLatestRunesResponse
- * @version 1.0.47
+ * @version 1.0.48
  */
 export default class GetLatestRunesResponse {
   /**

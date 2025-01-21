@@ -19,7 +19,7 @@ import MempoolAncestorsData from './MempoolAncestorsData';
 /**
  * The GetMempoolAncestorsResponse model module.
  * @module model/GetMempoolAncestorsResponse
- * @version 1.0.47
+ * @version 1.0.48
  */
 export default class GetMempoolAncestorsResponse {
   /**

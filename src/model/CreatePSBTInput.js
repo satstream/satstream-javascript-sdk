@@ -18,15 +18,19 @@ import ApiClient from '../ApiClient';
 /**
  * The CreatePSBTInput model module.
  * @module model/CreatePSBTInput
- * @version 1.0.47
+ * @version 1.0.48
  */
 export default class CreatePSBTInput {
   /**
    * Constructs a new <code>CreatePSBTInput</code>.
    * @alias module:model/CreatePSBTInput
    * @class
+   * @param txid {String} The transaction id of the output to spend
+   * @param vout {Number} The output index number (vout) of the output to spend
    */
-  constructor() {
+  constructor(txid, vout) {
+    this.txid = txid;
+    this.vout = vout;
   }
 
   /**
