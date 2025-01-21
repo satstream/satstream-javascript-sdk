@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateRawTransactionResponse model module.
  * @module model/CreateRawTransactionResponse
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class CreateRawTransactionResponse {
   /**

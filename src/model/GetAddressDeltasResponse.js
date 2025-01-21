@@ -19,7 +19,7 @@ import GithubComSatstreamSsUtilsDatabaseAddressDelta from './GithubComSatstreamS
 /**
  * The GetAddressDeltasResponse model module.
  * @module model/GetAddressDeltasResponse
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class GetAddressDeltasResponse {
   /**

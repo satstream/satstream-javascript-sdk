@@ -19,7 +19,7 @@ import BigInt from './BigInt';
 /**
  * The RuneTerms model module.
  * @module model/RuneTerms
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class RuneTerms {
   /**
@@ -41,7 +41,7 @@ export default class RuneTerms {
     if (data) {
       obj = obj || new RuneTerms();
       if (data.hasOwnProperty('amount'))
-        obj.amount = ApiClient.convertToType(data['amount'], 'Number');
+        obj.amount = BigInt.constructFromObject(data['amount']);
       if (data.hasOwnProperty('cap'))
         obj.cap = BigInt.constructFromObject(data['cap']);
       if (data.hasOwnProperty('height'))
@@ -54,7 +54,7 @@ export default class RuneTerms {
 }
 
 /**
- * @member {Number} amount
+ * @member {module:model/BigInt} amount
  */
 RuneTerms.prototype.amount = undefined;
 

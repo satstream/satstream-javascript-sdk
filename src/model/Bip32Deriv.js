@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Bip32Deriv model module.
  * @module model/Bip32Deriv
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class Bip32Deriv {
   /**

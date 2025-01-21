@@ -24,14 +24,12 @@ import GetRawTransactionPrevoutResponse from '../model/GetRawTransactionPrevoutR
 import GetTxOutProofResponse from '../model/GetTxOutProofResponse';
 import GetTxOutResponse from '../model/GetTxOutResponse';
 import GetTxSpendingPrevoutResponse from '../model/GetTxSpendingPrevoutResponse';
-import InlineResponse2002 from '../model/InlineResponse2002';
 import SendRawTransactionResponse from '../model/SendRawTransactionResponse';
 import TransactionCombineRawTransactionRequest from '../model/TransactionCombineRawTransactionRequest';
 import TransactionConvertToPSBTRequest from '../model/TransactionConvertToPSBTRequest';
 import TransactionCreateRawTxRequest from '../model/TransactionCreateRawTxRequest';
 import TransactionGetTxOutProofRequest from '../model/TransactionGetTxOutProofRequest';
 import TransactionGetTxOutRequest from '../model/TransactionGetTxOutRequest';
-import TransactionGetTxOutSetInfoRequest from '../model/TransactionGetTxOutSetInfoRequest';
 import TransactionGetTxSpendingPrevoutRequest from '../model/TransactionGetTxSpendingPrevoutRequest';
 import TransactionSendRawTransactionRequest from '../model/TransactionSendRawTransactionRequest';
 import TransactionVerifyTxOutProofRequest from '../model/TransactionVerifyTxOutProofRequest';
@@ -41,7 +39,7 @@ import VerifyTxOutProofResponse from '../model/VerifyTxOutProofResponse';
 /**
 * Transactions service.
 * @module api/TransactionsApi
-* @version 1.0.46
+* @version 1.0.47
 */
 export default class TransactionsApi {
 
@@ -476,53 +474,6 @@ export default class TransactionsApi {
 
       return this.apiClient.callApi(
         '/tx/outproof', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getTxOutSetInfo operation.
-     * @callback moduleapi/TransactionsApi~getTxOutSetInfoCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002{ data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get transaction output set information
-     * Returns statistics about the unspent transaction output set
-     * @param {module:model/TransactionGetTxOutSetInfoRequest} body UTXO set info request parameters
-     * @param {module:api/TransactionsApi~getTxOutSetInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
-     */
-    getTxOutSetInfo(body, callback) {
-      
-      let postBody = body;
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling getTxOutSetInfo");
-      }
-
-      let pathParams = {
-        
-      };
-      let queryParams = {
-        
-      };
-      let headerParams = {
-        
-      };
-      let formParams = {
-        
-      };
-
-      let authNames = ['ApiKeyAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = InlineResponse2002;
-
-      return this.apiClient.callApi(
-        '/tx/out/set/info', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

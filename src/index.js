@@ -40,8 +40,6 @@ import AllOfRawFeeEstimateModelShort from './model/AllOfRawFeeEstimateModelShort
 import AllOfRawMempoolDataSequence from './model/AllOfRawMempoolDataSequence';
 import AllOfTestMempoolAcceptResultFees from './model/AllOfTestMempoolAcceptResultFees';
 import AllOfTxOutScriptPubKey from './model/AllOfTxOutScriptPubKey';
-import AllOfUTXOBlockInfoUnspendables from './model/AllOfUTXOBlockInfoUnspendables';
-import AllOfUTXOSetInfoBlockInfo from './model/AllOfUTXOSetInfoBlockInfo';
 import AnalyzePSBTRequest from './model/AnalyzePSBTRequest';
 import AnalyzePSBTResponse from './model/AnalyzePSBTResponse';
 import BigInt from './model/BigInt';
@@ -137,7 +135,6 @@ import GithubComSatstreamSsUtilsOrdServerResponsesRuneListEntry from './model/Gi
 import GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse from './model/GithubComSatstreamSsUtilsOrdServerResponsesRunesListResponse';
 import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
-import InlineResponse2002 from './model/InlineResponse2002';
 import Input from './model/Input';
 import InscriptionData from './model/InscriptionData';
 import InscriptionResponse from './model/InscriptionResponse';
@@ -186,7 +183,6 @@ import TransactionCreateRawTxInput from './model/TransactionCreateRawTxInput';
 import TransactionCreateRawTxRequest from './model/TransactionCreateRawTxRequest';
 import TransactionGetTxOutProofRequest from './model/TransactionGetTxOutProofRequest';
 import TransactionGetTxOutRequest from './model/TransactionGetTxOutRequest';
-import TransactionGetTxOutSetInfoRequest from './model/TransactionGetTxOutSetInfoRequest';
 import TransactionGetTxSpendingPrevoutRequest from './model/TransactionGetTxSpendingPrevoutRequest';
 import TransactionSendRawTransactionRequest from './model/TransactionSendRawTransactionRequest';
 import TransactionVerifyTxOutProofRequest from './model/TransactionVerifyTxOutProofRequest';
@@ -195,9 +191,6 @@ import TxSpendingPrevoutInput from './model/TxSpendingPrevoutInput';
 import TxSpendingPrevoutResult from './model/TxSpendingPrevoutResult';
 import TxVin1 from './model/TxVin1';
 import TxVin2 from './model/TxVin2';
-import UTXOBlockInfo from './model/UTXOBlockInfo';
-import UTXOSetInfo from './model/UTXOSetInfo';
-import UTXOUnspendables from './model/UTXOUnspendables';
 import UnknownFields from './model/UnknownFields';
 import UtilsResponseEnvelope from './model/UtilsResponseEnvelope';
 import ValidateAddressResponse from './model/ValidateAddressResponse';
@@ -248,7 +241,7 @@ import TransactionsApi from './api/TransactionsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.46
+* @version 1.0.47
 */
 export {
     /**
@@ -412,18 +405,6 @@ export {
      * @property {module:model/AllOfTxOutScriptPubKey}
      */
     AllOfTxOutScriptPubKey,
-
-    /**
-     * The AllOfUTXOBlockInfoUnspendables model constructor.
-     * @property {module:model/AllOfUTXOBlockInfoUnspendables}
-     */
-    AllOfUTXOBlockInfoUnspendables,
-
-    /**
-     * The AllOfUTXOSetInfoBlockInfo model constructor.
-     * @property {module:model/AllOfUTXOSetInfoBlockInfo}
-     */
-    AllOfUTXOSetInfoBlockInfo,
 
     /**
      * The AnalyzePSBTRequest model constructor.
@@ -996,12 +977,6 @@ export {
     InlineResponse2001,
 
     /**
-     * The InlineResponse2002 model constructor.
-     * @property {module:model/InlineResponse2002}
-     */
-    InlineResponse2002,
-
-    /**
      * The Input model constructor.
      * @property {module:model/Input}
      */
@@ -1290,12 +1265,6 @@ export {
     TransactionGetTxOutRequest,
 
     /**
-     * The TransactionGetTxOutSetInfoRequest model constructor.
-     * @property {module:model/TransactionGetTxOutSetInfoRequest}
-     */
-    TransactionGetTxOutSetInfoRequest,
-
-    /**
      * The TransactionGetTxSpendingPrevoutRequest model constructor.
      * @property {module:model/TransactionGetTxSpendingPrevoutRequest}
      */
@@ -1342,24 +1311,6 @@ export {
      * @property {module:model/TxVin2}
      */
     TxVin2,
-
-    /**
-     * The UTXOBlockInfo model constructor.
-     * @property {module:model/UTXOBlockInfo}
-     */
-    UTXOBlockInfo,
-
-    /**
-     * The UTXOSetInfo model constructor.
-     * @property {module:model/UTXOSetInfo}
-     */
-    UTXOSetInfo,
-
-    /**
-     * The UTXOUnspendables model constructor.
-     * @property {module:model/UTXOUnspendables}
-     */
-    UTXOUnspendables,
 
     /**
      * The UnknownFields model constructor.

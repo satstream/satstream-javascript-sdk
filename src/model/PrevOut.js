@@ -19,7 +19,7 @@ import ScriptPubKey from './ScriptPubKey';
 /**
  * The PrevOut model module.
  * @module model/PrevOut
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class PrevOut {
   /**

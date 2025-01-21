@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Block1 model module.
  * @module model/Block1
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class Block1 {
   /**

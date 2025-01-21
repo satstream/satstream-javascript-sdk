@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetBlockHashByHeightResponse model module.
  * @module model/GetBlockHashByHeightResponse
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class GetBlockHashByHeightResponse {
   /**

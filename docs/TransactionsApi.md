@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**getRawTransactionPrevout**](TransactionsApi.md#getRawTransactionPrevout) | **GET** /tx/{txid}/raw/prevout | Get raw transaction with prevouts (verbosity 2)
 [**getTxOut**](TransactionsApi.md#getTxOut) | **POST** /tx/out | Get transaction output
 [**getTxOutProof**](TransactionsApi.md#getTxOutProof) | **POST** /tx/outproof | Get transaction output proof
-[**getTxOutSetInfo**](TransactionsApi.md#getTxOutSetInfo) | **POST** /tx/out/set/info | Get transaction output set information
 [**getTxSpendingPrevout**](TransactionsApi.md#getTxSpendingPrevout) | **POST** /tx/spending-prevout | Get transaction spending prevout
 [**sendRawTransaction**](TransactionsApi.md#sendRawTransaction) | **POST** /tx/send | Send raw transaction
 [**verifyTxOutProof**](TransactionsApi.md#verifyTxOutProof) | **POST** /tx/outproof/verify | Verify transaction output proof
@@ -458,56 +457,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetTxOutProofResponse**](GetTxOutProofResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getTxOutSetInfo"></a>
-# **getTxOutSetInfo**
-> InlineResponse2002 getTxOutSetInfo(body)
-
-Get transaction output set information
-
-Returns statistics about the unspent transaction output set
-
-### Example
-```javascript
-import {SatstreamJavascriptSdk} from 'satstream-javascript-sdk';
-let defaultClient = SatstreamJavascriptSdk.ApiClient.instance;
-
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SatstreamJavascriptSdk.TransactionsApi();
-let body = new SatstreamJavascriptSdk.TransactionGetTxOutSetInfoRequest(); // TransactionGetTxOutSetInfoRequest | UTXO set info request parameters
-
-apiInstance.getTxOutSetInfo(body, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**TransactionGetTxOutSetInfoRequest**](TransactionGetTxOutSetInfoRequest.md)| UTXO set info request parameters | 
-
-### Return type
-
-[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

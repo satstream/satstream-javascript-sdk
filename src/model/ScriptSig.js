@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScriptSig model module.
  * @module model/ScriptSig
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class ScriptSig {
   /**

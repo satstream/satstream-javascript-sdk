@@ -23,7 +23,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Fees service.
 * @module api/FeesApi
-* @version 1.0.46
+* @version 1.0.47
 */
 export default class FeesApi {
 

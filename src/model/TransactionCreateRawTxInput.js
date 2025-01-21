@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionCreateRawTxInput model module.
  * @module model/TransactionCreateRawTxInput
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class TransactionCreateRawTxInput {
   /**

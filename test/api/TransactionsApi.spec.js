@@ -215,26 +215,6 @@
           done();
         });
       });
-      describe('getTxOutSetInfo', function() {
-        it('should call getTxOutSetInfo successfully', function(done) {
-          // TODO: uncomment, update parameter values for getTxOutSetInfo call and complete the assertions
-          /*
-
-          instance.getTxOutSetInfo(body, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(SatstreamJavascriptSdk.InlineResponse2002);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
       describe('getTxSpendingPrevout', function() {
         it('should call getTxSpendingPrevout successfully', function(done) {
           // TODO: uncomment, update parameter values for getTxSpendingPrevout call and complete the assertions

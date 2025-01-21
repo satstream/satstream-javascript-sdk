@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TxSpendingPrevoutResult model module.
  * @module model/TxSpendingPrevoutResult
- * @version 1.0.46
+ * @version 1.0.47
  */
 export default class TxSpendingPrevoutResult {
   /**

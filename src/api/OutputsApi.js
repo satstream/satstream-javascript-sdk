@@ -21,7 +21,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Outputs service.
 * @module api/OutputsApi
-* @version 1.0.46
+* @version 1.0.47
 */
 export default class OutputsApi {
 
