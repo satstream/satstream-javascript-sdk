@@ -19,7 +19,7 @@ import DecodedScript from './DecodedScript';
 /**
  * The DecodeScriptResponse model module.
  * @module model/DecodeScriptResponse
- * @version 1.0.50
+ * @version 1.0.51
  */
 export default class DecodeScriptResponse {
   /**

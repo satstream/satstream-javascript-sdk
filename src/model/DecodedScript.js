@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DecodedScript model module.
  * @module model/DecodedScript
- * @version 1.0.50
+ * @version 1.0.51
  */
 export default class DecodedScript {
   /**

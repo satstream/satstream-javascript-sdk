@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetAddressBalanceResponseData model module.
  * @module model/GetAddressBalanceResponseData
- * @version 1.0.50
+ * @version 1.0.51
  */
 export default class GetAddressBalanceResponseData {
   /**

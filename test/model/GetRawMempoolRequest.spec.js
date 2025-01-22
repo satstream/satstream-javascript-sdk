@@ -46,12 +46,6 @@
         // expect(instance.mempoolSequence).to.be(expectedValueLiteral);
       });
 
-      it('should have the property verbose (base name: "verbose")', function() {
-        // TODO: update the code to test the property verbose
-        expect(instance).to.have.property('verbose');
-        // expect(instance.verbose).to.be(expectedValueLiteral);
-      });
-
     });
   });
 

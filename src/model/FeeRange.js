@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FeeRange model module.
  * @module model/FeeRange
- * @version 1.0.50
+ * @version 1.0.51
  */
 export default class FeeRange {
   /**

@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetRawMempoolRequest model module.
  * @module model/GetRawMempoolRequest
- * @version 1.0.50
+ * @version 1.0.51
  */
 export default class GetRawMempoolRequest {
   /**
@@ -41,22 +41,14 @@ export default class GetRawMempoolRequest {
       obj = obj || new GetRawMempoolRequest();
       if (data.hasOwnProperty('mempool_sequence'))
         obj.mempoolSequence = ApiClient.convertToType(data['mempool_sequence'], 'Boolean');
-      if (data.hasOwnProperty('verbose'))
-        obj.verbose = ApiClient.convertToType(data['verbose'], 'Boolean');
     }
     return obj;
   }
 }
 
 /**
- * Optional: If verbose=false, returns txids with mempool sequence number
+ * Optional: Returns txids with mempool sequence number
  * @member {Boolean} mempoolSequence
  */
 GetRawMempoolRequest.prototype.mempoolSequence = undefined;
-
-/**
- * Optional: True for detailed information, false for just txids
- * @member {Boolean} verbose
- */
-GetRawMempoolRequest.prototype.verbose = undefined;
 

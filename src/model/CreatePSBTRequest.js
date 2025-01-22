@@ -20,7 +20,7 @@ import CreatePSBTOutput from './CreatePSBTOutput';
 /**
  * The CreatePSBTRequest model module.
  * @module model/CreatePSBTRequest
- * @version 1.0.50
+ * @version 1.0.51
  */
 export default class CreatePSBTRequest {
   /**
