@@ -19,7 +19,7 @@ import ChainTxStats from './ChainTxStats';
 /**
  * The GetChainTxStatsResponse model module.
  * @module model/GetChainTxStatsResponse
- * @version 1.0.48
+ * @version 1.0.50
  */
 export default class GetChainTxStatsResponse {
   /**

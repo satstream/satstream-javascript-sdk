@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RunesBalance model module.
  * @module model/RunesBalance
- * @version 1.0.48
+ * @version 1.0.50
  */
 export default class RunesBalance {
   /**

@@ -19,7 +19,7 @@ import BlockchainInfo from './BlockchainInfo';
 /**
  * The GetBlockchainInfoResponse model module.
  * @module model/GetBlockchainInfoResponse
- * @version 1.0.48
+ * @version 1.0.50
  */
 export default class GetBlockchainInfoResponse {
   /**

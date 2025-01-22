@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetLatestBlockHashResponse model module.
  * @module model/GetLatestBlockHashResponse
- * @version 1.0.48
+ * @version 1.0.50
  */
 export default class GetLatestBlockHashResponse {
   /**

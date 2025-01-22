@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BigInt model module.
  * @module model/BigInt
- * @version 1.0.48
+ * @version 1.0.50
  */
 export default class BigInt {
   /**

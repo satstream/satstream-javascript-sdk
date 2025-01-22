@@ -19,7 +19,7 @@ import FeeRange from './FeeRange';
 /**
  * The AllOfFeeHorizonEstimateFail model module.
  * @module model/AllOfFeeHorizonEstimateFail
- * @version 1.0.48
+ * @version 1.0.50
  */
 export default class AllOfFeeHorizonEstimateFail extends FeeRange {
   /**

@@ -33,7 +33,7 @@ import UtilsResponseEnvelope from '../model/UtilsResponseEnvelope';
 /**
 * Blocks service.
 * @module api/BlocksApi
-* @version 1.0.48
+* @version 1.0.50
 */
 export default class BlocksApi {
 

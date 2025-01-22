@@ -19,7 +19,7 @@ import DecodeResponse from './DecodeResponse';
 /**
  * The DecodeTransactionResponse model module.
  * @module model/DecodeTransactionResponse
- * @version 1.0.48
+ * @version 1.0.50
  */
 export default class DecodeTransactionResponse {
   /**

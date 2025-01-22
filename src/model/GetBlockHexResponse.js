@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetBlockHexResponse model module.
  * @module model/GetBlockHexResponse
- * @version 1.0.48
+ * @version 1.0.50
  */
 export default class GetBlockHexResponse {
   /**

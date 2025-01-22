@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BlockchainInfo model module.
  * @module model/BlockchainInfo
- * @version 1.0.48
+ * @version 1.0.50
  */
 export default class BlockchainInfo {
   /**

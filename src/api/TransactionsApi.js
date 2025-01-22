@@ -39,7 +39,7 @@ import VerifyTxOutProofResponse from '../model/VerifyTxOutProofResponse';
 /**
 * Transactions service.
 * @module api/TransactionsApi
-* @version 1.0.48
+* @version 1.0.50
 */
 export default class TransactionsApi {
 
