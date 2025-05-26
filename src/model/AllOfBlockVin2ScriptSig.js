@@ -19,7 +19,7 @@ import ScriptSig from './ScriptSig';
 /**
  * The AllOfBlockVin2ScriptSig model module.
  * @module model/AllOfBlockVin2ScriptSig
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class AllOfBlockVin2ScriptSig extends ScriptSig {
   /**

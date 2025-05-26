@@ -20,7 +20,7 @@ import Vout from './Vout';
 /**
  * The BtcTx3 model module.
  * @module model/BtcTx3
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class BtcTx3 {
   /**

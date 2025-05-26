@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MempoolEntry model module.
  * @module model/MempoolEntry
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class MempoolEntry {
   /**

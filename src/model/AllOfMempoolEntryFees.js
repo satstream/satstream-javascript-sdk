@@ -19,7 +19,7 @@ import MempoolFees from './MempoolFees';
 /**
  * The AllOfMempoolEntryFees model module.
  * @module model/AllOfMempoolEntryFees
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class AllOfMempoolEntryFees extends MempoolFees {
   /**

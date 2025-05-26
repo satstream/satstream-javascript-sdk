@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SendRawTransactionResponse model module.
  * @module model/SendRawTransactionResponse
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class SendRawTransactionResponse {
   /**

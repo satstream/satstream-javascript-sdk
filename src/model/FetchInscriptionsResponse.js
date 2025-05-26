@@ -19,7 +19,7 @@ import InscriptionResponse from './InscriptionResponse';
 /**
  * The FetchInscriptionsResponse model module.
  * @module model/FetchInscriptionsResponse
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class FetchInscriptionsResponse {
   /**

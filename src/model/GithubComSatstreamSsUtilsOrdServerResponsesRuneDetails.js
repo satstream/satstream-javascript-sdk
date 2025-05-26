@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails model module.
  * @module model/GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class GithubComSatstreamSsUtilsOrdServerResponsesRuneDetails {
   /**

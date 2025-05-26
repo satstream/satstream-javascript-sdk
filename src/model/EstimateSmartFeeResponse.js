@@ -19,7 +19,7 @@ import SmartFeeEstimate from './SmartFeeEstimate';
 /**
  * The EstimateSmartFeeResponse model module.
  * @module model/EstimateSmartFeeResponse
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class EstimateSmartFeeResponse {
   /**

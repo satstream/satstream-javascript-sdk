@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetLatestBlockHeightResponse model module.
  * @module model/GetLatestBlockHeightResponse
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class GetLatestBlockHeightResponse {
   /**

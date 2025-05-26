@@ -20,7 +20,7 @@ import Output from './Output';
 /**
  * The Transaction model module.
  * @module model/Transaction
- * @version 1.0.53
+ * @version 1.0.54
  */
 export default class Transaction {
   /**
