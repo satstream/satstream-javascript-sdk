@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestMempoolFees model module.
  * @module model/TestMempoolFees
- * @version 1.0.54
+ * @version 1.0.55
  */
 export default class TestMempoolFees {
   /**

@@ -19,7 +19,7 @@ import RawMempoolData from './RawMempoolData';
 /**
  * The GetRawMempoolResponse model module.
  * @module model/GetRawMempoolResponse
- * @version 1.0.54
+ * @version 1.0.55
  */
 export default class GetRawMempoolResponse {
   /**

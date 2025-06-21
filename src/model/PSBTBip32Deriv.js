@@ -18,7 +18,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PSBTBip32Deriv model module.
  * @module model/PSBTBip32Deriv
- * @version 1.0.54
+ * @version 1.0.55
  */
 export default class PSBTBip32Deriv {
   /**
